@@ -179,13 +179,15 @@ export function mountFooter() {
           <a href="#" data-roll rel="noopener">Facebook</a>
           <a href="blog.html" data-roll>blog</a>
         </div>
-        <span class="f-mark" aria-hidden="true">©</span>
       </div>
-      <div class="f-bottom">
-        <span>©</span>
+    </div>
+    <div class="f-plate">
+      <span class="fp-mark" aria-hidden="true">©</span>
+      <div class="fp-legal mono-s">
         <span>Unleesh Creative, Inc.</span>
         <span>© 2026 ${BRAND} STUDIO. ALL RIGHTS RESERVED.</span>
       </div>
+      <span class="fp-word" aria-hidden="true">${BRAND}<i class="dot"></i></span>
     </div>`;
   document.querySelector('main').after(footer);
 }

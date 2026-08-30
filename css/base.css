@@ -162,6 +162,46 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
   text-transform: uppercase;
 }
 
+/* giant embossed metal wordmark plate closing the footer */
+.f-plate {
+  position: relative; z-index: 1;
+  margin: 48px calc(-1 * var(--gutter)) -32px;
+  padding: 56px var(--gutter) 8px;
+  background: url('../assets/img/metal.webp') center / cover no-repeat, #b9b9b9;
+  text-align: center; overflow: visible; line-height: 0;
+}
+.fp-word {
+  display: block;
+  font-family: var(--f-display); font-weight: 800; font-stretch: 125%;
+  font-size: clamp(72px, 13.5vw, 230px); line-height: 0.78;
+  letter-spacing: -0.02em; text-transform: uppercase;
+  color: rgba(90, 90, 90, 0.38);
+  mix-blend-mode: multiply;
+  /* pressed-in: light catches the lower edge, shade falls from the top */
+  text-shadow:
+    0 2px 2px rgba(255, 255, 255, 0.7),
+    0 -2px 3px rgba(0, 0, 0, 0.45);
+}
+.fp-word .dot {
+  display: inline-block; width: 0.26em; height: 0.26em;
+  background: rgba(90, 90, 90, 0.38); border-radius: 50%; margin-left: 0.05em;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.7), 0 -2px 3px rgba(0, 0, 0, 0.45);
+}
+.fp-legal {
+  position: absolute; top: 22px; left: var(--gutter);
+  text-align: left; line-height: 1.8;
+  font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(40, 40, 40, 0.75);
+}
+.fp-legal span { display: block; }
+/* the big © straddles the boundary between footer black and metal plate */
+.fp-mark {
+  position: absolute; top: 0; right: 7%;
+  transform: translateY(-52%);
+  font-size: clamp(56px, 7vw, 110px); line-height: 1;
+  color: var(--white); z-index: 2;
+}
+
 /* ---------- generic reveal masks ---------- */
 /* width:max-content lets huge display lines exceed their grid column instead of
    being shaved by the overflow mask; padding/margin trick gives glyph overshoot room */

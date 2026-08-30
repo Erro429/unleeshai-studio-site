@@ -197,6 +197,38 @@ function initField() {
     field.appendChild(el);
   });
 
+  // tumbling photo cubes around the dotted word band
+  const CUBES = [
+    { top: 42, left: 30, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13 },
+    { top: 57, left: 70, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
+  ];
+  CUBES.forEach(({ top, left, size, faces, sx, sy }) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'fd-cube';
+    wrap.style.top = top + '%';
+    wrap.style.left = left + '%';
+    wrap.style.width = wrap.style.height = size + 'px';
+    const half = size / 2;
+    const T = [
+      `translateZ(${half}px)`, `rotateY(180deg) translateZ(${half}px)`,
+      `rotateY(90deg) translateZ(${half}px)`, `rotateY(-90deg) translateZ(${half}px)`,
+      `rotateX(90deg) translateZ(${half}px)`, `rotateX(-90deg) translateZ(${half}px)`,
+    ];
+    wrap.innerHTML = `<div class="fd-cube-core">` +
+      faces.map((f, k) => `<div class="face" style="transform:${T[k]}"><img src="assets/img/${f}.webp" alt="" loading="lazy"></div>`).join('') +
+      `</div>`;
+    field.appendChild(wrap);
+    if (!reducedMotion) {
+      const core = wrap.querySelector('.fd-cube-core');
+      gsap.to(core, { rotationX: 360, duration: Math.abs(360 / sx) * 2, repeat: -1, ease: 'none' });
+      gsap.to(core, { rotationY: sx > 0 ? 360 : -360, duration: Math.abs(360 / sy) * 2, repeat: -1, ease: 'none' });
+      gsap.to(wrap, {
+        y: -120, ease: 'none',
+        scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'bottom top', scrub: true },
+      });
+    }
+  });
+
   // typewriter status lines
   const statusEls = STATUS.map((s) => {
     const el = document.createElement('div');
