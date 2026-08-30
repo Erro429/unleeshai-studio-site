@@ -21,7 +21,10 @@
 <main>
   <!-- 4.1 HERO — full-viewport video + typographic overlay carousel -->
   <section class="hero" data-cursor-dot>
-    <video class="hero-bg" src="assets/video/V01.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-media">
+      <div class="hero-layer is-front"><video src="assets/video/V01.mp4" autoplay muted loop playsinline></video></div>
+      <div class="hero-layer"></div>
+    </div>
     <div class="hero-scrim"></div>
 
     <div class="hero-ui">
@@ -69,6 +72,7 @@
       </div>
 
       <!-- carousel cluster -->
+      <div class="hx-cluster">
       <div class="hx-carousel">
         <button class="hero-prev" aria-label="Previous slide">⟪</button>
         <div class="hx-center">
@@ -79,11 +83,12 @@
       </div>
       <div class="hx-wave" aria-hidden="true"></div>
       <div class="hx-strip">
-        <div class="hx-thumb" data-i="0"><img src="assets/img/V76.webp" alt=""></div>
-        <div class="hx-thumb" data-i="1"><img src="assets/img/V23.webp" alt=""></div>
-        <div class="hx-thumb" data-i="2"><img src="assets/img/V28.webp" alt=""></div>
-        <div class="hx-thumb" data-i="3"><img src="assets/img/V09.webp" alt=""></div>
-        <div class="hx-thumb" data-i="4"><img src="assets/img/V33.webp" alt=""></div>
+        <div class="hx-thumb hx-thumb-brand" data-i="0"><span>UNLEESH<i class="dot"></i></span></div>
+        <div class="hx-thumb" data-i="1"><img src="assets/img/V40M.webp" alt=""></div>
+        <div class="hx-thumb" data-i="2"><img src="assets/img/V42M.webp" alt=""></div>
+        <div class="hx-thumb" data-i="3"><img src="assets/img/V45M.webp" alt=""></div>
+        <div class="hx-thumb" data-i="4"><img src="assets/img/V46M.webp" alt=""></div>
+      </div>
       </div>
 
       <!-- wordmark tile -->
