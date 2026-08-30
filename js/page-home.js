@@ -15,6 +15,7 @@ export function init() {
   if (lp) initLetterplay(lp);
   initWhoDeck();
   initSectorsArc();
+  initSectors();
   initWorksParallax();
 }
 
@@ -191,5 +192,29 @@ function initWhoDeck() {
   gsap.to(cards[cards.length - 1], {
     y: -40, ease: 'none',
     scrollTrigger: { trigger: deck, start: 'top bottom', end: 'bottom top', scrub: true },
+  });
+}
+
+
+/* ---- sectors hover preview ---- */
+const SECTOR_IMGS = ['V28', 'V30', 'V32', 'V33'];
+function initSectors() {
+  const rows = document.querySelectorAll('.sector-row');
+  if (!rows.length) return;
+  const pv = document.createElement('div');
+  pv.className = 'sector-preview';
+  pv.innerHTML = '<img alt="">';
+  document.body.appendChild(pv);
+  const img = pv.querySelector('img');
+  const xTo = gsap.quickTo(pv, 'x', { duration: 0.5, ease: 'power3' });
+  const yTo = gsap.quickTo(pv, 'y', { duration: 0.5, ease: 'power3' });
+
+  rows.forEach((row, i) => {
+    row.addEventListener('mouseenter', () => {
+      img.src = `assets/img/${SECTOR_IMGS[i % SECTOR_IMGS.length]}.webp`;
+      gsap.to(pv, { opacity: 1, duration: 0.3 });
+    });
+    row.addEventListener('mouseleave', () => gsap.to(pv, { opacity: 0, duration: 0.3 }));
+    row.addEventListener('mousemove', (e) => { xTo(e.clientX + 24); yTo(e.clientY - 110); });
   });
 }
