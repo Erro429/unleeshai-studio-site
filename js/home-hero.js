@@ -120,7 +120,7 @@ export async function initHero(hero) {
     const center = ((i + 0.5) / SLIDES.length) * BAR_COUNT;
     const sigma = BAR_COUNT / 15;
     bars.forEach((b, k) => {
-      b.style.height = (8 + 36 * Math.exp(-((k - center) ** 2) / (2 * sigma * sigma))).toFixed(1) + 'px';
+      b.style.height = (6 + 24 * Math.exp(-((k - center) ** 2) / (2 * sigma * sigma))).toFixed(1) + 'px';
     });
   };
   const setCount = (i) => {

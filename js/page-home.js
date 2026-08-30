@@ -58,15 +58,17 @@ function initField() {
     field.appendChild(el);
   });
 
-  // dotted letters
-  const letterEls = LETTERS.map(({ ch, top, left }) => {
-    const el = document.createElement('div');
-    el.className = 'fd-letter';
-    el.textContent = ch;
-    el.style.top = top + '%';
-    el.style.left = left + '%';
-    field.appendChild(el);
-    return el;
+  // dotted letters, each on a dim portrait media tile (reference pattern)
+  const LETTER_TEX = ['V21', 'V18', 'V22', 'V20', 'V19', 'V26', 'V13'];
+  const letterEls = LETTERS.map(({ ch, top, left }, i) => {
+    const tile = document.createElement('div');
+    tile.className = 'fd-ltile';
+    tile.style.top = top + '%';
+    tile.style.left = left + '%';
+    tile.innerHTML = `<img src="assets/img/${LETTER_TEX[i]}.webp" alt="">` +
+      `<div class="fd-letter">${ch}</div>`;
+    field.appendChild(tile);
+    return tile;
   });
 
   // label clusters
