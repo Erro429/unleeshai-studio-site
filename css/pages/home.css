@@ -474,3 +474,95 @@
 
 /* hero cube rides the sticky stage, centered */
 .fd-cube-hero { top: 30% !important; left: 50% !important; margin-left: -170px; }
+
+/* ---- services marquee ---- */
+.svc-marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; }
+.svc-marquee .mq-item span.word { font-size: 40px; }
+
+/* ---- cube ---- */
+.cube-section { position: relative; height: 100vh; display: grid; place-items: center; overflow: hidden; }
+.cube-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 60%, rgba(255,255,255,0.06), transparent 60%);
+}
+.cube-scene { perspective: 1400px; width: var(--cube, 420px); height: var(--cube, 420px); }
+.cube { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
+.cube .face {
+  position: absolute; inset: 0; border: 1px solid var(--line-strong);
+  overflow: hidden; background: var(--bg-2); backface-visibility: hidden;
+}
+.cube .face img { width: 100%; height: 100%; object-fit: cover; }
+.cube .face-front { display: grid; place-items: center; }
+.cube .face-front .cube-logo {
+  font-family: var(--f-display); font-weight: 800; font-stretch: 125%;
+  font-size: 64px; letter-spacing: -0.02em; color: var(--white); line-height: 1;
+}
+.cube-caption {
+  position: absolute; bottom: 48px; left: var(--gutter); right: var(--gutter);
+  display: flex; justify-content: space-between;
+  font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; color: var(--ink-2);
+}
+
+/* ---- letter-play ---- */
+.letterplay { position: relative; height: 100vh; overflow: hidden; }
+.lp-letter {
+  position: absolute;
+  /* dot-matrix glyphs: the brand point motif */
+  font-family: var(--f-dot); font-weight: 900; font-stretch: 100%;
+  font-size: clamp(80px, 13vw, 240px); line-height: 0.85;
+  will-change: transform, opacity;
+}
+.lp-tag {
+  position: absolute;
+  font-family: var(--f-mono); font-size: var(--t-label-s);
+  letter-spacing: 0.06em; color: var(--ink-3); text-transform: uppercase;
+  white-space: nowrap; will-change: transform, opacity;
+}
+.lp-tag:nth-child(3n) { color: var(--ink-2); }
+.lp-status { position: absolute; z-index: 3; }
+
+/* ---- who we are ---- */
+.who { text-align: center; }
+.who .eyebrow { margin-bottom: 24px; }
+.who h2 { font-family: var(--f-body); font-weight: 300; font-stretch: 100%; font-size: var(--t-h2); text-transform: none; line-height: 1.4; letter-spacing: 0; }
+.who-deck { position: relative; height: 480px; margin: 96px 0; }
+.who-card {
+  position: absolute; top: 0; left: 50%; width: 300px; aspect-ratio: 3 / 4;
+  margin-left: -150px; overflow: hidden;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
+  will-change: transform;
+}
+.who-card img { width: 100%; height: 100%; object-fit: cover; }
+.who-para { max-width: 62ch; margin: 0 auto 96px; color: var(--ink-2); font-weight: 300; }
+.who-statement { font-size: clamp(36px, 5.5vw, 92px); line-height: 0.95; margin: 24px auto 56px; max-width: 14ch; }
+.who-stats { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.who-stats .chip { border-radius: 0; font-size: var(--t-label-l); padding: 12px 24px; }
+
+/* restored-block adjustments */
+.cs-fog, .lp-fog {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.3; filter: saturate(0); pointer-events: none;
+}
+.cube-ribbon {
+  position: absolute; top: 50%; left: 0; right: 0;
+  transform: translateY(-50%); z-index: 1;
+}
+.cube-ribbon .mq-item span.word { font-size: clamp(72px, 9vw, 150px); }
+.marquee.mq-dot .mq-item .mq-gloss {
+  font-family: var(--f-mono); font-weight: 400; font-size: 12px;
+  letter-spacing: 0.08em; color: var(--ink-2);
+}
+.cube-scene { position: relative; z-index: 2; }
+.cube .face-front .cube-logo .dot {
+  display: inline-block; width: 0.3em; height: 0.3em;
+  background: currentColor; border-radius: 50%; margin-left: 0.06em;
+}
+/* letter field glyphs use the round dot-matrix face */
+.lp-letter {
+  font-family: var(--f-dot) !important;
+  font-weight: 900 !important;
+  font-stretch: 100% !important;
+}
+.letterplay { background: var(--bg); position: relative; z-index: 5; }
+.cube-section { background: var(--bg); position: relative; z-index: 5; }
+.who { background: var(--bg); position: relative; z-index: 5; }
