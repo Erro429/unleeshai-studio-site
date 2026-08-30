@@ -186,16 +186,40 @@ export function initCursorDot() {
     if (!seen) { seen = true; dots.forEach((d) => { d.x = tx; d.y = ty; }); }
   });
 
-  const HOVER = 'a, button, input, select, textarea, [data-cursor-dot], .lc-media, .hx-thumb';
+  // pill label targets: cursor becomes a white chip with contextual text
+  const label = document.createElement('span');
+  label.className = 'trail-label';
+  dots[0].el.appendChild(label);
+
+  const LABELED = '[data-cursor-label], .hero-prev, .hero-next, .hx-thumb, .work-card, .work-card2, .lab-card, .lc-media, a[href^="mailto:"], .cf-submit, .back-top, .f-social a, .hx-social a, .pj-pager a';
+  const HOVER = 'a, button, input, select, textarea, [data-cursor-dot]';
+
+  const labelFor = (el) => {
+    if (el.dataset.cursorLabel) return el.dataset.cursorLabel;
+    if (el.matches('.hero-prev')) return 'PREV';
+    if (el.matches('.hero-next')) return 'NEXT';
+    if (el.matches('.hx-thumb')) return 'PLAY';
+    if (el.matches('a[href^="mailto:"]')) return 'HELLO';
+    if (el.matches('.cf-submit')) return 'SEND';
+    if (el.matches('.back-top')) return 'TOP';
+    if (el.matches('.f-social a, .hx-social a')) return 'FOLLOW';
+    return 'VIEW';
+  };
+
+  let labeled = false;
   document.addEventListener('mouseover', (e) => {
-    hot = !!e.target.closest(HOVER);
+    const lab = e.target.closest(LABELED);
+    labeled = !!lab;
+    if (lab) label.textContent = labelFor(lab);
+    hot = labeled || !!e.target.closest(HOVER);
     document.body.classList.toggle('cursor-hot', hot);
+    document.body.classList.toggle('cursor-label', labeled);
   });
 
   gsap.ticker.add(() => {
     // each dot chases the one ahead of it; the head chases the pointer
     let px = tx, py = ty;
-    headScale += ((hot ? 3.2 : 1) - headScale) * 0.18;
+    headScale += (((hot && !labeled) ? 3.2 : 1) - headScale) * 0.18;
     dots.forEach((d, i) => {
       d.x += (px - d.x) * 0.42;
       d.y += (py - d.y) * 0.42;

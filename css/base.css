@@ -218,6 +218,22 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
 body.cursor-hot .trail-dot { opacity: 0.22 !important; }
 body.cursor-hot .trail-dot.trail-head { opacity: 1 !important; mix-blend-mode: difference; }
 
+/* labeled targets: the head morphs into a white pill with contextual text */
+.trail-head { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.trail-label {
+  display: none;
+  font-family: var(--f-mono); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #030303; white-space: nowrap;
+}
+body.cursor-label .trail-dot.trail-head {
+  width: auto !important; height: auto !important;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--white); mix-blend-mode: normal;
+  transition: padding 0.25s var(--ease-out);
+}
+body.cursor-label .trail-label { display: block; }
+
 /* back to top */
 .back-top {
   position: fixed; right: var(--gutter); bottom: 32px; width: 44px; height: 44px;

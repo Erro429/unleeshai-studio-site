@@ -69,17 +69,24 @@
 /* carousel cluster (wrapped for counter-parallax) */
 .hx-cluster { will-change: transform; }
 .hx-carousel {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  width: min(940px, 90vw); margin: 32px auto 0;
+  position: relative;
+  display: flex; align-items: flex-start; justify-content: center;
+  margin: 32px auto 0;
 }
-.hx-carousel button { font-size: 18px; color: var(--ink); padding: 4px 10px; }
+/* arrows live at the viewport gutters (reference), not inside the cluster */
+.hx-carousel button {
+  position: absolute; top: 0;
+  font-size: 18px; color: var(--ink); padding: 4px 10px;
+}
+.hero-prev { left: calc(-50vw + 50% + var(--gutter)); }
+.hero-next { right: calc(-50vw + 50% + var(--gutter)); }
 .hx-center { text-align: center; }
 .hero-count { font-family: var(--f-mono); font-size: var(--t-label-l); letter-spacing: 0.1em; }
 .hero-count em { font-style: normal; color: var(--ink-2); padding: 0 4px; }
 .hero-title {
   margin-top: 10px; overflow: hidden;
-  font-size: clamp(20px, 2vw, 30px); font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2;
+  font-size: clamp(18px, 1.7vw, 24px); font-weight: 500;
+  letter-spacing: 0.02em; text-transform: none; line-height: 1.25;
 }
 .hero-title .ht-inner { display: block; }
 
@@ -90,9 +97,15 @@
 }
 .hx-wave i { display: block; width: 1.5px; background: var(--ink); height: 8px; transition: height 0.5s var(--ease-out); }
 
-/* filmstrip: frosted-glass tiles, active one crisp */
-.hx-strip { display: flex; justify-content: center; gap: 0; width: min(940px, 90vw); margin: 4px auto 0; }
-.hx-thumb { flex: 1; height: 72px; overflow: hidden; cursor: pointer; position: relative; }
+/* filmstrip: frosted tiles on a continuous translucent band */
+.hx-strip {
+  display: flex; justify-content: center; gap: 6px;
+  width: min(1040px, 92vw); margin: 4px auto 0;
+  padding: 6px;
+  background: rgba(96, 96, 96, 0.26);
+  backdrop-filter: blur(6px);
+}
+.hx-thumb { flex: 1; height: 74px; overflow: hidden; cursor: pointer; position: relative; }
 .hx-thumb img {
   width: 100%; height: 100%; object-fit: cover;
   filter: blur(5px) grayscale(0.7) brightness(0.85); opacity: 0.8;
