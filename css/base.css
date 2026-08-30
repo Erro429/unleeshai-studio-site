@@ -85,6 +85,23 @@ main { position: relative; }
 .h-mail { display: grid; place-items: center; width: 32px; height: 32px; color: var(--ink); }
 .h-mail svg { width: 22px; height: 22px; }
 .h-mail:hover, .h-burger:hover { color: var(--white); }
+
+/* on the home hero the side icons are born from the center logo:
+   collapsed onto it at the top of the page, sliding out once scroll begins */
+.h-mail, .h-burger {
+  transition: transform 0.7s var(--ease-out), opacity 0.35s var(--ease-out);
+  transition-delay: 0.05s;
+}
+body[data-page="home"] .site-header:not(.is-solid) .h-mail {
+  transform: translateX(210px) scale(0.5); opacity: 0; pointer-events: none;
+}
+body[data-page="home"] .site-header:not(.is-solid) .h-burger {
+  transform: translateX(-210px) scale(0.5); opacity: 0; pointer-events: none;
+}
+@media (max-width: 767px) {
+  body[data-page="home"] .site-header:not(.is-solid) .h-mail { transform: translateX(38vw) scale(0.5); }
+  body[data-page="home"] .site-header:not(.is-solid) .h-burger { transform: translateX(-38vw) scale(0.5); }
+}
 .h-logo {
   font-family: var(--f-display);
   font-weight: 800;
