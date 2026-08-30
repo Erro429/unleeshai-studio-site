@@ -228,11 +228,13 @@
 
 /* crossing dotted streams + cube depth journey + rising corner letters */
 .band-zone {
-  position: absolute; top: 34%; left: 0; right: 0; height: 130vh;
-  z-index: 1; pointer-events: none;
+  position: absolute; top: 26%; left: 0; right: 0; height: 260vh;
+  z-index: 2; pointer-events: none;
 }
+/* everything in the stretch holds its viewport position while the zone transits */
+.bz-stage { position: sticky; top: 0; height: 100vh; }
 .bz-stream {
-  position: absolute; top: 44%; left: 0;
+  position: absolute; top: 47%; left: 0;
   display: flex; align-items: center; gap: 0.6em;
   white-space: nowrap; will-change: transform;
 }
@@ -246,7 +248,7 @@
   font-size: 11px; letter-spacing: 0.08em; color: var(--ink-2);
 }
 .bz-corner {
-  position: absolute; bottom: -6%;
+  position: absolute; bottom: -4%;
   font-family: var(--f-dot); font-weight: 900;
   font-size: clamp(80px, 8.5vw, 140px); line-height: 1;
   color: var(--ink); will-change: transform;
@@ -437,3 +439,34 @@
   .field { height: auto; min-height: 300vh; }
   .work-card.w7, .work-card.w5 { grid-column: 1 / -1; margin-top: 0; }
 }
+
+/* tile theater: center panel swaps a work image per scroll step */
+.bz-theater {
+  position: absolute; top: 52%; left: 50%;
+  width: 320px; height: 320px;
+  transform: translate(-50%, -38%);
+  z-index: 2; opacity: 0; transition: opacity 0.35s;
+}
+.bz-theater.is-on { opacity: 1; }
+.bz-theater img {
+  position: absolute; left: 50%; top: 50%;
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.bz-theater img.is-on { opacity: 1; }
+
+/* fixed dotted sentinels framing the theater */
+.bz-o, .bz-t {
+  position: absolute;
+  font-family: var(--f-dot); font-weight: 900;
+  font-size: clamp(44px, 4.4vw, 72px); line-height: 1;
+  color: var(--ink);
+  opacity: 0; transition: opacity 0.35s;
+}
+.bz-o { top: calc(52% - 205px); left: 57%; }
+.bz-t { top: calc(52% + 195px); left: 35%; }
+.bz-o.is-on, .bz-t.is-on { opacity: 1; }
+
+/* hero cube rides the sticky stage, centered */
+.fd-cube-hero { top: 30% !important; left: 50% !important; margin-left: -170px; }

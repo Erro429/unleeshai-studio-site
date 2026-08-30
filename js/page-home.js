@@ -246,8 +246,13 @@ function initField() {
     wrap.innerHTML = `<div class="fd-cube-core">` +
       faces.map((f, k) => `<div class="face" style="transform:${T[k]}"><img src="assets/img/${f}.webp" alt="" loading="lazy"></div>`).join('') +
       `</div>`;
-    field.appendChild(wrap);
-    if (hero) heroCube = wrap;
+    if (hero) {
+      heroCube = wrap;
+      wrap.classList.add('fd-cube-hero');
+      (field.querySelector('.bz-stage') || field).appendChild(wrap);
+    } else {
+      field.appendChild(wrap);
+    }
     if (!reducedMotion) {
       const core = wrap.querySelector('.fd-cube-core');
       // tumble stays time-based (reference cube keeps turning while scroll dwells)
@@ -305,16 +310,49 @@ function initField() {
     // decode fires when the line itself becomes visible, not the zone
     ScrollTrigger.create({ trigger: line, start: 'top 94%', once: true, onEnter: decode });
 
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1 },
+    // tile theater: a different work image on every scroll step after the cube
+    const THEATER = ['V40M', 'V63', 'V42M', 'V57', 'V46M', 'V27', 'V45M', 'V21', 'V48', 'V43M', 'V75', 'V41M'];
+    const theater = zone.querySelector('.bz-theater');
+    const sentinels = [zone.querySelector('.bz-o'), zone.querySelector('.bz-t')];
+    const timgs = THEATER.map((id, i) => {
+      const img = document.createElement('img');
+      img.src = `assets/img/${id}.webp`;
+      img.alt = '';
+      if (i === 0) img.classList.add('is-on');
+      theater.appendChild(img);
+      return img;
     });
-    // one line, slow left drift under scroll (it materializes in place)
-    tl.fromTo(line, { x: '12vw' }, { x: '-34vw', ease: 'none' }, 0);
-    // cube grows in place at center while tumbling; text passes behind it
+    let ti = 0;
+    const THEATER_START = 0.44;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1,
+        onUpdate: (self) => {
+          const p = self.progress;
+          const on = p >= THEATER_START;
+          theater.classList.toggle('is-on', on);
+          sentinels.forEach((s) => s.classList.toggle('is-on', on));
+          if (on) {
+            const idx = Math.min(timgs.length - 1,
+              Math.floor(((p - THEATER_START) / (1 - THEATER_START)) * timgs.length));
+            if (idx !== ti) {
+              timgs[ti].classList.remove('is-on');
+              timgs[idx].classList.add('is-on');
+              ti = idx;
+            }
+          }
+        },
+      },
+    });
+    // one line, slow left drift persisting across the whole stretch
+    tl.fromTo(line, { x: '14vw' }, { x: '-58vw', ease: 'none', duration: 1 }, 0);
+    // cube grows in place during the opening act, then hands off to the theater
     if (heroCube) {
       tl.fromTo(heroCube,
         { scale: 0.1, y: '-4vh' },
-        { scale: 1.3, y: '10vh', ease: 'none' }, 0);
+        { scale: 1.3, y: '8vh', ease: 'none', duration: 0.42 }, 0)
+        .to(heroCube, { autoAlpha: 0, scale: 1.45, ease: 'none', duration: 0.06 }, 0.42);
     }
     // stray brand letters rise from the bottom corners, staggered
     tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 140 }, { yPercent: 8, ease: 'none' }, 0)
