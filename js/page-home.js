@@ -33,7 +33,57 @@ export function init() {
   if (hero) initHero(hero);
 
   initField();
+  initSectorsArc();
   initWorksParallax();
+}
+
+/* THE SECTORS: two rings of small work tiles orbiting the heading —
+   continuous slow spin plus extra rotation scrubbed by scroll */
+const RING_IMGS = [
+  'V40', 'V41', 'V42', 'V43', 'V44', 'V45', 'V46', 'V47', 'V48', 'V49',
+  'V55', 'V56', 'V57', 'V58', 'V59', 'V60', 'V63', 'V65', 'V73', 'V75',
+  'V17', 'V23', 'V24', 'V25', 'V26', 'V27',
+];
+
+function initSectorsArc() {
+  const section = document.querySelector('.sectors-arc');
+  if (!section) return;
+  const outer = section.querySelector('.sa-ring-outer');
+  const inner = section.querySelector('.sa-ring-inner');
+
+  const build = (ring, count, radius, imgOffset) => {
+    for (let i = 0; i < count; i++) {
+      const tile = document.createElement('div');
+      tile.className = 'sa-tile';
+      const img = RING_IMGS[(i + imgOffset) % RING_IMGS.length];
+      tile.innerHTML = `<img src="assets/img/${img}.webp" alt="" loading="lazy">`;
+      tile.style.transform = `rotate(${(i / count) * 360}deg) translateY(-${radius}px)`;
+      ring.appendChild(tile);
+    }
+  };
+
+  const rOuter = Math.min(innerWidth * 0.34, 470);
+  const rInner = Math.min(innerWidth * 0.23, 320);
+  build(outer, 22, rOuter, 0);
+  build(inner, 13, rInner, 8);
+
+  if (reducedMotion) return;
+
+  // continuous counter-rotating spin
+  gsap.to(outer, { rotation: 360, duration: 90, repeat: -1, ease: 'none' });
+  gsap.to(inner, { rotation: -360, duration: 70, repeat: -1, ease: 'none' });
+
+  // scroll adds a visible extra turn while the section passes
+  gsap.to([outer, inner], {
+    rotation: '+=70', ease: 'none',
+    scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 },
+  });
+
+  // heading settles in
+  gsap.from(section.querySelector('.sa-title'), {
+    y: 60, opacity: 0, duration: 1, ease: 'expo.out',
+    scrollTrigger: { trigger: section, start: 'top 70%', once: true },
+  });
 }
 
 function initField() {
