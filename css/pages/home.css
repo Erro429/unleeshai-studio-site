@@ -150,7 +150,7 @@
 .fd-fog {
   position: sticky; top: 0; height: 100vh; width: 100%;
   margin-bottom: -100vh; /* stays behind the field content */
-  object-fit: cover; opacity: 0.22; filter: saturate(0);
+  object-fit: cover; opacity: 0.34; filter: saturate(0);
   pointer-events: none;
 }
 .fd-statement {
@@ -232,19 +232,18 @@
   z-index: 1; pointer-events: none;
 }
 .bz-stream {
-  position: absolute; top: 42%; left: 0;
-  display: flex; align-items: baseline; gap: 0.55em;
+  position: absolute; top: 44%; left: 0;
+  display: flex; align-items: center; gap: 0.6em;
   white-space: nowrap; will-change: transform;
 }
 .bz-stream span {
   font-family: var(--f-dot); font-weight: 900;
-  font-size: clamp(88px, 11vw, 175px); line-height: 1;
+  font-size: clamp(64px, 7.5vw, 120px); line-height: 1;
   letter-spacing: 0.02em; color: var(--ink);
 }
 .bz-stream i {
   font-family: var(--f-mono); font-style: normal;
   font-size: 11px; letter-spacing: 0.08em; color: var(--ink-2);
-  transform: translateY(-1.2em);
 }
 .bz-corner {
   position: absolute; bottom: -6%;

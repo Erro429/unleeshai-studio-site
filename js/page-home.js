@@ -317,11 +317,13 @@ function initField() {
         { scale: 1.3, y: '10vh', ease: 'none' }, 0);
     }
     // stray brand letters rise from the bottom corners, staggered
-    tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 130 }, { yPercent: -60, ease: 'none' }, 0)
-      .fromTo(zone.querySelector('.bz-cr'), { yPercent: 160 }, { yPercent: -20, ease: 'none' }, 0.3);
-    // ghost words hand the stage over during the line's reign, then return
-    tl.to(ghostEls, { opacity: 0.14, duration: 0.18 }, 0.22)
-      .to(ghostEls, { opacity: 0.55, duration: 0.18 }, 0.78);
+    tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 140 }, { yPercent: 8, ease: 'none' }, 0)
+      .fromTo(zone.querySelector('.bz-cr'), { yPercent: 170 }, { yPercent: 22, ease: 'none' }, 0.3);
+    // clean stage: ghost words and letter tiles clear out entirely, then return
+    const tiles = [...field.querySelectorAll('.fd-ltile')];
+    tl.to([...ghostEls, ...tiles], { opacity: 0, duration: 0.14 }, 0.18)
+      .to(ghostEls, { opacity: 0.55, duration: 0.18 }, 0.8)
+      .to(tiles, { opacity: 1, duration: 0.18 }, 0.8);
   } else if (zone) {
     // static composed state
     gsap.set(zone.querySelector('.bz-line'), { x: '-8vw' });
