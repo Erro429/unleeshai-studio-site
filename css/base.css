@@ -207,30 +207,35 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
 }
 @media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
 
-/* cursor dot trail */
-.trail-dot {
+/* pixel-dot cursor trail: uniform dots dropped along the path, fading in place */
+.px-dot {
   position: fixed; top: 0; left: 0;
   background: var(--white); border-radius: 50%;
-  pointer-events: none; z-index: 955;
-  will-change: transform;
+  pointer-events: none; z-index: 955; opacity: 0;
+  will-change: transform, opacity;
 }
-/* over anything clickable: head swells, tail recedes */
-body.cursor-hot .trail-dot { opacity: 0.22 !important; }
-body.cursor-hot .trail-dot.trail-head { opacity: 1 !important; mix-blend-mode: difference; }
 
-/* labeled targets: the head morphs into a white pill with contextual text */
-.trail-head { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+/* hover orb: appears only over links/buttons; expands into a pill when labeled */
+.cursor-orb {
+  position: fixed; top: 0; left: 0;
+  width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border-radius: 999px; background: var(--white);
+  mix-blend-mode: difference;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; z-index: 956;
+  opacity: 0; transform-origin: center;
+  transition: opacity 0.25s var(--ease-out), width 0.25s var(--ease-out);
+}
+body.cursor-hot .cursor-orb { opacity: 1; }
 .trail-label {
   display: none;
   font-family: var(--f-mono); font-size: 10px; font-weight: 400;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: #030303; white-space: nowrap;
 }
-body.cursor-label .trail-dot.trail-head {
-  width: auto !important; height: auto !important;
-  padding: 7px 14px; border-radius: 999px;
-  background: var(--white); mix-blend-mode: normal;
-  transition: padding 0.25s var(--ease-out);
+body.cursor-label .cursor-orb {
+  width: auto; height: auto; margin: -15px 0 0 10px;
+  padding: 8px 15px; mix-blend-mode: normal;
 }
 body.cursor-label .trail-label { display: block; }
 

@@ -162,34 +162,50 @@ export function initStatus(scope = document) {
   });
 }
 
-/* ---------- cursor dot trail (reference pattern: chasing dots, head reacts
-   to anything interactive) ---------- */
+/* ---------- pixel-dot cursor trail (reference pattern):
+   uniform dot-matrix pixels dropped along the pointer's path, fading where
+   they landed; a circle appears ONLY over links/buttons (pill when labeled) */
 export function initCursorDot() {
   if (reducedMotion || matchMedia('(pointer: coarse)').matches) return;
-  const N = 16;
-  const dots = [];
+
+  const N = 28;        // dot pool
+  const SIZE = 5;      // uniform pixel size
+  const GRID = 7;      // drops snap to a coarse grid → dot-matrix feel
+  const STEP = 9;      // min travel (px) between drops
+
+  const pool = [];
   for (let i = 0; i < N; i++) {
     const d = document.createElement('div');
-    d.className = 'trail-dot' + (i === 0 ? ' trail-head' : '');
-    const s = Math.max(2.5, 7 - i * 0.3);
-    d.style.width = d.style.height = s + 'px';
-    d.style.opacity = String(1 - i / (N + 4));
+    d.className = 'px-dot';
+    d.style.width = d.style.height = SIZE + 'px';
     document.body.appendChild(d);
-    dots.push({ el: d, x: innerWidth / 2, y: innerHeight / 2, s });
+    pool.push(d);
   }
-
-  let tx = innerWidth / 2, ty = innerHeight / 2, seen = false;
-  let hot = false, headScale = 1;
+  let poolIdx = 0;
+  let lastX = -100, lastY = -100;
 
   document.addEventListener('mousemove', (e) => {
-    tx = e.clientX; ty = e.clientY;
-    if (!seen) { seen = true; dots.forEach((d) => { d.x = tx; d.y = ty; }); }
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    if (dx * dx + dy * dy < STEP * STEP) return;
+    lastX = e.clientX; lastY = e.clientY;
+    const d = pool[poolIdx];
+    poolIdx = (poolIdx + 1) % N;
+    const gx = Math.round(e.clientX / GRID) * GRID - SIZE / 2;
+    const gy = Math.round(e.clientY / GRID) * GRID - SIZE / 2;
+    d.style.transform = `translate(${gx}px, ${gy}px)`;
+    gsap.fromTo(d, { opacity: 1 }, { opacity: 0, duration: 0.55, ease: 'power1.out', overwrite: true });
   });
 
-  // pill label targets: cursor becomes a white chip with contextual text
+  // hover orb: only exists over interactive elements; expands to a pill when labeled
+  const orb = document.createElement('div');
+  orb.className = 'cursor-orb';
   const label = document.createElement('span');
   label.className = 'trail-label';
-  dots[0].el.appendChild(label);
+  orb.appendChild(label);
+  document.body.appendChild(orb);
+  const ox = gsap.quickTo(orb, 'x', { duration: 0.3, ease: 'power3' });
+  const oy = gsap.quickTo(orb, 'y', { duration: 0.3, ease: 'power3' });
+  document.addEventListener('mousemove', (e) => { ox(e.clientX); oy(e.clientY); });
 
   const LABELED = '[data-cursor-label], .hero-prev, .hero-next, .hx-thumb, .work-card, .work-card2, .lab-card, .lc-media, a[href^="mailto:"], .cf-submit, .back-top, .f-social a, .hx-social a, .pj-pager a';
   const HOVER = 'a, button, input, select, textarea, [data-cursor-dot]';
@@ -206,28 +222,12 @@ export function initCursorDot() {
     return 'VIEW';
   };
 
-  let labeled = false;
   document.addEventListener('mouseover', (e) => {
     const lab = e.target.closest(LABELED);
-    labeled = !!lab;
+    const hot = !!lab || !!e.target.closest(HOVER);
     if (lab) label.textContent = labelFor(lab);
-    hot = labeled || !!e.target.closest(HOVER);
     document.body.classList.toggle('cursor-hot', hot);
-    document.body.classList.toggle('cursor-label', labeled);
-  });
-
-  gsap.ticker.add(() => {
-    // each dot chases the one ahead of it; the head chases the pointer
-    let px = tx, py = ty;
-    headScale += (((hot && !labeled) ? 3.2 : 1) - headScale) * 0.18;
-    dots.forEach((d, i) => {
-      d.x += (px - d.x) * 0.42;
-      d.y += (py - d.y) * 0.42;
-      const sc = i === 0 ? headScale : 1;
-      d.el.style.transform =
-        `translate(${(d.x - d.s / 2).toFixed(1)}px, ${(d.y - d.s / 2).toFixed(1)}px) scale(${sc.toFixed(2)})`;
-      px = d.x; py = d.y;
-    });
+    document.body.classList.toggle('cursor-label', !!lab);
   });
 }
 
