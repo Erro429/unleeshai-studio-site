@@ -19,18 +19,90 @@
 <body data-page="home">
 
 <main>
-  <!-- 4.1 HERO — COSMIC SERIES -->
+  <!-- 4.1 HERO — full-viewport video + typographic overlay carousel -->
   <section class="hero" data-cursor-dot>
-    <p class="hero-eyebrow">COSMIC SERIES</p>
-    <h1 class="hero-title display"><span class="ht-inner">Cosmic Signal</span></h1>
-    <div class="hero-ctl">
-      <button class="hero-prev" aria-label="Previous slide">⟪</button>
-      <span class="hero-count tabular">01 // 05</span>
-      <button class="hero-next" aria-label="Next slide">⟫</button>
-    </div>
-    <div class="scroll-ind">
-      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
-      <span>DOWN</span>
+    <video class="hero-bg" src="assets/video/V01.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-scrim"></div>
+
+    <div class="hero-ui">
+      <!-- masthead row -->
+      <div class="hx-mast">
+        <h1 class="hx-word display">STUDIO</h1>
+        <div class="hx-mark">
+          <span class="hx-logo">U<span class="dot"></span></span>
+          <span class="mono-s ink-2">( Brand Direction )</span>
+        </div>
+        <h1 class="hx-word display">DIGITAL</h1>
+      </div>
+
+      <!-- twin lists -->
+      <div class="hx-lists">
+        <ul class="hx-list-l">
+          <li>Core strategy planning</li>
+          <li>Brand identity</li>
+          <li>Content creative</li>
+          <li>Tech trend practice</li>
+        </ul>
+        <ul class="hx-list-r">
+          <li>Creative Strategy</li>
+          <li>Brand Identity</li>
+          <li>Creative Content</li>
+          <li>Web Design</li>
+        </ul>
+      </div>
+
+      <!-- in-hero nav + chip row -->
+      <div class="hx-nav-wrap">
+        <nav class="hx-nav" aria-label="Hero">
+          <a href="about.html" data-roll>ABOUT</a>
+          <a href="work.html" data-roll>WORK</a>
+          <a href="lab.html" data-roll>LABS</a>
+          <a href="blog.html" data-roll>BLOG</a>
+          <a href="contact.html" data-roll>CONTACT</a>
+        </nav>
+        <div class="hx-chips">
+          <span>( Web Interaction Dev )</span>
+          <span>( Motion Design )</span>
+          <span>( High-End Web Design )</span>
+          <span>( Brand Core Identity )</span>
+        </div>
+      </div>
+
+      <!-- carousel cluster -->
+      <div class="hx-carousel">
+        <button class="hero-prev" aria-label="Previous slide">⟪</button>
+        <div class="hx-center">
+          <span class="hero-count tabular">01 <em>//</em> 05</span>
+          <p class="hero-title"><span class="ht-inner">Brand Core</span></p>
+        </div>
+        <button class="hero-next" aria-label="Next slide">⟫</button>
+      </div>
+      <div class="hx-wave" aria-hidden="true"></div>
+      <div class="hx-strip">
+        <div class="hx-thumb" data-i="0"><img src="assets/img/V76.webp" alt=""></div>
+        <div class="hx-thumb" data-i="1"><img src="assets/img/V23.webp" alt=""></div>
+        <div class="hx-thumb" data-i="2"><img src="assets/img/V28.webp" alt=""></div>
+        <div class="hx-thumb" data-i="3"><img src="assets/img/V09.webp" alt=""></div>
+        <div class="hx-thumb" data-i="4"><img src="assets/img/V33.webp" alt=""></div>
+      </div>
+
+      <!-- wordmark tile -->
+      <div class="hx-brand-tile">UNLEESH<span class="dot"></span></div>
+
+      <!-- bottom row -->
+      <div class="hx-bottom">
+        <p class="hx-tagline">Strategy, design and development<br>under one roof. AI-accelerated,<br>obsessively crafted.</p>
+        <div class="hx-contact">
+          <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+          <span>San Francisco web design</span>
+          <span>UNLEESH Studio 2026©</span>
+        </div>
+        <div class="hx-social">
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="#" rel="noopener">Threads</a>
+          <a href="#" rel="noopener">Facebook</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -134,7 +206,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

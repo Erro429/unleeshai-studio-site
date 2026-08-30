@@ -190,6 +190,7 @@ export function initHeaderHide() {
       const y = self.scroll();
       if (y > 120 && y > last) header.classList.add('is-hidden');
       else header.classList.remove('is-hidden');
+      header.classList.toggle('is-solid', y > 60);
       last = y;
     },
   });

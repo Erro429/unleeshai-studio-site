@@ -58,27 +58,38 @@ main { position: relative; }
   gap: var(--gap);
 }
 
-/* ---------- header ---------- */
+/* ---------- header: floating top-center pill ---------- */
 .site-header {
   position: fixed;
-  inset: 0 0 auto 0;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--gutter);
-  mix-blend-mode: difference;
+  top: 24px; left: 50%;
+  transform: translateX(-50%);
   z-index: 900;
-  transition: transform 0.4s var(--ease-out);
+  transition: transform 0.4s var(--ease-out), opacity 0.4s var(--ease-out);
 }
-.site-header.is-hidden { transform: translateY(-100%); }
-.site-header .h-contact { font-family: var(--f-mono); font-size: var(--t-label); text-transform: lowercase; letter-spacing: 0.06em; }
-.site-header .h-right { display: flex; align-items: center; gap: 24px; }
+.site-header.is-hidden { transform: translateX(-50%) translateY(-140%); }
+.h-pill {
+  display: flex; align-items: center; justify-content: space-between;
+  width: min(500px, calc(100vw - 2 * var(--gutter)));
+  height: 60px; padding: 0 20px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
+}
+/* pill becomes a visible bar only once the page scrolls */
+.site-header.is-solid .h-pill {
+  background: rgba(10, 10, 10, 0.72);
+  border-color: var(--line);
+  backdrop-filter: blur(10px);
+}
+.h-mail { display: grid; place-items: center; width: 32px; height: 32px; color: var(--ink); }
+.h-mail svg { width: 22px; height: 22px; }
+.h-mail:hover, .h-burger:hover { color: var(--white); }
 .h-logo {
   font-family: var(--f-display);
   font-weight: 800;
   font-stretch: 125%;
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: -0.02em;
   color: var(--white);
   line-height: 1;

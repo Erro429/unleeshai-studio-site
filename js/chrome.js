@@ -32,9 +32,11 @@ export function mountHeader() {
   const header = document.createElement('header');
   header.className = 'site-header';
   header.innerHTML = `
-    <a class="h-contact" href="contact.html" data-roll>contact</a>
-    <div class="h-right">
-      <a class="h-logo" href="index.html" aria-label="${BRAND} home">${BRAND}<span class="dot"></span></a>
+    <div class="h-pill">
+      <a class="h-mail" href="contact.html" aria-label="Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 6l10 7L22 6"/></svg>
+      </a>
+      <a class="h-logo" href="index.html" aria-label="${BRAND} home">U<span class="dot"></span></a>
       <button class="h-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     </div>`;
   document.body.prepend(header);
