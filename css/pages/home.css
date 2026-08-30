@@ -342,15 +342,18 @@
 .wl-tile img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; opacity: 0;
+  transform: scale(1.07);
+  transition: opacity 0.45s var(--ease-out), transform 0.55s var(--ease-out);
 }
-.wl-tile img.is-on { opacity: 1; }
+.wl-tile img.is-on { opacity: 1; transform: scale(1); }
 .wl-letter {
   position: absolute; z-index: 2;
   font-family: var(--f-dot); font-weight: 900;
   font-size: clamp(56px, 6vw, 96px); line-height: 1;
-  opacity: 0; transition: opacity 0.35s;
+  opacity: 0; transform: scale(0.7);
+  transition: opacity 0.35s, transform 0.5s var(--ease-out);
 }
-.wl-letter.is-on { opacity: 1; }
+.wl-letter.is-on { opacity: 1; transform: scale(1); }
 
 @media (max-width: 1023px) {
   .wl-col-l .wl-row, .wl-col-r .wl-row { padding: 0 !important; }
@@ -451,10 +454,11 @@
 .bz-theater img {
   position: absolute; left: 50%; top: 50%;
   max-width: 100%; max-height: 100%; width: auto; height: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.08);
   opacity: 0;
+  transition: opacity 0.45s var(--ease-out), transform 0.6s var(--ease-out);
 }
-.bz-theater img.is-on { opacity: 1; }
+.bz-theater img.is-on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
 /* fixed dotted sentinels framing the theater */
 .bz-o, .bz-t {

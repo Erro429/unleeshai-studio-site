@@ -146,7 +146,7 @@ function initWall() {
 
   ScrollTrigger.create({
     trigger: wall, start: 'top top', end: '+=320%',
-    pin: true, scrub: true, anticipatePin: 1,
+    pin: true, scrub: 1, anticipatePin: 1,
     onUpdate: (self) => {
       const s = Math.min(STEPS - 1, Math.floor(self.progress * STEPS));
       if (s !== step) {
@@ -327,7 +327,7 @@ function initField() {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1,
+        trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1.2,
         onUpdate: (self) => {
           const p = self.progress;
           const on = p >= THEATER_START;
