@@ -165,17 +165,19 @@ export function mountFooter() {
         <p>Est. 2026 · ${CITY}</p>
         <p class="f-para" data-reveal-lines>We build digital flagships for brands that refuse to look ordinary: AI-accelerated commercial visuals, motion systems and hand-coded interfaces, all tuned to convert attention into belief.</p>
       </div>` : ''}
+      <div class="f-big">
+        <a class="f-email display" href="mailto:${EMAIL}" data-reveal-lines>${EMAIL}</a>
+        <p class="f-phone">${PHONE}</p>
+        <p class="f-addr mono ink-2">${isContact ? `${CITY}, CA ｜ ${PHONE}` : `94107 · ${CITY}, California`}</p>
+      </div>
       <div class="f-grid">
-        <div class="f-contact">
-          <p><a href="mailto:${EMAIL}" data-roll>${EMAIL}</a> &ensp; ${PHONE}</p>
-          <p class="ink-2">${isContact ? `${CITY}, CA ｜ ${PHONE}` : `94107 · ${CITY}, California`}</p>
-        </div>
         <div class="f-social mono">
           <a href="#" data-roll rel="noopener">Instagram</a>
           <a href="#" data-roll rel="noopener">Threads</a>
           <a href="#" data-roll rel="noopener">Facebook</a>
           <a href="blog.html" data-roll>blog</a>
         </div>
+        <span class="f-mark" aria-hidden="true">©</span>
       </div>
       <div class="f-bottom">
         <span>©</span>
@@ -258,6 +260,9 @@ export function mountPreloader(onDone) {
   tl.to(letterEls, { yPercent: -100, duration: 0.6, ease: 'expo.in', stagger: 0.02 }, short ? '+=0' : '+=0.2')
     .to(pl, { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'power4.inOut' })
     .to(main, { scale: 1, opacity: 1, duration: 1, ease: 'power4.inOut' }, '<')
+    // a leftover transform on <main> would break position:fixed pinning inside it
+    .set(main, { clearProps: 'transform,opacity' })
+    .call(() => ScrollTrigger.refresh())
     .call(finish);
 }
 

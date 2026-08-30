@@ -14,6 +14,7 @@
 
   /* type */
   --f-display: "Archivo", "Inter Tight", sans-serif;
+  --f-dot: "Doto", "Archivo", sans-serif;
   --f-mono: "JetBrains Mono", "Space Mono", monospace;
   --f-body: "Inter", sans-serif;
 
@@ -29,7 +30,7 @@
   /* layout */
   --gutter: clamp(20px, 3vw, 48px);
   --gap: 24px;
-  --section: clamp(120px, 14vw, 240px);
+  --section: clamp(140px, 18vw, 320px);
 
   /* motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);

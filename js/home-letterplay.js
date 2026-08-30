@@ -102,10 +102,10 @@ export function initLetterplay(section) {
   const assemble = () => {
     const w = innerWidth;
     const letterW = letterEls[0].getBoundingClientRect().width || w * 0.09;
-    const total = letterW * LETTERS.length * 1.02;
+    const total = letterW * LETTERS.length * 1.18;
     return letterEls.map((el, i) => {
       const r = el.getBoundingClientRect();
-      const targetX = (w - total) / 2 + i * letterW * 1.02;
+      const targetX = (w - total) / 2 + i * letterW * 1.18;
       const targetY = innerHeight / 2 - r.height / 2;
       const secR = section.getBoundingClientRect();
       return { x: targetX - (r.left - (gsap.getProperty(el, 'x') || 0)), y: targetY - (r.top - secR.top - (gsap.getProperty(el, 'y') || 0)) };
@@ -118,7 +118,7 @@ export function initLetterplay(section) {
     });
   }, null, 3.55);
   tl.to(tagEls, {
-    opacity: 0.25,
+    opacity: 0.4,
     x: () => gsap.utils.random(-30, 30),
     y: () => gsap.utils.random(-30, 30),
     ease: 'none', duration: 0.9,

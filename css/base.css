@@ -6,6 +6,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
 
+html { overflow-x: clip; }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -14,7 +15,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img, video { display: block; max-width: 100%; }
@@ -109,10 +110,23 @@ main { position: relative; }
 .f-meta { margin-bottom: 48px; }
 .f-meta p { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
 .f-para { max-width: 52ch; color: var(--ink-2); margin-top: 16px; font-weight: 300; }
-.f-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); align-items: start; }
-.f-contact { grid-column: 1 / 5; }
-.f-contact p { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; }
-.f-social { grid-column: 5 / 9; display: flex; gap: 24px; }
+.f-big { padding: 32px 0 48px; }
+.f-email {
+  display: inline-block;
+  font-size: clamp(28px, 3.2vw, 52px);
+  text-transform: none; line-height: 1;
+  transition: color var(--d-fast);
+}
+.f-email:hover { color: var(--white); }
+.f-phone { font-size: clamp(18px, 1.8vw, 30px); font-weight: 300; margin-top: 14px; }
+.f-addr { margin-top: 12px; }
+.f-grid { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--gap); }
+.f-social { display: flex; gap: 24px; }
+.f-mark {
+  font-family: var(--f-display); font-weight: 800;
+  font-size: clamp(64px, 8vw, 140px); line-height: 0.8;
+  color: var(--ink); user-select: none;
+}
 .f-bottom {
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
@@ -127,6 +141,10 @@ main { position: relative; }
   overflow: hidden; display: block;
   width: max-content; max-width: 100vw;
   padding: 0.12em 0.2em; margin: -0.12em -0.2em;
+}
+/* centered sections: masks re-center themselves */
+.intro .reveal-line-mask, .who .reveal-line-mask {
+  margin-left: auto; margin-right: auto;
 }
 .reveal-img { overflow: hidden; }
 .reveal-img > img, .reveal-img > video { width: 100%; height: 100%; object-fit: cover; }

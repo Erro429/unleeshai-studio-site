@@ -87,6 +87,14 @@
   text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1;
 }
 .marquee .mq-gloss { font-family: var(--f-mono); font-size: 0.4em; font-weight: 400; color: var(--ink-2); letter-spacing: 0.06em; }
+.marquee .mq-sep { font-family: var(--f-dot); font-weight: 900; font-stretch: 100%; letter-spacing: 0; }
+
+/* dot-matrix display variant: marquee walls, big counters */
+.marquee.mq-dot .mq-item span {
+  font-family: var(--f-dot); font-weight: 900; font-stretch: 100%;
+  text-transform: uppercase; letter-spacing: 0.02em; line-height: 1;
+}
+.dot-type { font-family: var(--f-dot) !important; font-weight: 900 !important; font-stretch: 100% !important; letter-spacing: 0.02em !important; }
 
 /* ---------- typewriter status ---------- */
 .status { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; }

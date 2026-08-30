@@ -2,10 +2,24 @@
 .about-marquees { padding-top: 96px; }
 .about-marquees .marquee { padding: 12px 0; }
 .about-marquees .mq-item span { font-size: 28px; color: var(--ink-2); }
+.about-chip-row {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  padding: 16px var(--gutter);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  font-family: var(--f-mono); font-size: var(--t-label-s); letter-spacing: 0.08em;
+  color: var(--ink-2); text-transform: uppercase;
+}
 
 .about-hero { padding: 64px var(--gutter); }
 .about-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
-.about-video { aspect-ratio: 16 / 9; margin-bottom: 64px; }
+/* reference pattern: centered, restrained video block, not full-bleed */
+.about-video { aspect-ratio: 16 / 9; width: min(52vw, 760px); margin: 48px auto 24px; }
+.about-video-caption {
+  text-align: center; margin: 0 auto 96px;
+  font-family: var(--f-mono); font-size: var(--t-label-s);
+  letter-spacing: 0.08em; color: var(--ink-2); text-transform: uppercase;
+  line-height: 2;
+}
 .about-statement { font-size: clamp(32px, 5vw, 88px); line-height: 0.95; margin-bottom: 32px; }
 .about-manifesto { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; }
 .about-manifesto strong { color: var(--ink); display: block; margin-bottom: 8px; font-weight: 400; }

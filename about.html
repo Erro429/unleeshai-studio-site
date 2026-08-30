@@ -8,7 +8,7 @@
   <meta name="description" content="UNLEESH is an AI-native creative studio committed to the art of subtraction: brand identity, high-end web design, AI visuals and motion.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Doto:wght@700;900&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -19,23 +19,12 @@
 <main>
   <!-- 5.1 double marquee header -->
   <div class="about-marquees">
-    <div class="marquee mq-display" data-speed="60" data-dir="left">
-      <div class="mq-track">
-        <span class="mq-item"><span>UNLEESH CREATIVE STUDIO</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>BRAND STRATEGY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>DIGITAL EXPERIENCE</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>MOTION DESIGN</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-      </div>
-    </div>
-    <div class="marquee mq-display" data-speed="50" data-dir="right">
-      <div class="mq-track">
-        <span class="mq-item"><span>WEB DESIGN</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>VISUAL IDENTITY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>UI / UX</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>COMMERCIAL IMAGERY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-        <span class="mq-item"><span>CREATIVE DIRECTION</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
-      </div>
+    <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left"
+         data-items="UNLEESH CREATIVE STUDIO|BRAND STRATEGY|DIGITAL EXPERIENCE|MOTION DESIGN|AI VISUALS" data-sep="☺"></div>
+    <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right"
+         data-items="WEB DESIGN|VISUAL IDENTITY|UI / UX|COMMERCIAL IMAGERY|CREATIVE DIRECTION" data-sep="☺"></div>
+    <div class="about-chip-row">
+      <span>( BRAND IDENTITY )</span><span>( AI MOTION )</span><span>( HIGH-END IMAGE GEN )</span><span>( DIGITAL CONSULTING )</span>
     </div>
   </div>
 
@@ -50,6 +39,7 @@
     <div class="about-video reveal-img">
       <video src="assets/video/V35.mp4" autoplay muted loop playsinline></video>
     </div>
+    <p class="about-video-caption">DEFINING THE CORE DNA OF BRAND AESTHETICS<br>NIGHT SHIFT AT THE UNLEESH TABLE</p>
     <h2 class="about-statement display" data-reveal-lines>ENGINEERING THE VISUAL CORE OF AMBITIOUS BRANDS</h2>
     <h2 class="about-statement display" data-reveal-lines>UNLEESH IS COMMITTED TO THE ART OF SUBTRACTION.</h2>
     <p class="about-manifesto"><strong>UNLEESH CREATIVE STUDIO</strong>Masters of absolute precision and the discipline of leaving things out.</p>
@@ -57,12 +47,12 @@
 
   <!-- 5.3 years block -->
   <section class="years">
-    <div class="reveal-img"><img src="assets/img/V36.webp" alt="Precision paper cut"></div>
     <div class="years-stat">
       <span class="mono ink-2">Distilling Over</span>
-      <div class="big display"><span class="count" data-target="12">0</span> YEARS</div>
+      <div class="big dot-type"><span class="count" data-target="12">0</span> YEARS</div>
       <span class="mono ink-2">Total Digital Shift</span>
     </div>
+    <div class="reveal-img"><img src="assets/img/V36.webp" alt="Precision paper cut"></div>
   </section>
 
   <!-- 5.4 four service cards, horizontal scroll -->
@@ -95,13 +85,13 @@
     </div>
   </div>
 
-  <!-- 5.5 marquee wall -->
+  <!-- 5.5 marquee wall (dot-matrix face, ☺ separators, one SERVICE quirk row) -->
   <div class="mq-wall">
-    <div class="marquee mq-display" data-speed="60" data-dir="left"><div class="mq-track"><span class="mq-item"><span>BRAND IDENTITY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>WEB PLANNING</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 10-8 10-8-10z"/></svg></span><span class="mq-item"><span>WEB DESIGN</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.8 7.2L21.5 6.5 16 12l5.5 5.5-7.7-1.7L12 23l-1.8-7.2L2.5 17.5 8 12 2.5 6.5l7.7 1.7z"/></svg></span><span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M7 12h10"/></svg></span><span class="mq-item"><span>AI MOTION</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span><span class="mq-item"><span>DIGITAL &amp; VISUAL</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span></div></div>
-    <div class="marquee mq-display" data-speed="50" data-dir="right"><div class="mq-track"><span class="mq-item"><span>BRAND IDENTITY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>WEB PLANNING</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 10-8 10-8-10z"/></svg></span><span class="mq-item"><span>WEB DESIGN</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.8 7.2L21.5 6.5 16 12l5.5 5.5-7.7-1.7L12 23l-1.8-7.2L2.5 17.5 8 12 2.5 6.5l7.7 1.7z"/></svg></span><span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M7 12h10"/></svg></span><span class="mq-item"><span>AI MOTION</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span><span class="mq-item"><span>DIGITAL &amp; VISUAL</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span></div></div>
-    <div class="marquee mq-display" data-speed="70" data-dir="left"><div class="mq-track"><span class="mq-item"><span>SERVICE</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>SERVICE</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>SERVICE</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>SERVICE</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span></div></div>
-    <div class="marquee mq-display" data-speed="45" data-dir="right"><div class="mq-track"><span class="mq-item"><span>BRAND IDENTITY</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 10-8 10-8-10z"/></svg></span><span class="mq-item"><span>WEB PLANNING</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>WEB DESIGN</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M7 12h10"/></svg></span><span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.8 7.2L21.5 6.5 16 12l5.5 5.5-7.7-1.7L12 23l-1.8-7.2L2.5 17.5 8 12 2.5 6.5l7.7 1.7z"/></svg></span><span class="mq-item"><span>AI MOTION</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span><span class="mq-item"><span>DIGITAL &amp; VISUAL</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span></div></div>
-    <div class="marquee mq-display" data-speed="65" data-dir="left"><div class="mq-track"><span class="mq-item"><span>BRAND IDENTITY</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span><span class="mq-item"><span>WEB PLANNING</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 10-8 10-8-10z"/></svg></span><span class="mq-item"><span>WEB DESIGN</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.8 7.2L21.5 6.5 16 12l5.5 5.5-7.7-1.7L12 23l-1.8-7.2L2.5 17.5 8 12 2.5 6.5l7.7 1.7z"/></svg></span><span class="mq-item"><span>AI VISUALS</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M7 12h10"/></svg></span><span class="mq-item"><span>AI MOTION</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span><span class="mq-item"><span>DIGITAL &amp; VISUAL</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span></div></div>
+    <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+    <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+    <div class="marquee mq-display mq-dot" data-speed="70" data-dir="left" data-items="SERVICE|SERVICE|AI VISUALS|SERVICE|SERVICE" data-sep="☺"></div>
+    <div class="marquee mq-display mq-dot" data-speed="45" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+    <div class="marquee mq-display mq-dot" data-speed="65" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
   </div>
 
   <!-- 5.6 six services accordion -->

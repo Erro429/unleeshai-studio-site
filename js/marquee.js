@@ -5,6 +5,15 @@ export function initMarquees(scope = document) {
   scope.querySelectorAll('.marquee').forEach((mq) => {
     if (mq.dataset.mqInit) return;
     mq.dataset.mqInit = '1';
+    // data-items="A|B|C" builds the track automatically (data-sep glyph between items)
+    if (mq.dataset.items && !mq.querySelector('.mq-track')) {
+      const sep = mq.dataset.sep || '☺';
+      const track = document.createElement('div');
+      track.className = 'mq-track';
+      track.innerHTML = mq.dataset.items.split('|').map((t) =>
+        `<span class="mq-item"><span>${t.trim()}</span><span class="mq-sep">${sep}</span></span>`).join('');
+      mq.appendChild(track);
+    }
     const track = mq.querySelector('.mq-track');
     if (!track) return;
 
