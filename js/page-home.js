@@ -33,8 +33,79 @@ export function init() {
   if (hero) initHero(hero);
 
   initField();
+  initRoller();
+  initReel();
   initSectorsArc();
   initWorksParallax();
+}
+
+/* capability roller: the stack scrolls through a fixed focus line at center;
+   each line sharpens as it approaches the middle of the viewport */
+function initRoller() {
+  const section = document.querySelector('.roller');
+  if (!section) return;
+  const track = section.querySelector('.rl-track');
+  const lines = [...track.querySelectorAll('span')];
+
+  const focus = () => {
+    const mid = innerHeight / 2;
+    lines.forEach((l) => {
+      const r = l.getBoundingClientRect();
+      const d = Math.abs(r.top + r.height / 2 - mid) / (innerHeight / 2);
+      const t = Math.min(d * 1.6, 1);
+      l.style.filter = `blur(${(t * 7).toFixed(1)}px)`;
+      l.style.opacity = (1 - t * 0.75).toFixed(2);
+    });
+  };
+
+  if (reducedMotion) {
+    lines.forEach((l) => { l.style.filter = 'none'; l.style.opacity = 1; });
+    return;
+  }
+
+  const travel = () => track.scrollHeight / 2;
+  gsap.fromTo(track, { y: () => travel() }, {
+    y: () => -travel(), ease: 'none',
+    scrollTrigger: {
+      trigger: section, start: 'top top', end: '+=220%',
+      pin: true, scrub: 1, anticipatePin: 1, invalidateOnRefresh: true,
+      onUpdate: focus,
+    },
+  });
+  focus();
+}
+
+/* showreel: scenes flip through the centered frame as the section scrubs */
+const REEL_IMGS = ['V40M', 'V41M', 'V42M', 'V43M', 'V44M', 'V45M', 'V46M', 'V47M', 'V48M', 'V49M'];
+
+function initReel() {
+  const section = document.querySelector('.reel');
+  if (!section) return;
+  const frame = section.querySelector('.reel-frame');
+  const imgs = REEL_IMGS.map((id, i) => {
+    const img = document.createElement('img');
+    img.src = `assets/img/${id}.webp`;
+    img.alt = '';
+    if (i === 0) img.classList.add('is-on');
+    frame.appendChild(img);
+    return img;
+  });
+
+  if (reducedMotion) return;
+
+  let current = 0;
+  ScrollTrigger.create({
+    trigger: section, start: 'top top', end: '+=160%',
+    pin: true, scrub: true, anticipatePin: 1,
+    onUpdate: (self) => {
+      const idx = Math.min(imgs.length - 1, Math.floor(self.progress * imgs.length));
+      if (idx !== current) {
+        imgs[current].classList.remove('is-on');
+        imgs[idx].classList.add('is-on');
+        current = idx;
+      }
+    },
+  });
 }
 
 /* THE SECTORS: two rings of small work tiles orbiting the heading —
@@ -69,15 +140,9 @@ function initSectorsArc() {
 
   if (reducedMotion) return;
 
-  // continuous counter-rotating spin
+  // continuous counter-rotating spin, independent of scroll
   gsap.to(outer, { rotation: 360, duration: 90, repeat: -1, ease: 'none' });
   gsap.to(inner, { rotation: -360, duration: 70, repeat: -1, ease: 'none' });
-
-  // scroll adds a visible extra turn while the section passes
-  gsap.to([outer, inner], {
-    rotation: '+=70', ease: 'none',
-    scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 },
-  });
 
   // heading settles in
   gsap.from(section.querySelector('.sa-title'), {

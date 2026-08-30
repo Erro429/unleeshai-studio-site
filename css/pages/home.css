@@ -232,6 +232,49 @@
 .field-down.is-visible { opacity: 1; }
 .field-down .chev { display: block; font-size: 16px; line-height: 1; margin-bottom: 4px; }
 
+/* ---- capability roller: blurred stack, centered line in focus ---- */
+.roller {
+  position: relative; z-index: 5; background: var(--bg);
+  height: 100vh; overflow: clip;
+  display: flex; align-items: center; justify-content: center;
+}
+.rl-track { will-change: transform; text-align: center; }
+.rl-track span {
+  display: block;
+  font-size: clamp(26px, 3.4vw, 48px); font-weight: 300;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  line-height: 2.1; color: var(--ink);
+  will-change: filter, opacity;
+}
+.rl-chip {
+  position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%);
+  font-family: var(--f-mono); font-size: var(--t-label-s);
+  letter-spacing: 0.1em; color: var(--ink-2);
+}
+
+/* ---- showreel frame: scenes flip through a centered panel ---- */
+.reel {
+  position: relative; z-index: 5; background: var(--bg);
+  height: 100vh; overflow: clip;
+  display: flex; align-items: center; justify-content: center;
+}
+.reel-frame {
+  position: relative;
+  width: min(46vw, 640px); aspect-ratio: 16 / 9;
+  border: 1px solid var(--line); background: var(--bg-2);
+  overflow: hidden;
+}
+.reel-frame img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0;
+}
+.reel-frame img.is-on { opacity: 1; }
+.reel-cap {
+  position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%);
+  font-family: var(--f-mono); font-size: var(--t-label-s);
+  letter-spacing: 0.1em; color: var(--ink-2);
+}
+
 /* ---- THE SECTORS: orbiting rings of work tiles around the heading ---- */
 .sectors-arc {
   position: relative; z-index: 5; background: var(--bg);
@@ -278,8 +321,9 @@
 .works-state .reveal-line-mask { margin-left: auto; margin-right: auto; }
 .works-state .ws-sub { font-weight: 300; color: var(--ink-2); letter-spacing: 0.2em; font-size: 13px; text-transform: uppercase; }
 
-/* ---- selected works: transparent so cards float over the pinned statement ---- */
-.works { position: relative; z-index: 6; background: transparent; margin-top: -55vh; }
+/* ---- selected works: transparent so cards float over the pinned statement;
+   the top padding gives the statement a full readable dwell before cards arrive ---- */
+.works { position: relative; z-index: 6; background: transparent; padding-top: 60vh; }
 .works-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); row-gap: 160px; }
 .work-card { position: relative; display: block; }
 .work-card.w7 { grid-column: span 7; }
