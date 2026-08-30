@@ -32,27 +32,8 @@ export function init() {
   const hero = document.querySelector('.hero');
   if (hero) initHero(hero);
 
-  initHeroDarken(hero);
   initField();
   initWorksParallax();
-}
-
-/* hero darkens under the field as you scroll the first stretch */
-function initHeroDarken(hero) {
-  if (!hero) return;
-  const dark = document.createElement('div');
-  dark.className = 'hero-dark';
-  hero.appendChild(dark);
-  if (reducedMotion) { dark.style.opacity = 0.9; return; }
-  gsap.to(dark, {
-    opacity: 1, ease: 'none',
-    scrollTrigger: { start: 0, end: () => innerHeight * 1.2, scrub: true },
-  });
-  // hero UI clears out faster than the backdrop so the field reads clean
-  gsap.to(hero.querySelector('.hero-ui'), {
-    opacity: 0, ease: 'none',
-    scrollTrigger: { start: 0, end: () => innerHeight * 0.8, scrub: true },
-  });
 }
 
 function initField() {
