@@ -168,10 +168,10 @@ export function initStatus(scope = document) {
 export function initCursorDot() {
   if (reducedMotion || matchMedia('(pointer: coarse)').matches) return;
 
-  const N = 64;        // dot pool
+  const N = 128;       // dot pool
   const SIZE = 5;      // uniform pixel size
   const GRID = 7;      // drops snap to a coarse grid → dot-matrix feel
-  const STEP = 4;      // min travel (px) between drops
+  const STEP = 2;      // min travel (px) between drops
 
   const pool = [];
   for (let i = 0; i < N; i++) {
