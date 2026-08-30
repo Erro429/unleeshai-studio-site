@@ -251,47 +251,86 @@
 .field-down.is-visible { opacity: 1; }
 .field-down .chev { display: block; font-size: 16px; line-height: 1; margin-bottom: 4px; }
 
-/* ---- capability roller: blurred stack, centered line in focus ---- */
-.roller {
+/* ---- WORD WALL: pinned stage under the hero ---- */
+.wall {
   position: relative; z-index: 5; background: var(--bg);
   height: 100vh; overflow: clip;
-  display: flex; align-items: center; justify-content: center;
 }
-.rl-track { will-change: transform; text-align: center; }
-.rl-track span {
-  display: block;
-  font-size: clamp(26px, 3.4vw, 48px); font-weight: 300;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  line-height: 2.1; color: var(--ink);
-  will-change: filter, opacity;
+.wl-fog {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.2; filter: saturate(0);
+  pointer-events: none;
 }
-.rl-chip {
-  position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%);
+.wl-statement {
+  position: absolute; top: 12%; left: 50%; transform: translateX(-50%);
   font-family: var(--f-mono); font-size: var(--t-label-s);
-  letter-spacing: 0.1em; color: var(--ink-2);
+  letter-spacing: 0.08em; color: var(--ink-2); white-space: nowrap;
+  z-index: 3;
 }
+.wl-col { position: absolute; top: 14%; bottom: 12%; z-index: 2; }
+.wl-col-l { left: 4%; }
+.wl-col-r { right: 4%; text-align: right; }
+.wl-row { position: relative; margin-bottom: 2px; }
+.wl-word {
+  font-size: clamp(17px, 1.9vw, 27px); font-weight: 300;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ink-3); opacity: 0.75; line-height: 1.75;
+  transition: color 0.4s, opacity 0.4s;
+  white-space: nowrap;
+}
+.wl-row.is-on .wl-word { color: var(--ink); opacity: 1; }
+.wl-chip {
+  display: inline-block; margin: 0 14px;
+  font-family: var(--f-mono); font-size: var(--t-label-s);
+  letter-spacing: 0.06em; color: var(--ink-2); text-transform: none;
+  opacity: 0; transition: opacity 0.4s;
+  white-space: nowrap; vertical-align: middle;
+}
+.wl-row.is-on .wl-chip { opacity: 1; }
+/* staggered arc indents */
+.wl-col-l .wl-row:nth-child(2)  { padding-left: 2.2em; }
+.wl-col-l .wl-row:nth-child(3)  { padding-left: 4.0em; }
+.wl-col-l .wl-row:nth-child(4)  { padding-left: 5.4em; }
+.wl-col-l .wl-row:nth-child(5)  { padding-left: 6.4em; }
+.wl-col-l .wl-row:nth-child(6)  { padding-left: 7.0em; }
+.wl-col-l .wl-row:nth-child(7)  { padding-left: 7.0em; }
+.wl-col-l .wl-row:nth-child(8)  { padding-left: 6.4em; }
+.wl-col-l .wl-row:nth-child(9)  { padding-left: 5.4em; }
+.wl-col-l .wl-row:nth-child(10) { padding-left: 4.0em; }
+.wl-col-l .wl-row:nth-child(11) { padding-left: 2.2em; }
+.wl-col-r .wl-row:nth-child(2)  { padding-right: 2.2em; }
+.wl-col-r .wl-row:nth-child(3)  { padding-right: 4.0em; }
+.wl-col-r .wl-row:nth-child(4)  { padding-right: 5.4em; }
+.wl-col-r .wl-row:nth-child(5)  { padding-right: 6.4em; }
+.wl-col-r .wl-row:nth-child(6)  { padding-right: 7.0em; }
+.wl-col-r .wl-row:nth-child(7)  { padding-right: 7.0em; }
+.wl-col-r .wl-row:nth-child(8)  { padding-right: 6.4em; }
+.wl-col-r .wl-row:nth-child(9)  { padding-right: 5.4em; }
+.wl-col-r .wl-row:nth-child(10) { padding-right: 4.0em; }
+.wl-col-r .wl-row:nth-child(11) { padding-right: 2.2em; }
 
-/* ---- showreel frame: scenes flip through a centered panel ---- */
-.reel {
-  position: relative; z-index: 5; background: var(--bg);
-  height: 100vh; overflow: clip;
-  display: flex; align-items: center; justify-content: center;
+.wl-tile {
+  position: absolute; top: 50%; left: 50%;
+  width: 240px; height: 148px; margin: -74px 0 0 -120px;
+  overflow: hidden; z-index: 3; background: var(--bg-2);
 }
-.reel-frame {
-  position: relative;
-  width: min(46vw, 640px); aspect-ratio: 16 / 9;
-  border: 1px solid var(--line); background: var(--bg-2);
-  overflow: hidden;
-}
-.reel-frame img {
+.wl-tile img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; opacity: 0;
 }
-.reel-frame img.is-on { opacity: 1; }
-.reel-cap {
-  position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%);
-  font-family: var(--f-mono); font-size: var(--t-label-s);
-  letter-spacing: 0.1em; color: var(--ink-2);
+.wl-tile img.is-on { opacity: 1; }
+.wl-letter {
+  position: absolute; z-index: 2;
+  font-family: var(--f-dot); font-weight: 900;
+  font-size: clamp(56px, 6vw, 96px); line-height: 1;
+  opacity: 0; transition: opacity 0.35s;
+}
+.wl-letter.is-on { opacity: 1; }
+
+@media (max-width: 1023px) {
+  .wl-col-l .wl-row, .wl-col-r .wl-row { padding: 0 !important; }
+  .wl-word { font-size: 13px; }
+  .wl-chip { display: none; }
 }
 
 /* ---- THE SECTORS: orbiting rings of work tiles around the heading ---- */
