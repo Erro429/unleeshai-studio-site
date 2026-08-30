@@ -222,12 +222,25 @@ function initField() {
     field.appendChild(el);
   });
 
-  // tumbling photo cubes around the dotted word band
+  // dotted words converge from both sides as the band region scrolls through
+  const band = field.querySelector('.fd-band2');
+  if (band && !reducedMotion) {
+    gsap.fromTo(band.querySelector('.fb-l'), { x: '-75vw' }, {
+      x: '6vw', ease: 'none',
+      scrollTrigger: { trigger: band, start: 'top bottom', end: 'bottom top', scrub: 1 },
+    });
+    gsap.fromTo(band.querySelector('.fb-r'), { x: '75vw' }, {
+      x: '-6vw', ease: 'none',
+      scrollTrigger: { trigger: band, start: 'top bottom', end: 'bottom top', scrub: 1 },
+    });
+  }
+
+  // tumbling photo cubes; the big one rolls in from the right into the band gap
   const CUBES = [
-    { top: 42, left: 30, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13 },
-    { top: 57, left: 70, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
+    { top: 40, left: 42, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13, enter: true },
+    { top: 60, left: 72, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
   ];
-  CUBES.forEach(({ top, left, size, faces, sx, sy }) => {
+  CUBES.forEach(({ top, left, size, faces, sx, sy, enter }) => {
     const wrap = document.createElement('div');
     wrap.className = 'fd-cube';
     wrap.style.top = top + '%';
@@ -247,10 +260,20 @@ function initField() {
       const core = wrap.querySelector('.fd-cube-core');
       gsap.to(core, { rotationX: 360, duration: Math.abs(360 / sx) * 2, repeat: -1, ease: 'none' });
       gsap.to(core, { rotationY: sx > 0 ? 360 : -360, duration: Math.abs(360 / sy) * 2, repeat: -1, ease: 'none' });
-      gsap.to(wrap, {
-        y: -120, ease: 'none',
-        scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'bottom top', scrub: true },
-      });
+      if (enter) {
+        // rolls in from off-screen right into the gap between the converging words
+        gsap.fromTo(wrap,
+          { x: '80vw', y: '30vh', rotation: 24 },
+          {
+            x: 0, y: 0, rotation: 0, ease: 'none',
+            scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'center 45%', scrub: 1 },
+          });
+      } else {
+        gsap.to(wrap, {
+          y: -120, ease: 'none',
+          scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'bottom top', scrub: true },
+        });
+      }
     }
   });
 
