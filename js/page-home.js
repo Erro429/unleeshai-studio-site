@@ -227,8 +227,8 @@ function initField() {
 
   // tumbling photo cubes; the hero cube runs a far-to-near journey on the timeline
   const CUBES = [
-    { top: 36, left: 42, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13, hero: true },
-    { top: 62, left: 74, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
+    { top: 30, left: 38, size: 340, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13, hero: true },
+    { top: 64, left: 76, size: 130, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
   ];
   let heroCube = null;
   CUBES.forEach(({ top, left, size, faces, sx, sy, hero }) => {
@@ -266,29 +266,65 @@ function initField() {
   // corner letters rise, ghost words dim through the crossing
   const ghostEls = [...field.querySelectorAll('.fd-ghost')];
   if (zone && !reducedMotion && innerWidth >= 1024) {
+    const line = zone.querySelector('.bz-line');
+
+    // per-glyph decode: letters materialize from scrambled dot-matrix characters
+    const POOL = 'UNLESHDOTMXKW0247';
+    const chars = [];
+    line.querySelectorAll('span').forEach((word) => {
+      const text = word.textContent;
+      word.textContent = '';
+      [...text].forEach((ch) => {
+        const c = document.createElement('b');
+        c.style.cssText = 'display:inline-block;font:inherit;';
+        c.dataset.final = ch;
+        c.textContent = ch;
+        word.appendChild(c);
+        chars.push(c);
+      });
+    });
+    let decoded = false;
+    const decode = () => {
+      if (decoded) return;
+      decoded = true;
+      chars.forEach((c, i) => {
+        const flips = 3 + Math.floor(Math.random() * 3);
+        let n = 0;
+        c.style.opacity = 0;
+        setTimeout(() => {
+          c.style.opacity = 1;
+          const iv = setInterval(() => {
+            n++;
+            c.textContent = n >= flips ? c.dataset.final : POOL[Math.floor(Math.random() * POOL.length)];
+            if (n >= flips) clearInterval(iv);
+          }, 65);
+        }, i * 22);
+      });
+    };
+
+    // decode fires when the line itself becomes visible, not the zone
+    ScrollTrigger.create({ trigger: line, start: 'top 94%', once: true, onEnter: decode });
+
     const tl = gsap.timeline({
       scrollTrigger: { trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1 },
     });
-    // stream A enters from the left moving right; B from the right moving left;
-    // they pass through each other mid-zone (glyphs genuinely overlap)
-    tl.fromTo(zone.querySelector('.bz-a'), { x: '-95vw' }, { x: '15vw', ease: 'none' }, 0)
-      .fromTo(zone.querySelector('.bz-b'), { x: '95vw' }, { x: '-115vw', ease: 'none' }, 0);
-    // cube: far-to-near journey, descending across the stream baseline
+    // one line, slow left drift under scroll (it materializes in place)
+    tl.fromTo(line, { x: '12vw' }, { x: '-34vw', ease: 'none' }, 0);
+    // cube grows in place at center while tumbling; text passes behind it
     if (heroCube) {
       tl.fromTo(heroCube,
-        { scale: 0.15, x: '7vw', y: '-16vh', autoAlpha: 0.85 },
-        { scale: 1, x: 0, y: '34vh', autoAlpha: 1, ease: 'none' }, 0);
+        { scale: 0.1, y: '-4vh' },
+        { scale: 1.3, y: '10vh', ease: 'none' }, 0);
     }
-    // corner letters rise from the bottom edges, staggered
-    tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 130 }, { yPercent: -40, ease: 'none' }, 0.05)
-      .fromTo(zone.querySelector('.bz-cr'), { yPercent: 150 }, { yPercent: -20, ease: 'none' }, 0.25);
-    // ghost words dim while the crossing owns the stage, then return
+    // stray brand letters rise from the bottom corners, staggered
+    tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 130 }, { yPercent: -60, ease: 'none' }, 0)
+      .fromTo(zone.querySelector('.bz-cr'), { yPercent: 160 }, { yPercent: -20, ease: 'none' }, 0.3);
+    // ghost words hand the stage over during the line's reign, then return
     tl.to(ghostEls, { opacity: 0.14, duration: 0.18 }, 0.22)
       .to(ghostEls, { opacity: 0.55, duration: 0.18 }, 0.78);
   } else if (zone) {
-    // static composed state: both streams visible, cube at rest
-    gsap.set(zone.querySelector('.bz-a'), { x: '-30vw' });
-    gsap.set(zone.querySelector('.bz-b'), { x: '-10vw' });
+    // static composed state
+    gsap.set(zone.querySelector('.bz-line'), { x: '-8vw' });
     gsap.set(zone.querySelectorAll('.bz-corner'), { yPercent: -20 });
   }
 
