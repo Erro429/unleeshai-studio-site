@@ -1,0 +1,65 @@
+/* UNLEESH — labs */
+.lab-head { padding: 160px var(--gutter) 48px; }
+.lab-head h1 { font-size: var(--t-h1); }
+.lab-head .lh-sub { font-family: var(--f-display); font-weight: 800; font-stretch: 125%; font-size: 24px; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; margin: 24px 0; }
+.lab-head .lh-row {
+  display: flex; justify-content: space-between;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 12px 0; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em;
+}
+.lab-head .lh-gloss { margin-top: 16px; font-weight: 300; font-size: 18px; color: var(--ink-2); }
+
+.lab-filters { display: flex; gap: 32px; padding: 32px var(--gutter); flex-wrap: wrap; }
+.lab-filters button {
+  font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-2); padding-bottom: 6px;
+  border-bottom: 1px solid transparent; transition: color var(--d-fast);
+}
+.lab-filters button:hover { color: var(--ink); }
+.lab-filters button.is-active { color: var(--ink); border-bottom-color: var(--ink); }
+
+.lab-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--gap); row-gap: 80px;
+  padding: 48px var(--gutter) var(--section);
+}
+.lab-card { display: flex; flex-direction: column; gap: 8px; }
+.lab-card .lc-media { overflow: hidden; cursor: pointer; }
+.lab-card:nth-child(odd) .lc-media { aspect-ratio: 4 / 5; }
+.lab-card:nth-child(even) .lc-media { aspect-ratio: 1 / 1; }
+.lab-card .lc-media img, .lab-card .lc-media video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+.lab-card .lc-media:hover img, .lab-card .lc-media:hover video { transform: scale(1.05); }
+.lab-card h3 { font-family: var(--f-mono); font-weight: 400; font-stretch: 100%; font-size: var(--t-label-l); letter-spacing: 0.06em; margin-top: 8px; }
+.lab-card .lc-date { font-family: var(--f-mono); font-size: var(--t-label-s); letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; }
+.lab-card .lc-cat { font-weight: 300; font-size: 12px; color: var(--ink-2); }
+.lab-card .lc-view { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: none; width: fit-content; position: relative; }
+.lab-card .lc-view::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform var(--d-fast) var(--ease-out); }
+.lab-card .lc-view:hover::after { transform: scaleX(1); }
+.lab-card .lc-disc { font-family: var(--f-mono); font-size: 10px; color: var(--ink-3); line-height: 1.5; }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 940;
+  background: rgba(3, 3, 3, 0.96); backdrop-filter: blur(8px);
+  display: grid; place-items: center;
+  opacity: 0; visibility: hidden;
+}
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox .lb-media { max-width: 90vw; max-height: 90vh; }
+.lightbox .lb-media img, .lightbox .lb-media video { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+.lightbox button { position: absolute; color: var(--ink-2); transition: color var(--d-fast); }
+.lightbox button:hover { color: var(--white); }
+.lightbox .lb-close { top: 32px; right: 32px; } .lightbox .lb-close svg { width: 32px; height: 32px; }
+.lightbox .lb-link { bottom: 32px; right: 32px; } .lightbox .lb-link svg { width: 24px; height: 24px; }
+.lightbox .lb-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-next { right: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-prev svg, .lightbox .lb-next svg { width: 40px; height: 40px; }
+.lightbox .lb-prev svg rect, .lightbox .lb-next svg rect { display: none; }
+.lightbox .lb-toast {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.1em;
+  color: var(--ink); opacity: 0;
+}
+
+@media (max-width: 1023px) { .lab-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) { .lab-grid { grid-template-columns: 1fr; } }

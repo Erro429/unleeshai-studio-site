@@ -1,0 +1,42 @@
+/* UNLEESH — design tokens */
+:root {
+  /* colour */
+  --bg: #030303;
+  --bg-2: #0a0a0a;
+  --bg-3: #111111;
+  --ink: #ededed;
+  --ink-2: #9a9a9a;
+  --ink-3: #5c5c5c;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.28);
+  --white: #ffffff;
+  --error: #ff4d4d;
+
+  /* type */
+  --f-display: "Archivo", "Inter Tight", sans-serif;
+  --f-mono: "JetBrains Mono", "Space Mono", monospace;
+  --f-body: "Inter", sans-serif;
+
+  --t-hero: clamp(96px, 18vw, 320px);
+  --t-h1: clamp(56px, 9vw, 160px);
+  --t-h2: clamp(28px, 3.6vw, 56px);
+  --t-h3: clamp(20px, 2.2vw, 32px);
+  --t-body: clamp(15px, 1.1vw, 17px);
+  --t-label-s: 11px;
+  --t-label: 12px;
+  --t-label-l: 13px;
+
+  /* layout */
+  --gutter: clamp(20px, 3vw, 48px);
+  --gap: 24px;
+  --section: clamp(120px, 14vw, 240px);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --d-fast: 0.4s;
+  --d-base: 0.8s;
+  --d-slow: 1.2s;
+  --d-curtain: 1s;
+}

@@ -1,0 +1,67 @@
+/* UNLEESH — contact */
+.ct-head { padding: 160px var(--gutter) 64px; }
+.ct-head .grid-12 { row-gap: 24px; align-items: start; }
+.ct-lets { grid-column: 1 / 7; font-size: var(--t-hero); line-height: 0.85; }
+.ct-label { grid-column: 7 / 13; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.1em; }
+.ct-sub { grid-column: 7 / 13; font-family: var(--f-display); font-weight: 800; font-stretch: 125%; font-size: 24px; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.15; }
+.ct-talk { grid-column: 2 / 9; font-size: var(--t-hero); line-height: 0.85; }
+.ct-start { grid-column: 9 / 13; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.1em; display: flex; align-items: center; gap: 12px; }
+.ct-start svg { width: 24px; height: 24px; }
+.ct-gloss { grid-column: 1 / 5; font-weight: 300; font-size: 18px; color: var(--ink-2); }
+.ct-pipes { grid-column: 5 / 13; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.1em; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 0; }
+
+.ct-form { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding: 64px var(--gutter) var(--section); }
+.ct-form .cf-side { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; }
+.cf-field { margin-bottom: 36px; }
+.cf-field label { display: block; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+.cf-field input[type="text"], .cf-field input[type="email"], .cf-field input[type="tel"], .cf-field textarea, .cf-field select {
+  width: 100%; background: var(--bg-2); border: 0; border-bottom: 1px solid var(--line);
+  color: var(--ink); font-family: var(--f-body); font-size: 16px;
+  height: 56px; padding: 0 16px; outline: none;
+  transition: border-color var(--d-fast);
+}
+.cf-field textarea { height: auto; min-height: 140px; padding: 16px; resize: vertical; }
+.cf-field input:focus, .cf-field textarea:focus, .cf-field select:focus { border-bottom-color: var(--line-strong); }
+.cf-field.is-error input, .cf-field.is-error textarea { border-bottom-color: var(--error); }
+.cf-field .cf-err {
+  display: block; overflow: hidden; height: 0;
+  font-family: var(--f-mono); font-size: var(--t-label-s); color: var(--error);
+  letter-spacing: 0.06em; transition: height 0.3s var(--ease-out); padding-top: 0;
+}
+.cf-field.is-error .cf-err { height: 22px; padding-top: 6px; }
+.cf-checks { display: flex; flex-wrap: wrap; gap: 12px; }
+.cf-checks label {
+  display: inline-flex; align-items: center; gap: 8px; margin: 0;
+  padding: 10px 20px; border: 1px solid var(--line); border-radius: 999px;
+  cursor: pointer; transition: all var(--d-fast);
+}
+.cf-checks input { display: none; }
+.cf-checks label:has(input:checked) { background: var(--white); color: var(--bg); border-color: var(--white); }
+.cf-badge { font-family: var(--f-mono); font-size: var(--t-label-s); color: var(--ink-2); margin-left: 12px; opacity: 0; transition: opacity var(--d-fast); }
+.cf-badge.is-visible { opacity: 1; }
+.cf-submit {
+  width: 100%; height: 56px; border: 1px solid var(--line-strong);
+  font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.1em;
+  text-transform: uppercase; transition: all var(--d-fast);
+}
+.cf-submit:hover { background: var(--white); color: var(--bg); }
+
+.ct-modal {
+  position: fixed; inset: 0; z-index: 960; display: grid; place-items: center;
+  background: rgba(3, 3, 3, 0.8); opacity: 0; visibility: hidden; transition: opacity 0.3s;
+}
+.ct-modal.is-open { opacity: 1; visibility: visible; }
+.ct-modal .cm-box {
+  width: 320px; min-height: 200px; background: var(--bg); border: 1px solid var(--line-strong);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  padding: 32px; text-align: center;
+}
+.ct-modal svg { width: 48px; height: 48px; }
+.ct-modal .cm-title { font-size: 32px; }
+.ct-modal .cm-sub { font-weight: 300; color: var(--ink-2); font-size: 14px; }
+.ct-modal .cm-close { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; border: 1px solid var(--line); padding: 10px 24px; }
+
+@media (max-width: 1023px) {
+  .ct-lets, .ct-talk, .ct-label, .ct-sub, .ct-start, .ct-gloss, .ct-pipes { grid-column: 1 / -1; }
+  .ct-form { grid-template-columns: 1fr; }
+}

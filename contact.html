@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030303">
+  <title>Contact — UNLEESH Studio</title>
+  <meta name="description" content="Start a conversation about your next digital transformation with UNLEESH studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body data-page="contact">
+
+<main>
+  <!-- 9.1 kinetic header -->
+  <header class="ct-head">
+    <div class="grid-12">
+      <h1 class="ct-lets display" data-reveal-lines>LET'S</h1>
+      <span class="ct-label mono">CONTACT</span>
+      <p class="ct-sub" data-reveal-lines>ABOUT YOUR NEXT BIG<br>DIGITAL TRANSFORMATION</p>
+      <h1 class="ct-talk display" data-reveal-lines>TALK</h1>
+      <span class="ct-start mono">START CONVERSATION <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span>
+      <span class="ct-gloss">（ Contact Us ）</span>
+      <span class="ct-pipes">VISION | EXPERIENCE | EXECUTION</span>
+    </div>
+  </header>
+
+  <!-- 9.2 form -->
+  <section class="ct-form">
+    <div class="cf-side">
+      <p>EVERY PROJECT BEGINS WITH A PRECISE QUESTION.</p>
+      <p style="margin-top:16px">TELL US YOURS.</p>
+    </div>
+    <form novalidate>
+      <div class="cf-field">
+        <label for="cf-name">Name *</label>
+        <input type="text" id="cf-name" name="name" required>
+        <span class="cf-err">Please fill in your name.</span>
+      </div>
+      <div class="cf-field">
+        <label for="cf-email">Email *</label>
+        <input type="email" id="cf-email" name="email" required>
+        <span class="cf-err">Please fill in a valid email.</span>
+      </div>
+      <div class="cf-field">
+        <label for="cf-phone">Phone *</label>
+        <input type="tel" id="cf-phone" name="phone" required>
+        <span class="cf-err">Please fill in your phone number.</span>
+      </div>
+      <div class="cf-field">
+        <label for="cf-company">Company ( optional )</label>
+        <input type="text" id="cf-company" name="company">
+      </div>
+      <div class="cf-field">
+        <label for="cf-details">Project Details *</label>
+        <textarea id="cf-details" name="details" rows="5" required></textarea>
+        <span class="cf-err">Please provide some details.</span>
+      </div>
+      <div class="cf-field">
+        <label>Services You Need</label>
+        <div class="cf-checks">
+          <label><input type="checkbox" name="svc" value="web">Web Design</label>
+          <label><input type="checkbox" name="svc" value="brand">Brand Identity</label>
+          <label><input type="checkbox" name="svc" value="image">Commercial Image Gen</label>
+          <label><input type="checkbox" name="svc" value="motion">AI Motion</label>
+        </div>
+      </div>
+      <div class="cf-field">
+        <label for="cf-budget">Budget Range<span class="cf-badge">( SELECTED )</span></label>
+        <select id="cf-budget" name="budget">
+          <option value="">Choose a range</option>
+          <option>Under $5K</option>
+          <option>$5K – $15K</option>
+          <option>$15K – $40K</option>
+          <option>$40K – $100K</option>
+          <option>$100K+</option>
+        </select>
+      </div>
+      <div class="cf-field">
+        <label for="cf-captcha"><span class="cap-q">1 + 9 =</span> ( Captcha ) *</label>
+        <input type="text" id="cf-captcha" name="captcha" inputmode="numeric" required>
+        <span class="cf-err">Incorrect answer. Please try again.</span>
+      </div>
+      <button type="submit" class="cf-submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- 9.3 let's talk marquee -->
+  <div class="marquee marquee-band mq-display" data-speed="60" data-dir="left">
+    <div class="mq-track">
+      <span class="mq-item"><span>LET'S TALK</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
