@@ -168,10 +168,10 @@ export function initStatus(scope = document) {
 export function initCursorDot() {
   if (reducedMotion || matchMedia('(pointer: coarse)').matches) return;
 
-  const N = 28;        // dot pool
+  const N = 64;        // dot pool
   const SIZE = 5;      // uniform pixel size
   const GRID = 7;      // drops snap to a coarse grid → dot-matrix feel
-  const STEP = 9;      // min travel (px) between drops
+  const STEP = 4;      // min travel (px) between drops
 
   const pool = [];
   for (let i = 0; i < N; i++) {
@@ -193,7 +193,7 @@ export function initCursorDot() {
     const gx = Math.round(e.clientX / GRID) * GRID - SIZE / 2;
     const gy = Math.round(e.clientY / GRID) * GRID - SIZE / 2;
     d.style.transform = `translate(${gx}px, ${gy}px)`;
-    gsap.fromTo(d, { opacity: 1 }, { opacity: 0, duration: 0.55, ease: 'power1.out', overwrite: true });
+    gsap.fromTo(d, { opacity: 1 }, { opacity: 0, duration: 0.75, ease: 'power1.out', overwrite: true });
   });
 
   // hover orb: only exists over interactive elements; expands to a pill when labeled
