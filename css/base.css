@@ -168,6 +168,28 @@ main { position: relative; }
 .roll .roll-inner span + span { position: absolute; left: 0; top: 100%; width: 100%; }
 .roll:hover .roll-inner, a:hover > .roll .roll-inner, .roll-parent:hover .roll .roll-inner { transform: translateY(-100%); }
 
+/* top scroll progress bar */
+.progress-bar {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0;
+  background: var(--white); z-index: 960; pointer-events: none;
+}
+
+/* film grain overlay */
+.grain {
+  position: fixed; inset: -50%; width: 200%; height: 200%;
+  pointer-events: none; z-index: 940; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(4) infinite;
+}
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2%, 1%); }
+  50% { transform: translate(1%, -2%); }
+  75% { transform: translate(-1%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
+
 /* cursor dot */
 .cursor-dot {
   position: fixed; top: 0; left: 0; width: 12px; height: 12px;

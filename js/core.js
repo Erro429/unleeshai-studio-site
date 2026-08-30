@@ -220,6 +220,24 @@ export function initScrollInd() {
   });
 }
 
+/* ---------- top scroll progress bar ---------- */
+export function initProgressBar() {
+  const bar = document.createElement('div');
+  bar.className = 'progress-bar';
+  document.body.appendChild(bar);
+  ScrollTrigger.create({
+    start: 0, end: 'max',
+    onUpdate: (self) => { bar.style.width = (self.progress * 100).toFixed(2) + '%'; },
+  });
+}
+
+/* ---------- film grain overlay ---------- */
+export function initGrain() {
+  const g = document.createElement('div');
+  g.className = 'grain';
+  document.body.appendChild(g);
+}
+
 /* ---------- session flag for short preloader ---------- */
 export function seenPreloader() {
   try { return sessionStorage.getItem('unleesh-seen') === '1'; } catch { return false; }

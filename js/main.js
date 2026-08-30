@@ -2,6 +2,7 @@
 import {
   initSmoothScroll, initReveals, initRolls, initCounters, initStatus,
   initCursorDot, initHeaderHide, initBackTop, initScrollInd,
+  initProgressBar, initGrain,
 } from './core.js';
 import { mountChrome, mountPreloader, mountTransitions, pageKey } from './chrome.js';
 import { initMarquees } from './marquee.js';
@@ -34,6 +35,8 @@ initSmoothScroll();
 mountChrome();
 mountTransitions(initPage);
 initHeaderHide();
+initProgressBar();
+initGrain();
 initCursorDot();
 mountPreloader(() => {});
 initPage();
