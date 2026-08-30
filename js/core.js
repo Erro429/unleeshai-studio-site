@@ -162,20 +162,48 @@ export function initStatus(scope = document) {
   });
 }
 
-/* ---------- cursor dot on hoverable media ---------- */
+/* ---------- cursor dot trail (reference pattern: chasing dots, head reacts
+   to anything interactive) ---------- */
 export function initCursorDot() {
   if (reducedMotion || matchMedia('(pointer: coarse)').matches) return;
-  const dot = document.createElement('div');
-  dot.className = 'cursor-dot';
-  document.body.appendChild(dot);
-  const xTo = gsap.quickTo(dot, 'x', { duration: 0.35, ease: 'power3' });
-  const yTo = gsap.quickTo(dot, 'y', { duration: 0.35, ease: 'power3' });
-  let active = false;
+  const N = 16;
+  const dots = [];
+  for (let i = 0; i < N; i++) {
+    const d = document.createElement('div');
+    d.className = 'trail-dot' + (i === 0 ? ' trail-head' : '');
+    const s = Math.max(2.5, 7 - i * 0.3);
+    d.style.width = d.style.height = s + 'px';
+    d.style.opacity = String(1 - i / (N + 4));
+    document.body.appendChild(d);
+    dots.push({ el: d, x: innerWidth / 2, y: innerHeight / 2, s });
+  }
+
+  let tx = innerWidth / 2, ty = innerHeight / 2, seen = false;
+  let hot = false, headScale = 1;
+
   document.addEventListener('mousemove', (e) => {
-    xTo(e.clientX); yTo(e.clientY);
-    const over = e.target.closest('[data-cursor-dot]');
-    if (over !== null && !active) { active = true; gsap.to(dot, { opacity: 1, duration: 0.2 }); }
-    if (over === null && active) { active = false; gsap.to(dot, { opacity: 0, duration: 0.2 }); }
+    tx = e.clientX; ty = e.clientY;
+    if (!seen) { seen = true; dots.forEach((d) => { d.x = tx; d.y = ty; }); }
+  });
+
+  const HOVER = 'a, button, input, select, textarea, [data-cursor-dot], .lc-media, .hx-thumb';
+  document.addEventListener('mouseover', (e) => {
+    hot = !!e.target.closest(HOVER);
+    document.body.classList.toggle('cursor-hot', hot);
+  });
+
+  gsap.ticker.add(() => {
+    // each dot chases the one ahead of it; the head chases the pointer
+    let px = tx, py = ty;
+    headScale += ((hot ? 3.2 : 1) - headScale) * 0.18;
+    dots.forEach((d, i) => {
+      d.x += (px - d.x) * 0.42;
+      d.y += (py - d.y) * 0.42;
+      const sc = i === 0 ? headScale : 1;
+      d.el.style.transform =
+        `translate(${(d.x - d.s / 2).toFixed(1)}px, ${(d.y - d.s / 2).toFixed(1)}px) scale(${sc.toFixed(2)})`;
+      px = d.x; py = d.y;
+    });
   });
 }
 

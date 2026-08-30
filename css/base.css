@@ -207,13 +207,16 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
 }
 @media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
 
-/* cursor dot */
-.cursor-dot {
-  position: fixed; top: 0; left: 0; width: 12px; height: 12px;
+/* cursor dot trail */
+.trail-dot {
+  position: fixed; top: 0; left: 0;
   background: var(--white); border-radius: 50%;
-  pointer-events: none; z-index: 950; opacity: 0;
-  transform: translate(-50%, -50%);
+  pointer-events: none; z-index: 955;
+  will-change: transform;
 }
+/* over anything clickable: head swells, tail recedes */
+body.cursor-hot .trail-dot { opacity: 0.22 !important; }
+body.cursor-hot .trail-dot.trail-head { opacity: 1 !important; mix-blend-mode: difference; }
 
 /* back to top */
 .back-top {

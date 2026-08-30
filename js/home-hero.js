@@ -4,10 +4,10 @@ import { reducedMotion } from './core.js';
 
 const SLIDES = [
   { title: 'UNLEESH BRAND CORE', type: 'video', src: 'assets/video/V01.mp4' },
-  { title: 'LUMEN SKINCARE', type: 'img', src: 'assets/img/V40M.webp' },
-  { title: 'WILDER CAMP', type: 'img', src: 'assets/img/V42M.webp' },
-  { title: 'PULL NOODLE BAR', type: 'img', src: 'assets/img/V45M.webp' },
-  { title: 'AXIOM PRECISION', type: 'img', src: 'assets/img/V46M.webp' },
+  { title: 'LUMEN SKINCARE', type: 'video', src: 'assets/video/V40V.mp4' },
+  { title: 'WILDER CAMP', type: 'video', src: 'assets/video/V42V.mp4' },
+  { title: 'PULL NOODLE BAR', type: 'video', src: 'assets/video/V45V.mp4' },
+  { title: 'AXIOM PRECISION', type: 'video', src: 'assets/video/V46V.mp4' },
 ];
 
 const BAR_COUNT = 84;
@@ -41,8 +41,8 @@ const FRAG = /* glsl */ `
                mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), f.x), f.y);
   }
   float fbm(vec2 p) {
-    float v = 0.0, a = 0.55;
-    for (int i = 0; i < 3; i++) { v += a * noise(p); p *= 2.1; a *= 0.5; }
+    float v = 0.0, a = 0.6;
+    for (int i = 0; i < 2; i++) { v += a * noise(p); p *= 2.15; a *= 0.5; }
     return v;
   }
 
@@ -55,9 +55,10 @@ const FRAG = /* glsl */ `
   }
 
   vec3 melted(sampler2D tex, vec2 uv, vec2 disp, float k) {
-    float r = texture2D(tex, clamp(uv + disp * (k * 1.25), 0.002, 0.998)).r;
+    // narrow chromatic split: the image stays readable, fringes stay on edges
+    float r = texture2D(tex, clamp(uv + disp * (k * 1.07), 0.002, 0.998)).r;
     float g = texture2D(tex, clamp(uv + disp * k, 0.002, 0.998)).g;
-    float b = texture2D(tex, clamp(uv + disp * (k * 0.72), 0.002, 0.998)).b;
+    float b = texture2D(tex, clamp(uv + disp * (k * 0.93), 0.002, 0.998)).b;
     return vec3(r, g, b);
   }
 
@@ -70,10 +71,10 @@ const FRAG = /* glsl */ `
     base = (base - 0.5) / (1.03 + 0.004 * sin(uTime * 0.4)) + 0.5;
     base += uMouse * 0.014;
 
-    // swirling displacement field
+    // swirling displacement field: moderate reach, slight downward drip bias
     float n1 = fbm(base * 3.0 + uTime * 0.06);
     float n2 = fbm(base * 5.0 - uTime * 0.05 + 7.3);
-    vec2 disp = vec2(n1 - 0.5, n2 - 0.5) * (0.55 * strength);
+    vec2 disp = vec2((n1 - 0.5) * 0.8, (n2 - 0.5) * 1.3) * (0.22 * strength);
 
     vec2 uvA = cover(base, uResA);
     vec2 uvB = cover(base, uResB);
@@ -157,7 +158,9 @@ export async function initHero(hero) {
   /* ---------- WebGL melt engine ---------- */
   async function glEngine() {
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    // 1.5x is visually indistinguishable on a full-bleed photographic plane
+    // and nearly halves fragment work vs 2x DPR
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
     renderer.setSize(mediaWrap.clientWidth, mediaWrap.clientHeight);
     // canvas replaces the DOM layers
     mediaWrap.querySelectorAll('.hero-layer').forEach((l) => l.remove());
@@ -169,10 +172,14 @@ export async function initHero(hero) {
 
     const texFor = (slide) => new Promise((res) => {
       if (slide.type === 'video') {
-        const v = mediaFor(slide);
+        const v = document.createElement('video');
+        v.src = slide.src; v.muted = true; v.loop = true; v.playsInline = true;
+        v.preload = 'auto';
         const t = new THREE.VideoTexture(v);
         t.minFilter = THREE.LinearFilter;
-        res({ tex: t, w: 1280, h: 720 });
+        const settle = () => res({ tex: t, w: v.videoWidth || 1280, h: v.videoHeight || 720, video: v });
+        v.addEventListener('loadedmetadata', settle, { once: true });
+        v.addEventListener('error', () => res(null), { once: true });
       } else {
         loader.load(slide.src, (t) => {
           t.minFilter = THREE.LinearFilter;
@@ -183,6 +190,16 @@ export async function initHero(hero) {
 
     const slots = await Promise.all(SLIDES.map(texFor));
     const first = slots[0] || slots.find(Boolean);
+
+    // decode only what's on screen: play the active slide's video, pause the rest
+    const syncPlayback = (activeIdx, incomingIdx = -1) => {
+      slots.forEach((s, k) => {
+        if (!s || !s.video) return;
+        if (k === activeIdx || k === incomingIdx) s.video.play().catch(() => {});
+        else s.video.pause();
+      });
+    };
+    syncPlayback(0);
 
     const uniforms = {
       uTexA: { value: first.tex },
@@ -199,7 +216,18 @@ export async function initHero(hero) {
       new THREE.ShaderMaterial({ uniforms, vertexShader: VERT, fragmentShader: FRAG }),
     ));
 
+    // stop rendering (and decoding) entirely once the hero is covered/scrolled past
+    let heroVisible = true;
+    ScrollTrigger.create({
+      trigger: hero, start: 'top bottom', end: 'bottom top',
+      onToggle: (self) => {
+        heroVisible = self.isActive;
+        if (!heroVisible) slots.forEach((s) => s?.video?.pause());
+        else syncPlayback(index);
+      },
+    });
     gsap.ticker.add(() => {
+      if (!heroVisible) return;
       uniforms.uTime.value = performance.now() / 1000;
       renderer.render(scene, camera);
     });
@@ -216,17 +244,19 @@ export async function initHero(hero) {
     });
 
     return {
-      go(i) {
+      go(i, prev) {
         const slot = slots[i] || first;
+        syncPlayback(prev, i);             // keep outgoing running, spin up incoming
         uniforms.uTexB.value = slot.tex;
         uniforms.uResB.value.set(slot.w, slot.h);
-        // uProgress runs 1 → 0: B (incoming) takes over as progress falls
-        gsap.fromTo(uniforms.uProgress, { value: 1 }, {
-          value: 0, duration: MELT_S, ease: 'power2.inOut',
+        // uProgress runs 0 → 1: A (current) melts away, B (incoming) resolves
+        gsap.fromTo(uniforms.uProgress, { value: 0 }, {
+          value: 1, duration: MELT_S, ease: 'power2.inOut',
           onComplete: () => {
             uniforms.uTexA.value = slot.tex;
             uniforms.uResA.value.copy(uniforms.uResB.value);
             uniforms.uProgress.value = 0;
+            syncPlayback(i);               // park every other video
             busy = false;
           },
         });
@@ -246,10 +276,11 @@ export async function initHero(hero) {
     const i = ((to % SLIDES.length) + SLIDES.length) % SLIDES.length;
     if (i === index) return;
     busy = true;
+    const prev = index;
     index = i;
     setCount(i); setWave(i); setThumbs(i);
     swapTitle(i);
-    engine.go(i);
+    engine.go(i, prev);
     if (user) restartAutoplay();
   }
 
