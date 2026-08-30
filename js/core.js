@@ -207,27 +207,12 @@ export function initCursorDot() {
   const oy = gsap.quickTo(orb, 'y', { duration: 0.3, ease: 'power3' });
   document.addEventListener('mousemove', (e) => { ox(e.clientX); oy(e.clientY); });
 
-  const LABELED = '[data-cursor-label], .hero-prev, .hero-next, .hx-thumb, .work-card, .work-card2, .lab-card, .lc-media, a[href^="mailto:"], .cf-submit, .back-top, .f-social a, .hx-social a, .pj-pager a';
-  const HOVER = 'a, button, input, select, textarea, [data-cursor-dot]';
-
-  const labelFor = (el) => {
-    if (el.dataset.cursorLabel) return el.dataset.cursorLabel;
-    if (el.matches('.hero-prev')) return 'PREV';
-    if (el.matches('.hero-next')) return 'NEXT';
-    if (el.matches('.hx-thumb')) return 'PLAY';
-    if (el.matches('a[href^="mailto:"]')) return 'HELLO';
-    if (el.matches('.cf-submit')) return 'SEND';
-    if (el.matches('.back-top')) return 'TOP';
-    if (el.matches('.f-social a, .hx-social a')) return 'FOLLOW';
-    return 'VIEW';
-  };
+  const HOVER = 'a, button, input, select, textarea, [data-cursor-dot], .hx-thumb, .work-card, .work-card2, .lab-card, .lc-media, .back-top';
 
   document.addEventListener('mouseover', (e) => {
-    const lab = e.target.closest(LABELED);
-    const hot = !!lab || !!e.target.closest(HOVER);
-    if (lab) label.textContent = labelFor(lab);
-    document.body.classList.toggle('cursor-hot', hot);
-    document.body.classList.toggle('cursor-label', !!lab);
+    const t = e.target.closest(HOVER);
+    document.body.classList.toggle('cursor-hot', !!t);
+    label.textContent = (t && t.dataset.cursorLabel) || 'EXPLORE';
   });
 }
 

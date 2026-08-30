@@ -215,29 +215,27 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
   will-change: transform, opacity;
 }
 
-/* hover orb: appears only over links/buttons; expands into a pill when labeled */
+/* hover orb: an x-ray lens over links/buttons — inverts whatever is behind it */
 .cursor-orb {
   position: fixed; top: 0; left: 0;
-  width: 34px; height: 34px; margin: -17px 0 0 -17px;
-  border-radius: 999px; background: var(--white);
-  mix-blend-mode: difference;
+  width: 96px; height: 96px; margin: -48px 0 0 -48px;
+  border-radius: 50%;
+  background: transparent;
+  backdrop-filter: invert(1) grayscale(0.15) contrast(1.05);
+  -webkit-backdrop-filter: invert(1) grayscale(0.15) contrast(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   display: flex; align-items: center; justify-content: center;
   pointer-events: none; z-index: 956;
-  opacity: 0; transform-origin: center;
-  transition: opacity 0.25s var(--ease-out), width 0.25s var(--ease-out);
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-out);
 }
 body.cursor-hot .cursor-orb { opacity: 1; }
 .trail-label {
-  display: none;
   font-family: var(--f-mono); font-size: 10px; font-weight: 400;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: #030303; white-space: nowrap;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--white); mix-blend-mode: difference;
+  white-space: nowrap;
 }
-body.cursor-label .cursor-orb {
-  width: auto; height: auto; margin: -15px 0 0 10px;
-  padding: 8px 15px; mix-blend-mode: normal;
-}
-body.cursor-label .trail-label { display: block; }
 
 /* back to top */
 .back-top {
