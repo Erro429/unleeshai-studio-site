@@ -222,25 +222,16 @@ function initField() {
     field.appendChild(el);
   });
 
-  // dotted words converge from both sides as the band region scrolls through
-  const band = field.querySelector('.fd-band2');
-  if (band && !reducedMotion) {
-    gsap.fromTo(band.querySelector('.fb-l'), { x: '-75vw' }, {
-      x: '6vw', ease: 'none',
-      scrollTrigger: { trigger: band, start: 'top bottom', end: 'bottom top', scrub: 1 },
-    });
-    gsap.fromTo(band.querySelector('.fb-r'), { x: '75vw' }, {
-      x: '-6vw', ease: 'none',
-      scrollTrigger: { trigger: band, start: 'top bottom', end: 'bottom top', scrub: 1 },
-    });
-  }
+  // ---- crossing streams + cube depth journey: one master scrub timeline ----
+  const zone = field.querySelector('.band-zone');
 
-  // tumbling photo cubes; the big one rolls in from the right into the band gap
+  // tumbling photo cubes; the hero cube runs a far-to-near journey on the timeline
   const CUBES = [
-    { top: 40, left: 42, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13, enter: true },
-    { top: 60, left: 72, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
+    { top: 36, left: 42, size: 330, faces: ['V45M', 'V29', 'V45', 'V41', 'V40M', 'V28'], sx: 9, sy: 13, hero: true },
+    { top: 62, left: 74, size: 140, faces: ['V46M', 'V33', 'V46', 'V18', 'V20', 'V22'], sx: -16, sy: 11 },
   ];
-  CUBES.forEach(({ top, left, size, faces, sx, sy, enter }) => {
+  let heroCube = null;
+  CUBES.forEach(({ top, left, size, faces, sx, sy, hero }) => {
     const wrap = document.createElement('div');
     wrap.className = 'fd-cube';
     wrap.style.top = top + '%';
@@ -256,19 +247,13 @@ function initField() {
       faces.map((f, k) => `<div class="face" style="transform:${T[k]}"><img src="assets/img/${f}.webp" alt="" loading="lazy"></div>`).join('') +
       `</div>`;
     field.appendChild(wrap);
+    if (hero) heroCube = wrap;
     if (!reducedMotion) {
       const core = wrap.querySelector('.fd-cube-core');
+      // tumble stays time-based (reference cube keeps turning while scroll dwells)
       gsap.to(core, { rotationX: 360, duration: Math.abs(360 / sx) * 2, repeat: -1, ease: 'none' });
       gsap.to(core, { rotationY: sx > 0 ? 360 : -360, duration: Math.abs(360 / sy) * 2, repeat: -1, ease: 'none' });
-      if (enter) {
-        // rolls in from off-screen right into the gap between the converging words
-        gsap.fromTo(wrap,
-          { x: '80vw', y: '30vh', rotation: 24 },
-          {
-            x: 0, y: 0, rotation: 0, ease: 'none',
-            scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'center 45%', scrub: 1 },
-          });
-      } else {
+      if (!hero) {
         gsap.to(wrap, {
           y: -120, ease: 'none',
           scrollTrigger: { trigger: wrap, start: 'top bottom', end: 'bottom top', scrub: true },
@@ -276,6 +261,65 @@ function initField() {
       }
     }
   });
+
+  // master scrub timeline: streams cross, cube grows and descends,
+  // corner letters rise, ghost words dim through the crossing
+  const ghostEls = [...field.querySelectorAll('.fd-ghost')];
+  if (zone && !reducedMotion && innerWidth >= 1024) {
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: zone, start: 'top bottom', end: 'bottom top', scrub: 1 },
+    });
+    // stream A enters from the left moving right; B from the right moving left;
+    // they pass through each other mid-zone (glyphs genuinely overlap)
+    tl.fromTo(zone.querySelector('.bz-a'), { x: '-95vw' }, { x: '15vw', ease: 'none' }, 0)
+      .fromTo(zone.querySelector('.bz-b'), { x: '95vw' }, { x: '-115vw', ease: 'none' }, 0);
+    // cube: far-to-near journey, descending across the stream baseline
+    if (heroCube) {
+      tl.fromTo(heroCube,
+        { scale: 0.15, x: '7vw', y: '-16vh', autoAlpha: 0.85 },
+        { scale: 1, x: 0, y: '34vh', autoAlpha: 1, ease: 'none' }, 0);
+    }
+    // corner letters rise from the bottom edges, staggered
+    tl.fromTo(zone.querySelector('.bz-cl'), { yPercent: 130 }, { yPercent: -40, ease: 'none' }, 0.05)
+      .fromTo(zone.querySelector('.bz-cr'), { yPercent: 150 }, { yPercent: -20, ease: 'none' }, 0.25);
+    // ghost words dim while the crossing owns the stage, then return
+    tl.to(ghostEls, { opacity: 0.14, duration: 0.18 }, 0.22)
+      .to(ghostEls, { opacity: 0.55, duration: 0.18 }, 0.78);
+  } else if (zone) {
+    // static composed state: both streams visible, cube at rest
+    gsap.set(zone.querySelector('.bz-a'), { x: '-30vw' });
+    gsap.set(zone.querySelector('.bz-b'), { x: '-10vw' });
+    gsap.set(zone.querySelectorAll('.bz-corner'), { yPercent: -20 });
+  }
+
+  // the centered frame continues the journey as a flat cycling photo tile
+  const frame = field.querySelector('.fd-frame');
+  if (frame) {
+    const FRAME_IMGS = ['V48', 'V40M', 'V63', 'V46M', 'V57', 'V42M'];
+    const fimgs = FRAME_IMGS.map((id, i) => {
+      const img = document.createElement('img');
+      img.src = `assets/img/${id}.webp`;
+      img.alt = '';
+      img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;';
+      if (i === 0) img.style.opacity = 1;
+      frame.appendChild(img);
+      return img;
+    });
+    if (!reducedMotion) {
+      let fi = 0;
+      ScrollTrigger.create({
+        trigger: frame, start: 'top bottom', end: 'bottom top', scrub: true,
+        onUpdate: (self) => {
+          const idx = Math.min(fimgs.length - 1, Math.floor(self.progress * fimgs.length));
+          if (idx !== fi) {
+            fimgs[fi].style.opacity = 0;
+            fimgs[idx].style.opacity = 1;
+            fi = idx;
+          }
+        },
+      });
+    }
+  }
 
   // typewriter status lines
   const statusEls = STATUS.map((s) => {

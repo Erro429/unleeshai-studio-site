@@ -226,20 +226,34 @@
   width: 100%; height: 100%; object-fit: cover;
 }
 
-/* giant dotted words converging from both sides around the cube gap */
-.fd-band2 {
-  position: absolute; top: 45%; left: 0; right: 0; height: 200px;
+/* crossing dotted streams + cube depth journey + rising corner letters */
+.band-zone {
+  position: absolute; top: 34%; left: 0; right: 0; height: 130vh;
   z-index: 1; pointer-events: none;
 }
-.fd-band2 span {
-  position: absolute; top: 0;
-  font-family: var(--f-dot); font-weight: 900;
-  font-size: clamp(90px, 11.5vw, 185px); line-height: 1;
-  letter-spacing: 0.02em; color: var(--ink);
+.bz-stream {
+  position: absolute; top: 42%; left: 0;
+  display: flex; align-items: baseline; gap: 0.55em;
   white-space: nowrap; will-change: transform;
 }
-.fb-l { right: 60%; }
-.fb-r { left: 60%; }
+.bz-stream span {
+  font-family: var(--f-dot); font-weight: 900;
+  font-size: clamp(88px, 11vw, 175px); line-height: 1;
+  letter-spacing: 0.02em; color: var(--ink);
+}
+.bz-stream i {
+  font-family: var(--f-mono); font-style: normal;
+  font-size: 11px; letter-spacing: 0.08em; color: var(--ink-2);
+  transform: translateY(-1.2em);
+}
+.bz-corner {
+  position: absolute; bottom: -6%;
+  font-family: var(--f-dot); font-weight: 900;
+  font-size: clamp(80px, 8.5vw, 140px); line-height: 1;
+  color: var(--ink); will-change: transform;
+}
+.bz-cl { left: 5%; }
+.bz-cr { right: 6%; }
 
 /* centered hairline frame */
 .fd-frame {
