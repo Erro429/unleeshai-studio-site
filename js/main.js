@@ -2,7 +2,7 @@
 import {
   initSmoothScroll, initReveals, initRolls, initCounters, initStatus,
   initCursorDot, initHeaderHide, initBackTop, initScrollInd,
-  initProgressBar, initGrain,
+  initProgressBar, initGrain, initMagnetic,
 } from './core.js';
 import { mountChrome, mountPreloader, mountTransitions, pageKey } from './chrome.js';
 import { initMarquees } from './marquee.js';
@@ -27,6 +27,7 @@ function initPage() {
   initMarquees();
   initScrollInd();
   initBackTop();
+  initMagnetic('.hero-prev, .hero-next, .h-mail, .h-burger, .back-top, .cf-submit, .hx-social a, .f-social a, .pj-pager a');
   const fn = pageInits[pageKey()];
   if (fn) fn().catch((e) => console.error('page init failed', e));
 }

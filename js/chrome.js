@@ -238,6 +238,8 @@ export function mountPreloader(onDone) {
     markPreloaderSeen();
     pl.remove();
     startScroll();
+    document.body.classList.add('pl-done');
+    document.dispatchEvent(new CustomEvent('preloader:done'));
     onDone && onDone();
   };
 

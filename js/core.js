@@ -282,3 +282,35 @@ export function seenPreloader() {
 export function markPreloaderSeen() {
   try { sessionStorage.setItem('unleesh-seen', '1'); } catch { /* private mode */ }
 }
+
+
+/* ---------- per-character display reveal (STUDIO / DIGITAL / THE SECTORS) ---------- */
+export function revealChars(el, opts = {}) {
+  if (reducedMotion || !el || el.dataset.charsDone) return;
+  el.dataset.charsDone = '1';
+  const chars = splitChars(el);
+  gsap.from(chars, {
+    yPercent: 115, duration: 0.9, ease: 'expo.out',
+    stagger: opts.stagger ?? 0.035, delay: opts.delay ?? 0,
+    ...(opts.trigger ? { scrollTrigger: { trigger: opts.trigger, start: 'top 80%', once: true } } : {}),
+  });
+}
+
+/* ---------- magnetic buttons: lean toward the pointer, snap back elastic ---------- */
+export function initMagnetic(selector) {
+  if (reducedMotion || matchMedia('(pointer: coarse)').matches) return;
+  document.querySelectorAll(selector).forEach((el) => {
+    if (el.dataset.magnetic) return;
+    el.dataset.magnetic = '1';
+    const xTo = gsap.quickTo(el, 'x', { duration: 0.4, ease: 'power3' });
+    const yTo = gsap.quickTo(el, 'y', { duration: 0.4, ease: 'power3' });
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      xTo((e.clientX - (r.left + r.width / 2)) * 0.35);
+      yTo((e.clientY - (r.top + r.height / 2)) * 0.35);
+    });
+    el.addEventListener('mouseleave', () => {
+      gsap.to(el, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1, 0.45)', overwrite: true });
+    });
+  });
+}

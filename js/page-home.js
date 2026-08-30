@@ -1,5 +1,5 @@
 /* UNLEESH — home: hero + the field (ghost words, dotted letters, clusters) + works */
-import { reducedMotion } from './core.js';
+import { reducedMotion, revealChars } from './core.js';
 import { initHero } from './home-hero.js';
 import { initCube } from './home-cube.js';
 import { initLetterplay } from './home-letterplay.js';
@@ -7,6 +7,10 @@ import { initLetterplay } from './home-letterplay.js';
 export function init() {
   const hero = document.querySelector('.hero');
   if (hero) initHero(hero);
+  // STUDIO / DIGITAL stagger in per character once the curtain lifts
+  const mastReveal = () => document.querySelectorAll('.hx-word').forEach((w, i) => revealChars(w, { delay: i * 0.15 }));
+  if (document.body.classList.contains('pl-done')) mastReveal();
+  else document.addEventListener('preloader:done', mastReveal, { once: true });
 
   initWall();
   const cubeSection = document.querySelector('.cube-section');
@@ -56,11 +60,8 @@ function initSectorsArc() {
   gsap.to(outer, { rotation: 360, duration: 90, repeat: -1, ease: 'none' });
   gsap.to(inner, { rotation: -360, duration: 70, repeat: -1, ease: 'none' });
 
-  // heading settles in
-  gsap.from(section.querySelector('.sa-title'), {
-    y: 60, opacity: 0, duration: 1, ease: 'expo.out',
-    scrollTrigger: { trigger: section, start: 'top 70%', once: true },
-  });
+  // heading staggers in per character on enter
+  revealChars(section.querySelector('.sa-title'), { trigger: section, stagger: 0.04 });
 }
 
 
