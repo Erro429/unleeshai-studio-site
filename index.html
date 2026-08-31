@@ -9,6 +9,7 @@
   <meta name="description" content="UNLEESH is an AI-native creative studio: high-end web design, commercial visuals and motion systems for brands that refuse to look ordinary.">
   <meta property="og:title" content="UNLEESH — AI-Native Web Design & Motion Studio">
   <meta property="og:image" content="assets/img/V76.webp">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Doto:ROND,wght@100,700;100,900&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -116,22 +117,25 @@
   </section>
 
   
-  <!-- 4.2 WORD WALL — pinned stage: persistent word columns, cycling center
-       tile, traveling chip labels, dotted letters popping in -->
-  <section class="wall">
-    <video class="wl-fog" src="assets/video/V34.mp4" autoplay muted loop playsinline></video>
-    <p class="wl-statement" data-reveal-lines>( We guard the aesthetic core and define the digital landing point )</p>
-    <div class="wl-col wl-col-l" aria-hidden="true"></div>
-    <div class="wl-col wl-col-r" aria-hidden="true"></div>
-    <div class="wl-tile" aria-hidden="true"></div>
-    <div class="wl-letter" aria-hidden="true"></div>
+  <!-- BLOCK 2 — THE BRIEF: eagerly loaded studio photo (clip reveal + parallax),
+       masked kicker and headline, twelve-cell decoder grid (scramble A -> B) -->
+  <section class="brief section">
+    <div class="brief-grid">
+      <figure class="company-photo">
+        <img src="assets/img/V17.webp" alt="The UNLEESH studio at night" width="900" height="1200">
+      </figure>
+      <div class="brief-copy">
+        <p class="brief-kicker" data-reveal-lines>( Brand strategy experts )</p>
+        <h2 class="brief-headline" data-reveal-lines>（ We guard the aesthetic core and define the digital landing point ）</h2>
+        <p class="brief-note">Core and point: the two words the studio is built from. Strategy, identity and code, held to one aesthetic centre.</p>
+      </div>
+    </div>
+    <div class="decoder" aria-label="Capabilities" role="list"></div>
   </section>
 
-  <!-- BLOCK 3 — pinned cube: wordmark front, scroll-scrubbed tumble;
-       the dotted velocity marquee ribbon runs behind it -->
-  <section class="cube-section">
-    <video class="cs-fog" src="assets/video/V34.mp4" autoplay muted loop playsinline></video>
-    <div class="marquee cube-ribbon mq-display mq-dot" data-speed="70" data-dir="left">
+  <!-- BLOCK 3 — THE RIBBON: seamless dotted marquee, velocity-coupled, reverses on scroll-up -->
+  <section class="ribbon" aria-label="Services">
+    <div class="marquee ribbon-track mq-display mq-dot" data-speed="70" data-dir="left">
       <div class="mq-track">
         <span class="mq-item"><span class="word">WEBDESIGN</span><span class="mq-gloss">（ INTERFACES ）</span></span>
         <span class="mq-item"><span class="word">UI/UX</span><span class="mq-gloss">（ EXPERIENCE ）</span></span>
@@ -139,22 +143,31 @@
         <span class="mq-item"><span class="word">BRANDING</span><span class="mq-gloss">（ IDENTITY ）</span></span>
       </div>
     </div>
+  </section>
+
+  <!-- BLOCK 4 — THE SCENE: one pinned set piece. Sixty keyword chips drift in with
+       depth, the cube assembles from exploded faces, spins left through three stops,
+       switches axis to a top/bottom tumble, then zooms out while the wordmark holds.
+       Each beat lights one giant letter: U N L E E S H. Chips, letters and status
+       lines are built by js/home-scene.js. -->
+  <section class="scene" aria-label="UNLEESH capabilities field">
+    <video class="sc-fog" src="assets/video/V34.mp4" autoplay muted loop playsinline></video>
+    <div class="sc-letters" aria-hidden="true"></div>
+    <div class="sc-chips" aria-hidden="true"></div>
+    <div class="sc-floor" aria-hidden="true"></div>
     <div class="cube-scene">
       <div class="cube">
         <div class="face face-front"><span class="cube-logo">UNLEESH<i class="dot"></i></span></div>
-        <div class="face face-right"><img src="assets/img/V40M.webp" alt=""></div>
-        <div class="face face-back"><img src="assets/img/V45M.webp" alt=""></div>
-        <div class="face face-left"><img src="assets/img/V42M.webp" alt=""></div>
-        <div class="face face-top"><img src="assets/img/V46M.webp" alt=""></div>
-        <div class="face face-bottom"><img src="assets/img/V41M.webp" alt=""></div>
+        <div class="face face-right"><img src="assets/img/V40M.webp" alt="Cube right"></div>
+        <div class="face face-back"><img src="assets/img/V45M.webp" alt="Cube back"></div>
+        <div class="face face-left"><img src="assets/img/V42M.webp" alt="Cube left"></div>
+        <div class="face face-top"><img src="assets/img/V46M.webp" alt="Cube top"></div>
+        <div class="face face-bottom"><img src="assets/img/V41M.webp" alt="Cube bottom"></div>
       </div>
     </div>
+    <div class="sc-mark" aria-hidden="true">UNLEESH<i class="dot"></i></div>
+    <div class="sc-status" aria-live="polite"></div>
     <div class="cube-caption"><span>( 3D MATRIX )</span><span>SCROLL TO ROTATE</span></div>
-  </section>
-
-  <!-- BLOCK 4 — pinned letter field: drifting chips, letters landing one by one -->
-  <section class="letterplay" aria-label="UNLEESH capabilities field">
-    <video class="lp-fog" src="assets/video/V34.mp4" autoplay muted loop playsinline></video>
   </section>
 
   <!-- BLOCK 5 — WHO WE ARE landing -->

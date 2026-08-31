@@ -19,7 +19,7 @@ do not work from file://).
 ## Pages
 | File | Page |
 |---|---|
-| `index.html` | Home: WebGL hero carousel, orbit chips, 3D cube, letter-play, works |
+| `index.html` | Home: WebGL hero carousel, the brief (photo reveal + decoder grid), ribbon marquee, pinned cube scene (chips, letters, status lines), who we are, sectors, works |
 | `about.html` | Double marquee, horizontal service cards, marquee wall, accordion, stepper, registry |
 | `work.html` | 10-item archive |
 | `work_<slug>.html` | 10 generated detail pages (sticky stacks, framed page scroller) |
@@ -29,7 +29,7 @@ do not work from file://).
 
 ## Structure
 - `css/` — tokens, base/chrome, components, per-page styles
-- `js/` — `main.js` bootstrap, `chrome.js` (header/menu/footer/preloader/transitions), per-page modules
+- `js/` — `main.js` bootstrap, `chrome.js` (header/menu/footer/preloader/transitions), per-page modules (`home-brief.js`, `home-scene.js`, `home-hero.js` for the home chain)
 - `assets/img|video/` — web-ready WebP/MP4 (raw generations in `assets/raw/`, git-ignored)
 - `tools/` — asset manifest + generation/conversion/page-generation scripts
 

@@ -1,5 +1,9 @@
-/* UNLEESH — marquee: infinite track, scroll-velocity timeScale + skew */
+/* UNLEESH — marquee: seamless loop driven by a ticker, so scroll velocity can
+   speed it up, reverse it on scroll-up, and let it settle back to its idle glide. */
 import { reducedMotion } from './core.js';
+
+const MAX_BOOST = 3;         // fastest multiple of idle speed
+const SETTLE_S = 0.8;        // seconds to glide back to idle after scrolling stops
 
 export function initMarquees(scope = document) {
   scope.querySelectorAll('.marquee').forEach((mq) => {
@@ -17,55 +21,39 @@ export function initMarquees(scope = document) {
     const track = mq.querySelector('.mq-track');
     if (!track) return;
 
-    // duplicate items until track exceeds 2x viewport
+    // duplicate items until the track exceeds 2x viewport, then double once more so
+    // copy B sits exactly where copy A started: the -50% wrap is invisible
     const original = track.innerHTML;
     let guard = 0;
     while (track.scrollWidth < window.innerWidth * 2 && guard < 12) {
       track.innerHTML += original;
       guard++;
     }
-    // one more copy so -50% wrap is seamless
     track.innerHTML += track.innerHTML;
 
     if (reducedMotion) return;
 
-    const speed = parseFloat(mq.dataset.speed || '60');
+    const speed = parseFloat(mq.dataset.speed || '60');       // px per second at idle
     const dir = mq.dataset.dir === 'right' ? 1 : -1;
-    const dist = track.scrollWidth / 2;
-    const tween = gsap.to(track, {
-      xPercent: dir * -50,
-      repeat: -1,
-      duration: dist / speed,
-      ease: 'none',
-    });
-    if (dir === 1) {
-      gsap.set(track, { xPercent: -50 });
-      tween.vars.xPercent = 0;
-      tween.invalidate();
-    }
+    const dist = () => track.scrollWidth / 2;
+    const wrap = gsap.utils.wrap(-50, 0);
 
-    // scroll velocity → timeScale + skew
-    let proxy = { ts: 1, skew: 0 };
+    const state = { pos: 0, ts: 1, skew: 0 };
+    gsap.ticker.add((_, dt) => {
+      state.pos += (dir * speed * (dt / 1000) * state.ts / dist()) * 100;
+      gsap.set(track, { xPercent: wrap(state.pos), skewX: state.skew });
+    });
+
+    // scroll velocity: faster with the scroll, reversed against it, then settle
     ScrollTrigger.create({
       start: 0,
       end: 'max',
       onUpdate: (self) => {
-        const v = Math.min(Math.abs(self.getVelocity()) / 1200, 2);
-        gsap.to(proxy, {
-          ts: 1 + v, skew: -6 * Math.min(v / 2, 1),
-          duration: 0.2, overwrite: true,
-          onUpdate: () => {
-            tween.timeScale(proxy.ts);
-            gsap.set(track, { skewX: proxy.skew });
-          },
-        });
-        gsap.to(proxy, {
-          ts: 1, skew: 0, duration: 0.8, delay: 0.15, ease: 'power2.out', overwrite: false,
-          onUpdate: () => {
-            tween.timeScale(proxy.ts);
-            gsap.set(track, { skewX: proxy.skew });
-          },
-        });
+        const raw = self.getVelocity();
+        const v = Math.min(Math.abs(raw) / 1200, MAX_BOOST - 1);
+        const sign = raw < 0 ? -1 : 1;
+        gsap.to(state, { ts: sign * (1 + v), skew: -6 * sign * Math.min(v / 2, 1), duration: 0.2, overwrite: true });
+        gsap.to(state, { ts: 1, skew: 0, duration: SETTLE_S, delay: 0.15, ease: 'power2.out', overwrite: false });
       },
     });
   });
