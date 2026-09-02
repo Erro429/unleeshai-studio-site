@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
 </head>
 <body data-page="home">
 
@@ -117,6 +118,127 @@
   </section>
 
   
+  <!-- ══════════════════════════════════════════════════════════════════════
+       NUDOT BRIEF BLOCKS (added 2026-09-03). Every section of the scroll brief,
+       built new and placed directly under the hero. Styles: css/pages/nudot.css,
+       logic: js/nx-*.js. The approved chain (the brief, the ribbon, the scene,
+       who we are, the sectors, works) follows untouched below this block.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <div class="nx" data-nx>
+    <svg class="nx-svgdefs" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="nx-ch-r" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
+        <filter id="nx-ch-g" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
+        <filter id="nx-ch-b" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter>
+      </defs>
+    </svg>
+
+    <!-- NX §4 wordmark marquee: difference blend, pushed by scroll velocity -->
+    <section class="nx-marquee" aria-label="Disciplines">
+      <div class="nxm-track" data-nx-marquee data-dir="-1">
+        <div class="nxm-set">
+          <span class="nxm-item">WEBDESIGN <span class="bracket-label">( Interfaces )</span></span><span class="nxm-sep"></span>
+          <span class="nxm-item">UI/UX <span class="bracket-label">( Experience )</span></span><span class="nxm-sep"></span>
+          <span class="nxm-item">MOTION <span class="bracket-label">( Kinetics )</span></span><span class="nxm-sep"></span>
+          <span class="nxm-item">BRANDING <span class="bracket-label">( Identity )</span></span><span class="nxm-sep"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NX §5 keyword tunnel: curtain reveal, sine-wave columns, dot-matrix logo,
+         focal card, Three.js cube. Words, dots and captions are built by js/nx-tunnel.js -->
+    <section class="nx-tunnel" data-nx-tunnel aria-label="Keyword tunnel">
+      <div class="nxt-mask">
+        <div class="nxt-vignette" aria-hidden="true"></div>
+        <canvas class="nxt-dots nxt-dots-l" aria-hidden="true"></canvas>
+        <canvas class="nxt-dots nxt-dots-r" aria-hidden="true"></canvas>
+        <p class="nxt-kicker bracket-label">( Keyword tunnel · Core identity in motion )</p>
+        <div class="nxt-wave" id="nx-wave-wrapper">
+          <ul class="nxt-col nxt-col-l" aria-label="Capabilities"></ul>
+          <ul class="nxt-col nxt-col-r" aria-label="Disciplines"></ul>
+          <figure class="nxt-thumb" aria-hidden="true"><img src="assets/img/V40M.webp" alt=""></figure>
+        </div>
+        <div class="nxt-card" aria-hidden="true">
+          <div class="nxc-texture"></div>
+          <div class="nxc-sweep"></div>
+          <div class="nxc-label"><span class="bracket-label">( Brand core )</span><span class="bracket-label">( 01 )</span></div>
+          <div class="nxc-captions"></div>
+        </div>
+        <div class="nxt-cube" aria-hidden="true"></div>
+        <div class="nxt-meta">
+          <span class="bracket-label">( 3D Matrix · scroll to rotate )</span>
+          <span class="nxt-prog tabular">000</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NX §6a THE SECTORS: arced headline, polaroid fan, stats ticker, RGB-split burst -->
+    <section class="nx-sectors" data-nx-sectors aria-label="The sectors">
+      <svg class="nxs-arc" viewBox="0 0 1200 420" aria-hidden="true">
+        <defs><path id="nxs-path" d="M 80 380 A 560 560 0 0 1 1120 380"/></defs>
+        <text><textPath href="#nxs-path" startOffset="50%" text-anchor="middle">THE SECTORS</textPath></text>
+      </svg>
+      <h2 class="sr-only">The sectors</h2>
+      <div class="nxs-fan" aria-hidden="true"></div>
+      <p class="nxs-sub bracket-label">( Engineering the visual core of ambitious brands )</p>
+      <div class="nxs-stats" aria-label="Studio stats">
+        <span>12Y_VISUAL_MASTERY</span>
+        <span>140+_DEPLOYED_WORKS</span>
+        <span>ESTABLISHED_2026</span>
+      </div>
+      <div class="nxs-black" aria-hidden="true"></div>
+    </section>
+
+    <!-- NX §6b ARCHIVE: pinned giant title, images slide in from alternating corners -->
+    <section class="nx-archive" data-nx-archive aria-label="Archive of the selected works">
+      <p class="nxa-kicker bracket-label">( Redefining brand visual thinking )</p>
+      <h2 class="nxa-title display">ARCHIVE OF<br>THE SELECTED WORKS<br>BY UNLEESH</h2>
+      <div class="nxa-images" aria-hidden="true"></div>
+      <span class="nxa-count">01 // 08</span>
+    </section>
+
+    <!-- NX §7 gallery continuation: Flip + scramble morph, case-study tiles, footer preview strip -->
+    <section class="nx-gallery" data-nx-gallery aria-label="Case studies">
+      <div class="nxg-morph">
+        <p class="nxg-morph-text" data-text="A release point for digital visual energy">A release point for digital visual energy</p>
+        <p class="nxg-morph-side" data-reveal="word">Each case study is a full-bleed project photograph first, a story second. Strategy, identity and code held to one aesthetic centre.</p>
+      </div>
+      <div class="nxg-grid">
+        <a class="nxg-tile" href="work_lumen.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V40.webp" alt="Lumen Skincare"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Lumen Skincare</h3><span class="bracket-label">( Web · Brand )</span></div>
+          <p data-reveal="word">A skincare flagship built on light, tone and a single continuous scroll.</p>
+        </a>
+        <a class="nxg-tile" href="work_nocturne.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V41.webp" alt="Nocturne"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Nocturne</h3><span class="bracket-label">( Motion · Film )</span></div>
+          <p data-reveal="word">Night-shift visuals for a label that only publishes after dark.</p>
+        </a>
+        <a class="nxg-tile" href="work_pullnoodle.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V45.webp" alt="Pull Noodle Bar"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Pull Noodle Bar</h3><span class="bracket-label">( Identity · Web )</span></div>
+          <p data-reveal="word">Steam, type and appetite: a restaurant identity that moves like its kitchen.</p>
+        </a>
+        <a class="nxg-tile" href="work_wilder.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V42.webp" alt="Wilder Camp"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Wilder Camp</h3><span class="bracket-label">( Web · AI Visual )</span></div>
+          <p data-reveal="word">Outdoor gear photographed nowhere, rendered everywhere.</p>
+        </a>
+        <a class="nxg-tile" href="work_ironflow.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V43.webp" alt="Ironflow"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Ironflow</h3><span class="bracket-label">( Interface · System )</span></div>
+          <p data-reveal="word">A fitness platform interface tuned to the rhythm of a workout.</p>
+        </a>
+        <a class="nxg-tile" href="work_axiom.html" data-cursor-dot>
+          <div class="nxg-media"><img src="assets/img/V46.webp" alt="Axiom Precision"></div>
+          <div class="nxg-cap"><h3 data-reveal="word">Axiom Precision</h3><span class="bracket-label">( 3D · Web )</span></div>
+          <p data-reveal="word">Precision engineering told through machined light and WebGL.</p>
+        </a>
+      </div>
+      <div class="nxg-strip" data-reveal="line">Web Design Studio<br>Commercial Visual · AI Motion<br>Est. 2026 · San Francisco</div>
+    </section>
+  </div>
+
   <!-- BLOCK 2 — THE BRIEF: eagerly loaded studio photo (clip reveal + parallax),
        masked kicker and headline, twelve-cell decoder grid (scramble A -> B) -->
   <section class="brief section">
@@ -242,9 +364,10 @@
   </nav>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
 <script type="module" src="js/main.js"></script>

@@ -233,6 +233,7 @@ export function mountPreloader(onDone) {
     </div>`;
   document.body.appendChild(pl);
   stopScroll();
+  document.dispatchEvent(new CustomEvent('preloader:mounted', { detail: pl }));   // nx-chrome hook
 
   const finish = () => {
     markPreloaderSeen();
@@ -301,6 +302,7 @@ export function mountTransitions(reinit) {
 
     layer.classList.add('is-open');
     layer.style.visibility = 'visible';
+    document.dispatchEvent(new CustomEvent('transition:leave'));   // nx pixel grid hook
     await gsap.fromTo(layer, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1, ease: 'power4.inOut' });
 
     try {
@@ -325,6 +327,7 @@ export function mountTransitions(reinit) {
       reinit && reinit();
       ScrollTrigger.refresh();
 
+      document.dispatchEvent(new CustomEvent('transition:enter'));   // nx pixel grid hook
       await gsap.to(layer, { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'power4.inOut', delay: 0.15 });
       layer.style.visibility = 'hidden';
     } catch {

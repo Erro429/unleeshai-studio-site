@@ -30,6 +30,8 @@ function initPage() {
   initMagnetic('.hero-prev, .hero-next, .h-mail, .h-burger, .back-top, .cf-submit, .hx-social a, .f-social a, .pj-pager a');
   const fn = pageInits[pageKey()];
   if (fn) fn().catch((e) => console.error('page init failed', e));
+  // NUDOT brief blocks + global additions (js/nx-*.js), layered after the approved init
+  import('./nx-index.js').then((m) => m.init()).catch((e) => console.error('nx init failed', e));
 }
 
 initSmoothScroll();
