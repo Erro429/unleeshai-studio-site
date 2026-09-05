@@ -491,6 +491,9 @@
 .sc-fog {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; opacity: 0.22; filter: saturate(0); pointer-events: none;
+  /* feather the plate into the page ground so the scene has no hard top or bottom edge */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 84%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 84%, transparent);
 }
 .sc-letters { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; z-index: 1; }
 .sc-letter {
@@ -560,3 +563,12 @@
   .sc-letter { font-size: clamp(160px, 50vmin, 400px); }
   .sc-chip-txt { font-size: 10px; }
 }
+
+/* ---- seams: one continuous surface (js/seams.js) ----
+   The ground plane sits between the sticky hero (z auto) and the sections
+   (z 5); it switches on once the hero is scrolled past so a section fading
+   in or out shows page ground, never the hero video. */
+.page-ground { position: fixed; inset: 0; z-index: 4; background: var(--bg); pointer-events: none; opacity: 0; }
+.page-ground.is-on { opacity: 1; }
+body[data-page="home"] .site-footer { position: relative; z-index: 5; }
+.seam-overlap { margin-top: -100vh; background: transparent !important; }

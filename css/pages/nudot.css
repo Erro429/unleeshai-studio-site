@@ -68,6 +68,9 @@
 .nxt-vignette {
   position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(ellipse at 50% 50%, #000 0%, #000 38%, #1a1a1a 100%);
+  /* feather the lighter rim into the page ground so the section never shows a hard tone edge */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
 }
 .nxt-dots { position: absolute; bottom: 4vh; width: 20vw; height: 24vw; pointer-events: none; opacity: 0.9; }
 .nxt-dots-l { left: 3vw; }

@@ -28,10 +28,19 @@ function initPage() {
   initScrollInd();
   initBackTop();
   initMagnetic('.hero-prev, .hero-next, .h-mail, .h-burger, .back-top, .cf-submit, .hx-social a, .f-social a, .pj-pager a');
-  const fn = pageInits[pageKey()];
-  if (fn) fn().catch((e) => console.error('page init failed', e));
+  const key = pageKey();
+  const fn = pageInits[key];
+  const page = fn ? fn().catch((e) => console.error('page init failed', e)) : Promise.resolve();
   // NUDOT brief blocks + global additions (js/nx-*.js), layered after the approved init
-  import('./nx-index.js').then((m) => m.init()).catch((e) => console.error('nx init failed', e));
+  const nx = import('./nx-index.js').then((m) => m.init()).catch((e) => console.error('nx init failed', e));
+  // seams: section dissolves + ground plane, mounted once every pin exists
+  if (key === 'home') {
+    Promise.all([page, nx])
+      .then(() => import('./seams.js')).then((m) => m.initSeams())
+      .catch((e) => console.error('seams init failed', e));
+  } else {
+    document.querySelectorAll('.page-ground').forEach((g) => g.remove());
+  }
 }
 
 initSmoothScroll();
