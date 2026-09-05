@@ -19,7 +19,6 @@ export function init() {
   initWhoDeck();
   initSectorsArc();
   initSectors();
-  initWorksParallax();
 }
 
 
@@ -64,15 +63,6 @@ function initSectorsArc() {
 }
 
 
-function initWorksParallax() {
-  if (reducedMotion) return;
-  document.querySelectorAll('.work-card').forEach((card, i) => {
-    gsap.to(card, {
-      y: i % 2 ? 40 : -40, ease: 'none',
-      scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true },
-    });
-  });
-}
 
 
 /* ---- WHO WE ARE deck fan ---- */

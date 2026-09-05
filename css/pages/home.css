@@ -309,37 +309,6 @@
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2);
 }
 
-/* ---- works statement: pinned behind, work cards slide over it ---- */
-.works-wrap { position: relative; z-index: 5; background: var(--bg); }
-.works-state {
-  position: sticky; top: 0;
-  height: 100vh; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 28px;
-  text-align: center; padding: 0 var(--gutter);
-}
-.works-state .mono-s { font-family: var(--f-mono); letter-spacing: 0.06em; }
-.works-state h2 { font-size: clamp(40px, 5.8vw, 92px); line-height: 1.02; }
-.works-state .reveal-line-mask { margin-left: auto; margin-right: auto; }
-.works-state .ws-sub { font-weight: 300; color: var(--ink-2); letter-spacing: 0.2em; font-size: 13px; text-transform: uppercase; }
-
-/* ---- selected works: transparent so cards float over the pinned statement;
-   the top padding gives the statement a full readable dwell before cards arrive ---- */
-.works { position: relative; z-index: 6; background: transparent; padding-top: 60vh; }
-.works-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); row-gap: 160px; }
-.work-card { position: relative; display: block; }
-.work-card.w7 { grid-column: span 7; }
-.work-card.w5 { grid-column: span 5; margin-top: 120px; }
-.work-card.w7 .reveal-img { aspect-ratio: 16 / 10; }
-.work-card.w5 .reveal-img { aspect-ratio: 4 / 5; }
-.work-card img { transition: transform 0.8s var(--ease-out); }
-.work-card:hover img { transform: scale(1.06); }
-.work-card .view {
-  position: absolute; bottom: 16px; left: 16px;
-  font-family: var(--f-mono); font-size: var(--t-label);
-  letter-spacing: 0.06em; opacity: 0; transition: opacity var(--d-fast);
-}
-.work-card:hover .view { opacity: 1; }
-
 /* ---- bottom nav ---- */
 .bottom-nav {
   display: flex; gap: 40px; justify-content: center; padding: 64px var(--gutter);
@@ -355,7 +324,6 @@
 
   .hx-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   .field { height: auto; min-height: 300vh; }
-  .work-card.w7, .work-card.w5 { grid-column: 1 / -1; margin-top: 0; }
 }
 
 /* tile theater: center panel swaps a work image per scroll step */
@@ -440,17 +408,17 @@
 .sa-stats b { font-weight: 400; }
 .hero .scroll-ind { z-index: 4; }
 
-/* flowing light along image edges on hover (work cards) */
+/* flowing light along image edges on hover (work cards on work.html) */
 @property --edge-a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-.work-card .reveal-img, .work-card2 .reveal-img { position: relative; }
-.work-card .reveal-img::after, .work-card2 .reveal-img::after {
+.work-card2 .reveal-img { position: relative; }
+.work-card2 .reveal-img::after {
   content: ''; position: absolute; inset: 0; padding: 1px; pointer-events: none;
   background: conic-gradient(from var(--edge-a), transparent 0 68%, rgba(255,255,255,0.95) 84%, transparent 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
   opacity: 0; transition: opacity 0.4s;
 }
-.work-card:hover .reveal-img::after, .work-card2:hover .reveal-img::after {
+.work-card2:hover .reveal-img::after {
   opacity: 1; animation: edge-sweep 1.6s linear infinite;
 }
 @keyframes edge-sweep { to { --edge-a: 360deg; } }
