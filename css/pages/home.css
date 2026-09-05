@@ -289,6 +289,14 @@
   font-family: var(--f-mono); font-size: var(--t-label-s);
   letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.9;
 }
+/* the orbit layer fades tiles out just before the title + subtitle band and back
+   in below it, so the rings pass around the type instead of being sliced by it */
+.sa-orbit {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  --band-top: 37%; --band-bot: 61%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(var(--band-top) - 5%), transparent var(--band-top), transparent var(--band-bot), #000 calc(var(--band-bot) + 5%));
+  mask-image: linear-gradient(to bottom, #000 0, #000 calc(var(--band-top) - 5%), transparent var(--band-top), transparent var(--band-bot), #000 calc(var(--band-bot) + 5%));
+}
 .sa-ring {
   position: absolute; top: 48%; left: 50%;
   width: 0; height: 0; z-index: 1;
