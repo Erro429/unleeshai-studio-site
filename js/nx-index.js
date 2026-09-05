@@ -6,7 +6,6 @@ import { initNxMarquee } from './nx-marquee.js';
 import { initNxTunnel } from './nx-tunnel.js';
 import { initNxSectors } from './nx-sectors.js';
 import { initNxArchive } from './nx-archive.js';
-import { initNxGallery } from './nx-gallery.js';
 
 export function init() {
   initNxChrome();
@@ -18,7 +17,6 @@ export function init() {
     safe('tunnel', initNxTunnel);
     safe('sectors', initNxSectors);
     safe('archive', initNxArchive);
-    safe('gallery', initNxGallery);
     // The approved sections' pinned triggers were created before these blocks
     // existed, so their start positions miss the new pin spacers. Re-sort every
     // trigger into document order and refresh so every pin measures correctly.
