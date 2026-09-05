@@ -39,9 +39,9 @@ export function initNxSectors(root) {
     fig.className = 'nxs-card';
     fig.innerHTML = `
       <div class="nxs-img">
-        <img class="ch ch-r" src="assets/img/${img}.webp" alt="" loading="lazy">
-        <img class="ch ch-g" src="assets/img/${img}.webp" alt="" loading="lazy">
-        <img class="ch ch-b" src="assets/img/${img}.webp" alt="" loading="lazy">
+        <img class="ch ch-r" src="assets/img/${img}.webp?v=2" alt="" loading="lazy">
+        <img class="ch ch-g" src="assets/img/${img}.webp?v=2" alt="" loading="lazy">
+        <img class="ch ch-b" src="assets/img/${img}.webp?v=2" alt="" loading="lazy">
       </div>
       <figcaption>${label}</figcaption>`;
     fanHost.appendChild(fig);

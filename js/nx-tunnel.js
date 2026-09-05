@@ -257,7 +257,7 @@ function buildCube(host) {
 
   const loader = new THREE.TextureLoader();
   const mats = CUBE_FACES.map((f) => {
-    const tex = loader.load(`assets/img/${f}.webp`);
+    const tex = loader.load(`assets/img/${f}.webp?v=2`);
     if ('colorSpace' in tex && THREE.SRGBColorSpace) tex.colorSpace = THREE.SRGBColorSpace;
     tex.minFilter = THREE.LinearFilter;
     return new THREE.MeshBasicMaterial({ map: tex });

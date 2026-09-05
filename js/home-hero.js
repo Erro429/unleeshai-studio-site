@@ -3,11 +3,11 @@
 import { reducedMotion } from './core.js';
 
 const SLIDES = [
-  { title: 'Unleesh Brand Core', type: 'video', src: 'assets/video/V01.mp4' },
-  { title: 'Lumen Skincare', type: 'video', src: 'assets/video/V40V.mp4' },
-  { title: 'Wilder Camp', type: 'video', src: 'assets/video/V42V.mp4' },
-  { title: 'Pull Noodle Bar', type: 'video', src: 'assets/video/V45V.mp4' },
-  { title: 'Axiom Precision', type: 'video', src: 'assets/video/V46V.mp4' },
+  { title: 'Unleesh Brand Core', type: 'video', src: 'assets/video/V01.mp4?v=2' },
+  { title: 'Lumen Skincare', type: 'video', src: 'assets/video/V40V.mp4?v=2' },
+  { title: 'Wilder Camp', type: 'video', src: 'assets/video/V42V.mp4?v=2' },
+  { title: 'Pull Noodle Bar', type: 'video', src: 'assets/video/V45V.mp4?v=2' },
+  { title: 'Axiom Precision', type: 'video', src: 'assets/video/V46V.mp4?v=2' },
 ];
 
 const BAR_COUNT = 84;

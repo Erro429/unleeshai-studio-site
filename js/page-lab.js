@@ -47,8 +47,8 @@ export function init() {
     <article class="lab-card" data-cat="${cat}" data-idx="${i}">
       <div class="lc-media" data-cursor-dot data-slot="${slot}" data-video="${isVideo}">
         ${isVideo
-          ? `<video src="assets/video/${slot}.mp4" autoplay muted loop playsinline></video>`
-          : `<img src="assets/img/${slot}.webp" alt="${title}" loading="lazy">`}
+          ? `<video src="assets/video/${slot}.mp4?v=2" autoplay muted loop playsinline></video>`
+          : `<img src="assets/img/${slot}.webp?v=2" alt="${title}" loading="lazy">`}
       </div>
       <h3>${title}</h3>
       <span class="lc-date">${date}</span>
@@ -113,8 +113,8 @@ function initLightbox(cards) {
     const m = card.querySelector('.lc-media');
     const slot = m.dataset.slot;
     media.innerHTML = m.dataset.video === '1'
-      ? `<video src="assets/video/${slot}.mp4" autoplay muted loop playsinline></video>`
-      : `<img src="assets/img/${slot}.webp" alt="">`;
+      ? `<video src="assets/video/${slot}.mp4?v=2" autoplay muted loop playsinline></video>`
+      : `<img src="assets/img/${slot}.webp?v=2" alt="">`;
     lb.classList.add('is-open');
     if (!reducedMotion) {
       const state = Flip.getState(m.firstElementChild);

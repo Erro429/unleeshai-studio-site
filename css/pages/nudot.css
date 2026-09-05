@@ -113,7 +113,7 @@
   box-shadow: 0 60px 120px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   will-change: transform, opacity;
 }
-.nxc-texture { position: absolute; inset: 0; background: url("../../assets/img/metal.webp") center / cover; filter: saturate(0) contrast(1.15); }
+.nxc-texture { position: absolute; inset: 0; background: url("../../assets/img/metal.webp?v=2") center / cover; filter: saturate(0) contrast(1.15); }
 .nxc-sweep {
   position: absolute; inset: -40% -60%; pointer-events: none;
   background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.55) 50%, transparent 60%);
@@ -238,7 +238,7 @@
 /* ---------- §8 footer additions ---------- */
 .site-footer .nx-fbg {
   position: absolute; left: 0; right: 0; bottom: 0; height: 62%; z-index: 0; pointer-events: none;
-  background-image: url("../../assets/img/V63.webp");
+  background-image: url("../../assets/img/V63.webp?v=2");
   background-attachment: fixed; background-size: contain; background-position: bottom; background-repeat: no-repeat;
   mix-blend-mode: luminosity; opacity: 0.55;
 }

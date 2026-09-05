@@ -106,8 +106,8 @@ export function mountMenu() {
   overlay.querySelectorAll('.menu-nav li').forEach((li) => {
     const n = NAV[+li.dataset.idx];
     li.addEventListener('mouseenter', () => {
-      pvA.querySelector('img').src = `assets/img/${n.imgs[0]}.webp`;
-      pvB.querySelector('img').src = `assets/img/${n.imgs[1]}.webp`;
+      pvA.querySelector('img').src = `assets/img/${n.imgs[0]}.webp?v=2`;
+      pvB.querySelector('img').src = `assets/img/${n.imgs[1]}.webp?v=2`;
       gsap.to([pvA, pvB], { opacity: 1, scale: 1, duration: 0.3 });
     });
     li.addEventListener('mouseleave', () => {
@@ -158,7 +158,7 @@ export function mountFooter() {
   const footer = document.createElement('footer');
   footer.className = 'site-footer';
   footer.innerHTML = `
-    <video class="f-video" src="assets/video/V34.mp4" autoplay muted loop playsinline></video>
+    <video class="f-video" src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video>
     <div class="f-inner">
       ${isHome ? `
       <div class="f-meta">
@@ -213,7 +213,7 @@ export function mountPreloader(onDone) {
   // the second E (index 4) becomes the video letter
   const wordHTML = letters.map((ch, i) =>
     i === 4
-      ? `<span class="pl-letter is-video"><video src="assets/video/V01.mp4" autoplay muted loop playsinline></video></span>`
+      ? `<span class="pl-letter is-video"><video src="assets/video/V01.mp4?v=2" autoplay muted loop playsinline></video></span>`
       : `<span class="pl-letter"><span>${ch}</span></span>`
   ).join('');
 

@@ -41,7 +41,7 @@ function initSectorsArc() {
       const tile = document.createElement('div');
       tile.className = 'sa-tile';
       const img = RING_IMGS[(i + imgOffset) % RING_IMGS.length];
-      tile.innerHTML = `<img src="assets/img/${img}.webp" alt="" loading="lazy">`;
+      tile.innerHTML = `<img src="assets/img/${img}.webp?v=2" alt="" loading="lazy">`;
       tile.style.transform = `rotate(${(i / count) * 360}deg) translateY(-${radius}px)`;
       ring.appendChild(tile);
     }

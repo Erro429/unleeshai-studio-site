@@ -20,7 +20,7 @@ export function initNxArchive(root) {
   const figs = IMAGES.map(([img, name], i) => {
     const f = document.createElement('figure');
     f.className = 'nxa-img';
-    f.innerHTML = `<img src="assets/img/${img}.webp" alt="${name}" loading="lazy"><span class="bracket-label">( ${String(i + 1).padStart(2, '0')} · ${name} )</span>`;
+    f.innerHTML = `<img src="assets/img/${img}.webp?v=2" alt="${name}" loading="lazy"><span class="bracket-label">( ${String(i + 1).padStart(2, '0')} · ${name} )</span>`;
     host.appendChild(f);
     return f;
   });

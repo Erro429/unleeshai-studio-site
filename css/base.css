@@ -167,7 +167,7 @@ body[data-page="home"] .site-header:not(.is-solid) .h-burger {
   position: relative; z-index: 1;
   margin: 48px calc(-1 * var(--gutter)) -32px;
   padding: 56px var(--gutter) 8px;
-  background: url('../assets/img/metal.webp') center / cover no-repeat, #b9b9b9;
+  background: url('../assets/img/metal.webp?v=2') center / cover no-repeat, #b9b9b9;
   text-align: center; overflow: visible; line-height: 0;
 }
 .fp-word {

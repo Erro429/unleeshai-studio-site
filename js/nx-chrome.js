@@ -98,7 +98,7 @@ function initLoaderAdditions() {
     if (videoLetter) {
       const sw = document.createElement('span');
       sw.className = 'nx-swatch';
-      sw.innerHTML = SWATCH_IMGS.map((v) => `<img src="assets/img/${v}.webp" alt="">`).join('');
+      sw.innerHTML = SWATCH_IMGS.map((v) => `<img src="assets/img/${v}.webp?v=2" alt="">`).join('');
       videoLetter.after(sw);
       const imgs = sw.querySelectorAll('img');
       const cycle = gsap.timeline({ repeat: -1 });
@@ -136,8 +136,8 @@ function initMenuPreviews() {
   items.forEach((li, i) => {
     const [a, b] = MENU_PREVIEWS[i % MENU_PREVIEWS.length];
     li.insertAdjacentHTML('beforeend',
-      `<span class="nx-mp nx-mp-a" aria-hidden="true"><img src="assets/img/${a}.webp" alt=""></span>
-       <span class="nx-mp nx-mp-b" aria-hidden="true"><img src="assets/img/${b}.webp" alt=""></span>`);
+      `<span class="nx-mp nx-mp-a" aria-hidden="true"><img src="assets/img/${a}.webp?v=2" alt=""></span>
+       <span class="nx-mp nx-mp-b" aria-hidden="true"><img src="assets/img/${b}.webp?v=2" alt=""></span>`);
     li.addEventListener('mouseenter', () => {
       items.forEach((o) => o.classList.toggle('is-previewed', o === li));
     });
@@ -250,7 +250,7 @@ function decorateFooter() {
     card.className = 'nx-fcard';
     card.href = 'contact.html';
     card.setAttribute('aria-label', 'Business card');
-    card.innerHTML = '<img src="assets/img/V07.webp" alt="">';
+    card.innerHTML = '<img src="assets/img/V07.webp?v=2" alt="">';
     big.appendChild(card);
   }
 }
