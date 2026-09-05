@@ -107,7 +107,7 @@ function initSectors() {
 
   rows.forEach((row, i) => {
     row.addEventListener('mouseenter', () => {
-      img.src = `assets/img/${SECTOR_IMGS[i % SECTOR_IMGS.length]}.webp`;
+      img.src = `assets/img/${SECTOR_IMGS[i % SECTOR_IMGS.length]}.webp?v=2`;
       gsap.to(pv, { opacity: 1, duration: 0.3 });
     });
     row.addEventListener('mouseleave', () => gsap.to(pv, { opacity: 0, duration: 0.3 }));

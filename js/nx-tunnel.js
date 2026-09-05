@@ -122,7 +122,7 @@ export function initNxTunnel(root) {
     if (idx !== state.focused) {
       wordsL.forEach((w, i) => w.el.classList.toggle('is-focused', i === idx));
       wordsR.forEach((w, i) => w.el.classList.toggle('is-focused', i === idx));
-      thumbImg.src = `assets/img/${THUMBS[idx % THUMBS.length]}.webp`;
+      thumbImg.src = `assets/img/${THUMBS[idx % THUMBS.length]}.webp?v=2`;
       state.focused = idx;
     }
     // shared thumbnail rides beside the focused right word, never under the card / cube
