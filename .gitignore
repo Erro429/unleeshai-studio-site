@@ -1,3 +1,5 @@
 assets/raw/
 tools/jobs.tsv
 tools/*.log
+assets/raw-tech/
+tools/jobs-tech.tsv
