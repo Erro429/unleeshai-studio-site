@@ -79,7 +79,7 @@
      "Skipping the audit does not save the week. It moves the week to the middle of the project, when the design is half built and someone senior finally articulates what the company is actually for. Everything built before that sentence gets rebuilt. We have never seen an exception.",
      "The audit ends in a single page: what the brand is, what it is not, and what the site therefore has to feel like. That page is the brief. Everything after it is execution."
    ]},
-  {"slug":"webgl-when-it-earns-its-place","date":"2026.05.06","cat":"Motion","read":"6 min","img":"V13","fig":"V71",
+  {"slug":"webgl-when-it-earns-its-place","date":"2026.05.06","cat":"Motion","read":"6 min","img":"V13","fig":"V20",
    "title":"WebGL: when it earns its place and when it is vanity",
    "deck":"A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.",
    "pull":"If a video would do the same job, use the video.",
@@ -119,7 +119,7 @@
      "Restraint is expensive to produce and cheap to recognise. It takes a week of argument to remove the feature grid and a fraction of a second for the visitor to feel the difference. That asymmetry is the entire business case.",
      "The measure we use is simple: if a section were removed, would anyone notice? Every section that fails the test comes out. What remains has room to be looked at, which is the only thing a premium page needs to do."
    ]},
-  {"slug":"moodboard-to-motion-five-days","date":"2026.03.11","cat":"Process","read":"6 min","img":"V38","fig":"V54",
+  {"slug":"moodboard-to-motion-five-days","date":"2026.03.11","cat":"Process","read":"6 min","img":"V38","fig":"V12",
    "title":"From moodboard to motion in five days",
    "deck":"The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.",
    "pull":"Speed does not come from cutting steps. It comes from removing the waiting between them.",
@@ -139,7 +139,7 @@
      "On Axiom Precision we opened every capability page on a macro loop of the machine at work. The frames are not decoration; they are evidence. A buyer who watches a surface finish appear under the key light does not need the certification list to believe the tolerance.",
      "The industrial sector is our favourite for exactly this reason. The work is already extraordinary. The studio's job is to point the light at it."
    ]},
-  {"slug":"preloader-first-scene","date":"2026.02.12","cat":"Motion","read":"4 min","img":"V07","fig":"V01",
+  {"slug":"preloader-first-scene","date":"2026.02.12","cat":"Motion","read":"4 min","img":"V07","fig":"V08",
    "title":"The preloader is the first scene of the film",
    "deck":"A loading screen is a second of undivided attention. Most sites spend it on a spinner.",
    "pull":"The reader is never more attentive than while waiting for you to begin.",
@@ -149,7 +149,7 @@
      "The second visit is different. We remember that the reader has seen the opening and cut it to a beat. A film does not replay its title sequence every time you pause. Neither should a site.",
      "Half a second is not long. It is long enough to tell the reader that everything that follows was composed, not assembled."
    ]},
-  {"slug":"launching-unleesh-labs","date":"2026.01.28","cat":"Studio","read":"3 min","img":"V51","fig":"V70",
+  {"slug":"launching-unleesh-labs","date":"2026.01.28","cat":"Studio","read":"3 min","img":"V57","fig":"V65",
    "title":"Launching UNLEESH Labs: our public sketchbook",
    "deck":"Twenty-five experiments in web motion and generated imagery, published as they are made. Not portfolio pieces. Sketches.",
    "pull":"The portfolio shows what we finished. Labs shows what we are thinking about.",
