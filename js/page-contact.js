@@ -1,8 +1,10 @@
 /* UNLEESH — contact: kinetic header drift, form validation, modals */
 import { reducedMotion } from './core.js';
 import { icon } from './icons.js';
+import { initInner } from './inner.js';
 
 export function init() {
+  initInner();
   driftHeadings();
   initCaptcha();
   initBudgetBadge();
@@ -14,9 +16,11 @@ function driftHeadings() {
   if (reducedMotion) return;
   const lets = document.querySelector('.ct-lets');
   const talk = document.querySelector('.ct-talk');
-  if (!lets || !talk) return;
-  gsap.to(lets, { x: 60, ease: 'none', scrollTrigger: { trigger: '.ct-head', start: 'top top', end: 'bottom top', scrub: 1 } });
-  gsap.to(talk, { x: -60, ease: 'none', scrollTrigger: { trigger: '.ct-head', start: 'top top', end: 'bottom top', scrub: 1 } });
+  const body = document.querySelector('.in-body');
+  if (!lets || !talk || !body) return;
+  const st = { trigger: body, start: 'top bottom', end: 'top top', scrub: 1 };
+  gsap.to(lets, { x: 80, ease: 'none', scrollTrigger: st });
+  gsap.to(talk, { x: -80, ease: 'none', scrollTrigger: st });
 }
 
 function arrowLoop() {
@@ -33,10 +37,13 @@ function initCaptcha() {
 }
 
 function initBudgetBadge() {
-  const sel = document.querySelector('#cf-budget');
+  const radios = document.querySelectorAll('.cf-radios input');
   const badge = document.querySelector('.cf-badge');
-  if (!sel) return;
-  sel.addEventListener('change', () => badge.classList.toggle('is-visible', !!sel.value));
+  if (!radios.length || !badge) return;
+  radios.forEach((r) => r.addEventListener('change', () => {
+    badge.textContent = `( ${r.value} )`;
+    badge.classList.add('is-visible');
+  }));
 }
 
 function setErr(field, on) {
@@ -65,11 +72,19 @@ function initForm() {
     const capOk = parseInt(captcha.value, 10) === capA + capB;
     setErr(captcha, !capOk); ok = ok && capOk;
 
-    if (!ok) return;
+    if (!ok) {
+      const first = form.querySelector('.cf-field.is-error input, .cf-field.is-error textarea');
+      first && first.focus();
+      return;
+    }
 
-    // Sending state → Received (no backend wired yet; swap in a POST here)
+    // Sending state -> Received (no backend wired yet; swap in a POST here)
     modal.showSending();
-    setTimeout(() => modal.showReceived(() => { form.reset(); initCaptcha(); }), 1400);
+    setTimeout(() => modal.showReceived(() => {
+      form.reset();
+      initCaptcha();
+      document.querySelector('.cf-badge')?.classList.remove('is-visible');
+    }), 1400);
   });
 }
 
@@ -93,7 +108,7 @@ function buildModal() {
       box.innerHTML = `
         ${icon('star4')}
         <h3 class="cm-title display">RECEIVED</h3>
-        <p class="cm-sub">Thank you. We will respond shortly.<br>Your project brief is in good hands.</p>
+        <p class="cm-sub">Thank you. A real person replies within two working days.<br>Your brief is in good hands.</p>
         <button class="cm-close">Close</button>`;
       box.querySelector('.cm-close').addEventListener('click', () => {
         wrap.classList.remove('is-open');

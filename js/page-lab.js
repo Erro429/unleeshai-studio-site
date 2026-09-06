@@ -1,6 +1,7 @@
-/* UNLEESH — labs: rendered grid, Flip filtering, lightbox */
-import { reducedMotion, revealImg } from './core.js';
+/* UNLEESH — labs: rendered grid, Flip filtering, captioned lightbox */
+import { reducedMotion } from './core.js';
 import { icon } from './icons.js';
+import { initInner } from './inner.js';
 
 const CATS = {
   all: 'ALL',
@@ -38,20 +39,22 @@ const ITEMS = [
 ];
 const OWN_BRAND = new Set(['V69']); // no disclaimer on our own concepts
 const DISCLAIMER = 'Disclaimer: This is an experimental visual concept. Not affiliated with, endorsed by, or sponsored by any featured brand.';
+const pad = (n) => String(n).padStart(2, '0');
 
 export function init() {
+  initInner();
   const grid = document.querySelector('.lab-grid');
   if (!grid) return;
 
   grid.innerHTML = ITEMS.map(([title, cat, slot, isVideo, date], i) => `
     <article class="lab-card" data-cat="${cat}" data-idx="${i}">
-      <div class="lc-media" data-cursor-dot data-slot="${slot}" data-video="${isVideo}">
+      <div class="lc-media" data-cursor-dot data-cursor-label="OPEN" data-slot="${slot}" data-video="${isVideo}">
         ${isVideo
           ? `<video src="assets/video/${slot}.mp4?v=2" autoplay muted loop playsinline></video>`
           : `<img src="assets/img/${slot}.webp?v=2" alt="${title}" loading="lazy">`}
+        <div class="lc-over"><span class="lc-idx">${pad(i + 1)} // ${pad(ITEMS.length)}</span><span class="bracket-label">( ${CATS[cat]} )</span></div>
       </div>
-      <h3>${title}</h3>
-      <span class="lc-date">${date}</span>
+      <div class="lc-head"><h3>${title}</h3><span class="lc-date">${date}</span></div>
       <span class="lc-cat">（ ${CATS[cat]} ）</span>
       <button class="lc-view">View Details</button>
       ${OWN_BRAND.has(slot) ? '' : `<p class="lc-disc">${DISCLAIMER}</p>`}
@@ -59,11 +62,17 @@ export function init() {
 
   const cards = [...grid.querySelectorAll('.lab-card')];
 
+  // filter counts
+  document.querySelectorAll('.lab-filters button').forEach((btn) => {
+    const cat = btn.dataset.cat;
+    const n = cat === 'all' ? ITEMS.length : ITEMS.filter((it) => it[1] === cat).length;
+    btn.querySelector('.cnt').textContent = pad(n);
+  });
+
   // entrance reveal
   if (!reducedMotion) {
     gsap.from(cards, {
-      y: 40, opacity: 0, duration: 0.8, ease: 'expo.out',
-      stagger: 0.07,
+      y: 40, opacity: 0, duration: 0.8, ease: 'expo.out', stagger: 0.06,
       scrollTrigger: { trigger: grid, start: 'top 85%', once: true },
     });
   }
@@ -72,7 +81,11 @@ export function init() {
   const filters = document.querySelectorAll('.lab-filters button');
   filters.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filters.forEach((b) => b.classList.toggle('is-active', b === btn));
+      filters.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-selected', String(on));
+      });
       const cat = btn.dataset.cat;
       const state = Flip.getState(cards.filter((c) => c.style.display !== 'none'));
       cards.forEach((c) => {
@@ -95,6 +108,8 @@ function initLightbox(cards) {
   lb.className = 'lightbox';
   lb.innerHTML = `
     <div class="lb-media"></div>
+    <span class="lb-count tabular"></span>
+    <div class="lb-cap"><span class="lb-cap-title"></span><span class="lb-cap-sub"></span></div>
     <button class="lb-close" aria-label="Close">${icon('close')}</button>
     <button class="lb-link" aria-label="Copy link">${icon('link')}</button>
     <button class="lb-prev" aria-label="Previous">${icon('prev')}</button>
@@ -102,6 +117,9 @@ function initLightbox(cards) {
     <span class="lb-toast">COPIED</span>`;
   document.body.appendChild(lb);
   const media = lb.querySelector('.lb-media');
+  const count = lb.querySelector('.lb-count');
+  const capTitle = lb.querySelector('.lb-cap-title');
+  const capSub = lb.querySelector('.lb-cap-sub');
   const toast = lb.querySelector('.lb-toast');
   let current = -1;
 
@@ -112,13 +130,17 @@ function initLightbox(cards) {
     current = set.indexOf(card);
     const m = card.querySelector('.lc-media');
     const slot = m.dataset.slot;
+    const item = ITEMS[+card.dataset.idx];
     media.innerHTML = m.dataset.video === '1'
       ? `<video src="assets/video/${slot}.mp4?v=2" autoplay muted loop playsinline></video>`
       : `<img src="assets/img/${slot}.webp?v=2" alt="">`;
+    count.innerHTML = `${pad(current + 1)} <em>//</em> ${pad(set.length)}`;
+    capTitle.textContent = item[0];
+    capSub.textContent = `${item[4]} · ${CATS[item[1]]}`;
     lb.classList.add('is-open');
     if (!reducedMotion) {
-      const state = Flip.getState(m.firstElementChild);
       gsap.fromTo(media, { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'expo.out' });
+      gsap.fromTo([count, lb.querySelector('.lb-cap')], { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'expo.out', stagger: 0.05 });
     }
   }
   const step = (d) => {
@@ -127,7 +149,7 @@ function initLightbox(cards) {
     current = ((current + d) % set.length + set.length) % set.length;
     show(set[current]);
   };
-  const close = () => lb.classList.remove('is-open');
+  const close = () => { lb.classList.remove('is-open'); media.innerHTML = ''; };
 
   cards.forEach((card) => {
     card.querySelector('.lc-media').addEventListener('click', () => show(card));
@@ -151,4 +173,11 @@ function initLightbox(cards) {
     if (e.key === 'ArrowLeft') step(-1);
   });
   lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+
+  // deep link: lab.html#V56 opens that experiment
+  const hash = location.hash.replace('#', '');
+  if (hash) {
+    const card = cards.find((c) => c.querySelector('.lc-media').dataset.slot === hash);
+    if (card) setTimeout(() => show(card), 1200);
+  }
 }

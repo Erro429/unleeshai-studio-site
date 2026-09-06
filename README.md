@@ -20,12 +20,17 @@ do not work from file://).
 | File | Page |
 |---|---|
 | `index.html` | Home: WebGL hero carousel, the brief (photo reveal + decoder grid), ribbon marquee, pinned cube scene (chips, letters, status lines), who we are, sectors, works |
-| `about.html` | Double marquee, horizontal service cards, marquee wall, accordion, stepper, registry |
-| `work.html` | 10-item archive |
-| `work_<slug>.html` | 10 generated detail pages (sticky stacks, framed page scroller) |
-| `lab.html` | 25-card experimental grid, Flip filtering, lightbox |
-| `contact.html` | Kinetic header, validated form, sending/received modals |
-| `blog.html` | 16-row journal |
+| `about.html` | Sticky video hero, dot marquees, manifesto, years counter, pinned service cards, marquee wall, accordion with media, pinned six-phase process stage, studio band, registry with cursor previews |
+| `work.html` | Sticky mockup-loop hero with filmstrip index, sticky grid/list toggle, editorial 12-col grid with hover loops, big-type list with cursor previews |
+| `work_<slug>.html` | 10 generated case pages: title-over-still hero, facts strip, brief/answer/result, sticky stacks, framed page scroller, next-case teaser |
+| `lab.html` | Sticky hero, sticky filter strip with counts, 25-card grid, Flip filtering, captioned lightbox (deep-linkable by `#slot`) |
+| `contact.html` | Kinetic LET'S TALK hero with live SF clock, contact card + what-happens-next, validated brief form (pill radios), FAQ accordion, sending/received modals |
+| `blog.html` | Sticky hero with featured entry, 16 rows with cursor previews, subscribe strip |
+| `journal_<slug>.html` | 16 generated entries: hero, sticky reading aside with progress, drop-cap lead, pull quote, figure, next-entry teaser |
+
+Every internal page shares `css/pages/inner.css` + `js/inner.js` (sticky hero
+choreography, body seams, cursor previews, accordion, clock) and links
+`css/pages/nudot.css` for the global loader/menu/transition/grain additions.
 
 ## Structure
 - `css/` — tokens, base/chrome, components, per-page styles
@@ -37,11 +42,14 @@ do not work from file://).
 ```bash
 bash tools/gen-run.sh    # fires all Higgsfield jobs in tools/manifest.psv, downloads results
 bash tools/convert.sh    # raw → assets/img (webp) and assets/video (mp4)
-bash tools/build-details.sh  # regenerate the 10 work detail pages
+python tools/build.py    # regenerate work.html, the 10 case pages, blog.html and the 16 journal entries
 ```
+`tools/build.py` reads `tools/projects.json` and `tools/journal.json` and fills
+`tools/work-template.html`, `tools/detail-template.html`,
+`tools/journal-template.html` and `tools/article-template.html`. Edit the JSON
+or a template, never the generated files.
 
 ## Known follow-ups
-- Contact form has no backend yet (`page-contact.js` fakes send → swap in a POST)
-- Journal rows link to `#` until article pages exist
+- Contact form and journal subscribe strip have no backend yet (both acknowledge locally; swap in a POST)
 - Stats chips (12Y / 140+ works) and contact details (phone, address) are placeholders — replace with real numbers
 - Social links point to `#`

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030303">
+  <meta name="format-detection" content="telephone=no">
+  <title>Journal — UNLEESH Studio</title>
+  <meta name="description" content="Design insights and creative journal from UNLEESH studio: web design, AI visuals, motion and brand strategy.">
+  <meta property="og:title" content="Journal — UNLEESH Studio">
+  <meta property="og:image" content="assets/img/%%FEAT_IMG%%.webp?v=2">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Doto:ROND,wght@100,700;100,900&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
+  <link rel="stylesheet" href="css/pages/blog.css">
+</head>
+<body data-page="blog">
+
+<main>
+  <!-- sticky hero: fog plate, masthead JOURNAL / INSIGHTS, featured entry -->
+  <section class="in-hero">
+    <h1 class="sr-only">UNLEESH Journal: design insights and studio notes</h1>
+    <div class="in-plate is-dim"><video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui">
+      <div class="in-mast">
+        <p class="in-word display">JOURNAL</p>
+        <div class="in-mark">
+          <span class="in-glyph">U<span class="dot"></span></span>
+          <span class="bracket-label">( %%COUNT%% entries · 2026 )</span>
+        </div>
+        <p class="in-word display">INSIGHTS</p>
+      </div>
+      <div class="in-lists">
+        <ul>%%CAT_LI%%</ul>
+        <ul class="in-list-r">
+          <li>Design insights</li>
+          <li>Creative journal</li>
+          <li>Case notes</li>
+          <li>Studio news</li>
+        </ul>
+      </div>
+      <div class="in-mid">
+        <a class="bl-feat" href="journal_%%FEAT_SLUG%%.html" data-cursor-label="READ">
+          <div class="bf-media"><img src="assets/img/%%FEAT_IMG%%.webp?v=2" alt=""></div>
+          <div class="bf-copy">
+            <span class="bracket-label">( Latest · %%FEAT_DATE%% · %%FEAT_CAT%% )</span>
+            <span class="bf-title">%%FEAT_TITLE%%</span>
+            <span class="bf-deck">%%FEAT_DECK%%</span>
+            <span class="bf-read mono">Read the entry · %%FEAT_READ%%</span>
+          </div>
+        </a>
+      </div>
+      <div class="in-bottom">
+        <p class="in-kicker">Notes from the table: what we learned building, lighting and shipping, written down while it was still fresh.</p>
+        <div class="in-stats">
+          <span><b class="count" data-target="%%COUNT%%">0</b>Entries</span>
+          <span><b class="count" data-target="%%CATS%%">0</b>Topics</span>
+          <span><b>2026</b>Volume</span>
+        </div>
+        <div class="in-links">
+          <a href="lab.html">Labs archive</a>
+          <a href="#subscribe">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>DOWN</span>
+    </div>
+  </section>
+
+  <div class="in-body">
+    <div class="in-strip">
+      <span>Blog</span>
+      <span class="gloss">（ Insights ）</span>
+      <span>Latest news</span>
+      <span>2026</span>
+    </div>
+
+    <section class="bl-entries in-section is-tight">
+      <div class="in-head">
+        <p class="in-eyebrow">All entries</p>
+        <p class="in-statement" data-reveal-lines>Sixteen entries, newest first. Hover a row to see the frame it came from.</p>
+      </div>
+      <div class="bl-list">
+%%ROWS%%
+      </div>
+    </section>
+
+    <section class="bl-sub" id="subscribe">
+      <div class="bs-copy">
+        <p class="in-eyebrow">Subscribe</p>
+        <p class="in-statement">One entry a fortnight. No newsletter voice, no growth hacks, just the notes.</p>
+      </div>
+      <form class="bs-form" novalidate>
+        <label class="sr-only" for="bs-email">Email</label>
+        <input type="email" id="bs-email" name="email" placeholder="you@studio.com" required>
+        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></button>
+        <span class="bs-toast mono">Received. First entry lands next fortnight.</span>
+      </form>
+    </section>
+
+    <section class="in-cta">
+      <video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video>
+      <span class="bracket-label">( Reading is free. Building is a conversation. )</span>
+      <a class="in-cta-link" href="contact.html" data-cursor-label="TALK">LET'S TALK<span class="dot"></span></a>
+      <div class="in-cta-row">
+        <a href="work.html" data-roll>See the work</a>
+        <a href="about.html" data-roll>How we work</a>
+        <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -7,6 +7,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>Contact — UNLEESH Studio</title>
   <meta name="description" content="Start a conversation about your next digital transformation with UNLEESH studio.">
+  <meta property="og:title" content="Contact — UNLEESH Studio">
+  <meta property="og:image" content="assets/img/V21.webp?v=2">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,88 +16,173 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
   <link rel="stylesheet" href="css/pages/contact.css">
 </head>
 <body data-page="contact">
 
 <main>
-  <!-- 9.1 kinetic header -->
-  <header class="ct-head">
-    <div class="grid-12">
-      <h1 class="ct-lets display" data-reveal-lines>LET'S</h1>
-      <span class="ct-label mono">CONTACT</span>
-      <p class="ct-sub" data-reveal-lines>ABOUT YOUR NEXT BIG<br>DIGITAL TRANSFORMATION</p>
-      <h1 class="ct-talk display" data-reveal-lines>TALK</h1>
-      <span class="ct-start mono">START CONVERSATION <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span>
-      <span class="ct-gloss">（ Contact Us ）</span>
-      <span class="ct-pipes">VISION | EXPERIENCE | EXECUTION</span>
-    </div>
-  </header>
-
-  <!-- 9.2 form -->
-  <section class="ct-form">
-    <div class="cf-side">
-      <p>EVERY PROJECT BEGINS WITH A PRECISE QUESTION.</p>
-      <p style="margin-top:16px">TELL US YOURS.</p>
-    </div>
-    <form novalidate>
-      <div class="cf-field">
-        <label for="cf-name">Name *</label>
-        <input type="text" id="cf-name" name="name" required>
-        <span class="cf-err">Please fill in your name.</span>
-      </div>
-      <div class="cf-field">
-        <label for="cf-email">Email *</label>
-        <input type="email" id="cf-email" name="email" required>
-        <span class="cf-err">Please fill in a valid email.</span>
-      </div>
-      <div class="cf-field">
-        <label for="cf-phone">Phone *</label>
-        <input type="tel" id="cf-phone" name="phone" required>
-        <span class="cf-err">Please fill in your phone number.</span>
-      </div>
-      <div class="cf-field">
-        <label for="cf-company">Company ( optional )</label>
-        <input type="text" id="cf-company" name="company">
-      </div>
-      <div class="cf-field">
-        <label for="cf-details">Project Details *</label>
-        <textarea id="cf-details" name="details" rows="5" required></textarea>
-        <span class="cf-err">Please provide some details.</span>
-      </div>
-      <div class="cf-field">
-        <label>Services You Need</label>
-        <div class="cf-checks">
-          <label><input type="checkbox" name="svc" value="web">Web Design</label>
-          <label><input type="checkbox" name="svc" value="brand">Brand Identity</label>
-          <label><input type="checkbox" name="svc" value="image">Commercial Image Gen</label>
-          <label><input type="checkbox" name="svc" value="motion">AI Motion</label>
+  <!-- sticky hero: light-arc plate, kinetic LET'S / TALK -->
+  <section class="in-hero ct-hero">
+    <h1 class="sr-only">Contact UNLEESH Studio</h1>
+    <div class="in-plate is-dim"><img src="assets/img/V21.webp?v=2" alt=""></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui ct-ui">
+      <header class="ct-head">
+        <div class="grid-12">
+          <p class="ct-lets display" data-reveal-lines>LET'S</p>
+          <span class="ct-label bracket-label">( Contact )</span>
+          <p class="ct-sub" data-reveal-lines>ABOUT YOUR NEXT BIG<br>DIGITAL TRANSFORMATION</p>
+          <p class="ct-talk display" data-reveal-lines>TALK</p>
+          <a class="ct-start mono" href="#brief">START CONVERSATION <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a>
+          <span class="ct-gloss">（ Contact Us ）</span>
+          <span class="ct-pipes">VISION | EXPERIENCE | EXECUTION</span>
+        </div>
+      </header>
+      <div class="in-bottom">
+        <p class="in-kicker">Every project begins with a precise question. Tell us yours; we answer within two working days.</p>
+        <div class="in-stats">
+          <span><b data-clock>--:--</b>San Francisco</span>
+          <span><b>48H</b>Response</span>
+          <span><b>Q4</b>Accepting briefs</span>
+        </div>
+        <div class="in-links">
+          <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+          <a href="tel:+14155550134">+1 415 555 0134</a>
         </div>
       </div>
-      <div class="cf-field">
-        <label for="cf-budget">Budget Range<span class="cf-badge">( SELECTED )</span></label>
-        <select id="cf-budget" name="budget">
-          <option value="">Choose a range</option>
-          <option>Under $5K</option>
-          <option>$5K – $15K</option>
-          <option>$15K – $40K</option>
-          <option>$40K – $100K</option>
-          <option>$100K+</option>
-        </select>
-      </div>
-      <div class="cf-field">
-        <label for="cf-captcha"><span class="cap-q">1 + 9 =</span> ( Captcha ) *</label>
-        <input type="text" id="cf-captcha" name="captcha" inputmode="numeric" required>
-        <span class="cf-err">Incorrect answer. Please try again.</span>
-      </div>
-      <button type="submit" class="cf-submit">Submit</button>
-    </form>
+    </div>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>DOWN</span>
+    </div>
   </section>
 
-  <!-- 9.3 let's talk marquee -->
-  <div class="marquee marquee-band mq-display" data-speed="60" data-dir="left">
-    <div class="mq-track">
-      <span class="mq-item"><span>LET'S TALK</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
+  <div class="in-body">
+    <div class="in-strip">
+      <span>Brief</span>
+      <span class="gloss">（ Tell us yours ）</span>
+      <span class="status" data-text="STATUS // ACCEPTING Q4 BRIEFS"></span>
+    </div>
+
+    <!-- brief form -->
+    <section class="ct-form" id="brief">
+      <aside class="cf-side">
+        <p class="in-eyebrow">Direct</p>
+        <a class="cf-email display" href="mailto:hello@unleesh.ai" data-reveal-lines>hello@unleesh.ai</a>
+        <p class="cf-phone">+1 (415) 555-0134</p>
+        <p class="cf-addr bracket-label">( 94107 · San Francisco, California )</p>
+        <div class="cf-social">
+          <a href="#" rel="noopener" data-roll>Instagram</a>
+          <a href="#" rel="noopener" data-roll>Threads</a>
+          <a href="#" rel="noopener" data-roll>Facebook</a>
+        </div>
+        <div class="cf-next">
+          <p class="in-eyebrow">What happens next</p>
+          <ol>
+            <li><span class="tabular">01</span><div><b>We read it properly.</b><p>A real person replies within two working days with three precise questions.</p></div></li>
+            <li><span class="tabular">02</span><div><b>A 40-minute call.</b><p>Scope, budget band and whether we are the right studio. If not, we say who is.</p></div></li>
+            <li><span class="tabular">03</span><div><b>A one-page brief.</b><p>What the brand is, what it is not, what the site has to feel like. Signed before a pixel moves.</p></div></li>
+          </ol>
+        </div>
+      </aside>
+      <form novalidate>
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-name">Name *</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+            <span class="cf-err">Please fill in your name.</span>
+          </div>
+          <div class="cf-field">
+            <label for="cf-email">Email *</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required>
+            <span class="cf-err">Please fill in a valid email.</span>
+          </div>
+          <div class="cf-field">
+            <label for="cf-phone">Phone *</label>
+            <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required>
+            <span class="cf-err">Please fill in your phone number.</span>
+          </div>
+          <div class="cf-field">
+            <label for="cf-company">Company ( optional )</label>
+            <input type="text" id="cf-company" name="company" autocomplete="organization">
+          </div>
+        </div>
+        <div class="cf-field">
+          <label for="cf-details">Project Details *</label>
+          <textarea id="cf-details" name="details" rows="4" required placeholder="What are you building, who is it for, and what should it feel like?"></textarea>
+          <span class="cf-err">Please provide some details.</span>
+        </div>
+        <div class="cf-field">
+          <span class="cf-legend">Services You Need</span>
+          <div class="cf-checks">
+            <label><input type="checkbox" name="svc" value="web">Web Design</label>
+            <label><input type="checkbox" name="svc" value="brand">Brand Identity</label>
+            <label><input type="checkbox" name="svc" value="image">Commercial Image Gen</label>
+            <label><input type="checkbox" name="svc" value="motion">AI Motion</label>
+            <label><input type="checkbox" name="svc" value="consult">Digital Consulting</label>
+          </div>
+        </div>
+        <div class="cf-field">
+          <span class="cf-legend">Budget Range<span class="cf-badge">( Selected )</span></span>
+          <div class="cf-checks cf-radios">
+            <label><input type="radio" name="budget" value="Under $5K">Under $5K</label>
+            <label><input type="radio" name="budget" value="$5K to $15K">$5K to $15K</label>
+            <label><input type="radio" name="budget" value="$15K to $40K">$15K to $40K</label>
+            <label><input type="radio" name="budget" value="$40K to $100K">$40K to $100K</label>
+            <label><input type="radio" name="budget" value="$100K+">$100K+</label>
+          </div>
+        </div>
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-captcha"><span class="cap-q">1 + 9 =</span> ( Captcha ) *</label>
+            <input type="text" id="cf-captcha" name="captcha" inputmode="numeric" required>
+            <span class="cf-err">Incorrect answer. Please try again.</span>
+          </div>
+          <div class="cf-field cf-submit-wrap">
+            <button type="submit" class="cf-submit"><span>Send the brief</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <p class="cf-fine bracket-label">( No newsletter, no CRM drip. Your brief goes to the two people who will read it. )</p>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq in-section is-tight">
+      <div class="in-head">
+        <p class="in-eyebrow">Before you write</p>
+        <p class="in-statement" data-reveal-lines>The questions every first call starts with, answered here so the call can start further along.</p>
+      </div>
+    </section>
+    <section class="accordion faq-acc">
+      <div class="acc-row">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">01</span><h3>HOW LONG DOES A SITE TAKE?</h3><span class="gloss">（ Timeline ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Six to eleven weeks from signed brief to launch, depending on page count and how much imagery we generate. The first moving hero is in your browser by the end of week one.</p></div></div>
+      </div>
+      <div class="acc-row">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">02</span><h3>WHAT DOES IT COST?</h3><span class="gloss">（ Budget ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Most flagships land between $15K and $40K. Identity plus site plus a full generated image library sits above that. We quote a fixed price after the brief, and it does not move unless the scope does.</p></div></div>
+      </div>
+      <div class="acc-row">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">03</span><h3>DO YOU USE TEMPLATES?</h3><span class="gloss">（ Build ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>No. Every site is hand-coded: GSAP motion, WebGL only where it earns its place, and a performance budget that holds on a two-year-old phone. You own the code.</p></div></div>
+      </div>
+      <div class="acc-row">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">04</span><h3>IS THE IMAGERY REALLY GENERATED?</h3><span class="gloss">（ Visuals ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Yes, and art-directed frame by frame under one key light, then retouched at pixel level. If you have a real product we shoot it, generate around it, and you will not be able to tell where one ends.</p></div></div>
+      </div>
+      <div class="acc-row">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">05</span><h3>WHAT IF WE ONLY NEED A PIECE?</h3><span class="gloss">（ Scope ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>A hero, a campaign image set, a motion pass on an existing site, a design audit: all fine. Tell us the piece in the brief and we will scope just that.</p></div></div>
+      </div>
+    </section>
+
+    <!-- let's talk marquee -->
+    <div class="marquee marquee-band mq-display" data-speed="60" data-dir="left">
+      <div class="mq-track">
+        <span class="mq-item"><span>LET'S TALK</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg></span>
+      </div>
     </div>
   </div>
 </main>

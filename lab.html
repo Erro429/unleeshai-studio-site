@@ -7,6 +7,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>Labs — UNLEESH Studio</title>
   <meta name="description" content="UNLEESH Labs: visual engineering and generative prototypes. An experimental archive of web motion, AI motion imagery and commercial image generation.">
+  <meta property="og:title" content="Labs — UNLEESH Studio">
+  <meta property="og:image" content="assets/img/V55.webp?v=2">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,35 +16,103 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
   <link rel="stylesheet" href="css/pages/lab.css">
 </head>
 <body data-page="lab">
 
 <main>
-  <!-- 8.2 header composition -->
-  <header class="lab-head">
-    <h1 data-reveal-lines>LABS</h1>
-    <p class="lh-sub" data-reveal-lines>VISUAL ENGINEERING<br>GENERATIVE PROTOTYPES</p>
-    <div class="lh-row"><span>CORE</span><span>EXPERIMENTAL ARCHIVE</span></div>
-    <p class="lh-gloss">（ Laboratories ）</p>
-  </header>
-
-  <!-- 8.3 filter tabs -->
-  <div class="lab-filters" role="tablist">
-    <button class="is-active" data-cat="all">ALL</button>
-    <button data-cat="web">Web Motion Design</button>
-    <button data-cat="motion">Motion Image Generation</button>
-    <button data-cat="commercial">High-End Commercial Image Generation</button>
-  </div>
-
-  <!-- 8.4 grid (25 cards rendered by JS) -->
-  <div class="lab-grid" aria-live="polite"></div>
-
-  <!-- 8.5 coming soon marquee -->
-  <div class="marquee marquee-band mq-display mq-dot" data-speed="40" data-dir="left">
-    <div class="mq-track">
-      <span class="mq-item"><span>COMING SOON</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2h12M6 22h12M7 2c0 5 4 6 5 8-1 2-5 3-5 8M17 2c0 5-4 6-5 8 1 2 5 3 5 8"/></svg></span>
+  <!-- sticky hero: glass-cube loop, masthead LABS / PROTOTYPE -->
+  <section class="in-hero">
+    <h1 class="sr-only">UNLEESH Labs: visual engineering and generative prototypes</h1>
+    <div class="in-plate is-dim"><video src="assets/video/V51.mp4?v=2" autoplay muted loop playsinline></video></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui">
+      <div class="in-mast">
+        <p class="in-word display">LABS</p>
+        <div class="in-mark">
+          <span class="in-glyph">U<span class="dot"></span></span>
+          <span class="bracket-label">( Experimental archive )</span>
+        </div>
+        <p class="in-word display">PROTOTYPE</p>
+      </div>
+      <div class="in-lists">
+        <ul>
+          <li>Web motion design</li>
+          <li>Motion image generation</li>
+          <li>High-end commercial image generation</li>
+        </ul>
+        <ul class="in-list-r">
+          <li>GSAP · WebGL · GLSL</li>
+          <li>Three.js · Lenis</li>
+          <li>Kling · Seedream</li>
+          <li>Published as made</li>
+        </ul>
+      </div>
+      <div class="in-mid">
+        <p class="status" data-text="LAB // 25 EXPERIMENTS · 3 STREAMS · UPDATED JUN 25 2026"></p>
+      </div>
+      <div class="in-bottom">
+        <p class="in-kicker">Our public sketchbook. Nothing here was made for a client; some of it became client work anyway.</p>
+        <div class="in-stats">
+          <span><b class="count" data-target="25">0</b>Experiments</span>
+          <span><b class="count" data-target="3">0</b>Streams</span>
+          <span><b>2026</b>Volume</span>
+        </div>
+        <div class="in-links">
+          <a href="blog.html">Read the journal</a>
+          <a href="work.html">See client work</a>
+        </div>
+      </div>
     </div>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>DOWN</span>
+    </div>
+  </section>
+
+  <div class="in-body">
+    <!-- sticky filter strip -->
+    <div class="in-strip lab-bar">
+      <div class="lab-filters" role="tablist" aria-label="Filter experiments">
+        <button class="is-active" data-cat="all" role="tab" aria-selected="true">All <span class="cnt tabular"></span></button>
+        <button data-cat="web" role="tab" aria-selected="false" aria-label="Web Motion Design">Web motion <span class="cnt tabular"></span></button>
+        <button data-cat="motion" role="tab" aria-selected="false" aria-label="Motion Image Generation">Motion gen <span class="cnt tabular"></span></button>
+        <button data-cat="commercial" role="tab" aria-selected="false" aria-label="High-End Commercial Image Generation">Commercial gen <span class="cnt tabular"></span></button>
+      </div>
+      <span class="gloss">（ Laboratories ）</span>
+    </div>
+
+    <section class="lab-intro in-section is-tight">
+      <div class="in-head">
+        <p class="in-eyebrow">The sketchbook</p>
+        <p class="in-statement" data-reveal-lines>The portfolio shows what we finished. Labs shows what we are thinking about: shaders that did something strange, renders lit for a direction nobody chose, loops made at midnight for no reason.</p>
+      </div>
+      <div class="marquee mq-display mq-dot lab-tools" data-speed="50" data-dir="left"
+           data-items="GSAP|WEBGL|THREE.JS|GLSL|LENIS|KLING 2.6|SEEDREAM 4.5|FLIP|SCRAMBLE" data-sep="·"></div>
+    </section>
+
+    <!-- grid (25 cards rendered by JS) -->
+    <div class="lab-grid" aria-live="polite"></div>
+
+    <!-- coming soon marquee -->
+    <div class="marquee marquee-band mq-display mq-dot" data-speed="40" data-dir="left">
+      <div class="mq-track">
+        <span class="mq-item"><span>COMING SOON</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2h12M6 22h12M7 2c0 5 4 6 5 8-1 2-5 3-5 8M17 2c0 5-4 6-5 8 1 2 5 3 5 8"/></svg></span>
+      </div>
+    </div>
+
+    <section class="in-cta">
+      <video src="assets/video/V70.mp4?v=2" autoplay muted loop playsinline></video>
+      <span class="bracket-label">( Want one of these built for real? )</span>
+      <a class="in-cta-link" href="contact.html" data-cursor-label="TALK">LET'S TALK<span class="dot"></span></a>
+      <div class="in-cta-row">
+        <a href="work.html" data-roll>See the work</a>
+        <a href="about.html" data-roll>How we work</a>
+        <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+      </div>
+    </section>
   </div>
 </main>
 

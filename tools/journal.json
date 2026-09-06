@@ -1,0 +1,162 @@
+[
+  {"slug":"hero-section-costing-clients","date":"2026.08.18","cat":"Web Design","read":"5 min","img":"V28","fig":"V40",
+   "title":"Why your hero section is costing you clients",
+   "deck":"The first viewport is a job interview that lasts three seconds. Most premium brands fail it by saying everything at once.",
+   "pull":"A hero is not a summary of the company. It is a single decision about what the visitor should feel first.",
+   "body":[
+     "Open ten agency sites in ten tabs and read only the first viewport. You will find the same sentence wearing different fonts: we craft digital experiences that drive results. Nobody hired anyone because of that sentence. It exists because a committee could not agree on what to leave out, so it left nothing out.",
+     "A hero is not a summary of the company. It is a single decision about what the visitor should feel first. On a fine-dining site that feeling is patience; on a machining site it is precision; on a skincare flagship it is calm. Once the feeling is chosen, the hero needs one image or loop that produces it, one line of type that names it, and a way down. Everything else belongs further down the page where the visitor has already decided to stay.",
+     "The cost of getting this wrong is measurable. We watched a B2B client lose a third of paid traffic inside the first viewport because the headline, a stat ticker, a video, a client logo strip and two buttons were all competing for the same second. We removed four of the six elements. The bounce rate halved without touching the ad spend.",
+     "The uncomfortable part is that the fix requires someone to be wrong. The stat ticker was somebody's idea. The logo strip was a sales request. Subtraction is a political act inside a company, which is why it is worth paying an outside studio to perform it."
+   ]},
+  {"slug":"one-key-light","date":"2026.08.02","cat":"AI Visuals","read":"6 min","img":"V37","fig":"V38",
+   "title":"One key light: the whole aesthetic explained",
+   "deck":"Every image we ship, generated or photographed, is lit from one direction. Here is why that single constraint does most of the work.",
+   "pull":"Consistency is not a style. It is the absence of accidents.",
+   "body":[
+     "Ask a cinematographer what makes a frame feel expensive and they will not talk about the camera. They will talk about where the light comes from, how hard it is, and what it refuses to touch. Most product imagery on the web is lit from everywhere, because that is what a white studio and a ring light do. It looks clean and it looks like nothing.",
+     "Our rule is one key light, always slightly above and to the side, with a long falloff into near-black. Every still and every loop on this site obeys it. When a client sends us a reference that breaks the rule, we shoot their version and ours and let them compare. Ours wins because it looks like it belongs with the rest of their brand, even when the rest of their brand does not exist yet.",
+     "The constraint matters even more for generated imagery. A diffusion model will happily give you forty product shots with forty different suns. Describing the light in words, in every prompt, is the difference between a catalogue and a pile of pictures. We write the light before we write the product.",
+     "Consistency is not a style. It is the absence of accidents. One key light removes the accidents so that the actual decisions, the material, the angle, the negative space, have room to be seen."
+   ]},
+  {"slug":"ai-product-photography-five-figure-shoot","date":"2026.07.22","cat":"AI Visuals","read":"7 min","img":"V56","fig":"V55",
+   "title":"AI product photography that passes for a five-figure shoot",
+   "deck":"Generated imagery is only cheap if you accept the first result. The craft is in the second, third and fourteenth.",
+   "pull":"The model gives you a draft. The art director gives you a shoot.",
+   "body":[
+     "Every week somebody sends us a generated product image and asks why theirs looks like a stock photo while ours looks like a campaign. The honest answer is that we threw away twenty frames to keep one, and we knew what we were looking for before we started.",
+     "A commercial shoot has a brief, a lighting plan, a shot list and an art director on set who says no. Generation removes the set and the crew but not the need for the other four. Our prompts read like lighting plans: the key light, the surface, the exact distance from lens to object, what stays out of frame. The model gives you a draft. The art director gives you a shoot.",
+     "Then there is the part nobody mentions: the retouch. Generated frames arrive with wrong reflections, invented text and lens behaviour that no lens has. We clean every frame at pixel level before it ships. A keycap with a legible, real character on it is worth more than a hundred with alphabet soup.",
+     "The result is imagery that survives being placed next to real photography, which is the only test that matters. When a client cannot tell which frames were shot and which were generated, we have done the job."
+   ]},
+  {"slug":"scroll-is-a-story","date":"2026.07.10","cat":"Motion","read":"5 min","img":"V39","fig":"V14",
+   "title":"Scroll is a story, not a scrollbar",
+   "deck":"Scroll-driven motion earns its place when it changes what the reader understands, not just what they see.",
+   "pull":"If the animation can be removed without losing meaning, remove it.",
+   "body":[
+     "Pinned sections, scrubbed timelines and parallax have become a dialect. Used badly, they turn a page into a theme park ride where every element must be endured before the content appears. Used well, they let the page control pace the way an editor controls a cut.",
+     "Our test for every scroll-driven beat is simple: does the reader know something at the end of it that they did not know at the start? A cube that assembles from six faces while six capabilities light up teaches the structure of the studio. A word that bounces because it can teaches nothing. If the animation can be removed without losing meaning, remove it.",
+     "The second test is reversibility. Anything the reader scrolls into, they will scroll out of. If the piece only works forward, it is a video, not an interaction. Every scrubbed tween on this site plays backwards cleanly, which is a discipline that costs time and pays back in trust.",
+     "The third test is the one most sites fail: the page must still read as a page. Motion is punctuation. When every sentence ends in an exclamation mark, the reader stops hearing any of them."
+   ]},
+  {"slug":"case-against-page-builders","date":"2026.06.28","cat":"Strategy","read":"6 min","img":"V09","fig":"V10",
+   "title":"The case against page builders for premium brands",
+   "deck":"A template is a decision someone else made about how your brand should feel. For most businesses that is fine. For a premium brand it is the whole problem.",
+   "pull":"You cannot charge a premium for a product that arrives in the same box as everyone else's.",
+   "body":[
+     "Page builders solved a real problem: most businesses need a website and cannot afford a studio. We are not arguing with that. We are arguing with the premium skincare house, the boutique clinic, the machining firm charging for tolerances no competitor can hit, when they ship a site that shares a skeleton with a dropshipping store.",
+     "You cannot charge a premium for a product that arrives in the same box as everyone else's. Visitors do not consciously recognise the template, but they recognise the rhythm: the hero, the three-column features, the testimonial slider, the footer. It reads as generic before a single word is processed, and generic is the opposite of what a premium price is asking the customer to believe.",
+     "There is a technical cost too. Builders ship megabytes of code to support features you did not use, and every animation runs through three layers of abstraction. The result is a site that is slower than it looks and harder to change than it should be. The debt arrives at the worst moment, usually a rebrand.",
+     "A hand-coded site is not a luxury. It is the only way to make the page do exactly one thing, feel exactly one way, and load exactly as fast as it should. For a brand that sells on precision, anything less is a contradiction on the front door."
+   ]},
+  {"slug":"motion-tokens","date":"2026.06.15","cat":"Motion","read":"8 min","img":"V12","fig":"V20",
+   "title":"Motion tokens: a design system for time",
+   "deck":"Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.",
+   "pull":"Four durations, three curves, one rule: every change eases, nothing snaps.",
+   "body":[
+     "A design system without motion tokens is a design system that stops at the edge of the static comp. The moment something moves, every developer invents their own timing and the brand fractures into a hundred slightly different bounces.",
+     "Our set is small on purpose. Four durations: fast for hover, base for reveals, slow for large surfaces, and a curtain length for full-screen transitions. Three curves: an expo-out for things arriving, an in-out for things travelling, and a soft ease for anything the reader is meant to ignore. One rule sits above all of it: every change eases, nothing snaps.",
+     "The tokens live in CSS custom properties and are read by GSAP, so a hover underline and a pinned scene share the same vocabulary. Changing the feel of an entire site becomes a two-line edit. That is what a system is for.",
+     "The payoff is not that the site moves more. It is that the site moves the same way everywhere, which the reader experiences as confidence. Nothing on the page feels improvised, because nothing was."
+   ]},
+  {"slug":"dark-mode-is-a-stage","date":"2026.06.01","cat":"Web Design","read":"4 min","img":"V19","fig":"V25",
+   "title":"Dark mode is not a theme, it is a stage",
+   "deck":"Designing on near-black is not inverting a light site. It is deciding that the content is the only thing lit.",
+   "pull":"On a dark stage the light is the layout.",
+   "body":[
+     "Most dark modes are light modes with the values flipped. The same grid, the same card borders, the same drop shadows now pointing nowhere. The result is a site that looks like it is wearing sunglasses indoors.",
+     "A true dark design starts from a stage, not a page. The background is not a colour; it is the absence of light. Anything that appears is lit deliberately, and anything unlit does not exist. On a dark stage the light is the layout: the image with the single key light, the paragraph in soft white, the one hairline that separates two thoughts.",
+     "This changes small decisions. Cards lose their borders because a border is a lit edge with nothing behind it. Text goes one step brighter than instinct suggests, because grey on black reads as dust, not hierarchy. Video plates run at a third of their brightness so the type in front of them stays legible.",
+     "The reward is that the content gets to be the only bright thing in the room. That is a kind of attention a light background can never give it."
+   ]},
+  {"slug":"brand-audit-findings","date":"2026.05.20","cat":"Strategy","read":"7 min","img":"V37","fig":"V11",
+   "title":"What a brand audit actually finds (and what it costs to skip one)",
+   "deck":"Every project we take on begins with a week of looking before a day of making. Clients occasionally ask to skip it. Here is what they would be skipping.",
+   "pull":"Every audit finds the same thing: the brand is saying three things and believing one.",
+   "body":[
+     "An audit is a week spent reading everything the brand has ever published: the site, the decks, the packaging, the support emails, the LinkedIn posts written at 11pm. We are not looking for mistakes. We are looking for the place where the brand tells the truth by accident.",
+     "Every audit finds the same thing: the brand is saying three things and believing one. The site claims innovation, the sales deck claims reliability, and the founder, when you get them talking, cares about craft. The audit names the one and gives the other two a graceful exit.",
+     "Skipping the audit does not save the week. It moves the week to the middle of the project, when the design is half built and someone senior finally articulates what the company is actually for. Everything built before that sentence gets rebuilt. We have never seen an exception.",
+     "The audit ends in a single page: what the brand is, what it is not, and what the site therefore has to feel like. That page is the brief. Everything after it is execution."
+   ]},
+  {"slug":"webgl-when-it-earns-its-place","date":"2026.05.06","cat":"Motion","read":"6 min","img":"V13","fig":"V71",
+   "title":"WebGL: when it earns its place and when it is vanity",
+   "deck":"A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.",
+   "pull":"If a video would do the same job, use the video.",
+   "body":[
+     "WebGL is the difference between a site that plays a film and a site that renders one. That distinction is powerful and mostly unnecessary. If a video would do the same job, use the video: it is smaller, it works everywhere, and nobody's laptop fan will spin up.",
+     "WebGL earns its place when the reader's input changes the picture in a way a video cannot anticipate: a product that turns to follow the cursor, an image that ripples where you touch it, a field of points that parts as you scroll through it. The moment the picture is interactive, the shader stops being decoration.",
+     "It also has to survive contact with the real world. Every WebGL layer we ship has a mobile fallback, disposes its own memory, and stops rendering when it leaves the viewport. A hero that is beautiful on a studio Mac and molten on a two-year-old phone is a failure dressed as an achievement.",
+     "The question to ask is not whether the effect is impressive. It is whether the reader would notice if it were gone. If the answer is no, it was vanity, and vanity is the one thing a premium brand cannot afford to be caught doing."
+   ]},
+  {"slug":"typography-carries-the-menu","date":"2026.04.22","cat":"Case Notes","read":"5 min","img":"V29","fig":"V41",
+   "title":"Typography carries the menu: lessons from a candlelit build",
+   "deck":"On the Nocturne Dining site there is almost no imagery. What holds the page is type set the way a menu is read.",
+   "pull":"A menu is read slowly, by candlelight, by someone who wants to be persuaded.",
+   "body":[
+     "The brief for Nocturne was unusual: the room is too dark to photograph, and the chef did not want plated shots because the plates change nightly. The site would have to be almost entirely typographic. We took that as a gift.",
+     "A menu is read slowly, by candlelight, by someone who wants to be persuaded. We set the type to match: a wide display face for course names, a light body face for descriptions, generous leading, and one hairline between courses. Nothing bold, nothing coloured, nothing that raises its voice.",
+     "Motion carries the mood the imagery cannot. Each course reveals line by line as the reader scrolls, the way a waiter describes a dish. The reservation flow lives inside the same rhythm, so booking a table feels like reading to the end of the menu rather than leaving the restaurant to fill in a form.",
+     "The lesson we took away: a page does not need a picture to have an atmosphere. It needs a pace, and type sets pace better than anything else on the screen."
+   ]},
+  {"slug":"seamless-loops","date":"2026.04.08","cat":"AI Visuals","read":"6 min","img":"V21","fig":"V14",
+   "title":"Seamless loops: the craft of ambient video backgrounds",
+   "deck":"A background loop should be invisible. The moment the reader notices the cut, it has become a distraction.",
+   "pull":"The best loop is the one nobody could tell you the length of.",
+   "body":[
+     "An ambient loop sits behind type for as long as the reader stays on the page, which can be minutes. Every seam in that loop is a small tap on the shoulder. Five taps and the reader has stopped reading and started watching the video for the cut.",
+     "We generate loops at five seconds and hand-select the ones whose first and last frames can be blended without a visible jump. The subject has to be moving slowly enough that the blend is not a stutter, and there must be nothing in the frame with a fixed rhythm, no blinking light, no swinging pendulum, that would reveal the period.",
+     "Then we treat the loop like a photograph: one key light, muted saturation, and a scrim so the type in front stays sharp. The loop provides temperature, not information. The best loop is the one nobody could tell you the length of.",
+     "Encoding matters as much as content. We ship two sizes, mute the audio track entirely, and preload only the poster frame. A beautiful loop that stalls the page load is a beautiful loop nobody sees."
+   ]},
+  {"slug":"negative-space-sells","date":"2026.03.25","cat":"Strategy","read":"5 min","img":"V04","fig":"V27",
+   "title":"Negative space sells: the economics of restraint",
+   "deck":"Empty space on a page looks like waste to a spreadsheet and like confidence to a customer. Only one of them is buying.",
+   "pull":"Restraint is expensive to produce and cheap to recognise.",
+   "body":[
+     "Every square inch of a page has a cost, and every stakeholder knows it. So the page fills. Another feature, another badge, another call to action just in case. Each addition is defensible and the sum is a site that looks like it is shouting from behind a market stall.",
+     "Premium brands work the other way. A luxury boutique puts one bag on a shelf built for twenty. The empty shelf is the message: we do not need to sell you this. Negative space on a page works the same way. It says the brand is not anxious, and an unanxious brand is one the customer can trust with a premium price.",
+     "Restraint is expensive to produce and cheap to recognise. It takes a week of argument to remove the feature grid and a fraction of a second for the visitor to feel the difference. That asymmetry is the entire business case.",
+     "The measure we use is simple: if a section were removed, would anyone notice? Every section that fails the test comes out. What remains has room to be looked at, which is the only thing a premium page needs to do."
+   ]},
+  {"slug":"moodboard-to-motion-five-days","date":"2026.03.11","cat":"Process","read":"6 min","img":"V38","fig":"V54",
+   "title":"From moodboard to motion in five days",
+   "deck":"The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.",
+   "pull":"Speed does not come from cutting steps. It comes from removing the waiting between them.",
+   "body":[
+     "The traditional pipeline is a relay race with hand-offs: strategy passes to design, design passes to motion, motion passes to development, and every baton drop takes a week of meetings. The work is not slow. The waiting is.",
+     "Our loop puts one small team around one table for five days. Day one is the moodboard and the single sentence the site has to feel like. Day two is type and grid. Day three is the hero in the browser, moving. Day four is the first full page. Day five is the client sitting in front of a working site instead of a deck about one.",
+     "Speed does not come from cutting steps. It comes from removing the waiting between them. Generated imagery removes the waiting for a shoot. Hand-coded motion removes the waiting for a developer to interpret a designer's video. A client who sees the real thing on day five gives better feedback than one who sees a mock on day forty.",
+     "The five days are not the whole project. They are the part that decides whether the project is right. Everything after them is refinement, which is the part that should take time."
+   ]},
+  {"slug":"industrial-brands-deserve-cinema","date":"2026.02.26","cat":"Case Notes","read":"5 min","img":"V33","fig":"V47",
+   "title":"Industrial brands deserve cinema too",
+   "deck":"Machining, lubricants, steel. The sectors with the most visually extraordinary work are the ones that show it worst.",
+   "pull":"A foundry at pour is the most cinematic thing in any city. Its website is a PDF.",
+   "body":[
+     "Walk a machine shop floor and you will see coolant arcs, titanium chips curling off a tool, a spindle finding a tolerance a human eye cannot. Then open the company's site: a stock photo of a handshake, a list of certifications, a phone number.",
+     "A foundry at pour is the most cinematic thing in any city. Its website is a PDF. This is not a lack of pride. It is a belief that the customers, engineers and procurement teams, do not respond to beauty. They do. They respond to it more, because they are the only people who can read what the beauty is proving.",
+     "On Axiom Precision we opened every capability page on a macro loop of the machine at work. The frames are not decoration; they are evidence. A buyer who watches a surface finish appear under the key light does not need the certification list to believe the tolerance.",
+     "The industrial sector is our favourite for exactly this reason. The work is already extraordinary. The studio's job is to point the light at it."
+   ]},
+  {"slug":"preloader-first-scene","date":"2026.02.12","cat":"Motion","read":"4 min","img":"V07","fig":"V01",
+   "title":"The preloader is the first scene of the film",
+   "deck":"A loading screen is a second of undivided attention. Most sites spend it on a spinner.",
+   "pull":"The reader is never more attentive than while waiting for you to begin.",
+   "body":[
+     "A preloader exists because assets take time, but its real function is dramatic. It is the black frame before the title card. The reader is never more attentive than while waiting for you to begin, and a spinner spends that attention on nothing.",
+     "Ours counts from zero to one hundred in the corner while the wordmark rises letter by letter, one letter replaced by a live video slice. Then the whole screen wipes upward and the hero is already moving underneath. The count is honest, it tracks real loading, but the choreography is the point: the site has a rhythm before it has content.",
+     "The second visit is different. We remember that the reader has seen the opening and cut it to a beat. A film does not replay its title sequence every time you pause. Neither should a site.",
+     "Half a second is not long. It is long enough to tell the reader that everything that follows was composed, not assembled."
+   ]},
+  {"slug":"launching-unleesh-labs","date":"2026.01.28","cat":"Studio","read":"3 min","img":"V51","fig":"V70",
+   "title":"Launching UNLEESH Labs: our public sketchbook",
+   "deck":"Twenty-five experiments in web motion and generated imagery, published as they are made. Not portfolio pieces. Sketches.",
+   "pull":"The portfolio shows what we finished. Labs shows what we are thinking about.",
+   "body":[
+     "Every studio has a folder of things that never became client work: a shader that did something strange, a product render lit for a client who chose a different direction, a loop made at midnight for no reason. We decided to publish ours.",
+     "Labs is that folder with a filter bar. Three streams: web motion design, motion image generation, and high-end commercial image generation. Each entry is dated, categorised and shown at full size in a lightbox. Nothing is retouched for the archive; the point is to show the sketch, not the frame.",
+     "The portfolio shows what we finished. Labs shows what we are thinking about. Clients read it to see where the studio is heading before they brief us, which turns out to be a better conversation than any capabilities deck.",
+     "The archive will grow by a few entries a month. Some will become client work. Most will stay sketches, which is what a sketchbook is for."
+   ]}
+]

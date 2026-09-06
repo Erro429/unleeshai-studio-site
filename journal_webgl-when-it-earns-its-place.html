@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030303">
+  <meta name="format-detection" content="telephone=no">
+  <title>WebGL: when it earns its place and when it is vanity — UNLEESH Journal</title>
+  <meta name="description" content="A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.">
+  <meta property="og:title" content="WebGL: when it earns its place and when it is vanity — UNLEESH Journal">
+  <meta property="og:image" content="assets/img/V13.webp?v=2">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Doto:ROND,wght@100,700;100,900&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
+  <link rel="stylesheet" href="css/pages/article.css">
+</head>
+<body data-page="article">
+
+<main>
+  <!-- sticky hero: the entry's frame, title set over it -->
+  <section class="in-hero ar-hero">
+    <div class="in-plate is-dim"><img src="assets/img/V13.webp?v=2" alt=""></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui ar-ui">
+      <div class="ar-top">
+        <a class="ar-back" href="blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg><span data-roll>Journal</span></a>
+        <span class="ar-index tabular">09 <em>//</em> 16</span>
+        <span class="chip">( Motion )</span>
+      </div>
+      <div class="ar-title-row">
+        <h1 class="ar-h1 display" data-reveal-lines>WebGL: when it earns its place and when it is vanity</h1>
+        <div class="ar-side">
+          <p class="ar-deck" data-reveal-lines>A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.</p>
+          <p class="bracket-label">( 2026.05.06 · 6 min read )</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>READ</span>
+    </div>
+  </section>
+
+  <div class="in-body">
+    <div class="in-strip">
+      <span class="tabular">2026.05.06</span>
+      <span class="gloss">（ Motion ）</span>
+      <span>6 min read</span>
+      <span class="ar-share">Share <a href="#" data-share="x">X</a> <a href="#" data-share="li">LinkedIn</a> <a href="#" data-share="copy">Copy link</a></span>
+    </div>
+
+    <article class="ar-body">
+      <aside class="ar-aside">
+        <div class="ar-aside-in">
+          <span class="bracket-label">( Entry 09 )</span>
+          <p class="ar-aside-title">WebGL: when it earns its place and when it is vanity</p>
+          <ul class="ar-meta">
+            <li><span>Topic</span>Motion</li>
+            <li><span>Published</span>2026.05.06</li>
+            <li><span>Reading</span>6 min</li>
+            <li><span>By</span>UNLEESH Studio</li>
+          </ul>
+          <div class="ar-progress" aria-hidden="true"><i></i></div>
+          <a class="ar-aside-next" href="journal_typography-carries-the-menu.html">Next: Typography carries the menu: lessons from a candlelit build</a>
+        </div>
+      </aside>
+      <div class="ar-col">
+      <p class="ar-lead">WebGL is the difference between a site that plays a film and a site that renders one. That distinction is powerful and mostly unnecessary. If a video would do the same job, use the video: it is smaller, it works everywhere, and nobody&#x27;s laptop fan will spin up.</p>
+      <p>WebGL earns its place when the reader&#x27;s input changes the picture in a way a video cannot anticipate: a product that turns to follow the cursor, an image that ripples where you touch it, a field of points that parts as you scroll through it. The moment the picture is interactive, the shader stops being decoration.</p>
+      <blockquote class="ar-pull" data-reveal-lines>If a video would do the same job, use the video.</blockquote>
+      <p>It also has to survive contact with the real world. Every WebGL layer we ship has a mobile fallback, disposes its own memory, and stops rendering when it leaves the viewport. A hero that is beautiful on a studio Mac and molten on a two-year-old phone is a failure dressed as an achievement.</p>
+      <figure class="ar-fig reveal-img"><img src="assets/img/V71.webp?v=2" alt="" loading="lazy"><figcaption class="bracket-label">( Fig. 01 · Motion )</figcaption></figure>
+      <p>The question to ask is not whether the effect is impressive. It is whether the reader would notice if it were gone. If the answer is no, it was vanity, and vanity is the one thing a premium brand cannot afford to be caught doing.</p>
+
+        <p class="ar-sign bracket-label">( Written at the UNLEESH table · San Francisco )</p>
+      </div>
+    </article>
+
+    <!-- next entry -->
+    <a class="ar-next" href="journal_typography-carries-the-menu.html" data-cursor-label="READ">
+      <div class="ar-next-media"><img src="assets/img/V29.webp?v=2" alt="" loading="lazy"></div>
+      <div class="ar-next-ui">
+        <span class="bracket-label">( Next entry · 2026.04.22 · Case Notes )</span>
+        <span class="ar-next-title display">Typography carries the menu: lessons from a candlelit build</span>
+      </div>
+    </a>
+
+    <div class="ar-foot">
+      <nav class="ar-pager" aria-label="Journal navigation">
+        <a href="journal_brand-audit-findings.html" aria-label="Previous entry: What a brand audit actually finds (and what it costs to skip one)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 7l-5 5 5 5"/></svg></a>
+        <a href="blog.html" aria-label="All entries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></a>
+        <a href="journal_typography-carries-the-menu.html" aria-label="Next entry: Typography carries the menu: lessons from a candlelit build"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 7l5 5-5 5"/></svg></a>
+      </nav>
+    </div>
+
+    <section class="in-cta">
+      <video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video>
+      <span class="bracket-label">( Reading is free. Building is a conversation. )</span>
+      <a class="in-cta-link" href="contact.html" data-cursor-label="TALK">LET'S TALK<span class="dot"></span></a>
+      <div class="in-cta-row">
+        <a href="work.html" data-roll>See the work</a>
+        <a href="about.html" data-roll>How we work</a>
+        <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

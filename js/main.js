@@ -17,6 +17,7 @@ const pageInits = {
   lab: () => import('./page-lab.js').then((m) => m.init()),
   contact: () => import('./page-contact.js').then((m) => m.init()),
   blog: () => import('./page-blog.js').then((m) => m.init()),
+  article: () => import('./page-article.js').then((m) => m.init()),
 };
 
 function initPage() {
@@ -27,7 +28,7 @@ function initPage() {
   initMarquees();
   initScrollInd();
   initBackTop();
-  initMagnetic('.hero-prev, .hero-next, .h-mail, .h-burger, .back-top, .cf-submit, .hx-social a, .f-social a, .pj-pager a');
+  initMagnetic('.hero-prev, .hero-next, .h-mail, .h-burger, .back-top, .cf-submit, .hx-social a, .f-social a, .pj-pager a, .ar-pager a, .wk-toggle button, .bs-form button, .lb-close, .lb-prev, .lb-next');
   const key = pageKey();
   const fn = pageInits[key];
   const page = fn ? fn().catch((e) => console.error('page init failed', e)) : Promise.resolve();

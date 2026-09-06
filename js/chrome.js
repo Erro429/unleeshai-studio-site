@@ -15,7 +15,18 @@ const PAGES = {
   lab:     { file: 'lab.html',          name: 'LABS',    sub: 'UNLEESH Labs — Editorial Grid' },
   contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT YOUR NEXT DIGITAL TRANSFORMATION' },
   blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Shared page-transition layer for the journal and article pages.' },
+  article: { file: 'journal.html',      name: 'ENTRY',   sub: 'Journal entry' },
 };
+
+/* which page key a link points at (data-driven pages share a prefix) */
+function keyForHref(href) {
+  const file = href.split('#')[0].split('?')[0];
+  const direct = Object.keys(PAGES).find((k) => PAGES[k].file === file);
+  if (direct) return direct;
+  if (file.startsWith('work_')) return 'project';
+  if (file.startsWith('journal_')) return 'article';
+  return 'home';
+}
 
 const NAV = [
   { label: '( Index )',     word: 'HOME',    href: 'index.html',   imgs: ['V07', 'V08'] },
@@ -297,7 +308,7 @@ export function mountTransitions(reinit) {
   async function navigate(href) {
     navigating = true;
     const from = (PAGES[pageKey()] || PAGES.home).name.toLowerCase();
-    const toKey = Object.keys(PAGES).find((k) => PAGES[k].file === href.split('#')[0]) || 'home';
+    const toKey = keyForHref(href);
     caption.textContent = `Shared page-transition layer for the ${from} page and the ${PAGES[toKey].name.toLowerCase()} page.`;
 
     layer.classList.add('is-open');
@@ -313,8 +324,14 @@ export function mountTransitions(reinit) {
       const newMain = doc.querySelector('main');
       const oldMain = document.querySelector('main');
 
+      // the target page's own stylesheets must be in place before its main is shown
+      await loadStylesheets(doc);
+
       ScrollTrigger.getAll().forEach((st) => st.kill());
       document.querySelector('.site-footer')?.remove();
+      // transient overlays the leaving page appended to <body>
+      document.querySelectorAll('.in-preview, .sector-preview, .view-pill, .lightbox, .ct-modal').forEach((n) => n.remove());
+      document.body.classList.remove('cursor-hot');
       oldMain.replaceWith(newMain);
       document.body.dataset.page = doc.body.dataset.page || 'home';
       if (doc.body.dataset.noFooter !== undefined) document.body.dataset.noFooter = '';
@@ -335,6 +352,19 @@ export function mountTransitions(reinit) {
     }
     navigating = false;
   }
+}
+
+/* append any stylesheet the fetched document links that this one does not have yet */
+function loadStylesheets(doc) {
+  const have = new Set([...document.querySelectorAll('link[rel="stylesheet"]')].map((l) => l.getAttribute('href')));
+  const missing = [...doc.querySelectorAll('link[rel="stylesheet"]')].filter((l) => !have.has(l.getAttribute('href')));
+  return Promise.all(missing.map((l) => new Promise((resolve) => {
+    const el = document.createElement('link');
+    el.rel = 'stylesheet';
+    el.href = l.getAttribute('href');
+    el.onload = el.onerror = resolve;
+    document.head.appendChild(el);
+  })));
 }
 
 /* helper for pages: mount everything shared */

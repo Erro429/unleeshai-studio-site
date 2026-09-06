@@ -7,6 +7,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>Journal — UNLEESH Studio</title>
   <meta name="description" content="Design insights and creative journal from UNLEESH studio: web design, AI visuals, motion and brand strategy.">
+  <meta property="og:title" content="Journal — UNLEESH Studio">
+  <meta property="og:image" content="assets/img/V28.webp?v=2">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,41 +16,122 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
   <link rel="stylesheet" href="css/pages/blog.css">
 </head>
 <body data-page="blog">
 
 <main>
-  <!-- 10.1 header composition -->
-  <header class="bl-head">
-    <div class="grid-12">
-      <h1 data-reveal-lines>NEWS</h1>
-      <p class="bh-sub" data-reveal-lines>DESIGN INSIGHTS<br>CREATIVE JOURNAL</p>
-      <span class="bh-blog">BLOG</span>
-      <span class="bh-latest">LATEST NEWS</span>
-      <span class="bh-gloss">（ Insights ）</span>
-      <span class="bh-year">2026</span>
+  <!-- sticky hero: fog plate, masthead JOURNAL / INSIGHTS, featured entry -->
+  <section class="in-hero">
+    <h1 class="sr-only">UNLEESH Journal: design insights and studio notes</h1>
+    <div class="in-plate is-dim"><video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui">
+      <div class="in-mast">
+        <p class="in-word display">JOURNAL</p>
+        <div class="in-mark">
+          <span class="in-glyph">U<span class="dot"></span></span>
+          <span class="bracket-label">( 16 entries · 2026 )</span>
+        </div>
+        <p class="in-word display">INSIGHTS</p>
+      </div>
+      <div class="in-lists">
+        <ul><li>AI Visuals</li><li>Case Notes</li><li>Motion</li><li>Process</li><li>Strategy</li><li>Studio</li><li>Web Design</li></ul>
+        <ul class="in-list-r">
+          <li>Design insights</li>
+          <li>Creative journal</li>
+          <li>Case notes</li>
+          <li>Studio news</li>
+        </ul>
+      </div>
+      <div class="in-mid">
+        <a class="bl-feat" href="journal_hero-section-costing-clients.html" data-cursor-label="READ">
+          <div class="bf-media"><img src="assets/img/V28.webp?v=2" alt=""></div>
+          <div class="bf-copy">
+            <span class="bracket-label">( Latest · 2026.08.18 · Web Design )</span>
+            <span class="bf-title">Why your hero section is costing you clients</span>
+            <span class="bf-deck">The first viewport is a job interview that lasts three seconds. Most premium brands fail it by saying everything at once.</span>
+            <span class="bf-read mono">Read the entry · 5 min</span>
+          </div>
+        </a>
+      </div>
+      <div class="in-bottom">
+        <p class="in-kicker">Notes from the table: what we learned building, lighting and shipping, written down while it was still fresh.</p>
+        <div class="in-stats">
+          <span><b class="count" data-target="16">0</b>Entries</span>
+          <span><b class="count" data-target="7">0</b>Topics</span>
+          <span><b>2026</b>Volume</span>
+        </div>
+        <div class="in-links">
+          <a href="lab.html">Labs archive</a>
+          <a href="#subscribe">Subscribe</a>
+        </div>
+      </div>
     </div>
-  </header>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>DOWN</span>
+    </div>
+  </section>
 
-  <!-- 10.2 article list, 16 rows, newest first -->
-  <div class="bl-list">
-    <a class="bl-row" href="#"><span class="b-date">2026.08.18</span><span class="b-title">Why your hero section is costing you clients</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.08.02</span><span class="b-title">One key light: the whole aesthetic explained</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.07.22</span><span class="b-title">AI product photography that passes for a five-figure shoot</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.07.10</span><span class="b-title">Scroll is a story, not a scrollbar</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.06.28</span><span class="b-title">The case against page builders for premium brands</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.06.15</span><span class="b-title">Motion tokens: a design system for time</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.06.01</span><span class="b-title">Dark mode is not a theme, it is a stage</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.05.20</span><span class="b-title">What a brand audit actually finds (and what it costs to skip one)</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.05.06</span><span class="b-title">WebGL: when it earns its place and when it is vanity</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.04.22</span><span class="b-title">Typography carries the menu: lessons from a candlelit build</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.04.08</span><span class="b-title">Seamless loops: the craft of ambient video backgrounds</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.03.25</span><span class="b-title">Negative space sells: the economics of restraint</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.03.11</span><span class="b-title">From moodboard to motion in five days</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.02.26</span><span class="b-title">Industrial brands deserve cinema too</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.02.12</span><span class="b-title">The preloader is the first scene of the film</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
-    <a class="bl-row" href="#"><span class="b-date">2026.01.28</span><span class="b-title">Launching UNLEESH Labs: our public sketchbook</span><span class="b-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+  <div class="in-body">
+    <div class="in-strip">
+      <span>Blog</span>
+      <span class="gloss">（ Insights ）</span>
+      <span>Latest news</span>
+      <span>2026</span>
+    </div>
+
+    <section class="bl-entries in-section is-tight">
+      <div class="in-head">
+        <p class="in-eyebrow">All entries</p>
+        <p class="in-statement" data-reveal-lines>Sixteen entries, newest first. Hover a row to see the frame it came from.</p>
+      </div>
+      <div class="bl-list">
+      <a class="bl-row" href="journal_hero-section-costing-clients.html" data-img="V28" data-cursor-label="READ"><span class="b-date tabular">2026.08.18</span><span class="b-cat">Web Design</span><span class="b-title">Why your hero section is costing you clients</span><span class="b-read">5 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_one-key-light.html" data-img="V37" data-cursor-label="READ"><span class="b-date tabular">2026.08.02</span><span class="b-cat">AI Visuals</span><span class="b-title">One key light: the whole aesthetic explained</span><span class="b-read">6 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_ai-product-photography-five-figure-shoot.html" data-img="V56" data-cursor-label="READ"><span class="b-date tabular">2026.07.22</span><span class="b-cat">AI Visuals</span><span class="b-title">AI product photography that passes for a five-figure shoot</span><span class="b-read">7 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_scroll-is-a-story.html" data-img="V39" data-cursor-label="READ"><span class="b-date tabular">2026.07.10</span><span class="b-cat">Motion</span><span class="b-title">Scroll is a story, not a scrollbar</span><span class="b-read">5 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_case-against-page-builders.html" data-img="V09" data-cursor-label="READ"><span class="b-date tabular">2026.06.28</span><span class="b-cat">Strategy</span><span class="b-title">The case against page builders for premium brands</span><span class="b-read">6 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_motion-tokens.html" data-img="V12" data-cursor-label="READ"><span class="b-date tabular">2026.06.15</span><span class="b-cat">Motion</span><span class="b-title">Motion tokens: a design system for time</span><span class="b-read">8 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_dark-mode-is-a-stage.html" data-img="V19" data-cursor-label="READ"><span class="b-date tabular">2026.06.01</span><span class="b-cat">Web Design</span><span class="b-title">Dark mode is not a theme, it is a stage</span><span class="b-read">4 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_brand-audit-findings.html" data-img="V37" data-cursor-label="READ"><span class="b-date tabular">2026.05.20</span><span class="b-cat">Strategy</span><span class="b-title">What a brand audit actually finds (and what it costs to skip one)</span><span class="b-read">7 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_webgl-when-it-earns-its-place.html" data-img="V13" data-cursor-label="READ"><span class="b-date tabular">2026.05.06</span><span class="b-cat">Motion</span><span class="b-title">WebGL: when it earns its place and when it is vanity</span><span class="b-read">6 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_typography-carries-the-menu.html" data-img="V29" data-cursor-label="READ"><span class="b-date tabular">2026.04.22</span><span class="b-cat">Case Notes</span><span class="b-title">Typography carries the menu: lessons from a candlelit build</span><span class="b-read">5 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_seamless-loops.html" data-img="V21" data-cursor-label="READ"><span class="b-date tabular">2026.04.08</span><span class="b-cat">AI Visuals</span><span class="b-title">Seamless loops: the craft of ambient video backgrounds</span><span class="b-read">6 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_negative-space-sells.html" data-img="V04" data-cursor-label="READ"><span class="b-date tabular">2026.03.25</span><span class="b-cat">Strategy</span><span class="b-title">Negative space sells: the economics of restraint</span><span class="b-read">5 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_moodboard-to-motion-five-days.html" data-img="V38" data-cursor-label="READ"><span class="b-date tabular">2026.03.11</span><span class="b-cat">Process</span><span class="b-title">From moodboard to motion in five days</span><span class="b-read">6 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_industrial-brands-deserve-cinema.html" data-img="V33" data-cursor-label="READ"><span class="b-date tabular">2026.02.26</span><span class="b-cat">Case Notes</span><span class="b-title">Industrial brands deserve cinema too</span><span class="b-read">5 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_preloader-first-scene.html" data-img="V07" data-cursor-label="READ"><span class="b-date tabular">2026.02.12</span><span class="b-cat">Motion</span><span class="b-title">The preloader is the first scene of the film</span><span class="b-read">4 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      <a class="bl-row" href="journal_launching-unleesh-labs.html" data-img="V51" data-cursor-label="READ"><span class="b-date tabular">2026.01.28</span><span class="b-cat">Studio</span><span class="b-title">Launching UNLEESH Labs: our public sketchbook</span><span class="b-read">3 min</span><span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></a>
+      </div>
+    </section>
+
+    <section class="bl-sub" id="subscribe">
+      <div class="bs-copy">
+        <p class="in-eyebrow">Subscribe</p>
+        <p class="in-statement">One entry a fortnight. No newsletter voice, no growth hacks, just the notes.</p>
+      </div>
+      <form class="bs-form" novalidate>
+        <label class="sr-only" for="bs-email">Email</label>
+        <input type="email" id="bs-email" name="email" placeholder="you@studio.com" required>
+        <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></button>
+        <span class="bs-toast mono">Received. First entry lands next fortnight.</span>
+      </form>
+    </section>
+
+    <section class="in-cta">
+      <video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video>
+      <span class="bracket-label">( Reading is free. Building is a conversation. )</span>
+      <a class="in-cta-link" href="contact.html" data-cursor-label="TALK">LET'S TALK<span class="dot"></span></a>
+      <div class="in-cta-row">
+        <a href="work.html" data-roll>See the work</a>
+        <a href="about.html" data-roll>How we work</a>
+        <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+      </div>
+    </section>
   </div>
 </main>
 

@@ -7,6 +7,8 @@
   <meta name="format-detection" content="telephone=no">
   <title>About — UNLEESH Studio</title>
   <meta name="description" content="UNLEESH is an AI-native creative studio committed to the art of subtraction: brand identity, high-end web design, AI visuals and motion.">
+  <meta property="og:title" content="About — UNLEESH Studio">
+  <meta property="og:image" content="assets/img/V17.webp?v=2">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,154 +16,300 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/nudot.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
   <link rel="stylesheet" href="css/pages/about.css">
 </head>
 <body data-page="about">
 
 <main>
-  <!-- 5.1 double marquee header -->
-  <div class="about-marquees">
-    <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left"
-         data-items="UNLEESH CREATIVE STUDIO|BRAND STRATEGY|DIGITAL EXPERIENCE|MOTION DESIGN|AI VISUALS" data-sep="☺"></div>
-    <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right"
-         data-items="WEB DESIGN|VISUAL IDENTITY|UI / UX|COMMERCIAL IMAGERY|CREATIVE DIRECTION" data-sep="☺"></div>
-    <div class="about-chip-row">
-      <span>( BRAND IDENTITY )</span><span>( AI MOTION )</span><span>( HIGH-END IMAGE GEN )</span><span>( DIGITAL CONSULTING )</span>
+  <!-- sticky hero: the studio at night, masthead ABOUT / STUDIO -->
+  <section class="in-hero">
+    <h1 class="sr-only">About UNLEESH: an AI-native web design and motion studio in San Francisco</h1>
+    <div class="in-plate is-dim"><video src="assets/video/V35.mp4?v=2" autoplay muted loop playsinline></video></div>
+    <div class="in-scrim"></div>
+    <div class="in-ui">
+      <div class="in-mast">
+        <p class="in-word display">ABOUT</p>
+        <div class="in-mark">
+          <span class="in-glyph">U<span class="dot"></span></span>
+          <span class="bracket-label">( Est. 2026 · San Francisco )</span>
+        </div>
+        <p class="in-word display">STUDIO</p>
+      </div>
+      <div class="in-lists">
+        <ul>
+          <li>Absolute precision</li>
+          <li>The art of subtraction</li>
+          <li>One key light</li>
+          <li>Taste over committee</li>
+        </ul>
+        <ul class="in-list-r">
+          <li>Brand Identity</li>
+          <li>Web Design &amp; Build</li>
+          <li>AI Visuals</li>
+          <li>AI Motion</li>
+        </ul>
+      </div>
+      <div class="in-mid">
+        <p class="status" data-text="STATUS // NIGHT SHIFT AT THE UNLEESH TABLE"></p>
+      </div>
+      <div class="in-bottom">
+        <p class="in-kicker">A small studio that guards the aesthetic core and defines the digital landing point. Strategy, design and code, held to one centre.</p>
+        <div class="in-stats">
+          <span><b class="count" data-target="12">0</b>Years of visual mastery</span>
+          <span><b class="count" data-target="140" data-suffix="+">0</b>Deployed works</span>
+          <span><b>2026</b>Established</span>
+        </div>
+        <div class="in-links">
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="#" rel="noopener">Threads</a>
+          <a href="#" rel="noopener">Facebook</a>
+        </div>
+      </div>
     </div>
+    <div class="scroll-ind">
+      <svg viewBox="0 0 12 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 1v20M1.5 17L6 22l4.5-5"/></svg>
+      <span>DOWN</span>
+    </div>
+  </section>
+
+  <div class="in-body">
+    <!-- double dot-matrix marquee, velocity driven -->
+    <div class="about-marquees">
+      <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left"
+           data-items="UNLEESH CREATIVE STUDIO|BRAND STRATEGY|DIGITAL EXPERIENCE|MOTION DESIGN|AI VISUALS" data-sep="☺"></div>
+      <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right"
+           data-items="WEB DESIGN|VISUAL IDENTITY|UI / UX|COMMERCIAL IMAGERY|CREATIVE DIRECTION" data-sep="☺"></div>
+    </div>
+    <div class="in-strip">
+      <span>( Brand Identity )</span><span>( AI Motion )</span><span>( High-End Image Gen )</span><span>( Digital Consulting )</span>
+    </div>
+
+    <!-- manifesto -->
+    <section class="manifesto in-section">
+      <div class="in-head">
+        <p class="in-eyebrow">Manifesto</p>
+        <p class="in-statement" data-reveal-lines>Every powerful digital experience begins from one precise point. We find it, light it, and leave everything else out.</p>
+      </div>
+      <div class="mf-grid">
+        <h2 class="about-statement display" data-reveal-lines>ENGINEERING THE VISUAL CORE OF AMBITIOUS BRANDS</h2>
+        <div class="mf-side">
+          <p class="mf-kicker bracket-label">( UNLEESH creative studio )</p>
+          <p class="in-para">Masters of absolute precision and the discipline of leaving things out. We take on a handful of brands a year and hold each one to a single aesthetic centre: strategy, identity, imagery and code from one table, under one light.</p>
+          <div class="about-chips">
+            <span class="chip">( Brand Identity )</span>
+            <span class="chip">( AI Motion )</span>
+            <span class="chip">( High-End Commercial Image Generation )</span>
+          </div>
+        </div>
+      </div>
+      <h2 class="about-statement about-statement-b display" data-reveal-lines>UNLEESH IS COMMITTED TO THE ART OF SUBTRACTION.</h2>
+    </section>
+
+    <!-- years block -->
+    <section class="years">
+      <div class="years-stat">
+        <span class="bracket-label">( Distilling over )</span>
+        <div class="big dot-type"><span class="count" data-target="12">0</span> YEARS</div>
+        <span class="bracket-label">( Total digital shift )</span>
+        <p class="in-para">Twelve years across agencies, product teams and film sets, folded into one studio that ships like a startup and finishes like a house.</p>
+      </div>
+      <div class="years-media reveal-img"><img src="assets/img/V36.webp?v=2" alt="Precision laser cut"></div>
+    </section>
+
+    <!-- four service cards, horizontal scroll (pinned) -->
+    <div class="svc-cards-wrap">
+      <div class="svc-cards">
+        <div class="svc-lead">
+          <p class="in-eyebrow">What we bring</p>
+          <h2 class="display">FOUR<br>DISCIPLINES</h2>
+          <p class="in-para">Scroll sideways. Each one is a full practice; together they are the reason a brand only needs one studio.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">SERVICE 01</span>
+          <h3>Absolute Precision</h3>
+          <p>Measured to the pixel, argued to the letter.</p>
+          <div class="reveal-img"><img src="assets/img/V37.webp?v=2" alt=""></div>
+        </div>
+        <div class="svc-card">
+          <span class="num">SERVICE 02</span>
+          <h3>Vibe Workflow</h3>
+          <p>Taste-led iteration, from moodboard to motion, without committee drag.</p>
+          <div class="reveal-img"><img src="assets/img/V38.webp?v=2" alt=""></div>
+        </div>
+        <div class="svc-card">
+          <span class="num">SERVICE 03</span>
+          <h3>Elite Frontend Tech</h3>
+          <p>Hand-coded WebGL, GSAP and performance budgets that survive launch day.</p>
+          <div class="reveal-img"><img src="assets/img/V39.webp?v=2" alt=""></div>
+        </div>
+        <div class="svc-card">
+          <span class="num">SERVICE 04</span>
+          <h3>Striking Visuals</h3>
+          <p>Commercial imagery with a cinema key light.</p>
+          <div class="reveal-img"><img src="assets/img/V36.webp?v=2" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- marquee wall -->
+    <div class="mq-wall">
+      <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+      <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+      <div class="marquee mq-display mq-dot" data-speed="70" data-dir="left" data-items="SERVICE|SERVICE|AI VISUALS|SERVICE|SERVICE" data-sep="☺"></div>
+      <div class="marquee mq-display mq-dot" data-speed="45" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+      <div class="marquee mq-display mq-dot" data-speed="65" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
+    </div>
+
+    <!-- six services accordion -->
+    <section class="services in-section is-tight" id="services">
+      <div class="in-head">
+        <p class="in-eyebrow">Services</p>
+        <p class="in-statement" data-reveal-lines>Six practices, one table. Open any of them.</p>
+      </div>
+    </section>
+    <section class="accordion">
+      <div class="acc-row" data-img="V11">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">01</span><h3>BRAND IDENTITY</h3><span class="gloss">（ Brand Identity Design ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>We distil a brand to its sharpest possible mark: naming logic, logotype, colour law and the voice that carries them. The identity ships as a living system, not a PDF that dies in a drawer.</p><div class="acc-media"><img src="assets/img/V11.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+      <div class="acc-row" data-img="V37">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">02</span><h3>WEB PLANNING</h3><span class="gloss">（ Website Planning ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Sitemaps, narratives and conversion paths engineered before a single pixel is drawn. Every page earns its place in the journey or it gets cut.</p><div class="acc-media"><img src="assets/img/V37.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+      <div class="acc-row" data-img="V39">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">03</span><h3>WEB DESIGN</h3><span class="gloss">（ Website Design &amp; Development ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Hand-coded builds: GSAP motion, WebGL where it matters, performance budgets that hold. No templates, no page-builder debt, nothing you have to apologise for later.</p><div class="acc-media"><img src="assets/img/V39.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+      <div class="acc-row" data-img="V56">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">04</span><h3>AI VISUALS</h3><span class="gloss">（ High-End Commercial Visual Generation ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Campaign-grade product and lifestyle imagery generated under a single cinematic key light, art-directed frame by frame until it passes for a five-figure shoot.</p><div class="acc-media"><img src="assets/img/V56.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+      <div class="acc-row" data-img="V21">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">05</span><h3>AI VIDEO</h3><span class="gloss">（ AI Motion Imagery ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>Seamless motion loops, product orbits and cinematic b-roll produced in days, not months, and cut to the exact rhythm of your site and campaigns.</p><div class="acc-media"><img src="assets/img/V21.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+      <div class="acc-row" data-img="V73">
+        <button class="acc-head" aria-expanded="false"><span class="acc-idx">06</span><h3>DIGITAL CONSULTANT</h3><span class="gloss">（ Digital Design Consulting ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
+        <div class="acc-panel"><div class="acc-inner"><p>A standing seat at your table: design audits, roadmap arbitration and taste enforcement for teams that ship fast and want to ship beautiful.</p><div class="acc-media"><img src="assets/img/V73.webp?v=2" alt="" loading="lazy"></div></div></div>
+      </div>
+    </section>
+
+    <!-- the process: sticky stage with outlined phase numbers, six steps scroll past -->
+    <section class="proc" aria-label="How we work">
+      <div class="proc-grid">
+        <div class="proc-stage">
+          <p class="in-eyebrow">How we work</p>
+          <div class="proc-nums" aria-hidden="true">
+            <span class="proc-num">01</span><span class="proc-num">02</span><span class="proc-num">03</span>
+            <span class="proc-num">04</span><span class="proc-num">05</span><span class="proc-num">06</span>
+          </div>
+          <div class="proc-icon" aria-hidden="true"></div>
+          <div class="proc-rail" aria-hidden="true"><i></i></div>
+          <p class="proc-count tabular"><span class="pc-cur">01</span> <em>//</em> 06</p>
+        </div>
+        <div class="proc-steps">
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 01 )</p>
+            <h3 class="display">DISCOVERY</h3>
+            <p>A week of reading before a day of making. We audit everything the brand has ever published and find the one thing it actually believes.</p>
+            <ul class="proc-tags"><li>Brand audit</li><li>Interviews</li><li>Competitive read</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V37.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 02 )</p>
+            <h3 class="display">STRATEGY</h3>
+            <p>One page: what the brand is, what it is not, and what the site therefore has to feel like. That page is the brief. Nothing is built before it is signed.</p>
+            <ul class="proc-tags"><li>Positioning</li><li>Sitemap</li><li>Narrative</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V11.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 03 )</p>
+            <h3 class="display">DESIGN</h3>
+            <p>Type, grid and light decided in the browser, not in a deck. The hero is moving by day three, and the client sees a site, not a picture of one.</p>
+            <ul class="proc-tags"><li>Art direction</li><li>Type system</li><li>Prototypes</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V38.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 04 )</p>
+            <h3 class="display">VISUALS &amp; MOTION</h3>
+            <p>Every frame generated under one key light and retouched at pixel level. Every animation eased on a shared set of motion tokens, so the whole site moves one way.</p>
+            <ul class="proc-tags"><li>AI imagery</li><li>Loops</li><li>Motion tokens</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V39.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 05 )</p>
+            <h3 class="display">BUILD</h3>
+            <p>Hand-coded GSAP, WebGL only where it earns its place, and performance budgets that survive launch day on a two-year-old phone.</p>
+            <ul class="proc-tags"><li>GSAP</li><li>WebGL</li><li>Performance</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V18.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+          <article class="proc-step">
+            <p class="bracket-label">( Phase 06 )</p>
+            <h3 class="display">LAUNCH &amp; CARE</h3>
+            <p>We ship, measure and stay at the table: design audits, roadmap arbitration and taste enforcement for as long as the brand keeps moving.</p>
+            <ul class="proc-tags"><li>Launch</li><li>Analytics</li><li>Retainer</li></ul>
+            <figure class="proc-fig reveal-img"><img src="assets/img/V23.webp?v=2" alt="" loading="lazy"></figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- the table: where it happens -->
+    <section class="table-band in-section">
+      <div class="in-head">
+        <p class="in-eyebrow">The table</p>
+        <p class="in-statement" data-reveal-lines>One room, one table, one light. Strategy, design and code sit within arm's reach of each other, which is why nothing gets lost in a hand-off.</p>
+      </div>
+      <div class="in-band">
+        <figure class="tb-a" data-speed="-0.3"><img src="assets/img/V73.webp?v=2" alt="The studio floor at night" loading="lazy"><figcaption>( The floor · 23:40 )</figcaption></figure>
+        <figure class="tb-b" data-speed="0.15"><img src="assets/img/V17.webp?v=2" alt="A workstation at the UNLEESH table" loading="lazy"><figcaption>( Station 02 )</figcaption></figure>
+        <figure class="tb-c" data-speed="-0.1"><img src="assets/img/V75.webp?v=2" alt="Pair review at the table" loading="lazy"><figcaption>( Pair review )</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- recognition & capabilities index -->
+    <section class="registry">
+      <div class="in-head">
+        <p class="in-eyebrow">Index</p>
+        <p class="in-statement" data-reveal-lines>Recognition and capabilities, by sector.</p>
+      </div>
+      <p class="list-eyebrow">// CLIENT REGISTRY</p>
+      <div class="reg-list">
+        <div class="reg-row" data-img="V40"><span class="r-title">HIGH-END SKINCARE</span><span class="r-sub">Clean beauty flagship and campaign visuals</span><span class="r-ep">[EP.01]</span><span class="r-tag">BEAUTY_AND_COSMETICS_BRAND</span></div>
+        <div class="reg-row" data-img="V41"><span class="r-title">FINE DINING</span><span class="r-sub">Tasting-menu storytelling in the dark</span><span class="r-ep">[EP.02]</span><span class="r-tag">HOSPITALITY_GROUP</span></div>
+        <div class="reg-row" data-img="V42"><span class="r-title">OUTDOOR &amp; CAMP</span><span class="r-sub">Expedition-grade gear, cinematic dusk</span><span class="r-ep">[EP.03]</span><span class="r-tag">OUTDOOR_LIFESTYLE_BRAND</span></div>
+        <div class="reg-row" data-img="V43"><span class="r-title">INDUSTRIAL LUBRICANTS</span><span class="r-sub">Heavy industry with a macro lens</span><span class="r-ep">[EP.04]</span><span class="r-tag">B2B_MANUFACTURING</span></div>
+        <div class="reg-row" data-img="V44"><span class="r-title">CRAFT FURNITURE</span><span class="r-sub">Rattan weave under raking light</span><span class="r-ep">[EP.05]</span><span class="r-tag">FURNITURE_AND_LIVING</span></div>
+        <div class="reg-row" data-img="V45"><span class="r-title">NOODLE HOUSE</span><span class="r-sub">Hand-pulled craft, flour in the light shaft</span><span class="r-ep">[EP.06]</span><span class="r-tag">F_AND_B_RETAIL</span></div>
+        <div class="reg-row" data-img="V46"><span class="r-title">PRECISION MACHINING</span><span class="r-sub">CNC sparks, titanium tolerances</span><span class="r-ep">[EP.07]</span><span class="r-tag">ADVANCED_MANUFACTURING</span></div>
+        <div class="reg-row" data-img="V47"><span class="r-title">HEAVY STEEL</span><span class="r-sub">Foundry glow as brand language</span><span class="r-ep">[EP.08]</span><span class="r-tag">INDUSTRIAL_GROUP</span></div>
+        <div class="reg-row" data-img="V48"><span class="r-title">MEDICAL AESTHETICS</span><span class="r-sub">Clinical calm, frosted-glass light</span><span class="r-ep">[EP.09]</span><span class="r-tag">HEALTH_AND_BEAUTY_CLINIC</span></div>
+        <div class="reg-row" data-img="V49"><span class="r-title">SOLAR ENERGY</span><span class="r-sub">Night arrays reflecting the moon</span><span class="r-ep">[EP.10]</span><span class="r-tag">RENEWABLE_ENERGY</span></div>
+      </div>
+      <p class="list-eyebrow">// GLOBAL CONTENDERS</p>
+      <div class="reg-list">
+        <div class="reg-row" data-img="V13"><span class="r-title">AWWWARDS_COLLECTION</span><span class="r-sub">Site of the Day submissions in rotation</span><span class="r-ep">[EP.11]</span><span class="r-tag">AWARD_PLATFORM</span></div>
+        <div class="reg-row" data-img="V14"><span class="r-title">CSS_DESIGN_AWARDS</span><span class="r-sub">Judged for UI, UX and innovation</span><span class="r-ep">[EP.12]</span><span class="r-tag">AWARD_PLATFORM</span></div>
+        <div class="reg-row" data-img="V12"><span class="r-title">FWA_ARCHIVE</span><span class="r-sub">Motion-first work, immersive category</span><span class="r-ep">[EP.13]</span><span class="r-tag">AWARD_PLATFORM</span></div>
+        <div class="reg-row" data-img="V20"><span class="r-title">GODLY_GALLERY</span><span class="r-sub">Curated astronomically good web design</span><span class="r-ep">[EP.14]</span><span class="r-tag">CURATED_GALLERY</span></div>
+        <div class="reg-row" data-img="V04"><span class="r-title">SITEINSPIRE_INDEX</span><span class="r-sub">Minimal, typographic, unapologetic</span><span class="r-ep">[EP.15]</span><span class="r-tag">CURATED_GALLERY</span></div>
+      </div>
+    </section>
+
+    <!-- closing band -->
+    <section class="in-cta">
+      <video src="assets/video/V34.mp4?v=2" autoplay muted loop playsinline></video>
+      <span class="bracket-label">( Have a brand that refuses to look ordinary? )</span>
+      <a class="in-cta-link" href="contact.html" data-cursor-label="TALK">LET'S TALK<span class="dot"></span></a>
+      <div class="in-cta-row">
+        <a href="work.html" data-roll>See the work</a>
+        <a href="lab.html" data-roll>Visit the labs</a>
+        <a href="mailto:hello@unleesh.ai">hello@unleesh.ai</a>
+      </div>
+    </section>
   </div>
-
-  <!-- 5.2 hero -->
-  <section class="about-hero">
-    <h1 class="sr-only">UNLEESH — web design company</h1>
-    <div class="about-chips">
-      <span class="chip">( Brand Identity )</span>
-      <span class="chip">( AI Motion )</span>
-      <span class="chip">( High-End Commercial Image Generation )</span>
-    </div>
-    <div class="about-video reveal-img">
-      <video src="assets/video/V35.mp4?v=2" autoplay muted loop playsinline></video>
-    </div>
-    <p class="about-video-caption">DEFINING THE CORE DNA OF BRAND AESTHETICS<br>NIGHT SHIFT AT THE UNLEESH TABLE</p>
-    <h2 class="about-statement display" data-reveal-lines>ENGINEERING THE VISUAL CORE OF AMBITIOUS BRANDS</h2>
-    <h2 class="about-statement display" data-reveal-lines>UNLEESH IS COMMITTED TO THE ART OF SUBTRACTION.</h2>
-    <p class="about-manifesto"><strong>UNLEESH CREATIVE STUDIO</strong>Masters of absolute precision and the discipline of leaving things out.</p>
-  </section>
-
-  <!-- 5.3 years block -->
-  <section class="years">
-    <div class="years-stat">
-      <span class="mono ink-2">Distilling Over</span>
-      <div class="big dot-type"><span class="count" data-target="12">0</span> YEARS</div>
-      <span class="mono ink-2">Total Digital Shift</span>
-    </div>
-    <div class="reveal-img"><img src="assets/img/V36.webp?v=2" alt="Precision laser cut"></div>
-  </section>
-
-  <!-- 5.4 four service cards, horizontal scroll -->
-  <div class="svc-cards-wrap">
-    <div class="svc-cards">
-      <div class="svc-card">
-        <span class="num">SERVICE 01</span>
-        <h3>Absolute Precision</h3>
-        <p>Measured to the pixel, argued to the letter.</p>
-        <div class="reveal-img"><img src="assets/img/V37.webp?v=2" alt=""></div>
-      </div>
-      <div class="svc-card">
-        <span class="num">SERVICE 02</span>
-        <h3>Vibe Workflow</h3>
-        <p>Taste-led iteration, from moodboard to motion, without committee drag.</p>
-        <div class="reveal-img"><img src="assets/img/V38.webp?v=2" alt=""></div>
-      </div>
-      <div class="svc-card">
-        <span class="num">SERVICE 03</span>
-        <h3>Elite Frontend Tech</h3>
-        <p>Hand-coded WebGL, GSAP and performance budgets that survive launch day.</p>
-        <div class="reveal-img"><img src="assets/img/V39.webp?v=2" alt=""></div>
-      </div>
-      <div class="svc-card">
-        <span class="num">SERVICE 04</span>
-        <h3>Striking Visuals</h3>
-        <p>Commercial imagery with a cinema key light.</p>
-        <div class="reveal-img"><img src="assets/img/V36.webp?v=2" alt=""></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5.5 marquee wall (dot-matrix face, ☺ separators, one SERVICE quirk row) -->
-  <div class="mq-wall">
-    <div class="marquee mq-display mq-dot" data-speed="60" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
-    <div class="marquee mq-display mq-dot" data-speed="50" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
-    <div class="marquee mq-display mq-dot" data-speed="70" data-dir="left" data-items="SERVICE|SERVICE|AI VISUALS|SERVICE|SERVICE" data-sep="☺"></div>
-    <div class="marquee mq-display mq-dot" data-speed="45" data-dir="right" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
-    <div class="marquee mq-display mq-dot" data-speed="65" data-dir="left" data-items="BRAND IDENTITY|WEB PLANNING|WEB DESIGN|AI VISUALS|AI MOTION|DIGITAL &amp; VISUAL" data-sep="☺"></div>
-  </div>
-
-  <!-- 5.6 six services accordion -->
-  <section class="accordion" id="services">
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>BRAND IDENTITY</h3><span class="gloss">（ Brand Identity Design ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>We distil a brand to its sharpest possible mark: naming logic, logotype, colour law and the voice that carries them. The identity ships as a living system, not a PDF that dies in a drawer.</p></div>
-    </div>
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>WEB PLANNING</h3><span class="gloss">（ Website Planning ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>Sitemaps, narratives and conversion paths engineered before a single pixel is drawn. Every page earns its place in the journey or it gets cut.</p></div>
-    </div>
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>WEB DESIGN</h3><span class="gloss">（ Website Design &amp; Development ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>Hand-coded builds: GSAP motion, WebGL where it matters, performance budgets that hold. No templates, no page-builder debt, nothing you have to apologise for later.</p></div>
-    </div>
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>AI VISUALS</h3><span class="gloss">（ High-End Commercial Visual Generation ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>Campaign-grade product and lifestyle imagery generated under a single cinematic key light, art-directed frame by frame until it passes for a five-figure shoot.</p></div>
-    </div>
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>AI VIDEO</h3><span class="gloss">（ AI Motion Imagery ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>Seamless motion loops, product orbits and cinematic b-roll produced in days, not months, and cut to the exact rhythm of your site and campaigns.</p></div>
-    </div>
-    <div class="acc-row">
-      <button class="acc-head" aria-expanded="false"><h3>DIGITAL CONSULTANT</h3><span class="gloss">（ Digital Design Consulting ）</span><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 5v18M5 14h18"/></svg></button>
-      <div class="acc-panel"><p>A standing seat at your table: design audits, roadmap arbitration and taste enforcement for teams that ship fast and want to ship beautiful.</p></div>
-    </div>
-  </section>
-
-  <!-- 5.7 stepper 1–6 -->
-  <section class="stepper">
-    <div class="stepper-icon" aria-hidden="true"></div>
-    <div class="stepper-steps">
-      <div class="step"><span>1</span></div>
-      <div class="step"><span>2</span></div>
-      <div class="step"><span>3</span></div>
-      <div class="step"><span>4</span></div>
-      <div class="step"><span>5</span></div>
-      <div class="step"><span>6</span></div>
-    </div>
-  </section>
-
-  <!-- 5.8 recognition & capabilities index -->
-  <section class="registry">
-    <p class="mono ink-2">Recognition &amp; Capabilities Index</p>
-    <p class="list-eyebrow">// CLIENT REGISTRY</p>
-    <div class="reg-list">
-      <div class="reg-row"><span class="r-title">HIGH-END SKINCARE</span><span class="r-sub">Clean beauty flagship and campaign visuals</span><span class="r-ep">[EP.01]</span><span class="r-tag">BEAUTY_AND_COSMETICS_BRAND</span></div>
-      <div class="reg-row"><span class="r-title">FINE DINING</span><span class="r-sub">Tasting-menu storytelling in the dark</span><span class="r-ep">[EP.02]</span><span class="r-tag">HOSPITALITY_GROUP</span></div>
-      <div class="reg-row"><span class="r-title">OUTDOOR &amp; CAMP</span><span class="r-sub">Expedition-grade gear, cinematic dusk</span><span class="r-ep">[EP.03]</span><span class="r-tag">OUTDOOR_LIFESTYLE_BRAND</span></div>
-      <div class="reg-row"><span class="r-title">INDUSTRIAL LUBRICANTS</span><span class="r-sub">Heavy industry with a macro lens</span><span class="r-ep">[EP.04]</span><span class="r-tag">B2B_MANUFACTURING</span></div>
-      <div class="reg-row"><span class="r-title">CRAFT FURNITURE</span><span class="r-sub">Rattan weave under raking light</span><span class="r-ep">[EP.05]</span><span class="r-tag">FURNITURE_AND_LIVING</span></div>
-      <div class="reg-row"><span class="r-title">NOODLE HOUSE</span><span class="r-sub">Hand-pulled craft, flour in the light shaft</span><span class="r-ep">[EP.06]</span><span class="r-tag">F_AND_B_RETAIL</span></div>
-      <div class="reg-row"><span class="r-title">PRECISION MACHINING</span><span class="r-sub">CNC sparks, titanium tolerances</span><span class="r-ep">[EP.07]</span><span class="r-tag">ADVANCED_MANUFACTURING</span></div>
-      <div class="reg-row"><span class="r-title">HEAVY STEEL</span><span class="r-sub">Foundry glow as brand language</span><span class="r-ep">[EP.08]</span><span class="r-tag">INDUSTRIAL_GROUP</span></div>
-      <div class="reg-row"><span class="r-title">MEDICAL AESTHETICS</span><span class="r-sub">Clinical calm, frosted-glass light</span><span class="r-ep">[EP.09]</span><span class="r-tag">HEALTH_AND_BEAUTY_CLINIC</span></div>
-      <div class="reg-row"><span class="r-title">SOLAR ENERGY</span><span class="r-sub">Night arrays reflecting the moon</span><span class="r-ep">[EP.10]</span><span class="r-tag">RENEWABLE_ENERGY</span></div>
-    </div>
-    <p class="list-eyebrow">// GLOBAL CONTENDERS</p>
-    <div class="reg-list">
-      <div class="reg-row"><span class="r-title">AWWWARDS_COLLECTION</span><span class="r-sub">Site of the Day submissions in rotation</span><span class="r-ep">[EP.11]</span><span class="r-tag">AWARD_PLATFORM</span></div>
-      <div class="reg-row"><span class="r-title">CSS_DESIGN_AWARDS</span><span class="r-sub">Judged for UI, UX and innovation</span><span class="r-ep">[EP.12]</span><span class="r-tag">AWARD_PLATFORM</span></div>
-      <div class="reg-row"><span class="r-title">FWA_ARCHIVE</span><span class="r-sub">Motion-first work, immersive category</span><span class="r-ep">[EP.13]</span><span class="r-tag">AWARD_PLATFORM</span></div>
-      <div class="reg-row"><span class="r-title">GODLY_GALLERY</span><span class="r-sub">Curated astronomically good web design</span><span class="r-ep">[EP.14]</span><span class="r-tag">CURATED_GALLERY</span></div>
-      <div class="reg-row"><span class="r-title">SITEINSPIRE_INDEX</span><span class="r-sub">Minimal, typographic, unapologetic</span><span class="r-ep">[EP.15]</span><span class="r-tag">CURATED_GALLERY</span></div>
-    </div>
-  </section>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
