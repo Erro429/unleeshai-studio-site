@@ -5,7 +5,7 @@
    - menu: CSS-toggled flanking previews per row, gold hover, HOME previewed at rest
    - pixel-grid page transition (9 x 17) blooming over the existing wipe
    - canvas film grain (10 baked frames, 25fps, 12fps while scrolling)
-   - footer: luminosity parallax texture, embossed wordmark, tilted business card */
+   - footer: embossed wordmark */
 import { reducedMotion, lenis } from './core.js';
 
 const MENU_PREVIEWS = [['V07', 'V08'], ['V09', 'V10'], ['V11', 'V12'], ['V13', 'V14'], ['V15', 'V16']];
@@ -239,18 +239,5 @@ function decorateFooter() {
   const footer = document.querySelector('.site-footer');
   if (!footer || footer.dataset.nxFooter) return;
   footer.dataset.nxFooter = '1';
-  const bg = document.createElement('div');
-  bg.className = 'nx-fbg';
-  bg.setAttribute('aria-hidden', 'true');
-  footer.prepend(bg);
   footer.querySelector('.fp-word')?.classList.add('nx-emboss');
-  const big = footer.querySelector('.f-big');
-  if (big) {
-    const card = document.createElement('a');
-    card.className = 'nx-fcard';
-    card.href = 'contact.html';
-    card.setAttribute('aria-label', 'Business card');
-    card.innerHTML = '<img src="assets/img/V07.webp?v=2" alt="">';
-    big.appendChild(card);
-  }
 }
