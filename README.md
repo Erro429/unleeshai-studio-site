@@ -42,8 +42,20 @@ choreography, body seams, cursor previews, accordion, clock) and links
 ```bash
 bash tools/gen-run.sh    # fires all Higgsfield jobs in tools/manifest.psv, downloads results
 bash tools/convert.sh    # raw → assets/img (webp) and assets/video (mp4)
-python tools/build.py    # regenerate work.html, the 10 case pages, blog.html and the 16 journal entries
+python tools/build.py    # regenerate work.html, the 10 case pages, blog.html and the 16 journal entries, then run tools/seo.py
 ```
+
+## SEO and AI search (tools/seo.py)
+`python tools/build.py` finishes by running `tools/seo.py`, which is idempotent and owns:
+- the `<!-- seo:start -->` block in every page head: title, description, canonical, robots,
+  Open Graph, Twitter card, icons, a no-JS visibility fallback and a JSON-LD `@graph`
+  (Organization, WebSite, page type, BreadcrumbList, BlogPosting / CreativeWork / FAQPage / ItemList)
+- `sitemap.xml`, `robots.txt` (AI crawlers explicitly allowed), `llms.txt`, `llms-full.txt`, `site.webmanifest`
+- 1200x630 JPEG share images in `assets/og/` and PNG icons in `assets/icons/`
+
+Studio facts (domain, email, city, services, social profiles) live in the `SITE` dict at the top of
+`tools/seo.py`; static page titles and descriptions in `STATIC`. Never hand-edit the seo block in a page.
+Add real profile URLs to `SITE['same_as']` once they exist. `404.html` is served by most static hosts automatically.
 `tools/build.py` reads `tools/projects.json` and `tools/journal.json` and fills
 `tools/work-template.html`, `tools/detail-template.html`,
 `tools/journal-template.html` and `tools/article-template.html`. Edit the JSON
@@ -51,5 +63,5 @@ or a template, never the generated files.
 
 ## Known follow-ups
 - Contact form and journal subscribe strip have no backend yet (both acknowledge locally; swap in a POST)
-- Stats chips (12Y / 140+ works) and contact details (phone, address) are placeholders — replace with real numbers
-- Social links point to `#`
+- Case studies are presented as studio concept projects; the invented stats and the placeholder phone were removed
+- Social links were removed until real profiles exist (add them back in `js/chrome.js` and `SITE['same_as']`)

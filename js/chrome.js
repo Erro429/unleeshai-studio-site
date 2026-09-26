@@ -4,7 +4,6 @@ import { stopScroll, startScroll, reducedMotion, seenPreloader, markPreloaderSee
 
 export const BRAND = 'UNLEESH';
 export const EMAIL = 'hello@unleeshai.com';
-export const PHONE = '+1 (415) 555-0134';
 export const CITY = 'San Francisco';
 
 const PAGES = {
@@ -86,10 +85,9 @@ export function mountMenu() {
       </div>
       <p class="ms-tagline">Strategy, design and development under one roof.<br>AI-accelerated, obsessively crafted.<br>Fast, lean, fairly priced.</p>
       <a class="mono" href="#" data-email>&nbsp;</a>
-      <h1 class="sr-only">UNLEESH — AI-native web design &amp; motion studio</h1>
       <div class="ms-foot">
         <span>${BRAND} Studio 2026©</span>
-        <span><a href="#" rel="noopener">Instagram</a>&ensp;<a href="#" rel="noopener">Threads</a>&ensp;<a href="#" rel="noopener">Facebook</a></span>
+        <span><a href="work.html">Work</a>&ensp;<a href="blog.html">Journal</a>&ensp;<a href="contact.html">Contact</a></span>
       </div>
     </aside>`;
   document.body.appendChild(overlay);
@@ -180,14 +178,13 @@ export function mountFooter() {
       </div>` : ''}
       <div class="f-big">
         <a class="f-email display" href="mailto:${EMAIL}" data-reveal-lines>${EMAIL}</a>
-        <p class="f-phone">${PHONE}</p>
-        <p class="f-addr mono ink-2">${isContact ? `${CITY}, CA ｜ ${PHONE}` : `94107 · ${CITY}, California`}</p>
+        <p class="f-addr mono ink-2">${CITY}, California</p>
       </div>
       <div class="f-grid">
         <div class="f-social mono">
-          <a href="#" data-roll rel="noopener">Instagram</a>
-          <a href="#" data-roll rel="noopener">Threads</a>
-          <a href="#" data-roll rel="noopener">Facebook</a>
+          <a href="work.html" data-roll>work</a>
+          <a href="about.html" data-roll>about</a>
+          <a href="contact.html" data-roll>contact</a>
           <a href="blog.html" data-roll>blog</a>
         </div>
       </div>

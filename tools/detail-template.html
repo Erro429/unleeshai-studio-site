@@ -31,7 +31,7 @@
       <div class="pj-top">
         <a class="pj-back" href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg><span data-roll>Back to list</span></a>
         <span class="pj-index tabular">%%INDEX%% <em>//</em> %%COUNT%%</span>
-        <span class="chip">( %%TYPE%% )</span>
+        <span class="chip">( Concept · %%TYPE%% )</span>
       </div>
       <div class="pj-title-row">
         <h1 class="pj-h1 display" data-reveal-lines>%%TITLE%%</h1>
@@ -50,7 +50,7 @@
   <div class="in-body">
     <!-- facts strip -->
     <section class="pj-facts">
-      <div class="pf"><span class="bracket-label">( Sector )</span><p>%%TYPE%%</p></div>
+      <div class="pf"><span class="bracket-label">( Sector )</span><p>%%TYPE%%</p><p class="bracket-label">( Studio concept project )</p></div>
       <div class="pf"><span class="bracket-label">( Timeline )</span><p>2026 %%QUARTER%% · %%WEEKS%%</p></div>
       <div class="pf"><span class="bracket-label">( Services )</span><ul>%%SERVICES_LI%%</ul></div>
       <div class="pf"><span class="bracket-label">( Stack )</span><p>%%STACK%%</p></div>
@@ -72,10 +72,10 @@
     <div class="pj-video reveal-img"><video src="assets/video/V50A.mp4?v=2" autoplay muted loop playsinline></video></div>
 
     <div class="pj-stack">
-      <div class="pj-panel"><img src="assets/img/%%S1%%.webp?v=2" alt=""><h3 class="pn-label">section 01</h3></div>
-      <div class="pj-panel"><img src="assets/img/%%S2%%.webp?v=2" alt=""><h3 class="pn-label">section 02</h3></div>
-      <div class="pj-panel"><img src="assets/img/%%S3%%.webp?v=2" alt=""><h3 class="pn-label">section 03</h3></div>
-      <div class="pj-panel"><img src="assets/img/%%S4%%.webp?v=2" alt=""><h3 class="pn-label">section 04</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S1%%.webp?v=2" alt="%%TITLE%% concept, frame 01" loading="lazy"><h3 class="pn-label">section 01</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S2%%.webp?v=2" alt="%%TITLE%% concept, frame 02" loading="lazy"><h3 class="pn-label">section 02</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S3%%.webp?v=2" alt="%%TITLE%% concept, frame 03" loading="lazy"><h3 class="pn-label">section 03</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S4%%.webp?v=2" alt="%%TITLE%% concept, frame 04" loading="lazy"><h3 class="pn-label">section 04</h3></div>
     </div>
 
     <section class="pj-note">
@@ -86,9 +86,9 @@
     <div class="pj-video reveal-img"><video src="assets/video/V50B.mp4?v=2" autoplay muted loop playsinline></video></div>
 
     <div class="pj-stack">
-      <div class="pj-panel"><img src="assets/img/%%S5%%.webp?v=2" alt=""><h3 class="pn-label">section 05</h3></div>
-      <div class="pj-panel"><img src="assets/img/%%S6%%.webp?v=2" alt=""><h3 class="pn-label">section 06</h3></div>
-      <div class="pj-panel"><img src="assets/img/%%S7%%.webp?v=2" alt=""><h3 class="pn-label">section 07</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S5%%.webp?v=2" alt="%%TITLE%% concept, frame 05" loading="lazy"><h3 class="pn-label">section 05</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S6%%.webp?v=2" alt="%%TITLE%% concept, frame 06" loading="lazy"><h3 class="pn-label">section 06</h3></div>
+      <div class="pj-panel"><img src="assets/img/%%S7%%.webp?v=2" alt="%%TITLE%% concept, frame 07" loading="lazy"><h3 class="pn-label">section 07</h3></div>
     </div>
 
     <div class="pj-pair">
@@ -119,11 +119,7 @@
         <a href="work.html" aria-label="All projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></a>
         <a href="%%NEXT%%" aria-label="Next project: %%NEXT_TITLE%%"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 7l5 5-5 5"/></svg></a>
       </nav>
-      <div class="pj-share">
-        <a href="https://www.behance.net/" target="_blank" rel="noopener" aria-label="Behance"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.2 11.2c.9-.5 1.4-1.3 1.4-2.4 0-2.1-1.6-3-3.8-3H1v12.4h5c2.4 0 4.3-1.1 4.3-3.6 0-1.6-.8-2.8-2.1-3.4zM3.7 7.9h1.9c.9 0 1.6.4 1.6 1.3s-.6 1.3-1.5 1.3h-2V7.9zm2.1 8.2H3.7v-3.2h2.2c1.1 0 1.8.6 1.8 1.6s-.7 1.6-1.9 1.6zM19 5.9h-4.6v1.3H19V5.9zm-2.3 3c-2.7 0-4.5 1.9-4.5 4.7 0 2.9 1.8 4.7 4.6 4.7 2.1 0 3.6-1 4.2-2.9h-2.3c-.3.7-.9 1-1.8 1-1.2 0-1.9-.7-2.1-2h6.3v-.6c0-2.9-1.7-4.9-4.4-4.9zm-1.9 3.8c.2-1.1.9-1.8 1.9-1.8s1.7.7 1.8 1.8h-3.7z"/></svg></a>
-        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.9 6.4 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.5 1.9 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.2.2-.4.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.2 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 2-1.3 2.6.9.3 1.9.5 3 .5 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
-      </div>
-      <p class="pj-contact"><a href="mailto:hello@unleeshai.com">hello@unleeshai.com</a> &ensp; +1 415 555 0134</p>
+      <p class="pj-contact"><a href="mailto:hello@unleeshai.com">hello@unleeshai.com</a> &ensp; San Francisco</p>
     </div>
   </div>
 </main>

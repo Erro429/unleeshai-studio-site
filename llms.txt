@@ -1,0 +1,56 @@
+# UnleeshAI (UNLEESH)
+
+> UnleeshAI (wordmark UNLEESH) is an AI-native web design and motion studio in San Francisco. It designs and hand-codes flagship websites, generates commercial visuals and video with AI, and builds motion systems for premium brands.
+
+- Website: https://unleeshai.com/
+- Email: hello@unleeshai.com
+- Location: San Francisco, California, USA
+- Founded: 2026
+- Services: Brand identity, Web planning, High-end web design, Web interaction development, AI commercial visuals, AI video and motion design, Digital consulting
+- Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief
+- Portfolio note: the ten case studies are self-initiated studio concept projects, not client commissions
+
+## Main pages
+
+- [UnleeshAI | AI Web Design & Motion Studio, San Francisco](https://unleeshai.com/): UnleeshAI is an AI-native web design and motion studio in San Francisco: hand-coded flagship websites, AI commercial visuals and motion systems for premium brands.
+- [About UnleeshAI: AI-Native Design Studio in San Francisco](https://unleeshai.com/about.html): How UnleeshAI works: a small San Francisco studio for brand identity, high-end web design, AI visuals and motion, run on a six-phase process from brief to launch.
+- [Work: Web Design & Motion Concept Cases | UnleeshAI](https://unleeshai.com/work.html): Ten UnleeshAI concept flagships across ten sectors: hand-coded websites, generated commercial imagery and scroll-driven motion, each shown as a full case study.
+- [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and high-end commercial image generation, filterable by stream with a captioned lightbox.
+- [Contact UnleeshAI: Start a Web Design Project](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, brand identity or AI visual library. We reply within two working days with questions, a timeline and a fixed-price quote.
+- [Journal: Web Design, Motion & AI Visual Notes | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: field notes on web design, scroll motion, AI product imagery and brand strategy, written by the studio while the work was still fresh.
+
+## Concept case studies
+
+- [Lumen Skincare](https://unleeshai.com/work_lumen.html): Beauty Flagship. Redefining clean beauty: a bespoke digital experience blending editorial layouts with an organic palette.
+- [Nocturne Dining](https://unleeshai.com/work_nocturne.html): Hospitality. A tasting menu told in candlelight: reservation flow, menu narrative and cellar archive in one continuous scroll.
+- [Wilder Camp](https://unleeshai.com/work_wilder.html): Outdoor Brand. Expedition-grade gear presented at blue hour, with lantern light doing the selling.
+- [Ironflow Lubricants](https://unleeshai.com/work_ironflow.html): B2B Industrial. Heavy industry through a macro lens: viscosity, sheen and torque as brand assets.
+- [Cane & Form](https://unleeshai.com/work_caneform.html): Furniture & Living. Rattan weave under raking light: a craft catalogue with long shadows and longer patience.
+- [Pull Noodle Bar](https://unleeshai.com/work_pullnoodle.html): F&B Retail. Hand-pulled craft caught mid-air: flour dust in a single shaft of light.
+- [Axiom Precision](https://unleeshai.com/work_axiom.html): Advanced Manufacturing. CNC tolerances as brand language: titanium, coolant spray and sparks of white light.
+- [Forgeline Steel](https://unleeshai.com/work_forgeline.html): Industrial Group. Foundry glow as the only colour in a monochrome world.
+- [Clara Aesthetics](https://unleeshai.com/work_clara.html): Medical Aesthetics. Clinical calm behind frosted glass: a corridor of soft light and quiet confidence.
+- [Helios Energy](https://unleeshai.com/work_helios.html): Renewable Energy. Night arrays reflecting the moon: solar told through geometry and silence.
+
+## Journal
+
+- [Why your hero section is costing you clients](https://unleeshai.com/journal_hero-section-costing-clients.html) (2026-08-18, Web Design): The first viewport is a job interview that lasts three seconds. Most premium brands fail it by saying everything at once.
+- [One key light: the whole aesthetic explained](https://unleeshai.com/journal_one-key-light.html) (2026-08-02, AI Visuals): Every image we ship, generated or photographed, is lit from one direction. Here is why that single constraint does most of the work.
+- [AI product photography that passes for a five-figure shoot](https://unleeshai.com/journal_ai-product-photography-five-figure-shoot.html) (2026-07-22, AI Visuals): Generated imagery is only cheap if you accept the first result. The craft is in the second, third and fourteenth.
+- [Scroll is a story, not a scrollbar](https://unleeshai.com/journal_scroll-is-a-story.html) (2026-07-10, Motion): Scroll-driven motion earns its place when it changes what the reader understands, not just what they see.
+- [The case against page builders for premium brands](https://unleeshai.com/journal_case-against-page-builders.html) (2026-06-28, Strategy): A template is a decision someone else made about how your brand should feel. For most businesses that is fine. For a premium brand it is the whole problem.
+- [Motion tokens: a design system for time](https://unleeshai.com/journal_motion-tokens.html) (2026-06-15, Motion): Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.
+- [Dark mode is not a theme, it is a stage](https://unleeshai.com/journal_dark-mode-is-a-stage.html) (2026-06-01, Web Design): Designing on near-black is not inverting a light site. It is deciding that the content is the only thing lit.
+- [What a brand audit actually finds (and what it costs to skip one)](https://unleeshai.com/journal_brand-audit-findings.html) (2026-05-20, Strategy): Every project we take on begins with a week of looking before a day of making. Clients occasionally ask to skip it. Here is what they would be skipping.
+- [WebGL: when it earns its place and when it is vanity](https://unleeshai.com/journal_webgl-when-it-earns-its-place.html) (2026-05-06, Motion): A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.
+- [Typography carries the menu: lessons from a candlelit build](https://unleeshai.com/journal_typography-carries-the-menu.html) (2026-04-22, Case Notes): On the Nocturne Dining site there is almost no imagery. What holds the page is type set the way a menu is read.
+- [Seamless loops: the craft of ambient video backgrounds](https://unleeshai.com/journal_seamless-loops.html) (2026-04-08, AI Visuals): A background loop should be invisible. The moment the reader notices the cut, it has become a distraction.
+- [Negative space sells: the economics of restraint](https://unleeshai.com/journal_negative-space-sells.html) (2026-03-25, Strategy): Empty space on a page looks like waste to a spreadsheet and like confidence to a customer. Only one of them is buying.
+- [From moodboard to motion in five days](https://unleeshai.com/journal_moodboard-to-motion-five-days.html) (2026-03-11, Process): The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.
+- [Industrial brands deserve cinema too](https://unleeshai.com/journal_industrial-brands-deserve-cinema.html) (2026-02-26, Case Notes): Machining, lubricants, steel. The sectors with the most visually extraordinary work are the ones that show it worst.
+- [The preloader is the first scene of the film](https://unleeshai.com/journal_preloader-first-scene.html) (2026-02-12, Motion): A loading screen is a second of undivided attention. Most sites spend it on a spinner.
+- [Launching UNLEESH Labs: our public sketchbook](https://unleeshai.com/journal_launching-unleesh-labs.html) (2026-01-28, Studio): Twenty-five experiments in web motion and generated imagery, published as they are made. Not portfolio pieces. Sketches.
+
+## Optional
+
+- [Full text of the journal and case studies](https://unleeshai.com/llms-full.txt)

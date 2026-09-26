@@ -3,13 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- seo:start -->
+  <title>Motion tokens: a design system for time | UnleeshAI</title>
+  <meta name="description" content="Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.">
+  <link rel="canonical" href="https://unleeshai.com/journal_motion-tokens.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="UnleeshAI">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="UnleeshAI">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://unleeshai.com/journal_motion-tokens.html">
+  <meta property="og:title" content="Motion tokens: a design system for time | UnleeshAI">
+  <meta property="og:description" content="Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.">
+  <meta property="og:image" content="https://unleeshai.com/assets/og/journal_motion-tokens.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Motion tokens: a design system for time">
+  <meta property="article:published_time" content="2026-06-15">
+  <meta property="article:section" content="Motion">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Motion tokens: a design system for time | UnleeshAI">
+  <meta name="twitter:description" content="Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.">
+  <meta name="twitter:image" content="https://unleeshai.com/assets/og/journal_motion-tokens.jpg">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt">
+  <noscript><style>html body:not(.chrome-ready) main { visibility: visible; }</style></noscript>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://unleeshai.com/#org",
+   "name": "UnleeshAI",
+   "alternateName": "UNLEESH",
+   "url": "https://unleeshai.com/",
+   "email": "hello@unleeshai.com",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://unleeshai.com/assets/icons/icon-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "image": "https://unleeshai.com/assets/og/index.jpg",
+   "description": "UnleeshAI (wordmark UNLEESH) is an AI-native web design and motion studio in San Francisco. It designs and hand-codes flagship websites, generates commercial visuals and video with AI, and builds motion systems for premium brands.",
+   "foundingDate": "2026",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Francisco",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+   },
+   "knowsAbout": [
+    "Web design",
+    "Motion design",
+    "GSAP scroll animation",
+    "WebGL",
+    "AI image generation",
+    "AI video generation",
+    "Brand identity",
+    "Conversion-focused landing pages"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "new business",
+    "email": "hello@unleeshai.com",
+    "availableLanguage": "English"
+   },
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Studio services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Brand identity",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Web planning",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "High-end web design",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Web interaction development",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AI commercial visuals",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AI video and motion design",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Digital consulting",
+       "provider": {
+        "@id": "https://unleeshai.com/#org"
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://unleeshai.com/#website",
+   "url": "https://unleeshai.com/",
+   "name": "UnleeshAI",
+   "alternateName": "UNLEESH",
+   "publisher": {
+    "@id": "https://unleeshai.com/#org"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://unleeshai.com/journal_motion-tokens.html#webpage",
+   "url": "https://unleeshai.com/journal_motion-tokens.html",
+   "name": "Motion tokens: a design system for time | UnleeshAI",
+   "description": "Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.",
+   "isPartOf": {
+    "@id": "https://unleeshai.com/#website"
+   },
+   "about": {
+    "@id": "https://unleeshai.com/#org"
+   },
+   "inLanguage": "en",
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://unleeshai.com/assets/og/journal_motion-tokens.jpg"
+   },
+   "breadcrumb": {
+    "@id": "https://unleeshai.com/journal_motion-tokens.html#breadcrumb"
+   }
+  },
+  {
+   "@type": "BlogPosting",
+   "@id": "https://unleeshai.com/journal_motion-tokens.html#article",
+   "headline": "Motion tokens: a design system for time",
+   "description": "Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.",
+   "datePublished": "2026-06-15",
+   "dateModified": "2026-06-15",
+   "articleSection": "Motion",
+   "wordCount": 176,
+   "timeRequired": "PT8M",
+   "inLanguage": "en",
+   "image": "https://unleeshai.com/assets/og/journal_motion-tokens.jpg",
+   "author": {
+    "@id": "https://unleeshai.com/#org"
+   },
+   "publisher": {
+    "@id": "https://unleeshai.com/#org"
+   },
+   "isPartOf": {
+    "@id": "https://unleeshai.com/blog.html#webpage"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://unleeshai.com/journal_motion-tokens.html#webpage"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://unleeshai.com/journal_motion-tokens.html#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://unleeshai.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Journal",
+     "item": "https://unleeshai.com/blog.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Motion tokens: a design system for time",
+     "item": "https://unleeshai.com/journal_motion-tokens.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <!-- seo:end -->
   <meta name="theme-color" content="#030303">
   <meta name="format-detection" content="telephone=no">
-  <title>Motion tokens: a design system for time — UNLEESH Journal</title>
-  <meta name="description" content="Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.">
-  <meta property="og:title" content="Motion tokens: a design system for time — UNLEESH Journal">
-  <meta property="og:image" content="assets/img/V12.webp?v=2">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300..800&family=Doto:ROND,wght@100,700;100,900&family=Inter:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -75,7 +303,7 @@
       <p>Our set is small on purpose. Four durations: fast for hover, base for reveals, slow for large surfaces, and a curtain length for full-screen transitions. Three curves: an expo-out for things arriving, an in-out for things travelling, and a soft ease for anything the reader is meant to ignore. One rule sits above all of it: every change eases, nothing snaps.</p>
       <blockquote class="ar-pull" data-reveal-lines>Four durations, three curves, one rule: every change eases, nothing snaps.</blockquote>
       <p>The tokens live in CSS custom properties and are read by GSAP, so a hover underline and a pinned scene share the same vocabulary. Changing the feel of an entire site becomes a two-line edit. That is what a system is for.</p>
-      <figure class="ar-fig reveal-img"><img src="assets/img/V20.webp?v=2" alt="" loading="lazy"><figcaption class="bracket-label">( Fig. 01 · Motion )</figcaption></figure>
+      <figure class="ar-fig reveal-img"><img src="assets/img/V20.webp?v=2" alt="Motion illustration for Motion tokens: a design system for time" loading="lazy"><figcaption class="bracket-label">( Fig. 01 · Motion )</figcaption></figure>
       <p>The payoff is not that the site moves more. It is that the site moves the same way everywhere, which the reader experiences as confidence. Nothing on the page feels improvised, because nothing was.</p>
 
         <p class="ar-sign bracket-label">( Written at the UNLEESH table · San Francisco )</p>

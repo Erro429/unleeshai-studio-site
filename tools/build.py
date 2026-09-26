@@ -13,6 +13,8 @@ import io
 import json
 import os
 
+import seo
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 V = '?v=2'
@@ -164,7 +166,7 @@ def build_articles(articles):
             if k == 1:
                 body_html += f'      <blockquote class="ar-pull" data-reveal-lines>{esc(a["pull"])}</blockquote>\n'
             if k == 2:
-                body_html += (f'      <figure class="ar-fig reveal-img"><img src="assets/img/{a["fig"]}.webp{V}" alt="" loading="lazy">'
+                body_html += (f'      <figure class="ar-fig reveal-img"><img src="assets/img/{a["fig"]}.webp{V}" alt="{esc(a["cat"])} illustration for {esc(a["title"])}" loading="lazy">'
                               f'<figcaption class="bracket-label">( Fig. 01 · {esc(a["cat"])} )</figcaption></figure>\n')
         write(f'journal_{a["slug"]}.html', fill(tpl, {
             'SLUG': a['slug'], 'TITLE': esc(a['title']), 'DECK': esc(a['deck']), 'DATE': a['date'],
@@ -185,6 +187,7 @@ def main():
         build_journal(articles)
     if os.path.exists(os.path.join(HERE, 'article-template.html')):
         build_articles(articles)
+    seo.main()  # head tags, JSON-LD, sitemap, robots, llms.txt: always last
 
 
 if __name__ == '__main__':
