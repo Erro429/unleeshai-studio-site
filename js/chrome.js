@@ -3,7 +3,7 @@ import { icon } from './icons.js';
 import { stopScroll, startScroll, reducedMotion, seenPreloader, markPreloaderSeen, makeRoll, lenis } from './core.js';
 
 export const BRAND = 'UNLEESH';
-export const EMAIL = 'hello@unleesh.ai';
+export const EMAIL = 'hello@unleeshai.com';
 export const PHONE = '+1 (415) 555-0134';
 export const CITY = 'San Francisco';
 
@@ -96,7 +96,7 @@ export function mountMenu() {
 
   // obfuscated email
   const em = overlay.querySelector('[data-email]');
-  const addr = ['hello', 'unleesh.ai'].join('@');
+  const addr = ['hello', 'unleeshai.com'].join('@');
   em.textContent = addr;
   em.href = 'mailto:' + addr;
 
