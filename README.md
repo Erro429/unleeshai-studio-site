@@ -56,7 +56,9 @@ python tools/build.py    # regenerate work.html, the 10 case pages, blog.html an
 Studio facts (domain, email, city, services, social profiles) live in the `SITE` dict at the top of
 `tools/seo.py`; static page titles and descriptions in `STATIC`. Never hand-edit the seo block in a page.
 Add real profile URLs to `SITE['same_as']` once they exist. `404.html` is served by most static hosts automatically.
-`tools/build.py` reads `tools/projects.json` and `tools/journal.json` and fills
+`tools/build.py` reads `tools/projects.json`, `tools/journal.json` and `tools/live.json`
+(shipped client sites shown as "Live builds" at the top of the Work page; screenshots in
+`assets/img/live/<slug>-desk.webp` / `-mob.webp`) and fills
 `tools/work-template.html`, `tools/detail-template.html`,
 `tools/journal-template.html` and `tools/article-template.html`. Edit the JSON
 or a template, never the generated files.

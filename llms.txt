@@ -8,16 +8,22 @@
 - Founded: 2026
 - Services: Brand identity, Web planning, High-end web design, Web interaction development, AI commercial visuals, AI video and motion design, Digital consulting
 - Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief
-- Portfolio note: the ten case studies are self-initiated studio concept projects, not client commissions
+- Portfolio note: the live websites listed below are real shipped client sites; the ten case studies are self-initiated studio concept projects, not client commissions
 
 ## Main pages
 
 - [UnleeshAI | AI Web Design & Motion Studio, San Francisco](https://unleeshai.com/): UnleeshAI is an AI-native web design and motion studio in San Francisco: hand-coded flagship websites, AI commercial visuals and motion systems for premium brands.
 - [About UnleeshAI: AI-Native Design Studio in San Francisco](https://unleeshai.com/about.html): How UnleeshAI works: a small San Francisco studio for brand identity, high-end web design, AI visuals and motion, run on a six-phase process from brief to launch.
-- [Work: Web Design & Motion Concept Cases | UnleeshAI](https://unleeshai.com/work.html): Ten UnleeshAI concept flagships across ten sectors: hand-coded websites, generated commercial imagery and scroll-driven motion, each shown as a full case study.
+- [Work: Live Sites & Web Design Cases | UnleeshAI](https://unleeshai.com/work.html): Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten sectors: hand-coded sites, generated imagery and scroll-driven motion.
 - [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and high-end commercial image generation, filterable by stream with a captioned lightbox.
 - [Contact UnleeshAI: Start a Web Design Project](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, brand identity or AI visual library. We reply within two working days with questions, a timeline and a fixed-price quote.
 - [Journal: Web Design, Motion & AI Visual Notes | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: field notes on web design, scroll motion, AI product imagery and brand strategy, written by the studio while the work was still fresh.
+
+## Live websites built by the studio
+
+- [Florida Land Brand Site](https://goldenrp.land/): Real Estate · Land Sales. The full brand site for an owner-financed land company: parcel listings, a how-it-works flow, buyer guides, a blog, an FAQ and a VIP lead form, built on Next.js with a live content database.
+- [Search Landing Page](https://goldenrpland.com/florida-land/): Real Estate · Organic Search. A long-form landing page written to rank for owner-financed land searches: a bank-versus-owner comparison, the payment numbers set out plainly, an FAQ and a free land guide download.
+- [Conversion Landing Page](https://goldenrpland.com/owner-financed-land-florida/): Real Estate · Lead Generation. A fast single-offer page built to convert: one clear promise, trust badges, a quick-facts panel and a 30-second land credit claim form above the fold.
 
 ## Concept case studies
 

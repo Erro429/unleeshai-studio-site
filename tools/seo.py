@@ -59,9 +59,9 @@ STATIC = {
               'AI visuals and motion, run on a six-phase process from brief to launch.')),
     'work.html': dict(
         path='/work.html', kind='CollectionPage', img='V40M', crumb='Work',
-        title='Work: Web Design & Motion Concept Cases | UnleeshAI',
-        desc=('Ten UnleeshAI concept flagships across ten sectors: hand-coded websites, generated '
-              'commercial imagery and scroll-driven motion, each shown as a full case study.')),
+        title='Work: Live Sites & Web Design Cases | UnleeshAI',
+        desc=('Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten '
+              'sectors: hand-coded sites, generated imagery and scroll-driven motion.')),
     'lab.html': dict(
         path='/lab.html', kind='CollectionPage', img='V55', crumb='Labs',
         title='Labs: AI Visual & Web Motion Experiments | UnleeshAI',
@@ -320,9 +320,16 @@ def static_pages(projects, articles):
         graph = [org_node(), website_node()]
         extra = {}
         if filename == 'work.html':
-            extra['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(projects), 'itemListElement': [
-                {'@type': 'ListItem', 'position': i, 'url': abs_url(f'/work_{p["slug"]}.html'), 'name': p['title'].title()}
-                for i, p in enumerate(projects, 1)]}
+            live = live_sites()
+            shipped = [{'@type': 'ListItem', 'position': i, 'item': {
+                '@type': 'WebSite', 'name': s['title'], 'url': s['url'], 'description': s['desc'],
+                'genre': s['sector'], 'creator': {'@id': ORG_ID},
+                'image': abs_url(f'/assets/img/live/{s["slug"]}-desk.webp')}}
+                for i, s in enumerate(live, 1)]
+            concepts = [{'@type': 'ListItem', 'position': len(live) + i, 'url': abs_url(f'/work_{p["slug"]}.html'),
+                         'name': p['title'].title()} for i, p in enumerate(projects, 1)]
+            extra['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(shipped) + len(concepts),
+                                   'itemListElement': shipped + concepts}
         if filename == 'blog.html':
             extra['blogPost'] = [{'@id': abs_url(f'/journal_{a["slug"]}.html') + '#article'} for a in articles]
             extra['publisher'] = {'@id': ORG_ID}
@@ -421,6 +428,12 @@ def robots():
           f'{ai}\n\nSitemap: {SITE["url"]}/sitemap.xml\n')
 
 
+def live_sites():
+    """Shipped client sites shown at the top of the Work page (tools/live.json)."""
+    path = os.path.join(HERE, 'live.json')
+    return json.loads(read(path)) if os.path.exists(path) else []
+
+
 def llms(projects, articles):
     u = SITE['url']
     lines = [f'# {SITE["name"]} ({SITE["wordmark"]})', '', f'> {SITE["summary"]}', '',
@@ -429,10 +442,13 @@ def llms(projects, articles):
              f'- Founded: {SITE["founded"]}',
              '- Services: ' + ', '.join(SITE['services']),
              '- Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief',
-             '- Portfolio note: the ten case studies are self-initiated studio concept projects, not client commissions',
+             '- Portfolio note: the live websites listed below are real shipped client sites; the ten case studies '
+             'are self-initiated studio concept projects, not client commissions',
              '', '## Main pages', '']
     for filename, m in STATIC.items():
         lines.append(f'- [{m["title"]}]({u}{m["path"]}): {m["desc"]}')
+    lines += ['', '## Live websites built by the studio', '']
+    lines += [f'- [{s["title"]}]({s["url"]}): {s["sector"]}. {s["desc"]}' for s in live_sites()]
     lines += ['', '## Concept case studies', '']
     lines += [f'- [{p["title"].title()}]({u}/work_{p["slug"]}.html): {p["type"]}. {p["line"]}' for p in projects]
     lines += ['', '## Journal', '']
