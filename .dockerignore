@@ -1,0 +1,13 @@
+# Only the site itself goes into the image.
+.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+docs
+tools
+__pycache__
+
+# Raw generations (also gitignored)
+assets/raw
+assets/raw-tech

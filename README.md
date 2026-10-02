@@ -67,3 +67,10 @@ or a template, never the generated files.
 - Contact form and journal subscribe strip have no backend yet (both acknowledge locally; swap in a POST)
 - Case studies are presented as studio concept projects; the invented stats and the placeholder phone were removed
 - Social links were removed until real profiles exist (add them back in `js/chrome.js` and `SITE['same_as']`)
+
+## Deploy with Docker
+The repo ships a `Dockerfile` (nginx serving the static files, port **80**), `nginx.conf` and `.dockerignore`.
+On a host with a Dockerfile build pack: pick Dockerfile, base directory `/`, exposed port `80`. No environment variables are needed.
+```bash
+docker build -t unleesh-studio . && docker run -p 8093:80 unleesh-studio
+```
