@@ -58,9 +58,9 @@ STATIC = {
               'Google and in AI answers. SEO, AEO, content and funnels included.')),
     'about.html': dict(
         path='/about.html', kind='AboutPage', img='V36', crumb='About',
-        title='About UnleeshAI: AI-Native Design Studio in San Francisco',
-        desc=('How UnleeshAI works: a small San Francisco studio for brand identity, high-end web design, '
-              'AI visuals and motion, run on a six-phase process from brief to launch.')),
+        title='About UnleeshAI: Remote Web Design and SEO Studio',
+        desc=('How UnleeshAI works: a remote studio for custom websites, SEO, AI search and funnels, '
+              'run on a six-phase process from first call to launch and growth.')),
     'work.html': dict(
         path='/work.html', kind='CollectionPage', img='V40M', crumb='Work',
         title='Work: Live Sites & Web Design Cases | UnleeshAI',
