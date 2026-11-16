@@ -12,7 +12,7 @@ const PAGES = {
   work:    { file: 'work.html',         name: 'WORK',    sub: 'Shared page-transition layer for the home page and work archive.' },
   project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Project Showcase' },
   lab:     { file: 'lab.html',          name: 'LABS',    sub: 'UNLEESH Labs — Editorial Grid' },
-  contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT YOUR NEXT DIGITAL TRANSFORMATION' },
+  contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT A WEBSITE THAT GETS FOUND' },
   blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Shared page-transition layer for the journal and article pages.' },
   article: { file: 'journal.html',      name: 'ENTRY',   sub: 'Journal entry' },
 };
