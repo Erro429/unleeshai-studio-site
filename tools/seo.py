@@ -33,13 +33,14 @@ SITE = {
     'area_served': 'United States',
     'founded': '2026',
     'locale': 'en_US',
-    'summary': ('UnleeshAI (wordmark UNLEESH) is a remote web studio serving clients across the US. '
+    'summary': ('UnleeshAI (wordmark UNLEESH) is a remote web design studio serving clients across the US. '
                 'It designs and hand-codes custom websites and landing pages, then grows their visibility '
-                'and conversion with SEO, AEO and AIO, content, and sales funnels.'),
+                'and conversion with SEO, AEO and AIO (also called GEO or AI SEO), content, and sales funnels.'),
     'services': ['Custom website design and development', 'Landing pages', 'SEO', 'AEO and AIO',
                  'Sales funnels', 'Blog and content writing', 'Traffic generation', 'Website optimization'],
-    'knows_about': ['Custom web design', 'Web development', 'Landing pages', 'Search engine optimization',
-                    'Answer engine optimization', 'AI Overview optimization', 'Sales funnels',
+    'knows_about': ['Custom web design', 'Website design', 'Web development', 'Landing pages',
+                    'Search engine optimization', 'Answer engine optimization', 'AI Overview optimization',
+                    'Generative engine optimization', 'AI SEO', 'Sales funnels',
                     'Content marketing', 'Conversion rate optimization', 'Website performance optimization',
                     'GSAP scroll animation', 'WebGL'],
     'same_as': [],  # add real profile URLs (Instagram, LinkedIn, ...) once they exist
@@ -53,19 +54,19 @@ STATIC = {
     'index.html': dict(
         path='/', kind='home', img='V76',
         img_alt='UnleeshAI: custom websites built to be found',
-        title='UnleeshAI | Custom Websites, SEO and AI Search Visibility',
-        desc=('UnleeshAI builds custom, hand-coded websites and landing pages, then gets them found on '
-              'Google and in AI answers. SEO, AEO, content and funnels included.')),
+        title='Custom Website Design, SEO, AEO and AI Search | UnleeshAI',
+        desc=('UnleeshAI is a web design studio that builds custom, hand-coded websites and landing pages, '
+              'then gets them found on Google and in AI answers with SEO and AEO.')),
     'about.html': dict(
         path='/about.html', kind='AboutPage', img='V36', crumb='About',
-        title='About UnleeshAI: Remote Web Design and SEO Studio',
-        desc=('How UnleeshAI works: a remote studio for custom websites, SEO, AI search and funnels, '
-              'run on a six-phase process from first call to launch and growth.')),
+        title='About UnleeshAI: Web Design, SEO and AI Search Studio',
+        desc=('How UnleeshAI works: a remote web design studio for custom websites, SEO, AEO and sales '
+              'funnels, run on a six-phase process from first call to launch.')),
     'work.html': dict(
         path='/work.html', kind='CollectionPage', img='V40M', crumb='Work',
-        title='Work: Live Sites & Web Design Cases | UnleeshAI',
-        desc=('Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten '
-              'sectors: hand-coded sites, generated imagery and scroll-driven motion.')),
+        title='Web Design Portfolio: Live Sites and Concepts | UnleeshAI',
+        desc=('The UnleeshAI web design portfolio: live client websites we built and shipped, plus ten '
+              'concept flagships across ten sectors, all hand-coded.')),
     'lab.html': dict(
         path='/lab.html', kind='CollectionPage', img='V55', crumb='Labs',
         title='Labs: AI Visual & Web Motion Experiments | UnleeshAI',
@@ -73,14 +74,14 @@ STATIC = {
               'commercial image generation, filterable by stream with a captioned lightbox.')),
     'contact.html': dict(
         path='/contact.html', kind='ContactPage', img='V21', crumb='Contact',
-        title='Contact UnleeshAI: Start a Website or SEO Project',
+        title='Contact UnleeshAI: Get a Website, SEO or AEO Quote',
         desc=('Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites '
               'from $499, most live in 2 to 4 days. Replies in two working days.')),
     'blog.html': dict(
         path='/blog.html', kind='Blog', img='V28', crumb='Journal',
-        title='Journal: Web Design, Motion & AI Visual Notes | UnleeshAI',
-        desc=('The UnleeshAI journal: field notes on web design, scroll motion, AI product imagery and '
-              'brand strategy, written by the studio while the work was still fresh.')),
+        title='Journal: Web Design, SEO and AI Search Answers | UnleeshAI',
+        desc=('The UnleeshAI journal: plain answers on website cost, SEO timelines, AEO, landing pages '
+              'and sales funnels, plus field notes on web design and motion.')),
 }
 
 
@@ -219,7 +220,7 @@ def faq_node(page_html, url):
     if not pairs:
         return None
     return {'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [
-        {'@type': 'Question', 'name': ' '.join(text_of(q)).capitalize(),
+        {'@type': 'Question', 'name': re.sub(r'\b(aeo|aio|seo|geo|ai)\b', lambda m: m.group(1).upper(), ' '.join(text_of(q)).capitalize()),
          'acceptedAnswer': {'@type': 'Answer', 'text': ' '.join(text_of(a))}} for q, a in pairs]}
 
 

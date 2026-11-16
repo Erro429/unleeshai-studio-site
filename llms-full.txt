@@ -1,6 +1,6 @@
 # UnleeshAI: full text
 
-UnleeshAI (wordmark UNLEESH) is a remote web studio serving clients across the US. It designs and hand-codes custom websites and landing pages, then grows their visibility and conversion with SEO, AEO and AIO, content, and sales funnels.
+UnleeshAI (wordmark UNLEESH) is a remote web design studio serving clients across the US. It designs and hand-codes custom websites and landing pages, then grows their visibility and conversion with SEO, AEO and AIO (also called GEO or AI SEO), content, and sales funnels.
 
 ## Case study: Lumen Skincare (Beauty Flagship, studio concept)
 URL: https://unleeshai.com/work_lumen.html
@@ -111,6 +111,126 @@ Premise: Imagine an energy company that wants the poetry of the panel field, not
 Concept: In the concept, live generation data feeds a night-mode dashboard that looks like the array itself. Investor and community pages share the same silence, with numbers appearing only when the reader asks.
 
 Scope explored: Creative Direction, Data Dashboard, Corporate Site. Proposed stack: WebGL · D3 · GSAP.
+
+## How much does a website cost in 2026?
+URL: https://unleeshai.com/journal_how-much-does-a-website-cost.html
+Published: 2026-11-16 · Strategy
+
+The honest answer is a range so wide it is useless, until you know the five things that move the price. Here they are, with our own number on the table.
+
+A website in 2026 can cost nothing, or it can cost more than a car. A free builder page, a freelancer, a studio and a large agency will all sell you something called a website, and the prices climb steeply at each step. Our own number, so you have one real figure to hold on to: a custom five-page website from UNLEESH starts at $499. The rest of this entry explains why quotes vary so much and how to tell which price is right for you.
+
+Five things move the price. Page count is the obvious one. The second is whether the design is custom or a template with your logo dropped in. The third is content: who writes the words and where the images come from. The fourth is function, meaning anything the site has to do beyond being read, such as booking, payments, logins or a product catalogue. The fifth is what happens after launch: search optimization, content and upkeep. Most surprise invoices come from numbers three and five, because nobody priced them at the start.
+
+The cheapest route is a do-it-yourself builder. It costs a monthly fee and your own evenings. That is a fair trade for a brand-new business that needs to exist online this week. The hidden cost shows up later: a template that looks like a thousand other sites, pages that load slowly, and a platform you rent rather than own.
+
+The most expensive route is a large agency. You are paying for account managers, discovery workshops and a process built for companies with a marketing department. If you have one, that process is worth it. If you are an owner who needs a site that brings in enquiries, you are mostly paying for meetings.
+
+The middle is where most small businesses should shop, and it is where the quality varies most. Ask three questions of any quote. Is the price fixed, or an estimate? Do I own the code and the domain when it is done? And what exactly is included for search: page titles, structured data, speed, a sitemap, or nothing? A site nobody can find is the most expensive kind, whatever the invoice says.
+
+Here is how we price. A five-page site starts at $499. Past that we do not guess: once we know what needs building, we quote a fixed price, and it does not move unless the scope does. Most of our builds are live in two to four days from an agreed brief. Search foundations are built in from the first commit instead of sold as an extra after launch.
+
+A cheap website is not the one with the lowest invoice. It is the one that pays for itself fastest. Price the site against what one new customer is worth to you, then ask how many customers it needs to bring in to cover its cost. If the answer is one or two, the decision is easier than it looked.
+
+## What is AEO? AEO, GEO and AI SEO explained in plain words
+URL: https://unleeshai.com/journal_what-is-aeo-geo-ai-seo.html
+Published: 2026-11-16 · Search
+
+Four acronyms, one job: getting your business named when someone asks an AI assistant instead of a search engine. Here is what the work actually is.
+
+AEO stands for answer engine optimization. It is the work of getting your business named, quoted or linked when someone asks an AI assistant a question instead of typing it into a search box. The assistants in question are ChatGPT, Claude, Perplexity, Gemini and the AI Overviews that now sit at the top of many Google results.
+
+You will hear the same job called by other names. GEO means generative engine optimization. AIO usually means AI Overview optimization, or simply AI optimization. AI SEO and AI search optimization are the plain versions. They overlap almost completely. We say AEO and AIO because those are the terms our clients arrive with, but if an agency sells you GEO, it is describing the same work.
+
+The difference from classic SEO is the shape of the result. Search engines hand out a list. Answer engines hand out a recommendation. On a results page you can win a click from position four. In an AI answer there is often no position four: the assistant names two or three businesses and the conversation moves on.
+
+So what does the work look like? First, the site has to be readable by machines: clean HTML, fast pages, and structured data that says plainly who you are, what you sell and where you work. Second, the content has to answer real questions directly. A page that opens with a clear answer in its first two sentences is easy to quote. A page that opens with three paragraphs of mood is not.
+
+Third, the facts about your business have to match everywhere they appear: your site, your Google Business Profile, directories, review sites and social profiles. An assistant that finds three different descriptions of what you do will trust none of them. Fourth, other people need to mention you. Reviews, forum threads, local press and industry roundups all count, because assistants lean on what the wider web says about a business, not only on what the business says about itself.
+
+AEO does not replace SEO. It sits on top of it. Most assistants can look things up on the live web when they answer, so a page that ranks well and reads clearly has a head start. That is why we build both into a site from the first commit instead of treating AI search as a separate project.
+
+A quick test you can run today: open two or three assistants and ask the question your best customer would ask before hiring someone like you. Note who gets named. If it is not you, read what those businesses publish and where they are mentioned. That gap is the work.
+
+## How do you get your business recommended by ChatGPT?
+URL: https://unleeshai.com/journal_get-recommended-by-chatgpt.html
+Published: 2026-11-16 · Search
+
+You cannot pay for it and you cannot trick it. You can make your business easy to find, easy to understand and easy to vouch for.
+
+You get recommended by ChatGPT, Claude, Perplexity or Gemini the same way you get recommended by a well-informed friend: by being easy to find, easy to understand and vouched for by other people. There is no form to submit and no placement to buy. What you can do is remove every reason an assistant might have to skip you.
+
+Start with being understood. An assistant recommends the business it can describe with confidence. Your site should state in plain sentences what you do, who you do it for, where you work and what it costs or how pricing works. If a stranger cannot summarise your business after reading your home page for ten seconds, neither can a machine.
+
+Then make the site readable. That means fast pages, real text instead of words baked into images, a clear heading on every page, and structured data that labels your business, services and frequently asked questions. Check that your site is not blocking AI crawlers by accident. Some are, through a security setting nobody remembers switching on.
+
+Answer the questions buyers actually ask. Assistants are asked things like how much a service costs, how long it takes, and who is good at it in a given city or industry. A page that answers one of those directly, in its opening lines, is far more quotable than a page of slogans. Question-style headings help, because they match the way people phrase prompts.
+
+Get mentioned in places you do not control. Reviews on Google and industry platforms, answers on Reddit and Quora, local news, supplier and partner pages, podcast notes. Assistants weigh what the wider web says about you more heavily than what you say about yourself, in the same way a person would.
+
+Keep the facts consistent. Name, services, location, hours and pricing should read the same on your site, your Google Business Profile, your social profiles and every directory. Conflicting details make an assistant hedge, and a hedged answer usually names someone else.
+
+Then test it. Once a month, ask three assistants the questions your customers ask and write down who gets named. It will not change overnight. Assistants refresh what they know on their own schedule, so expect weeks to months. The businesses that show up a year from now are the ones that started tidying up today.
+
+## How long does SEO take to work?
+URL: https://unleeshai.com/journal_how-long-does-seo-take.html
+Published: 2026-11-16 · Search
+
+Months, not weeks. Here is what happens in each of them, and how to tell real progress from a nice-looking report.
+
+SEO usually takes months, not weeks, to show results you can feel in the business. Google's own guidance on hiring an SEO says to expect four months to a year before improvements are in place and the benefit shows. A brand-new domain sits at the slow end of that range. An established site with fixable problems can move faster.
+
+It is slow for a reason. A search engine has to crawl your pages, understand them, compare them with every other page on the subject, and watch how people respond. Trust is earned through consistency, and consistency takes time to observe. SEO is slow for the same reason it is valuable: you cannot buy your way to the front of it overnight.
+
+The first month is foundations. Fix what stops pages being crawled and understood: broken links, slow loading, missing titles, thin or duplicate pages, no structured data. None of this is visible to a visitor, and all of it decides whether the rest of the work counts.
+
+Months two and three are content. Each service gets a page that says clearly what it is, who it is for and what it costs or how it is priced. Questions customers actually ask get direct answers. This is when impressions start to climb in Google Search Console, usually well before clicks do.
+
+From month four onward the compounding starts. Pages that were on page three move to page two, then to the bottom of page one. Clicks follow rankings, and enquiries follow clicks. New content builds on pages that already have some standing instead of starting from zero.
+
+How do you tell real progress from a nice-looking report? Look at three numbers in this order: impressions, then clicks, then enquiries. Impressions rising means Google is showing you for more searches. Clicks rising means the right people are choosing you. Enquiries rising is the only number that pays a bill, and any report that never mentions it is hiding something.
+
+Two things shorten the wait. A fast, well-built site gives every page a better start, which is why we build search foundations in from the first commit. And choosing specific searches over broad ones gets results sooner: a page about owner-financed land in Florida will rank long before a page about real estate.
+
+## Landing page vs website: which one do you need?
+URL: https://unleeshai.com/journal_landing-page-vs-website.html
+Published: 2026-11-16 · Strategy
+
+A website introduces the whole business. A landing page asks for one thing. Knowing which job you are hiring for saves money either way.
+
+A website is the full picture of a business: what it does, who is behind it, the services, the proof and a way to get in touch. A landing page is a single page built around one offer and one action. You need a website when people are checking whether you are real. You need a landing page when you are sending traffic somewhere and want it to do one thing.
+
+The difference is focus. A website answers every question. A landing page asks one. A good website has navigation, several pages and room to explore. A good landing page removes almost all of that on purpose, because every extra link is a way to leave without acting.
+
+Use a landing page when the visitor arrives from a specific place with a specific intent: an ad, an email, a social post, a QR code on a flyer. Someone who clicked an ad for a free quote should land on a page about that free quote, not on a home page where they have to find it again.
+
+Use a website when the visitor arrives without a script. People who search your business name, follow a referral or find you through a blog post want to look around before they trust you. A single page with one button feels thin to someone still deciding whether you are legitimate.
+
+Most businesses end up needing both, in that order. The website comes first because it is what search engines and AI assistants read to understand who you are. Landing pages come second, one per campaign or offer, and they borrow the trust the main site has already earned.
+
+A sales funnel is what you get when you connect them: a landing page that makes the offer, a form or checkout that captures the action, a thank-you page that sets the next step, and follow-up emails for the people who were not ready. The landing page is the front door of the funnel, not the whole building.
+
+If the budget only stretches to one, ask where your next ten customers will come from. If the answer is search and referrals, build the website. If the answer is ads or outreach you are about to switch on, build the landing page and point everything at it.
+
+## What is a sales funnel, and does a small business need one?
+URL: https://unleeshai.com/journal_what-is-a-sales-funnel.html
+Published: 2026-11-16 · Strategy
+
+A funnel is the path from stranger to customer, written down and built on purpose. You already have one. The question is whether it leaks.
+
+A sales funnel is the path a stranger takes to become a customer, mapped out and built on purpose. In practice it is a short chain of pages and messages: something that gets attention, a page that makes one offer, a way to act on it, and follow-up for the people who are not ready yet. Yes, a small business needs one, because it already has one. Every business has a funnel. Most of them were built by accident.
+
+The accidental version looks like this. Someone hears about you, searches your name, lands on a home page, hunts for a phone number, and maybe calls. Each of those steps loses people. A funnel is what you get when you look at each step and ask what would stop someone here.
+
+A simple funnel has four parts. Traffic: search, ads, social posts or referrals that bring the right people in. A landing page: one offer, one action, no distractions. A capture: a form, a booking calendar or a checkout. And follow-up: an email or message sequence that answers the questions people have before they buy.
+
+The offer matters more than the pages. A free quote, a guide, a consultation, a first-order discount: whatever it is, it has to be worth giving an email address or a phone number for. A beautiful page with a weak offer converts worse than a plain page with a strong one.
+
+Follow-up is where most of the money is. Few people buy on the first visit. A funnel without follow-up pays to attract visitors and then lets nearly all of them leave with no way to reach them again. Three or four honest emails that answer real objections will often do more than another month of ad spend.
+
+Measure each step separately. How many people arrive, how many act on the offer, how many respond to follow-up, how many become customers. The step with the biggest drop is the one to fix first. Without those four numbers, every change is a guess.
+
+You do not need software with funnel in the name to do any of this. You need a page that makes one clear offer, a form that works, and a short sequence of follow-up messages. We build the pages and wire the path, and we would rather you had a simple funnel that gets measured than an elaborate one that does not.
 
 ## Why your hero section is costing you clients
 URL: https://unleeshai.com/journal_hero-section-costing-clients.html
