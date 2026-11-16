@@ -466,8 +466,8 @@ def llms(projects, articles):
     full = [f'# {SITE["name"]}: full text', '', SITE['summary'], '']
     for p in projects:
         full += [f'## Case study: {p["title"].title()} ({p["type"]}, studio concept)', f'URL: {u}/work_{p["slug"]}.html', '',
-                 p['line'], '', f'Brief: {p["ov1"]}', '', f'Result: {p["result"]}', '',
-                 f'Services: {", ".join(p["services"])}. Stack: {p["stack"]}. Timeline: {p["weeks"]}.', '']
+                 p['line'], '', f'Premise: {p["ov1"]}', '', f'Concept: {p["result"]}', '',
+                 f'Scope explored: {", ".join(p["services"])}. Proposed stack: {p["stack"]}.', '']
     for a in articles:
         full += [f'## {a["title"]}', f'URL: {u}/journal_{a["slug"]}.html', f'Published: {iso(a["date"])} · {a["cat"]}', '',
                  a['deck'], ''] + [b + '\n' for b in a['body']]
