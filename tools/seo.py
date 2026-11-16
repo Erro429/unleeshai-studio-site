@@ -69,7 +69,7 @@ STATIC = {
     'lab.html': dict(
         path='/lab.html', kind='CollectionPage', img='V55', crumb='Labs',
         title='Labs: AI Visual & Web Motion Experiments | UnleeshAI',
-        desc=('UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and high-end '
+        desc=('UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and '
               'commercial image generation, filterable by stream with a captioned lightbox.')),
     'contact.html': dict(
         path='/contact.html', kind='ContactPage', img='V21', crumb='Contact',

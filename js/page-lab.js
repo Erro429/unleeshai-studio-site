@@ -7,7 +7,7 @@ const CATS = {
   all: 'ALL',
   web: 'Web Motion Design',
   motion: 'Motion Image Generation',
-  commercial: 'High-End Commercial Image Generation',
+  commercial: 'Commercial Image Generation',
 };
 
 const ITEMS = [
@@ -55,7 +55,7 @@ export function init() {
         <div class="lc-over"><span class="lc-idx">${pad(i + 1)} // ${pad(ITEMS.length)}</span><span class="bracket-label">( ${CATS[cat]} )</span></div>
       </div>
       <div class="lc-head"><h3>${title}</h3><span class="lc-date">${date}</span></div>
-      <span class="lc-cat">（ ${CATS[cat]} ）</span>
+      <span class="lc-cat">( ${CATS[cat]} )</span>
       <button class="lc-view">View Details</button>
       ${OWN_BRAND.has(slot) ? '' : `<p class="lc-disc">${DISCLAIMER}</p>`}
     </article>`).join('');
