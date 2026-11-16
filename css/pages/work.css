@@ -101,7 +101,7 @@
 /* ---------- live builds: shipped sites, desktop capture in a frame + phone capture on top ---------- */
 .lv-builds { padding-bottom: clamp(48px, 6vw, 96px); }
 .lv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(48px, 4vw, 64px) var(--gap); margin-top: clamp(40px, 5vw, 72px); }
-.lv-card { display: grid; grid-template-rows: auto 1fr; gap: 22px; min-width: 0; }
+.lv-card { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 22px; min-width: 0; }
 .lv-frame {
   position: relative; display: block; border: 1px solid var(--line-strong); border-radius: 10px;
   background: var(--bg-2); padding-bottom: 14px; margin-right: 18px;
