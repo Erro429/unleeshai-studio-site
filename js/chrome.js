@@ -4,10 +4,10 @@ import { stopScroll, startScroll, reducedMotion, seenPreloader, markPreloaderSee
 
 export const BRAND = 'UNLEESH';
 export const EMAIL = 'hello@unleeshai.com';
-export const CITY = 'San Francisco';
+export const CITY = 'Remote';
 
 const PAGES = {
-  home:    { file: 'index.html',        name: 'HOME',    sub: 'Shared page-transition layer for the home page and work archive.' },
+  home:    { file: 'index.html',        name: 'HOME',    sub: 'Custom websites, built to be found.' },
   about:   { file: 'about.html',        name: 'ABOUT',   sub: 'Brand Strategy & Creative Direction' },
   work:    { file: 'work.html',         name: 'WORK',    sub: 'Shared page-transition layer for the home page and work archive.' },
   project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Project Showcase' },
@@ -69,10 +69,10 @@ export function mountMenu() {
       </ul>
     </nav>
     <aside class="menu-side">
-      <div class="ms-words">STUDIO<br><span class="mono ink-2" style="font-stretch:100%;font-weight:400">( Brand Direction )</span><br>DIGITAL</div>
+      <div class="ms-words">DESIGN<br><span class="mono ink-2" style="font-stretch:100%;font-weight:400">( Web · SEO · AEO )</span><br>SELLS</div>
       <div class="ms-lists">
-        <ul><li>Core Strategy</li><li>Brand Identity</li><li>Content Creative</li><li>Tech Trend Practice</li></ul>
-        <ul><li>Creative Strategy</li><li>Brand Identity</li><li>Creative Content</li><li>Web Design</li></ul>
+        <ul><li>Custom Websites</li><li>Landing Pages</li><li>Sales Funnels</li><li>Website Optimization</li></ul>
+        <ul><li>SEO</li><li>AEO and AIO</li><li>Blog Writing</li><li>Traffic Generation</li></ul>
       </div>
       <div class="ms-links">
         <a href="about.html" data-roll>About</a><a href="work.html" data-roll>Work</a>
@@ -80,10 +80,10 @@ export function mountMenu() {
         <a href="contact.html" data-roll>Contact</a>
       </div>
       <div class="ms-chips">
-        <span class="chip">( Web Interaction Dev )</span><span class="chip">( Motion Design )</span>
-        <span class="chip">( High-End Web Design )</span><span class="chip">( Brand Core Identity )</span>
+        <span class="chip">( Hand-Coded Builds )</span><span class="chip">( No Templates )</span>
+        <span class="chip">( Search and AI Ready )</span><span class="chip">( Built in Days )</span>
       </div>
-      <p class="ms-tagline">Strategy, design and development under one roof.<br>AI-accelerated, obsessively crafted.<br>Fast, lean, fairly priced.</p>
+      <p class="ms-tagline">Websites that look expensive and get found.<br>Built to turn visitors into customers.<br>Fast, lean, fairly priced.</p>
       <a class="mono" href="#" data-email>&nbsp;</a>
       <div class="ms-foot">
         <span>${BRAND} Studio 2026©</span>
@@ -171,14 +171,14 @@ export function mountFooter() {
     <div class="f-inner">
       ${isHome ? `
       <div class="f-meta">
-        <p>Web Design Studio</p>
-        <p>Commercial Visual · AI Motion</p>
+        <p>Custom Web Studio</p>
+        <p>Websites · SEO · AI Search</p>
         <p>Est. 2026 · ${CITY}</p>
-        <p class="f-para" data-reveal-lines>We build digital flagships for brands that refuse to look ordinary: AI-accelerated commercial visuals, motion systems and hand-coded interfaces, all tuned to convert attention into belief.</p>
+        <p class="f-para" data-reveal-lines>We build custom websites for businesses that refuse to look ordinary, then do the work that gets them found: SEO, AI search, content and funnels, all tuned to turn attention into customers.</p>
       </div>` : ''}
       <div class="f-big">
         <a class="f-email display" href="mailto:${EMAIL}" data-reveal-lines>${EMAIL}</a>
-        <p class="f-addr mono ink-2">${CITY}, California</p>
+        <p class="f-addr mono ink-2">Remote studio, serving clients across the US</p>
       </div>
       <div class="f-grid">
         <div class="f-social mono">
@@ -192,8 +192,8 @@ export function mountFooter() {
     <div class="f-plate">
       <span class="fp-mark" aria-hidden="true">©</span>
       <div class="fp-legal mono-s">
-        <span>Unleesh Creative, Inc.</span>
-        <span>© 2026 ${BRAND} STUDIO. ALL RIGHTS RESERVED.</span>
+        <span>UnleeshAI</span>
+        <span>© 2026 UnleeshAI. All rights reserved.</span>
       </div>
       <span class="fp-word" aria-hidden="true">${BRAND}<i class="dot"></i></span>
     </div>`;
@@ -231,12 +231,12 @@ export function mountPreloader(onDone) {
     <div class="pl-corner pl-tr">${(location.pathname.split('/').pop() || meta.file)}</div>
     <div class="pl-word">${wordHTML}</div>
     <div class="pl-corner pl-bl">
-      <p>${BRAND} CREATIVE STUDIO</p>
+      <p>${BRAND} WEB STUDIO</p>
       <p>${meta.name}</p>
       <p>${meta.sub}</p>
     </div>
     <div class="pl-corner pl-br">
-      <p>Digital / Motion / Interface</p>
+      <p>Websites / Search / Conversion</p>
       <p>2026</p>
     </div>`;
   document.body.appendChild(pl);
@@ -306,7 +306,7 @@ export function mountTransitions(reinit) {
     navigating = true;
     const from = (PAGES[pageKey()] || PAGES.home).name.toLowerCase();
     const toKey = keyForHref(href);
-    caption.textContent = `Shared page-transition layer for the ${from} page and the ${PAGES[toKey].name.toLowerCase()} page.`;
+    caption.textContent = `${BRAND} · ${PAGES[toKey].name}`;
 
     layer.classList.add('is-open');
     layer.style.visibility = 'visible';

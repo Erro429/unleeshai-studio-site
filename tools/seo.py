@@ -27,18 +27,21 @@ SITE = {
     'name': 'UnleeshAI',
     'wordmark': 'UNLEESH',
     'email': 'hello@unleeshai.com',
-    'city': 'San Francisco',
-    'region': 'CA',
+    'city': '',        # remote studio: no city or region is published
+    'region': '',
     'country': 'US',
+    'area_served': 'United States',
     'founded': '2026',
     'locale': 'en_US',
-    'summary': ('UnleeshAI (wordmark UNLEESH) is an AI-native web design and motion studio in '
-                'San Francisco. It designs and hand-codes flagship websites, generates commercial '
-                'visuals and video with AI, and builds motion systems for premium brands.'),
-    'services': ['Brand identity', 'Web planning', 'High-end web design', 'Web interaction development',
-                 'AI commercial visuals', 'AI video and motion design', 'Digital consulting'],
-    'knows_about': ['Web design', 'Motion design', 'GSAP scroll animation', 'WebGL', 'AI image generation',
-                    'AI video generation', 'Brand identity', 'Conversion-focused landing pages'],
+    'summary': ('UnleeshAI (wordmark UNLEESH) is a remote web studio serving clients across the US. '
+                'It designs and hand-codes custom websites and landing pages, then grows their visibility '
+                'and conversion with SEO, AEO and AIO, content, and sales funnels.'),
+    'services': ['Custom website design and development', 'Landing pages', 'SEO', 'AEO and AIO',
+                 'Sales funnels', 'Blog and content writing', 'Traffic generation', 'Website optimization'],
+    'knows_about': ['Custom web design', 'Web development', 'Landing pages', 'Search engine optimization',
+                    'Answer engine optimization', 'AI Overview optimization', 'Sales funnels',
+                    'Content marketing', 'Conversion rate optimization', 'Website performance optimization',
+                    'GSAP scroll animation', 'WebGL'],
     'same_as': [],  # add real profile URLs (Instagram, LinkedIn, ...) once they exist
 }
 
@@ -49,9 +52,10 @@ TODAY = datetime.date.today().isoformat()
 STATIC = {
     'index.html': dict(
         path='/', kind='home', img='V76',
-        title='UnleeshAI | AI Web Design & Motion Studio, San Francisco',
-        desc=('UnleeshAI is an AI-native web design and motion studio in San Francisco: hand-coded '
-              'flagship websites, AI commercial visuals and motion systems for premium brands.')),
+        img_alt='UnleeshAI: custom websites built to be found',
+        title='UnleeshAI | Custom Websites, SEO and AI Search Visibility',
+        desc=('UnleeshAI builds custom, hand-coded websites and landing pages, then gets them found on '
+              'Google and in AI answers. SEO, AEO, content and funnels included.')),
     'about.html': dict(
         path='/about.html', kind='AboutPage', img='V36', crumb='About',
         title='About UnleeshAI: AI-Native Design Studio in San Francisco',
@@ -171,8 +175,9 @@ def org_node():
         'logo': {'@type': 'ImageObject', 'url': abs_url('/assets/icons/icon-512.png'), 'width': 512, 'height': 512},
         'image': abs_url('/assets/og/index.jpg'),
         'description': SITE['summary'], 'foundingDate': SITE['founded'],
-        'address': {'@type': 'PostalAddress', 'addressLocality': SITE['city'],
-                    'addressRegion': SITE['region'], 'addressCountry': SITE['country']},
+        'address': {'@type': 'PostalAddress', 'addressCountry': SITE['country'],
+                    **({'addressLocality': SITE['city'], 'addressRegion': SITE['region']} if SITE['city'] else {})},
+        'areaServed': {'@type': 'Country', 'name': SITE['area_served']},
         'knowsAbout': SITE['knows_about'],
         'contactPoint': {'@type': 'ContactPoint', 'contactType': 'new business',
                          'email': SITE['email'], 'availableLanguage': 'English'},
@@ -345,7 +350,7 @@ def static_pages(projects, articles):
             faq = faq_node(read(os.path.join(ROOT, filename)), url)
             if faq:
                 graph.append(faq)
-        pages.append((filename, dict(m, og=og, graph=graph, img_alt=f'{SITE["wordmark"]}: {m["crumb"] if m["kind"] != "home" else "studio"}')))
+        pages.append((filename, dict(m, og=og, graph=graph, img_alt=m.get('img_alt') or f'{SITE["wordmark"]}: {m["crumb"] if m["kind"] != "home" else "studio"}')))
     return pages
 
 
@@ -438,7 +443,8 @@ def llms(projects, articles):
     u = SITE['url']
     lines = [f'# {SITE["name"]} ({SITE["wordmark"]})', '', f'> {SITE["summary"]}', '',
              f'- Website: {u}/', f'- Email: {SITE["email"]}',
-             f'- Location: {SITE["city"]}, California, USA',
+             (f'- Location: {SITE["city"]}, {SITE["region"]}, USA' if SITE['city']
+              else f'- Location: Remote studio, serving clients across the {SITE["area_served"]}'),
              f'- Founded: {SITE["founded"]}',
              '- Services: ' + ', '.join(SITE['services']),
              '- Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief',

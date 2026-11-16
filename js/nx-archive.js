@@ -6,7 +6,7 @@ import { reducedMotion } from './core.js';
 
 const IMAGES = [
   ['V40', 'Lumen Skincare'], ['V41', 'Nocturne'], ['V45', 'Pull Noodle Bar'], ['V42', 'Wilder Camp'],
-  ['V43', 'Ironflow'], ['V46', 'Axiom Precision'], ['V47', 'Helios'], ['V48', 'Caneform'],
+  ['V43', 'Ironflow'], ['V46', 'Axiom Precision'], ['V47', 'Forgeline'], ['V48', 'Clara'],
 ];
 const PIN_PX = 4000;
 

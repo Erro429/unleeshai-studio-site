@@ -11,24 +11,24 @@ import { reducedMotion } from './core.js';
 const LETTERS = ['U', 'N', 'L', 'E', 'E', 'S', 'H'];
 
 const CHIPS = [
-  'Brand identity', 'Visual strategy', 'Unleesh studio', 'Motion design', 'Micro interactions',
-  'Type system', 'Creative direction', 'Design language', 'Interface design', 'Web experience',
-  'Digital storytelling', 'Art direction', 'Campaign design', 'Visual narrative', 'Brand experience',
-  'UX strategy', 'Creative coding', 'Logo design', 'Editorial layout', 'Packaging design',
-  'Digital experience', 'Interaction design', 'Brand guidelines', 'Typography', 'Colour systems',
-  'Brand consulting', 'Social media design', 'Video production', 'Illustration', 'Creative strategy',
-  'Print design', 'Space branding', 'Exhibition design', 'Sound identity', 'Concept development',
-  'Market positioning', 'Brand personality', 'Audience insight', 'Design thinking', 'Prototyping',
-  'User research', 'Content strategy', 'Visual identity', 'Responsive design', 'Animation direction',
-  'UI component design', 'Design system', 'Cross-media branding', 'Landing page', 'Digital brand standards',
-  'Scroll experience', 'WebGL interface', 'Kinetic typography', 'Motion visual design', 'Brand audit',
-  'AI visual pipeline', 'Generative imagery', 'Render direction', 'Prompt craft', 'Signal design',
+  'Custom websites', 'Landing pages', 'Unleesh studio', 'Motion design', 'Micro interactions',
+  'Hand-written code', 'Art direction', 'Design systems', 'Interface design', 'Scroll experience',
+  'Responsive design', 'Kinetic typography', 'WebGL interface', 'AI visual pipeline', 'Generative imagery',
+  'UX strategy', 'Page speed', 'Technical SEO', 'On-page SEO', 'Local SEO',
+  'Keyword research', 'Content strategy', 'Blog writing', 'Topic clusters', 'Internal linking',
+  'Schema markup', 'Site architecture', 'Core Web Vitals', 'Search intent', 'Competitor research',
+  'Image SEO', 'SEO audits', 'AEO', 'AIO', 'GEO',
+  'AI search visibility', 'AI answer citations', 'LLM visibility', 'Entity markup', 'FAQ schema',
+  'Brand mentions', 'Answer-first content', 'Sales funnels', 'Lead capture', 'Lead magnets',
+  'Conversion copy', 'Offer design', 'Split testing', 'Call-to-action design', 'Form optimization',
+  'Booking flows', 'Email follow-up', 'Analytics setup', 'Conversion tracking', 'Traffic generation',
+  'Website optimization', 'Speed optimization', 'Site audits', 'Monthly reporting', 'Content calendar',
 ];
 
 const STATUS = [
-  { text: 'BRAND IDENTITY SYSTEM :: BUILDING', pos: [8, 22] },
-  { text: 'VISUAL SYSTEM :: LOADING', pos: [64, 76] },
-  { text: 'CREATIVE ENERGY :: CONTINUOUSLY OUTPUTTING', pos: [10, 80] },
+  { text: 'SITE SPEED :: OPTIMIZING', pos: [8, 22] },
+  { text: 'CONTENT ENGINE :: PUBLISHING', pos: [64, 76] },
+  { text: 'TRAFFIC :: COMPOUNDING', pos: [10, 80] },
 ];
 
 /* timeline units: 10 = full pin (500vh). Each face beat = 1.0 turn + 0.2 plateau. */
