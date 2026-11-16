@@ -1,6 +1,6 @@
 # UnleeshAI (UNLEESH)
 
-> UnleeshAI (wordmark UNLEESH) is a remote web studio serving clients across the US. It designs and hand-codes custom websites and landing pages, then grows their visibility and conversion with SEO, AEO and AIO, content, and sales funnels.
+> UnleeshAI (wordmark UNLEESH) is a remote web design studio serving clients across the US. It designs and hand-codes custom websites and landing pages, then grows their visibility and conversion with SEO, AEO and AIO (also called GEO or AI SEO), content, and sales funnels.
 
 - Website: https://unleeshai.com/
 - Email: hello@unleeshai.com
@@ -13,12 +13,12 @@
 
 ## Main pages
 
-- [UnleeshAI | Custom Websites, SEO and AI Search Visibility](https://unleeshai.com/): UnleeshAI builds custom, hand-coded websites and landing pages, then gets them found on Google and in AI answers. SEO, AEO, content and funnels included.
-- [About UnleeshAI: Remote Web Design and SEO Studio](https://unleeshai.com/about.html): How UnleeshAI works: a remote studio for custom websites, SEO, AI search and funnels, run on a six-phase process from first call to launch and growth.
-- [Work: Live Sites & Web Design Cases | UnleeshAI](https://unleeshai.com/work.html): Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten sectors: hand-coded sites, generated imagery and scroll-driven motion.
+- [Custom Website Design, SEO, AEO and AI Search | UnleeshAI](https://unleeshai.com/): UnleeshAI is a web design studio that builds custom, hand-coded websites and landing pages, then gets them found on Google and in AI answers with SEO and AEO.
+- [About UnleeshAI: Web Design, SEO and AI Search Studio](https://unleeshai.com/about.html): How UnleeshAI works: a remote web design studio for custom websites, SEO, AEO and sales funnels, run on a six-phase process from first call to launch.
+- [Web Design Portfolio: Live Sites and Concepts | UnleeshAI](https://unleeshai.com/work.html): The UnleeshAI web design portfolio: live client websites we built and shipped, plus ten concept flagships across ten sectors, all hand-coded.
 - [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and commercial image generation, filterable by stream with a captioned lightbox.
-- [Contact UnleeshAI: Start a Website or SEO Project](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites from $499, most live in 2 to 4 days. Replies in two working days.
-- [Journal: Web Design, Motion & AI Visual Notes | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: field notes on web design, scroll motion, AI product imagery and brand strategy, written by the studio while the work was still fresh.
+- [Contact UnleeshAI: Get a Website, SEO or AEO Quote](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites from $499, most live in 2 to 4 days. Replies in two working days.
+- [Journal: Web Design, SEO and AI Search Answers | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: plain answers on website cost, SEO timelines, AEO, landing pages and sales funnels, plus field notes on web design and motion.
 
 ## Live websites built by the studio
 
@@ -41,6 +41,12 @@
 
 ## Journal
 
+- [How much does a website cost in 2026?](https://unleeshai.com/journal_how-much-does-a-website-cost.html) (2026-11-16, Strategy): The honest answer is a range so wide it is useless, until you know the five things that move the price. Here they are, with our own number on the table.
+- [What is AEO? AEO, GEO and AI SEO explained in plain words](https://unleeshai.com/journal_what-is-aeo-geo-ai-seo.html) (2026-11-16, Search): Four acronyms, one job: getting your business named when someone asks an AI assistant instead of a search engine. Here is what the work actually is.
+- [How do you get your business recommended by ChatGPT?](https://unleeshai.com/journal_get-recommended-by-chatgpt.html) (2026-11-16, Search): You cannot pay for it and you cannot trick it. You can make your business easy to find, easy to understand and easy to vouch for.
+- [How long does SEO take to work?](https://unleeshai.com/journal_how-long-does-seo-take.html) (2026-11-16, Search): Months, not weeks. Here is what happens in each of them, and how to tell real progress from a nice-looking report.
+- [Landing page vs website: which one do you need?](https://unleeshai.com/journal_landing-page-vs-website.html) (2026-11-16, Strategy): A website introduces the whole business. A landing page asks for one thing. Knowing which job you are hiring for saves money either way.
+- [What is a sales funnel, and does a small business need one?](https://unleeshai.com/journal_what-is-a-sales-funnel.html) (2026-11-16, Strategy): A funnel is the path from stranger to customer, written down and built on purpose. You already have one. The question is whether it leaks.
 - [Why your hero section is costing you clients](https://unleeshai.com/journal_hero-section-costing-clients.html) (2026-08-18, Web Design): The first viewport is a job interview that lasts three seconds. Most premium brands fail it by saying everything at once.
 - [One key light: the whole aesthetic explained](https://unleeshai.com/journal_one-key-light.html) (2026-08-02, AI Visuals): Every image we ship is lit from one direction. Here is why that single constraint does most of the work.
 - [AI product photography that passes for a five-figure shoot](https://unleeshai.com/journal_ai-product-photography-five-figure-shoot.html) (2026-07-22, AI Visuals): Generated imagery is only cheap if you accept the first result. The craft is in the second, third and fourteenth.

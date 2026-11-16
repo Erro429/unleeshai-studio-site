@@ -13,7 +13,7 @@ const PAGES = {
   project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Studio concept project' },
   lab:     { file: 'lab.html',          name: 'LABS',    sub: 'Motion and AI visual experiments.' },
   contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT A WEBSITE THAT GETS FOUND' },
-  blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Notes on web design, motion and AI visuals.' },
+  blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Answers on web design, SEO and AI search.' },
   article: { file: 'journal.html',      name: 'ENTRY',   sub: 'Journal entry' },
 };
 
