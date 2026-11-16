@@ -16,15 +16,15 @@
 - [UnleeshAI | Custom Websites, SEO and AI Search Visibility](https://unleeshai.com/): UnleeshAI builds custom, hand-coded websites and landing pages, then gets them found on Google and in AI answers. SEO, AEO, content and funnels included.
 - [About UnleeshAI: Remote Web Design and SEO Studio](https://unleeshai.com/about.html): How UnleeshAI works: a remote studio for custom websites, SEO, AI search and funnels, run on a six-phase process from first call to launch and growth.
 - [Work: Live Sites & Web Design Cases | UnleeshAI](https://unleeshai.com/work.html): Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten sectors: hand-coded sites, generated imagery and scroll-driven motion.
-- [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and high-end commercial image generation, filterable by stream with a captioned lightbox.
+- [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and commercial image generation, filterable by stream with a captioned lightbox.
 - [Contact UnleeshAI: Start a Website or SEO Project](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites from $499, most live in 2 to 4 days. Replies in two working days.
 - [Journal: Web Design, Motion & AI Visual Notes | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: field notes on web design, scroll motion, AI product imagery and brand strategy, written by the studio while the work was still fresh.
 
 ## Live websites built by the studio
 
 - [Florida Land Brand Site](https://goldenrp.land/): Real Estate · Land Sales. The full brand site for an owner-financed land company: parcel listings, a how-it-works flow, buyer guides, a blog, an FAQ and a VIP lead form, built on Next.js with a live content database.
-- [Search Landing Page](https://goldenrpland.com/florida-land/): Real Estate · Organic Search. A long-form landing page written to rank for owner-financed land searches: a bank-versus-owner comparison, the payment numbers set out plainly, an FAQ and a free land guide download.
-- [Conversion Landing Page](https://goldenrpland.com/owner-financed-land-florida/): Real Estate · Lead Generation. A fast single-offer page built to convert: one clear promise, trust badges, a quick-facts panel and a 30-second land credit claim form above the fold.
+- [Search Landing Page](https://goldenrpland.com/florida-land/): Real Estate · SEO. A long-form landing page written to rank for owner-financed land searches: a bank-versus-owner comparison, the payment numbers set out plainly, an FAQ and a free land guide download.
+- [Conversion Landing Page](https://goldenrpland.com/owner-financed-land-florida/): Real Estate · Lead Gen. A fast single-offer page built to convert: one clear promise, trust badges, a quick-facts panel and a 30-second land credit claim form above the fold.
 
 ## Concept case studies
 
@@ -42,19 +42,19 @@
 ## Journal
 
 - [Why your hero section is costing you clients](https://unleeshai.com/journal_hero-section-costing-clients.html) (2026-08-18, Web Design): The first viewport is a job interview that lasts three seconds. Most premium brands fail it by saying everything at once.
-- [One key light: the whole aesthetic explained](https://unleeshai.com/journal_one-key-light.html) (2026-08-02, AI Visuals): Every image we ship, generated or photographed, is lit from one direction. Here is why that single constraint does most of the work.
+- [One key light: the whole aesthetic explained](https://unleeshai.com/journal_one-key-light.html) (2026-08-02, AI Visuals): Every image we ship is lit from one direction. Here is why that single constraint does most of the work.
 - [AI product photography that passes for a five-figure shoot](https://unleeshai.com/journal_ai-product-photography-five-figure-shoot.html) (2026-07-22, AI Visuals): Generated imagery is only cheap if you accept the first result. The craft is in the second, third and fourteenth.
 - [Scroll is a story, not a scrollbar](https://unleeshai.com/journal_scroll-is-a-story.html) (2026-07-10, Motion): Scroll-driven motion earns its place when it changes what the reader understands, not just what they see.
 - [The case against page builders for premium brands](https://unleeshai.com/journal_case-against-page-builders.html) (2026-06-28, Strategy): A template is a decision someone else made about how your brand should feel. For most businesses that is fine. For a premium brand it is the whole problem.
 - [Motion tokens: a design system for time](https://unleeshai.com/journal_motion-tokens.html) (2026-06-15, Motion): Colour and type have tokens. Motion should too. Here is the small set of durations and curves that runs every page we build.
 - [Dark mode is not a theme, it is a stage](https://unleeshai.com/journal_dark-mode-is-a-stage.html) (2026-06-01, Web Design): Designing on near-black is not inverting a light site. It is deciding that the content is the only thing lit.
-- [What a brand audit actually finds (and what it costs to skip one)](https://unleeshai.com/journal_brand-audit-findings.html) (2026-05-20, Strategy): Every project we take on begins with a week of looking before a day of making. Clients occasionally ask to skip it. Here is what they would be skipping.
+- [What a brand audit actually finds (and what it costs to skip one)](https://unleeshai.com/journal_brand-audit-findings.html) (2026-05-20, Strategy): Every project we take on begins with looking before making. The temptation is always to skip it. Here is what gets skipped.
 - [WebGL: when it earns its place and when it is vanity](https://unleeshai.com/journal_webgl-when-it-earns-its-place.html) (2026-05-06, Motion): A shader is the most expensive way to render a rectangle. Sometimes the rectangle deserves it.
-- [Typography carries the menu: lessons from a candlelit build](https://unleeshai.com/journal_typography-carries-the-menu.html) (2026-04-22, Case Notes): On the Nocturne Dining site there is almost no imagery. What holds the page is type set the way a menu is read.
+- [Typography carries the menu: lessons from a candlelit concept](https://unleeshai.com/journal_typography-carries-the-menu.html) (2026-04-22, Concept Notes): On the Nocturne Dining concept there is almost no imagery. What holds the page is type set the way a menu is read.
 - [Seamless loops: the craft of ambient video backgrounds](https://unleeshai.com/journal_seamless-loops.html) (2026-04-08, AI Visuals): A background loop should be invisible. The moment the reader notices the cut, it has become a distraction.
 - [Negative space sells: the economics of restraint](https://unleeshai.com/journal_negative-space-sells.html) (2026-03-25, Strategy): Empty space on a page looks like waste to a spreadsheet and like confidence to a customer. Only one of them is buying.
-- [From moodboard to motion in five days](https://unleeshai.com/journal_moodboard-to-motion-five-days.html) (2026-03-11, Process): The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.
-- [Industrial brands deserve cinema too](https://unleeshai.com/journal_industrial-brands-deserve-cinema.html) (2026-02-26, Case Notes): Machining, lubricants, steel. The sectors with the most visually extraordinary work are the ones that show it worst.
+- [From moodboard to motion in three days](https://unleeshai.com/journal_moodboard-to-motion-three-days.html) (2026-03-11, Process): The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.
+- [Industrial brands deserve cinema too](https://unleeshai.com/journal_industrial-brands-deserve-cinema.html) (2026-02-26, Concept Notes): Machining, lubricants, steel. The sectors with the most visually extraordinary work are the ones that show it worst.
 - [The preloader is the first scene of the film](https://unleeshai.com/journal_preloader-first-scene.html) (2026-02-12, Motion): A loading screen is a second of undivided attention. Most sites spend it on a spinner.
 - [Launching UNLEESH Labs: our public sketchbook](https://unleeshai.com/journal_launching-unleesh-labs.html) (2026-01-28, Studio): Twenty-five experiments in web motion and generated imagery, published as they are made. Not portfolio pieces. Sketches.
 

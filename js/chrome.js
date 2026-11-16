@@ -11,9 +11,9 @@ const PAGES = {
   about:   { file: 'about.html',        name: 'ABOUT',   sub: 'Websites, Search & Conversion' },
   work:    { file: 'work.html',         name: 'WORK',    sub: 'Live client builds and concept flagships.' },
   project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Studio concept project' },
-  lab:     { file: 'lab.html',          name: 'LABS',    sub: 'UNLEESH Labs — Editorial Grid' },
+  lab:     { file: 'lab.html',          name: 'LABS',    sub: 'Motion and AI visual experiments.' },
   contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT A WEBSITE THAT GETS FOUND' },
-  blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Shared page-transition layer for the journal and article pages.' },
+  blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Notes on web design, motion and AI visuals.' },
   article: { file: 'journal.html',      name: 'ENTRY',   sub: 'Journal entry' },
 };
 

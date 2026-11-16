@@ -122,7 +122,7 @@ Open ten agency sites in ten tabs and read only the first viewport. You will fin
 
 A hero is not a summary of the company. It is a single decision about what the visitor should feel first. On a fine-dining site that feeling is patience; on a machining site it is precision; on a skincare flagship it is calm. Once the feeling is chosen, the hero needs one image or loop that produces it, one line of type that names it, and a way down. Everything else belongs further down the page where the visitor has already decided to stay.
 
-The cost of getting this wrong is measurable. We watched a B2B client lose a third of paid traffic inside the first viewport because the headline, a stat ticker, a video, a client logo strip and two buttons were all competing for the same second. We removed four of the six elements. The bounce rate halved without touching the ad spend.
+The cost of getting this wrong is measurable. Picture a B2B hero where the headline, a stat ticker, a video, a client logo strip and two buttons all compete for the same second. Paid traffic lands, finds nothing to hold on to, and leaves before the first scroll. Remove four of the six elements and the page finally says one thing, without a dollar more in ad spend.
 
 The uncomfortable part is that the fix requires someone to be wrong. The stat ticker was somebody's idea. The logo strip was a sales request. Subtraction is a political act inside a company, which is why it is worth paying an outside studio to perform it.
 
@@ -130,11 +130,11 @@ The uncomfortable part is that the fix requires someone to be wrong. The stat ti
 URL: https://unleeshai.com/journal_one-key-light.html
 Published: 2026-08-02 · AI Visuals
 
-Every image we ship, generated or photographed, is lit from one direction. Here is why that single constraint does most of the work.
+Every image we ship is lit from one direction. Here is why that single constraint does most of the work.
 
 Ask a cinematographer what makes a frame feel expensive and they will not talk about the camera. They will talk about where the light comes from, how hard it is, and what it refuses to touch. Most product imagery on the web is lit from everywhere, because that is what a white studio and a ring light do. It looks clean and it looks like nothing.
 
-Our rule is one key light, always slightly above and to the side, with a long falloff into near-black. Every still and every loop on this site obeys it. When a client sends us a reference that breaks the rule, we shoot their version and ours and let them compare. Ours wins because it looks like it belongs with the rest of their brand, even when the rest of their brand does not exist yet.
+Our rule is one key light, always slightly above and to the side, with a long falloff into near-black. Every still and every loop on this site obeys it. When a reference breaks the rule, we make both versions and put them side by side. The one-light version wins because it looks like it belongs with the rest of the brand, even when the rest of the brand does not exist yet.
 
 The constraint matters even more for generated imagery. A diffusion model will happily give you forty product shots with forty different suns. Describing the light in words, in every prompt, is the difference between a catalogue and a pile of pictures. We write the light before we write the product.
 
@@ -146,11 +146,11 @@ Published: 2026-07-22 · AI Visuals
 
 Generated imagery is only cheap if you accept the first result. The craft is in the second, third and fourteenth.
 
-Every week somebody sends us a generated product image and asks why theirs looks like a stock photo while ours looks like a campaign. The honest answer is that we threw away twenty frames to keep one, and we knew what we were looking for before we started.
+The usual question about generated product imagery is why one frame looks like a stock photo and another looks like a campaign. The honest answer is that we threw away twenty frames to keep one, and we knew what we were looking for before we started.
 
 A commercial shoot has a brief, a lighting plan, a shot list and an art director on set who says no. Generation removes the set and the crew but not the need for the other four. Our prompts read like lighting plans: the key light, the surface, the exact distance from lens to object, what stays out of frame. The model gives you a draft. The art director gives you a shoot.
 
-Then there is the part nobody mentions: the retouch. Generated frames arrive with wrong reflections, invented text and lens behaviour that no lens has. We clean every frame at pixel level before it ships. A keycap with a legible, real character on it is worth more than a hundred with alphabet soup.
+Then there is the part nobody mentions: the retouch. Generated frames arrive with wrong reflections, invented text and lens behaviour that no lens has. Every client frame gets cleaned at pixel level before it ships. A keycap with a legible, real character on it is worth more than a hundred with alphabet soup.
 
 The result is imagery that survives being placed next to real photography, which is the only test that matters. When a client cannot tell which frames were shot and which were generated, we have done the job.
 
@@ -174,7 +174,7 @@ Published: 2026-06-28 · Strategy
 
 A template is a decision someone else made about how your brand should feel. For most businesses that is fine. For a premium brand it is the whole problem.
 
-Page builders solved a real problem: most businesses need a website and cannot afford a studio. We are not arguing with that. We are arguing with the premium skincare house, the boutique clinic, the machining firm charging for tolerances no competitor can hit, when they ship a site that shares a skeleton with a dropshipping store.
+Page builders solved a real problem: most businesses need a website, and a custom build used to cost more than they could justify. We are not arguing with that. We are arguing with the premium skincare house, the boutique clinic, the machining firm charging for tolerances no competitor can hit, when they ship a site that shares a skeleton with a dropshipping store.
 
 You cannot charge a premium for a product that arrives in the same box as everyone else's. Visitors do not consciously recognise the template, but they recognise the rhythm: the hero, the three-column features, the testimonial slider, the footer. It reads as generic before a single word is processed, and generic is the opposite of what a premium price is asking the customer to believe.
 
@@ -214,13 +214,13 @@ The reward is that the content gets to be the only bright thing in the room. Tha
 URL: https://unleeshai.com/journal_brand-audit-findings.html
 Published: 2026-05-20 · Strategy
 
-Every project we take on begins with a week of looking before a day of making. Clients occasionally ask to skip it. Here is what they would be skipping.
+Every project we take on begins with looking before making. The temptation is always to skip it. Here is what gets skipped.
 
-An audit is a week spent reading everything the brand has ever published: the site, the decks, the packaging, the support emails, the LinkedIn posts written at 11pm. We are not looking for mistakes. We are looking for the place where the brand tells the truth by accident.
+An audit is time spent reading everything the brand has ever published: the site, the decks, the packaging, the support emails, the LinkedIn posts written at 11pm. We are not looking for mistakes. We are looking for the place where the brand tells the truth by accident.
 
 Every audit finds the same thing: the brand is saying three things and believing one. The site claims innovation, the sales deck claims reliability, and the founder, when you get them talking, cares about craft. The audit names the one and gives the other two a graceful exit.
 
-Skipping the audit does not save the week. It moves the week to the middle of the project, when the design is half built and someone senior finally articulates what the company is actually for. Everything built before that sentence gets rebuilt. We have never seen an exception.
+Skipping the audit does not save the time. It moves it to the middle of the project, when the design is half built and someone senior finally articulates what the company is actually for. Everything built before that sentence gets rebuilt. We have never seen an exception.
 
 The audit ends in a single page: what the brand is, what it is not, and what the site therefore has to feel like. That page is the brief. Everything after it is execution.
 
@@ -238,13 +238,13 @@ It also has to survive contact with the real world. Every WebGL layer we ship ha
 
 The question to ask is not whether the effect is impressive. It is whether the reader would notice if it were gone. If the answer is no, it was vanity, and vanity is the one thing a premium brand cannot afford to be caught doing.
 
-## Typography carries the menu: lessons from a candlelit build
+## Typography carries the menu: lessons from a candlelit concept
 URL: https://unleeshai.com/journal_typography-carries-the-menu.html
-Published: 2026-04-22 · Case Notes
+Published: 2026-04-22 · Concept Notes
 
-On the Nocturne Dining site there is almost no imagery. What holds the page is type set the way a menu is read.
+On the Nocturne Dining concept there is almost no imagery. What holds the page is type set the way a menu is read.
 
-The brief for Nocturne was unusual: the room is too dark to photograph, and the chef did not want plated shots because the plates change nightly. The site would have to be almost entirely typographic. We took that as a gift.
+The brief we set ourselves for Nocturne was unusual: a room too dark to photograph, and a chef who does not want plated shots because the plates change nightly. The site would have to be almost entirely typographic. We took that as a gift.
 
 A menu is read slowly, by candlelight, by someone who wants to be persuaded. We set the type to match: a wide display face for course names, a light body face for descriptions, generous leading, and one hairline between courses. Nothing bold, nothing coloured, nothing that raises its voice.
 
@@ -280,23 +280,23 @@ Restraint is expensive to produce and cheap to recognise. It takes a week of arg
 
 The measure we use is simple: if a section were removed, would anyone notice? Every section that fails the test comes out. What remains has room to be looked at, which is the only thing a premium page needs to do.
 
-## From moodboard to motion in five days
-URL: https://unleeshai.com/journal_moodboard-to-motion-five-days.html
+## From moodboard to motion in three days
+URL: https://unleeshai.com/journal_moodboard-to-motion-three-days.html
 Published: 2026-03-11 · Process
 
 The vibe workflow: how a taste-led loop replaces the six-week approval chain without lowering the bar.
 
 The traditional pipeline is a relay race with hand-offs: strategy passes to design, design passes to motion, motion passes to development, and every baton drop takes a week of meetings. The work is not slow. The waiting is.
 
-Our loop puts one small team around one table for five days. Day one is the moodboard and the single sentence the site has to feel like. Day two is type and grid. Day three is the hero in the browser, moving. Day four is the first full page. Day five is the client sitting in front of a working site instead of a deck about one.
+Our loop keeps strategy, design, motion and code in the same hands for three days. Day one is the moodboard, the single sentence the site has to feel like, and the type and grid that follow from it. Day two is the hero in the browser, moving, and then the first full page. Day three is the client sitting in front of a working site instead of a deck about one.
 
-Speed does not come from cutting steps. It comes from removing the waiting between them. Generated imagery removes the waiting for a shoot. Hand-coded motion removes the waiting for a developer to interpret a designer's video. A client who sees the real thing on day five gives better feedback than one who sees a mock on day forty.
+Speed does not come from cutting steps. It comes from removing the waiting between them. Generated imagery removes the waiting for a shoot. Hand-coded motion removes the waiting for a developer to interpret a designer's video. A client who sees the real thing on day three gives better feedback than one who sees a mock on day forty.
 
-The five days are not the whole project. They are the part that decides whether the project is right. Everything after them is refinement, which is the part that should take time.
+The three days are not the whole project. They are the part that decides whether the project is right. Everything after them is refinement and growth: search, content and testing, which is the part that should take time.
 
 ## Industrial brands deserve cinema too
 URL: https://unleeshai.com/journal_industrial-brands-deserve-cinema.html
-Published: 2026-02-26 · Case Notes
+Published: 2026-02-26 · Concept Notes
 
 Machining, lubricants, steel. The sectors with the most visually extraordinary work are the ones that show it worst.
 
@@ -304,7 +304,7 @@ Walk a machine shop floor and you will see coolant arcs, titanium chips curling 
 
 A foundry at pour is the most cinematic thing in any city. Its website is a PDF. This is not a lack of pride. It is a belief that the customers, engineers and procurement teams, do not respond to beauty. They do. They respond to it more, because they are the only people who can read what the beauty is proving.
 
-On Axiom Precision we opened every capability page on a macro loop of the machine at work. The frames are not decoration; they are evidence. A buyer who watches a surface finish appear under the key light does not need the certification list to believe the tolerance.
+On the Axiom Precision concept we opened every capability page on a macro loop of the machine at work. The frames are not decoration; they are evidence. A buyer who watches a surface finish appear under the key light does not need the certification list to believe the tolerance.
 
 The industrial sector is our favourite for exactly this reason. The work is already extraordinary. The studio's job is to point the light at it.
 
@@ -328,10 +328,10 @@ Published: 2026-01-28 · Studio
 
 Twenty-five experiments in web motion and generated imagery, published as they are made. Not portfolio pieces. Sketches.
 
-Every studio has a folder of things that never became client work: a shader that did something strange, a product render lit for a client who chose a different direction, a loop made at midnight for no reason. We decided to publish ours.
+Every studio has a folder of things that never became client work: a shader that did something strange, a product render lit for a direction nobody chose, a loop made at midnight for no reason. We decided to publish ours.
 
-Labs is that folder with a filter bar. Three streams: web motion design, motion image generation, and high-end commercial image generation. Each entry is dated, categorised and shown at full size in a lightbox. Nothing is retouched for the archive; the point is to show the sketch, not the frame.
+Labs is that folder with a filter bar. Three streams: web motion design, motion image generation, and commercial image generation. Each entry is dated, categorised and shown at full size in a lightbox. Nothing is retouched for the archive; the point is to show the sketch, not the frame.
 
-The portfolio shows what we finished. Labs shows what we are thinking about. Clients read it to see where the studio is heading before they brief us, which turns out to be a better conversation than any capabilities deck.
+The portfolio shows what we finished. Labs shows what we are thinking about. It lets a client see where the studio is heading before they brief us, which makes for a better conversation than any capabilities deck.
 
-The archive will grow by a few entries a month. Some will become client work. Most will stay sketches, which is what a sketchbook is for.
+The archive will grow by a few entries a month. Some will find their way into client sites. Most will stay sketches, which is what a sketchbook is for.
