@@ -8,25 +8,25 @@
 import { reducedMotion } from './core.js';
 
 const LEFT = [
-  ['Core-Site', '( THE CORE SITE )'], ['Gen-AI Visual', '( GENERATIVE VISUALS )'],
-  ['Motion Flow', '( MOTION SYSTEMS )'], ['WebGL Realm', '( REALTIME 3D )'],
-  ['3D Matrix', '( SPATIAL GRIDS )'], ['Interaction', '( MICRO INTERACTIONS )'],
-  ['Pixel Perfect', '( PRECISION UI )'], ['Logic Build', '( SYSTEM LOGIC )'],
-  ['Fluid UI', '( FLUID INTERFACES )'], ['Aero Design', '( LIGHT FORMS )'],
-  ['Pure Code', '( HAND-WRITTEN CODE )'], ['Digital Art', '( DIGITAL ART )'],
+  ['Custom Sites', '( NO TEMPLATES )'], ['Landing Pages', '( ONE PAGE, ONE JOB )'],
+  ['Sales Funnels', '( VISITOR TO BUYER )'], ['SEO Strategy', '( RANK ON GOOGLE )'],
+  ['AI Search', '( AEO · AIO )'], ['Blog Writing', '( CONTENT THAT RANKS )'],
+  ['Optimization', '( TEST AND IMPROVE )'], ['Hand-Coded', '( HAND-WRITTEN CODE )'],
+  ['Motion Design', '( SCROLL AND MOTION )'], ['AI Visuals', '( GENERATED IMAGERY )'],
+  ['Analytics', '( MEASURE EVERYTHING )'], ['Monthly Care', '( KEEPS IMPROVING )'],
 ];
 const RIGHT = [
-  ['Strategy', '( DIRECTION )'], ['Design', '( FORM )'], ['Tech', '( ENGINEERING )'],
-  ['Creative', '( IDEATION )'], ['Motion', '( KINETICS )'], ['Brand', '( IDENTITY )'],
-  ['Future', '( FORESIGHT )'], ['Vision', '( CLARITY )'], ['System', '( STRUCTURE )'],
-  ['Labs', '( PROTOTYPES )'], ['Core', '( ESSENCE )'], ['Craft', '( FINISH )'],
+  ['Trust', '( CREDIBILITY )'], ['Leads', '( INQUIRIES )'], ['Sales', '( REVENUE )'],
+  ['Rankings', '( PAGE ONE )'], ['Answers', '( CITED BY AI )'], ['Traffic', '( VISITORS )'],
+  ['Speed', '( LOAD TIME )'], ['Control', '( YOU OWN IT )'], ['Impact', '( MEMORABLE )'],
+  ['Polish', '( PREMIUM )'], ['Clarity', '( NUMBERS )'], ['Growth', '( COMPOUNDING )'],
 ];
 const THUMBS = ['V40M', 'V41M', 'V42M', 'V43M', 'V44M', 'V45M', 'V46M', 'V47M', 'V48M', 'V49M', 'V40', 'V42'];
 const CUBE_FACES = ['V40M', 'V45M', 'V46M', 'V41M', 'V42M', 'V43M'];
 const CAPTIONS = [
-  'BRAND IDENTITY SYSTEM :: BUILDING',
-  'VISUAL SYSTEM :: LOADING',
-  'CREATIVE ENERGY :: CONTINUOUSLY OUTPUTTING',
+  'CUSTOM WEBSITE :: BUILDING',
+  'SEO AND AI SEARCH :: INDEXING',
+  'LEAD FLOW :: CONVERTING',
 ];
 
 const PIN_PX = 5000;

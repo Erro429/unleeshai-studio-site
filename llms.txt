@@ -1,18 +1,18 @@
 # UnleeshAI (UNLEESH)
 
-> UnleeshAI (wordmark UNLEESH) is an AI-native web design and motion studio in San Francisco. It designs and hand-codes flagship websites, generates commercial visuals and video with AI, and builds motion systems for premium brands.
+> UnleeshAI (wordmark UNLEESH) is a remote web studio serving clients across the US. It designs and hand-codes custom websites and landing pages, then grows their visibility and conversion with SEO, AEO and AIO, content, and sales funnels.
 
 - Website: https://unleeshai.com/
 - Email: hello@unleeshai.com
-- Location: San Francisco, California, USA
+- Location: Remote studio, serving clients across the United States
 - Founded: 2026
-- Services: Brand identity, Web planning, High-end web design, Web interaction development, AI commercial visuals, AI video and motion design, Digital consulting
+- Services: Custom website design and development, Landing pages, SEO, AEO and AIO, Sales funnels, Blog and content writing, Traffic generation, Website optimization
 - Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief
 - Portfolio note: the live websites listed below are real shipped client sites; the ten case studies are self-initiated studio concept projects, not client commissions
 
 ## Main pages
 
-- [UnleeshAI | AI Web Design & Motion Studio, San Francisco](https://unleeshai.com/): UnleeshAI is an AI-native web design and motion studio in San Francisco: hand-coded flagship websites, AI commercial visuals and motion systems for premium brands.
+- [UnleeshAI | Custom Websites, SEO and AI Search Visibility](https://unleeshai.com/): UnleeshAI builds custom, hand-coded websites and landing pages, then gets them found on Google and in AI answers. SEO, AEO, content and funnels included.
 - [About UnleeshAI: AI-Native Design Studio in San Francisco](https://unleeshai.com/about.html): How UnleeshAI works: a small San Francisco studio for brand identity, high-end web design, AI visuals and motion, run on a six-phase process from brief to launch.
 - [Work: Live Sites & Web Design Cases | UnleeshAI](https://unleeshai.com/work.html): Live websites UnleeshAI has built and shipped, plus ten concept flagships across ten sectors: hand-coded sites, generated imagery and scroll-driven motion.
 - [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and high-end commercial image generation, filterable by stream with a captioned lightbox.

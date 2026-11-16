@@ -3,10 +3,10 @@
 import { reducedMotion } from './core.js';
 
 const CELLS = [
-  ['Core-Site', 'Strategy'], ['Gen-AI Visual', 'Design'], ['Motion Flow', 'Tech'],
-  ['WebGL Realm', 'Creative'], ['3D Matrix', 'Motion'], ['Interaction', 'Brand'],
-  ['Pixel Perfect', 'Future'], ['Logic Build', 'Vision'], ['Fluid UI', 'System'],
-  ['Aero Design', 'Labs'], ['Pure Code', 'Core'], ['Digital Art', 'Craft'],
+  ['Custom Sites', 'Trust'], ['Landing Pages', 'Leads'], ['Sales Funnels', 'Sales'],
+  ['SEO Strategy', 'Rankings'], ['AI Search', 'Answers'], ['Blog Writing', 'Traffic'],
+  ['Optimization', 'Speed'], ['Hand-Coded', 'Control'], ['Motion Design', 'Impact'],
+  ['AI Visuals', 'Polish'], ['Analytics', 'Clarity'], ['Monthly Care', 'Growth'],
 ];
 const GLYPHS = '!<>-_\\/[]{}=+*^?#';
 const FRAMES = 26;
