@@ -73,9 +73,9 @@ STATIC = {
               'commercial image generation, filterable by stream with a captioned lightbox.')),
     'contact.html': dict(
         path='/contact.html', kind='ContactPage', img='V21', crumb='Contact',
-        title='Contact UnleeshAI: Start a Web Design Project',
-        desc=('Send UnleeshAI a brief for a website, brand identity or AI visual library. We reply within '
-              'two working days with questions, a timeline and a fixed-price quote.')),
+        title='Contact UnleeshAI: Start a Website or SEO Project',
+        desc=('Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites '
+              'from $499, most live in 2 to 4 days. Replies in two working days.')),
     'blog.html': dict(
         path='/blog.html', kind='Blog', img='V28', crumb='Journal',
         title='Journal: Web Design, Motion & AI Visual Notes | UnleeshAI',
@@ -447,7 +447,8 @@ def llms(projects, articles):
               else f'- Location: Remote studio, serving clients across the {SITE["area_served"]}'),
              f'- Founded: {SITE["founded"]}',
              '- Services: ' + ', '.join(SITE['services']),
-             '- Typical project: 6 to 11 weeks from signed brief to launch, fixed-price quote after the brief',
+             '- Typical project: 2 to 4 days from agreed brief to launch (3 on average), fixed-price quote once requirements are known',
+             '- Pricing: a five-page website starts at $499',
              '- Portfolio note: the live websites listed below are real shipped client sites; the ten case studies '
              'are self-initiated studio concept projects, not client commissions',
              '', '## Main pages', '']
