@@ -7,110 +7,110 @@ URL: https://unleeshai.com/work_lumen.html
 
 Redefining clean beauty: a bespoke digital experience blending editorial layouts with an organic palette.
 
-Brief: A skincare house asked for a flagship that feels like porcelain under gallery light. We built an editorial system around negative space, water texture and one cinematic key light.
+Premise: Imagine a skincare house that wants a flagship that feels like porcelain under gallery light. We built an editorial system around negative space, water texture and one cinematic key light.
 
-Result: The launch site carries the full line on a single scroll: ingredient stories, ritual pages and a checkout that never breaks the calm. Every product frame was generated under the same key light, so the catalogue reads as one shoot.
+Concept: The concept carries the full line on a single scroll: ingredient stories, ritual pages and a checkout that never breaks the calm. Every product frame was generated under the same key light, so the catalogue reads as one shoot.
 
-Services: Brand Audit, Premium UI/UX, Product Site. Stack: GSAP · Lenis · Shopify Hydrogen. Timeline: 9 weeks.
+Scope explored: Brand Audit, Premium UI/UX, Product Site. Proposed stack: GSAP · Lenis · Shopify Hydrogen.
 
 ## Case study: Nocturne Dining (Hospitality, studio concept)
 URL: https://unleeshai.com/work_nocturne.html
 
 A tasting menu told in candlelight: reservation flow, menu narrative and cellar archive in one continuous scroll.
 
-Brief: A fine-dining room with one candle per table needed a site as dark and patient as its service. Typography carries the menu; light carries the mood.
+Premise: Imagine a fine-dining room with one candle per table, and a site as dark and patient as its service. Typography carries the menu; light carries the mood.
 
-Result: Reservations moved from a third-party widget into the story itself. The seasonal menu is a scroll-driven sequence, and the cellar archive doubles as the sommelier's working list.
+Concept: In the concept, reservations move out of a third-party widget and into the story itself. The seasonal menu is a scroll-driven sequence, and the cellar archive doubles as the sommelier's working list.
 
-Services: Brand Identity, Menu System, Reservation Flow. Stack: GSAP · Lenis · Sanity. Timeline: 7 weeks.
+Scope explored: Brand Identity, Menu System, Reservation Flow. Proposed stack: GSAP · Lenis · Sanity.
 
 ## Case study: Wilder Camp (Outdoor Brand, studio concept)
 URL: https://unleeshai.com/work_wilder.html
 
 Expedition-grade gear presented at blue hour, with lantern light doing the selling.
 
-Brief: An outdoor label wanted dusk, not daylight. We built the catalogue around glowing canvas, cold air and warm interiors.
+Premise: Imagine an outdoor label that wants dusk, not daylight. We built the catalogue around glowing canvas, cold air and warm interiors.
 
-Result: A catalogue that behaves like a campsite at nightfall: products glow, specs stay quiet until asked, and the trip planner ties gear lists to real routes.
+Concept: A catalogue concept that behaves like a campsite at nightfall: products glow, specs stay quiet until asked, and a trip planner ties gear lists to routes.
 
-Services: Creative Direction, Catalogue UX, AI Visual Showcase. Stack: WebGL · GSAP · Headless commerce. Timeline: 10 weeks.
+Scope explored: Creative Direction, Catalogue UX, AI Visual Showcase. Proposed stack: WebGL · GSAP · Headless commerce.
 
 ## Case study: Ironflow Lubricants (B2B Industrial, studio concept)
 URL: https://unleeshai.com/work_ironflow.html
 
 Heavy industry through a macro lens: viscosity, sheen and torque as brand assets.
 
-Brief: An industrial group asked us to make oil beautiful. Macro photography and slow ripples turned a commodity into a visual signature.
+Premise: Imagine an industrial group that needs oil to look beautiful. Macro imagery and slow ripples turn a commodity into a visual signature.
 
-Result: Datasheets became scroll stories. Each product page opens on a macro loop of the fluid itself, then hands off to a spec table engineers can actually read.
+Concept: In the concept, datasheets become scroll stories. Each product page opens on a macro loop of the fluid itself, then hands off to a spec table engineers can actually read.
 
-Services: Brand Audit, Product Site, AI Brand Visual. Stack: GSAP · Lenis · Static build. Timeline: 8 weeks.
+Scope explored: Brand Audit, Product Site, AI Brand Visual. Proposed stack: GSAP · Lenis · Static build.
 
 ## Case study: Cane & Form (Furniture & Living, studio concept)
 URL: https://unleeshai.com/work_caneform.html
 
 Rattan weave under raking light: a craft catalogue with long shadows and longer patience.
 
-Brief: A furniture workshop wanted its weave seen, not described. Side light and shadow do the talking across the collection.
+Premise: Imagine a furniture workshop that wants its weave seen, not described. Side light and shadow do the talking across the collection.
 
-Result: The collection is presented as a slow walk through a lit workshop. Material close-ups sit beside room-scale renders, and the trade portal lives behind the same visual language.
+Concept: The collection is presented as a slow walk through a lit workshop. Material close-ups sit beside room-scale renders, and a trade portal is designed in the same visual language.
 
-Services: Brand Identity, Collection Site, Motion Design. Stack: GSAP · Three.js · Sanity. Timeline: 8 weeks.
+Scope explored: Brand Identity, Collection Site, Motion Design. Proposed stack: GSAP · Three.js · Sanity.
 
 ## Case study: Pull Noodle Bar (F&B Retail, studio concept)
 URL: https://unleeshai.com/work_pullnoodle.html
 
 Hand-pulled craft caught mid-air: flour dust in a single shaft of light.
 
-Brief: A noodle house with a queue around the block needed a site that moves like the kitchen: fast, precise, theatrical.
+Premise: Imagine a noodle house with a queue around the block, and a site that moves like the kitchen: fast, precise, theatrical.
 
-Result: Ordering is three taps and one animation. The menu is shot as a single kitchen sequence, and the queue page tells waiting guests exactly how long until their bowl.
+Concept: In the concept, ordering is three taps and one animation. The menu plays as a single kitchen sequence, and a queue page tells waiting guests how long until their bowl.
 
-Services: Brand Core, Ordering UX, AI Visual Showcase. Stack: GSAP · Lenis · PWA. Timeline: 6 weeks.
+Scope explored: Brand Core, Ordering UX, AI Visual Showcase. Proposed stack: GSAP · Lenis · PWA.
 
-## Case study: Axiom Precision (Advanced Manufacturing, studio concept)
+## Case study: Axiom Precision (Manufacturing, studio concept)
 URL: https://unleeshai.com/work_axiom.html
 
 CNC tolerances as brand language: titanium, coolant spray and sparks of white light.
 
-Brief: A machining firm asked for proof of precision. We answered with macro frames of the work itself, measured to the micron.
+Premise: Imagine a machining firm that needs to prove precision. We answered with macro frames of the work itself, down to the tool marks.
 
-Result: Capabilities are shown, not claimed: every process page opens on the machine at work. The quote flow reads a CAD upload and returns a scoped estimate within the same session.
+Concept: Capabilities are shown, not claimed: every process page opens on the machine at work. The quote flow is designed to read a CAD upload and return a scoped estimate in the same session.
 
-Services: Brand Audit, Premium UI/UX, Motion Design. Stack: WebGL · GSAP · Node quoting API. Timeline: 9 weeks.
+Scope explored: Brand Audit, Premium UI/UX, Motion Design. Proposed stack: WebGL · GSAP · Node quoting API.
 
 ## Case study: Forgeline Steel (Industrial Group, studio concept)
 URL: https://unleeshai.com/work_forgeline.html
 
 Foundry glow as the only colour in a monochrome world.
 
-Brief: A steel group wanted scale and heat. Molten orange against near-black structure became the entire art direction.
+Premise: Imagine a steel group that wants scale and heat. Molten orange against near-black structure became the entire art direction.
 
-Result: A group site for six divisions that shares one temperature. Project archives, investor pages and careers all sit inside the same monochrome frame with one glowing accent.
+Concept: A group site concept for six divisions that share one temperature. Project archives, investor pages and careers all sit inside the same monochrome frame with one glowing accent.
 
-Services: Group Identity, Corporate Site, AI Brand Visual. Stack: GSAP · Lenis · Multisite CMS. Timeline: 11 weeks.
+Scope explored: Group Identity, Corporate Site, AI Brand Visual. Proposed stack: GSAP · Lenis · Multisite CMS.
 
 ## Case study: Clara Aesthetics (Medical Aesthetics, studio concept)
 URL: https://unleeshai.com/work_clara.html
 
 Clinical calm behind frosted glass: a corridor of soft light and quiet confidence.
 
-Brief: A clinic asked for trust at first scroll. Charcoal tones and one glowing door set the temperature for every treatment page.
+Premise: Imagine a clinic that needs trust at first scroll. Charcoal tones and one glowing door set the temperature for every treatment page.
 
-Result: Treatment pages lead with the room, not the procedure. Booking is one calm panel, consultations are explained in plain language, and nothing on the site raises the pulse.
+Concept: Treatment pages lead with the room, not the procedure. Booking is one calm panel, consultations are explained in plain language, and nothing in the design raises the pulse.
 
-Services: Brand Identity, Treatment UX, Booking Flow. Stack: GSAP · Lenis · Booking API. Timeline: 7 weeks.
+Scope explored: Brand Identity, Treatment UX, Booking Flow. Proposed stack: GSAP · Lenis · Booking API.
 
 ## Case study: Helios Energy (Renewable Energy, studio concept)
 URL: https://unleeshai.com/work_helios.html
 
 Night arrays reflecting the moon: solar told through geometry and silence.
 
-Brief: An energy company wanted the poetry of the panel field, not the datasheet. We shot the array at night and let geometry speak.
+Premise: Imagine an energy company that wants the poetry of the panel field, not the datasheet. We rendered the array at night and let geometry speak.
 
-Result: Live generation data feeds a night-mode dashboard that looks like the array itself. Investor and community pages share the same silence, with numbers appearing only when the reader asks.
+Concept: In the concept, live generation data feeds a night-mode dashboard that looks like the array itself. Investor and community pages share the same silence, with numbers appearing only when the reader asks.
 
-Services: Creative Direction, Data Dashboard, Corporate Site. Stack: WebGL · D3 · GSAP. Timeline: 10 weeks.
+Scope explored: Creative Direction, Data Dashboard, Corporate Site. Proposed stack: WebGL · D3 · GSAP.
 
 ## Why your hero section is costing you clients
 URL: https://unleeshai.com/journal_hero-section-costing-clients.html

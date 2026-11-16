@@ -61,7 +61,7 @@ def work_card(p, i, n):
         f'            <span class="wk-idx tabular">{i + 1:02d} <em>//</em> {n:02d}</span>\n'
         f'            <h2 class="wk-title display">{esc(p["title"])}</h2>\n'
         f'            <p class="wk-sub">{esc(p["sub"])}</p>\n'
-        f'            <span class="wk-tags bracket-label">( {esc(p["type"])} · 2026 {p["quarter"]} )</span>\n'
+        f'            <span class="wk-tags bracket-label">( {esc(p["type"])} · Concept )</span>\n'
         f'          </div>\n'
         f'        </a>'
     )
@@ -73,7 +73,7 @@ def work_row(p, i, n):
         f'<span class="idx tabular">{i + 1:02d}</span>'
         f'<h2 class="display">{esc(p["title"])}</h2>'
         f'<span class="sector">{esc(p["type"])}</span>'
-        f'<span class="year tabular">2026 {p["quarter"]}</span>'
+        f'<span class="year tabular">Concept</span>'
         f'<svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>'
         f'</a>'
     )
@@ -122,6 +122,7 @@ def build_work(projects, live):
     tpl = read('work-template.html')
     write('work.html', fill(tpl, {
         'COUNT': n,
+        'LIVE_COUNT': len(live),
         'SECTORS': sectors,
         'FIRST_TITLE': esc(projects[0]['title']),
         'LIVE': '\n'.join(live_card(s, i, len(live)) for i, s in enumerate(live)),

@@ -9,8 +9,8 @@ export const CITY = 'Remote';
 const PAGES = {
   home:    { file: 'index.html',        name: 'HOME',    sub: 'Custom websites, built to be found.' },
   about:   { file: 'about.html',        name: 'ABOUT',   sub: 'Websites, Search & Conversion' },
-  work:    { file: 'work.html',         name: 'WORK',    sub: 'Shared page-transition layer for the home page and work archive.' },
-  project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Project Showcase' },
+  work:    { file: 'work.html',         name: 'WORK',    sub: 'Live client builds and concept flagships.' },
+  project: { file: 'work_cont.html',    name: 'PROJECT', sub: 'Studio concept project' },
   lab:     { file: 'lab.html',          name: 'LABS',    sub: 'UNLEESH Labs — Editorial Grid' },
   contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT A WEBSITE THAT GETS FOUND' },
   blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Shared page-transition layer for the journal and article pages.' },
