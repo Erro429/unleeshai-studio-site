@@ -95,6 +95,12 @@
   max-width: 26ch;
 }
 .in-para { max-width: 56ch; color: var(--ink-2); font-weight: 300; line-height: 1.7; }
+/* page intro: the visible h1 set as the statement, with its paragraph under it */
+.in-intro { padding-bottom: 0; }
+.in-intro .in-head { margin-bottom: 0; }
+.in-head .in-para { grid-column: 4 / 13; align-self: start; }
+.in-para a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+.in-para a:hover { color: var(--white); text-decoration-color: var(--white); }
 
 /* ---------- accordion (about services, contact FAQ) ---------- */
 .accordion { padding: 0 var(--gutter); }
@@ -112,6 +118,8 @@
 .acc-row.is-open .acc-head svg { transform: rotate(45deg); }
 .acc-panel { height: 0; overflow: hidden; }
 .acc-panel .acc-inner { display: grid; grid-template-columns: 32px 1fr minmax(180px, 260px); gap: 24px; padding: 0 8px 32px; }
+.acc-inner p a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+.acc-inner p a:hover { color: var(--white); text-decoration-color: var(--white); }
 .acc-panel p { max-width: 60ch; color: var(--ink-2); font-weight: 300; grid-column: 2; }
 .acc-panel .acc-media { grid-column: 3; aspect-ratio: 4 / 3; overflow: hidden; }
 .acc-panel .acc-media img { width: 100%; height: 100%; object-fit: cover; }
@@ -181,7 +189,7 @@ a:hover > .in-arrow, .roll-parent:hover .in-arrow { transform: rotate(-45deg); }
   .in-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
   .in-links { align-items: flex-start; }
   .in-head { grid-template-columns: 1fr; }
-  .in-head .in-eyebrow, .in-head h2, .in-head .in-statement { grid-column: 1 / -1; }
+  .in-head .in-eyebrow, .in-head h2, .in-head .in-statement, .in-head .in-para { grid-column: 1 / -1; }
   .acc-panel .acc-inner { grid-template-columns: 1fr; }
   .acc-panel p, .acc-panel .acc-media { grid-column: 1; }
   .in-preview { display: none; }

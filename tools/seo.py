@@ -67,6 +67,11 @@ STATIC = {
         title='Web Design Portfolio: Live Sites and Concepts | UnleeshAI',
         desc=('The UnleeshAI web design portfolio: live client websites we built and shipped, plus ten '
               'concept flagships across ten sectors, all hand-coded.')),
+    'services.html': dict(
+        path='/services.html', kind='CollectionPage', img='V09', crumb='Services',
+        title='Web Design, SEO and AI Search Services | UnleeshAI',
+        desc=('Eight services from one studio: custom website design, landing pages, SEO, AEO and AI SEO, '
+              'sales funnels, blog writing, website optimization and traffic generation.')),
     'lab.html': dict(
         path='/lab.html', kind='CollectionPage', img='V55', crumb='Labs',
         title='Labs: AI Visual & Web Motion Experiments | UnleeshAI',
@@ -336,6 +341,11 @@ def static_pages(projects, articles):
                          'name': p['title'].title()} for i, p in enumerate(projects, 1)]
             extra['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(shipped) + len(concepts),
                                    'itemListElement': shipped + concepts}
+        if filename == 'services.html':
+            svcs = load_services()
+            extra['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(svcs), 'itemListElement': [
+                {'@type': 'ListItem', 'position': i, 'name': s['name'], 'url': abs_url(f'/{s["slug"]}.html')}
+                for i, s in enumerate(svcs, 1)]}
         if filename == 'blog.html':
             extra['blogPost'] = [{'@id': abs_url(f'/journal_{a["slug"]}.html') + '#article'} for a in articles]
             extra['publisher'] = {'@id': ORG_ID}
@@ -384,7 +394,7 @@ def article_pages(articles):
         og = og_image(a['img'], f'journal_{a["slug"]}')
         title = a['title'] if len(a['title']) > 52 else f'{a["title"]} | UnleeshAI'
         desc = clip(a['deck'])
-        words = sum(len(b.split()) for b in a['body'])
+        words = sum(len(plain(b).split()) for b in a['body'])
         post = {'@type': 'BlogPosting', '@id': url + '#article', 'headline': a['title'], 'description': a['deck'],
                 'datePublished': iso(a['date']), 'dateModified': iso(a['date']), 'articleSection': a['cat'],
                 'wordCount': words, 'timeRequired': f'PT{a["read"].split()[0]}M', 'inLanguage': 'en',
@@ -398,6 +408,41 @@ def article_pages(articles):
     return pages
 
 
+def plain(block):
+    """A body block as plain text: heading and list markers dropped, [text](url) reduced to its text."""
+    return re.sub(r'\[([^\]]+)\]\([^)\s]+\)', r'\1', re.sub(r'^(#{2,3} |- )', '', block))
+
+
+def load_services():
+    path = os.path.join(HERE, 'services.json')
+    return json.loads(read(path)) if os.path.exists(path) else []
+
+
+def service_pages(services):
+    pages = []
+    for s in services:
+        filename, path = f'{s["slug"]}.html', f'/{s["slug"]}.html'
+        url = abs_url(path)
+        og = og_image(s['img'], s['slug'])
+        title, desc = s['meta_title'], clip(s['meta_desc'])
+        svc = {'@type': 'Service', '@id': url + '#service', 'name': s['name'], 'serviceType': s['type'],
+               'description': s['deck'], 'url': url, 'provider': {'@id': ORG_ID},
+               'areaServed': {'@type': 'Country', 'name': SITE['area_served']},
+               'image': abs_url('/' + og), 'mainEntityOfPage': {'@id': url + '#webpage'}}
+        if s.get('offer'):
+            svc['offers'] = {'@type': 'Offer', 'price': s['offer']['price'], 'priceCurrency': 'USD',
+                             'description': s['offer']['note'], 'url': abs_url('/contact.html')}
+        faq = {'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [
+            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': plain(a)}}
+            for q, a in s['faq']]}
+        graph = [org_node(), website_node(),
+                 page_node('WebPage', url, title, desc, abs_url('/' + og), {'mainEntity': {'@id': url + '#service'}}),
+                 svc, faq, crumbs(url, [('Services', '/services.html'), (s['name'], path)])]
+        pages.append((filename, dict(path=path, title=title, desc=desc, og=og, graph=graph,
+                                     img_alt=f'{s["name"]} by {SITE["wordmark"]}')))
+    return pages
+
+
 def not_found_page():
     return ('404.html', dict(path='/404.html', title='Page not found | UnleeshAI',
                              desc='This page does not exist. Head back to the UnleeshAI home page, the work or the journal.',
@@ -407,8 +452,9 @@ def not_found_page():
 # ------------------------------------------------------------------ site files
 def sitemap(pages, articles):
     dates = {f'journal_{a["slug"]}.html': iso(a['date']) for a in articles}
-    prio = {'index.html': '1.0', 'work.html': '0.9', 'about.html': '0.8', 'contact.html': '0.8',
+    prio = {'index.html': '1.0', 'services.html': '0.9', 'work.html': '0.9', 'about.html': '0.8', 'contact.html': '0.8',
             'blog.html': '0.7', 'lab.html': '0.6'}
+    prio.update({f'{s["slug"]}.html': '0.9' for s in load_services()})
     rows = []
     for filename, p in pages:
         if 'noindex' in p.get('robots', ''):
@@ -455,6 +501,8 @@ def llms(projects, articles):
              '', '## Main pages', '']
     for filename, m in STATIC.items():
         lines.append(f'- [{m["title"]}]({u}{m["path"]}): {m["desc"]}')
+    lines += ['', '## Services', '']
+    lines += [f'- [{s["name"]}]({u}/{s["slug"]}.html): {s["deck"]}' for s in load_services()]
     lines += ['', '## Live websites built by the studio', '']
     lines += [f'- [{s["title"]}]({s["url"]}): {s["sector"]}. {s["desc"]}' for s in live_sites()]
     lines += ['', '## Concept case studies', '']
@@ -465,13 +513,20 @@ def llms(projects, articles):
     write(os.path.join(ROOT, 'llms.txt'), '\n'.join(lines))
 
     full = [f'# {SITE["name"]}: full text', '', SITE['summary'], '']
+    for s in load_services():
+        full += [f'## Service: {s["name"]}', f'URL: {u}/{s["slug"]}.html', f'Pricing: {s["price"]}. Timeline: {s["time"]}.', '',
+                 s['deck'], '']
+        full += [('#' + b if b.startswith('## ') else plain(b) if not b.startswith('- ') else '- ' + plain(b)) + '\n' for b in s['body']]
+        full += ['### Common questions', '']
+        for q, a in s['faq']:
+            full += [f'Q: {q}', f'A: {plain(a)}', '']
     for p in projects:
         full += [f'## Case study: {p["title"].title()} ({p["type"]}, studio concept)', f'URL: {u}/work_{p["slug"]}.html', '',
                  p['line'], '', f'Premise: {p["ov1"]}', '', f'Concept: {p["result"]}', '',
                  f'Scope explored: {", ".join(p["services"])}. Proposed stack: {p["stack"]}.', '']
     for a in articles:
         full += [f'## {a["title"]}', f'URL: {u}/journal_{a["slug"]}.html', f'Published: {iso(a["date"])} · {a["cat"]}', '',
-                 a['deck'], ''] + [b + '\n' for b in a['body']]
+                 a['deck'], ''] + [('#' + b if b.startswith('## ') else plain(b) if not b.startswith('- ') else '- ' + plain(b)) + '\n' for b in a['body']]
     write(os.path.join(ROOT, 'llms-full.txt'), '\n'.join(full))
 
 
@@ -488,7 +543,8 @@ def main():
     projects = json.loads(read(os.path.join(HERE, 'projects.json')))
     articles = json.loads(read(os.path.join(HERE, 'journal.json')))
     build_icons()
-    pages = static_pages(projects, articles) + case_pages(projects) + article_pages(articles)
+    pages = (static_pages(projects, articles) + service_pages(load_services())
+             + case_pages(projects) + article_pages(articles))
     if os.path.exists(os.path.join(ROOT, '404.html')):
         pages.append(not_found_page())
     for filename, p in pages:

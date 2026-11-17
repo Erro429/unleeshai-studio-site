@@ -42,7 +42,7 @@ choreography, body seams, cursor previews, accordion, clock) and links
 ```bash
 bash tools/gen-run.sh    # fires all Higgsfield jobs in tools/manifest.psv, downloads results
 bash tools/convert.sh    # raw → assets/img (webp) and assets/video (mp4)
-python tools/build.py    # regenerate work.html, the 10 case pages, blog.html and the 16 journal entries, then run tools/seo.py
+python tools/build.py    # regenerate work.html, the 10 case pages, blog.html, the journal entries, services.html and the 8 service pages, then run tools/seo.py and tools/imgattrs.py
 ```
 
 ## SEO and AI search (tools/seo.py)
@@ -74,3 +74,22 @@ On a host with a Dockerfile build pack: pick Dockerfile, base directory `/`, exp
 ```bash
 docker build -t unleesh-studio . && docker run -p 8093:80 unleesh-studio
 ```
+
+## Service pages
+
+`tools/services.json` holds one entry per service (slug, name, deck, pricing line, body copy, FAQ). `tools/build.py` writes
+`services.html` from `tools/services-template.html` and one `<slug>.html` per entry from `tools/service-template.html`.
+Body copy is a list of strings: `## ` and `### ` start a subheading, consecutive `- ` lines form a list, `[text](url)` is a
+link, anything else is a paragraph. Journal entries in `tools/journal.json` accept the same marks.
+If a slug changes, update `SERVICE_FILES` in `js/chrome.js` and the links in `index.html`, `about.html` and the menu.
+
+## Images
+
+`tools/imgattrs.py` runs last in the build. It writes intrinsic `width` and `height` on every `<img>` and fills empty `alt`
+text from `tools/alt.json` (image id to description). Backdrop images behind text keep an empty `alt` on purpose.
+
+## Forms
+
+`js/forms.js` delivers the Contact brief and the Journal subscribe form. Set `FORM_ENDPOINT` to a URL that accepts a JSON
+POST and answers 2xx. While it is empty, or if the request fails, the visitor's own mail app opens with the message
+written out and addressed to hello@unleeshai.com, and the page says so instead of claiming it was sent.

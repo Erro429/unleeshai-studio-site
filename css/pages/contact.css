@@ -90,6 +90,7 @@
 .ct-modal .cm-sub { font-weight: 300; color: var(--ink-2); font-size: 14px; line-height: 1.6; }
 .ct-modal .cm-close { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; border: 1px solid var(--line); padding: 10px 24px; transition: background var(--d-fast), color var(--d-fast); }
 .ct-modal .cm-close:hover { background: var(--white); color: var(--bg); }
+.ct-modal .cm-mail { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
 @media (max-width: 1023px) {
   .ct-lets, .ct-talk, .ct-label, .ct-sub, .ct-start, .ct-gloss, .ct-pipes { grid-column: 1 / -1; }

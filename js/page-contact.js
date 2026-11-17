@@ -2,6 +2,7 @@
 import { reducedMotion } from './core.js';
 import { icon } from './icons.js';
 import { initInner } from './inner.js';
+import { deliver, mailtoHref, FORM_EMAIL } from './forms.js';
 
 export function init() {
   initInner();
@@ -78,13 +79,33 @@ function initForm() {
       return;
     }
 
-    // Sending state -> Received (no backend wired yet; swap in a POST here)
-    modal.showSending();
-    setTimeout(() => modal.showReceived(() => {
+    // Deliver the brief: POST to the endpoint in forms.js, or hand it to the visitor's mail app
+    const picked = (name) => [...form.querySelectorAll(`input[name="${name}"]:checked`)]
+      .map((el) => el.parentElement.textContent.trim()).join(', ');
+    const fields = {
+      Name: name.value.trim(),
+      Email: email.value.trim(),
+      Phone: phone.value.trim(),
+      Company: form.querySelector('#cf-company').value.trim(),
+      Services: picked('svc'),
+      Budget: picked('budget'),
+      Details: details.value.trim(),
+    };
+    const subject = `Project brief from ${fields.Name}`;
+    const clear = () => {
       form.reset();
       initCaptcha();
       document.querySelector('.cf-badge')?.classList.remove('is-visible');
-    }), 1400);
+    };
+    modal.showSending();
+    const started = Date.now();
+    deliver('contact', subject, fields).then((how) => {
+      const wait = Math.max(0, 900 - (Date.now() - started));
+      setTimeout(() => {
+        if (how === 'sent') modal.showReceived(clear);
+        else modal.showEmail(mailtoHref(subject, fields));   // fields stay filled in until the email is really sent
+      }, wait);
+    });
   });
 }
 
@@ -114,6 +135,17 @@ function buildModal() {
         wrap.classList.remove('is-open');
         onClose && onClose();
       });
+    },
+    /* no endpoint, or it failed: the brief was handed to the visitor's mail app, so say exactly that */
+    showEmail(href) {
+      if (spin) spin.kill();
+      box.innerHTML = `
+        ${icon('star4')}
+        <h3 class="cm-title display">PRESS SEND</h3>
+        <p class="cm-sub">Your email app just opened with the brief written out. Press send there and it reaches us.<br>
+        Nothing opened? <a class="cm-mail" href="${href}">Open the email again</a> or write to ${FORM_EMAIL}.</p>
+        <button class="cm-close">Close</button>`;
+      box.querySelector('.cm-close').addEventListener('click', () => wrap.classList.remove('is-open'));
     },
   };
 }

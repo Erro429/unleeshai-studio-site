@@ -44,7 +44,7 @@
 .menu-nav .m-label { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; color: var(--ink-2); text-transform: capitalize; }
 .menu-nav .m-word {
   font-family: var(--f-display); font-weight: 800; font-stretch: 125%;
-  font-size: clamp(48px, 7vw, 120px); letter-spacing: -0.02em; line-height: 0.9;
+  font-size: clamp(48px, min(7vw, 11vh), 120px); letter-spacing: -0.02em; line-height: 0.9;   /* 11vh keeps six items on a short laptop screen */
   text-transform: uppercase;
 }
 .menu-preview {
@@ -60,6 +60,7 @@
 .menu-side .ms-words { font-family: var(--f-display); font-weight: 800; font-stretch: 125%; font-size: clamp(28px, 3vw, 48px); line-height: 1; text-transform: uppercase; }
 .menu-side .ms-lists { display: flex; gap: 48px; }
 .menu-side .ms-lists ul { font-family: var(--f-mono); font-size: var(--t-label-s); letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; line-height: 2.1; }
+.menu-side .ms-lists a:hover { color: var(--white); }
 .menu-side .ms-links { display: flex; gap: 20px; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; }
 .menu-side .ms-chips { display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--f-mono); font-size: var(--t-label-s); color: var(--ink-2); }
 .menu-side .ms-tagline { color: var(--ink-2); font-weight: 300; max-width: 38ch; }

@@ -1,0 +1,446 @@
+[
+ {
+  "slug": "website-design",
+  "name": "Custom Website Design",
+  "title": "Custom Website Design",
+  "chip": "Web Design",
+  "type": "Website design and development",
+  "img": "V38",
+  "fig": "V39",
+  "price": "From $499",
+  "time": "2 to 4 days",
+  "fact": "From $499 · 2 to 4 days",
+  "offer": {
+   "price": "499",
+   "note": "Starting price for a custom five-page website"
+  },
+  "meta_title": "Custom Website Design from $499 | UnleeshAI",
+  "meta_desc": "Custom website design, hand-coded with no templates. A five-page site starts at $499 and most go live in 2 to 4 days, with SEO foundations built in.",
+  "deck": "Custom website design means a site drawn and coded for your business alone, with no template underneath. Ours start at $499 for five pages and most go live in two to four days.",
+  "body": [
+   "Custom website design is a website planned, designed and coded for one business, instead of a template with a new logo dropped in. At UNLEESH every site is hand-coded. A five-page website starts at $499, and most builds go live two to four days after we agree the brief, three on average.",
+   "The quiet fear with any new website is paying for something that looks fine and changes nothing. So we start from the job the site has to do: who needs to find it, what they need to believe, and what they should do next. The design follows from that, not the other way round.",
+   "## What you get",
+   "- A site designed around your offer and your buyer, not a theme chosen from a gallery",
+   "- Hand-written code: no page builder, no plugin stack, nothing to rent month after month",
+   "- Layouts that work on a phone first, then scale up to a desktop",
+   "- Search foundations from the first commit: page titles, descriptions, structured data, a sitemap and clean headings",
+   "- Pages structured so AI assistants can read and quote them, covered in [AEO and AI SEO](aeo-ai-seo.html)",
+   "- Motion and imagery where they earn their place, and a speed budget that holds on a two-year-old phone",
+   "- The code and the domain are yours when we are done",
+   "## How the build works",
+   "It starts with a short brief: what the business does, who you want to reach and what the site should get them to do. We reply with a fixed quote and a ship date. Day one is structure, copy and the visual direction. Day two is the home page in the browser, then the remaining pages. Day three is you looking at a working site instead of a mock-up, and telling us what to change before it goes live.",
+   "Because you see the real thing early, feedback is about the site and not about a slide of the site. That is most of why the timeline is days instead of weeks.",
+   "## What it costs",
+   "A five-page website starts at $499. Past that we do not guess. More pages, online booking, payments, a product catalogue, a members area or a content system all change the work, so we price them once we know what you need. The quote is fixed and in writing, and it does not move unless the scope does. The longer answer is in [how much a website costs in 2026](journal_how-much-does-a-website-cost.html).",
+   "## Who it is for",
+   "Businesses whose current site undersells them, new businesses that need to look established from day one, and owners who are tired of a builder site that looks like everyone else's. If you only need one page for a campaign, a [landing page](landing-page-design.html) is the better fit. If you already have a site you like and it is slow or invisible, look at [website optimization](website-optimization.html) or [SEO](seo-services.html) instead.",
+   "You can see three live client builds and ten concept sites on the [Work page](work.html)."
+  ],
+  "faq": [
+   [
+    "How much does a custom website cost?",
+    "A five-page custom website from UNLEESH starts at $499. Larger sites and sites with booking, payments or a catalogue are quoted at a fixed price once we know what needs building."
+   ],
+   [
+    "How long does it take to build a website?",
+    "Two to four days from an agreed brief to launch, and three is the average. The exact ship date is written into your quote before any work starts."
+   ],
+   [
+    "Do you use templates or page builders?",
+    "No. Every site is designed for the business and hand-coded. There is no template, no page builder and no plugin stack underneath, which is why the pages load fast and why you own the code."
+   ],
+   [
+    "Will my website show up on Google?",
+    "The foundations are built in: titles, descriptions, structured data, a sitemap, fast pages and clear headings. Ranking for competitive searches takes ongoing work, which is what our [SEO service](seo-services.html) covers."
+   ],
+   [
+    "Do I own the website when it is finished?",
+    "Yes. The code and the domain are yours. You are not renting the site from us or from a platform."
+   ]
+  ],
+  "fig_alt": "Glowing wireframe of a building floating above a tablet of code"
+ },
+ {
+  "slug": "landing-page-design",
+  "name": "Landing Page Design",
+  "title": "Landing Page Design",
+  "chip": "Landing Pages",
+  "type": "Landing page design and development",
+  "img": "V21",
+  "fig": "V24",
+  "price": "Fixed quote",
+  "time": "Set in the quote",
+  "fact": "One offer · one action",
+  "meta_title": "Landing Page Design That Converts | UnleeshAI",
+  "meta_desc": "Landing page design built around one offer and one action. Hand-coded, fast on a phone, with the form and follow-up wired in. Fixed quote before any work.",
+  "deck": "A landing page is a single page built around one offer and one action. We design and hand-code landing pages for ads, email campaigns and launches, with the form and the follow-up wired in.",
+  "body": [
+   "A landing page is one page with one job: take a visitor who arrived from a specific place and get them to do one specific thing. We design and hand-code landing pages for ad campaigns, email campaigns, launches and lead magnets. Each one is built around a single offer, a single action and nothing that distracts from either.",
+   "If you are paying for clicks, the quiet fear is that the money is leaking somewhere between the ad and the enquiry. It usually is, and it usually leaks on the page. A home page asks visitors to find what they came for. A landing page hands it to them.",
+   "## What you get",
+   "- One page planned around one offer and one call to action",
+   "- A headline that matches the ad or email that sent the visitor, so the click feels continuous",
+   "- Proof placed where the doubt appears: reviews, numbers, guarantees, answers to objections",
+   "- A form, booking calendar or checkout that works on a phone with one thumb",
+   "- A thank-you step that tells people what happens next",
+   "- Tracking on the page so you can see how many visitors act, not only how many arrive",
+   "- Fast load times, because every second of delay costs paid traffic",
+   "## How we build it",
+   "We start with the offer, not the layout. What is being promised, to whom, and what would stop them saying yes. Then we plan the path from the first line to the button, and cut anything that does not move a visitor along it. Navigation, extra links and secondary offers all come out, because every extra link is a way to leave without acting.",
+   "The page is hand-coded, so there is no page-builder weight slowing it down. One of our live builds is exactly this kind of page: a single-offer landing page for an owner-financed land company, shown on the [Work page](work.html).",
+   "## Pricing and timeline",
+   "A landing page is quoted at a fixed price once we know the offer, the copy you already have and what the form needs to connect to. For scale, a full five-page website starts at $499 and goes live in two to four days. The price and the ship date for your page are written into the quote before any work starts.",
+   "## Landing page or website?",
+   "You need a website when people are checking whether you are real. You need a landing page when you are sending traffic somewhere and want it to do one thing. Most businesses end up with both. The comparison is laid out in [landing page vs website](journal_landing-page-vs-website.html). When a landing page needs follow-up emails and a measured path behind it, that is a [sales funnel](sales-funnels.html)."
+  ],
+  "faq": [
+   [
+    "What is a landing page?",
+    "A landing page is a single web page built around one offer and one action, such as requesting a quote, booking a call or buying a product. Visitors usually arrive on it from an ad, an email or a social post."
+   ],
+   [
+    "How is a landing page different from a home page?",
+    "A home page introduces the whole business and lets visitors explore. A landing page removes navigation and side offers on purpose so the visitor does one thing."
+   ],
+   [
+    "Do I need a website before I get a landing page?",
+    "No. A landing page can stand alone for a campaign. A full website helps when people look you up before they buy, which is why most businesses end up with both."
+   ],
+   [
+    "Can you write the copy for the page?",
+    "Yes. We write the headline, the offer and the body copy, or tighten what you already have. Copy is part of the build, not an extra."
+   ]
+  ],
+  "fig_alt": "Folding phone displayed upright on a black plinth under one beam of light"
+ },
+ {
+  "slug": "seo-services",
+  "name": "SEO Services",
+  "title": "SEO Services",
+  "chip": "SEO",
+  "type": "Search engine optimization",
+  "img": "V37",
+  "fig": "V25",
+  "price": "Fixed quote",
+  "time": "Months, not weeks",
+  "fact": "Technical · on-page · local",
+  "meta_title": "SEO Services: Technical, On-Page and Local | UnleeshAI",
+  "meta_desc": "SEO services that get your business found on Google: technical fixes, on-page optimization, local search and content. Fixed quotes and honest timelines.",
+  "deck": "SEO is the work that gets your website shown when people search for what you sell. We handle the technical fixes, the page-by-page optimization, local search and the content, and we report on enquiries, not vanity numbers.",
+  "body": [
+   "SEO, or search engine optimization, is the work that gets your website shown when someone searches for what you sell. Our SEO service covers the technical foundations, on-page optimization, local search and the content that earns rankings. We quote each piece at a fixed price and we tell you up front that results take months, not weeks.",
+   "Most owners who ask about SEO have been burned once: a monthly fee, a report full of charts, and a phone that did not ring any more than before. So we report in the order that matters: impressions, then clicks, then enquiries. Enquiries are the only number that pays a bill.",
+   "## What the work includes",
+   "- A technical audit: crawl errors, broken links, slow pages, missing or duplicate titles, thin pages, mobile problems",
+   "- On-page optimization: titles, descriptions, headings, internal links and copy matched to what people actually search",
+   "- Structured data so search engines understand your business, services, prices and FAQs",
+   "- Local SEO: Google Business Profile, consistent name, address and phone details, local landing pages",
+   "- Keyword research built on buyer intent, not on the biggest number in a tool",
+   "- New pages and articles for the searches you should be winning, through [blog writing](blog-writing.html)",
+   "- Reporting from Google Search Console and analytics, in plain language",
+   "## How long SEO takes",
+   "Plan on months. Google's own guidance on hiring an SEO says to expect four months to a year before improvements are in place and the benefit shows. The first month is foundations. Months two and three are content. From month four the compounding starts: pages move from page three to page two to the bottom of page one. The month-by-month version is in [how long SEO takes to work](journal_how-long-does-seo-take.html).",
+   "Two things shorten the wait. A fast, well-built site gives every page a better start. And specific searches move sooner than broad ones: a page about one service in one place will rank long before a page about an entire industry.",
+   "## Pricing",
+   "SEO is quoted at a fixed price for a defined piece of work: an audit, a set of pages to optimize, a local search setup, a month of content. You know the cost and the deliverable before anything starts. Ongoing work is quoted the same way: a defined month of deliverables, written down.",
+   "## SEO and AI search",
+   "More buyers now ask ChatGPT, Claude, Perplexity or Google's AI Overviews instead of scrolling a results page. The two kinds of search reward much of the same work, and we build for both. The AI side is covered in [AEO and AI SEO](aeo-ai-seo.html).",
+   "One of our live builds is a long-form page written to rank for owner-financed land searches in Florida. It is on the [Work page](work.html)."
+  ],
+  "faq": [
+   [
+    "What is SEO?",
+    "SEO, or search engine optimization, is the practice of improving a website so it appears higher in search results when people look for what the business offers. It covers technical health, page content, local listings and links from other sites."
+   ],
+   [
+    "How long does SEO take to work?",
+    "Usually months, not weeks. Google's own guidance says four months to a year. Impressions tend to move first, then clicks, then enquiries."
+   ],
+   [
+    "How much does SEO cost?",
+    "We quote SEO at a fixed price for a defined piece of work, such as an audit, a set of pages or a month of content, once we have looked at your site and your market."
+   ],
+   [
+    "Do you do SEO for websites you did not build?",
+    "Yes. We start with an audit of the existing site, fix what is holding it back and then build on it. If the site itself is the problem, we will say so."
+   ],
+   [
+    "Is SEO still worth it now that people use AI?",
+    "Yes. AI assistants lean on pages that rank well and read clearly, so good SEO helps in both places. We treat [AEO and AI SEO](aeo-ai-seo.html) as part of the same job."
+   ]
+  ],
+  "fig_alt": "Aisle of server racks in a data centre with one cabinet lit from inside"
+ },
+ {
+  "slug": "aeo-ai-seo",
+  "name": "AEO and AI SEO",
+  "title": "AEO and AI SEO",
+  "chip": "AI Search",
+  "type": "Answer engine optimization",
+  "img": "V26",
+  "fig": "V18",
+  "price": "Fixed quote",
+  "time": "Weeks to months",
+  "fact": "AEO · AIO · GEO · AI SEO",
+  "meta_title": "AEO and AI SEO Services (AIO, GEO) | UnleeshAI",
+  "meta_desc": "AEO, AIO, GEO and AI SEO services: get your business named by ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews. Structure, content and consistency.",
+  "deck": "AEO is answer engine optimization: getting your business named when someone asks an AI assistant instead of a search engine. It is also called AIO, GEO or AI SEO. We build it into your site and your content.",
+  "body": [
+   "AEO stands for answer engine optimization. It is the work of getting your business named, quoted or linked when someone asks ChatGPT, Claude, Perplexity, Gemini or Google's AI Overviews a question. You will also hear it called AIO (AI Overview optimization), GEO (generative engine optimization) or simply AI SEO. They describe the same job, and we do all of it.",
+   "The quiet fear is simple: a buyer asks an assistant who to hire, and the assistant names three of your competitors. Search engines hand out a list of ten. Answer engines hand out a recommendation of two or three. You want to be in the recommendation.",
+   "## What the work includes",
+   "- An AI visibility check: we ask the assistants the questions your buyers ask and record who gets named",
+   "- Structured data that states plainly who you are, what you sell, what it costs and where you work",
+   "- Pages rewritten to answer first: the direct answer in the opening lines, the detail after",
+   "- Question-style headings and FAQ sections that match the way people phrase prompts",
+   "- A check that AI crawlers are allowed in, and an llms.txt summary of the site",
+   "- Consistent facts across your site, Google Business Profile, directories and social profiles",
+   "- A plan for mentions you do not control: reviews, forums, local press and industry roundups",
+   "## How assistants decide who to name",
+   "An assistant recommends the business it can describe with confidence. That confidence comes from three places: a site it can read, facts that agree everywhere it looks, and other people vouching for you. Most assistants can also look things up on the live web when they answer, so a page that ranks well and reads clearly has a head start. That is why AEO sits on top of [SEO](seo-services.html) instead of replacing it.",
+   "There is no form to submit and no placement to buy. What you can do is remove every reason an assistant might have to skip you. The full walk-through is in [how to get your business recommended by ChatGPT](journal_get-recommended-by-chatgpt.html), and the terms are untangled in [AEO, GEO and AI SEO explained](journal_what-is-aeo-geo-ai-seo.html).",
+   "## How long it takes",
+   "Expect weeks to months. Assistants refresh what they know on their own schedule, and mentions on other sites take time to build. The on-site work, which is structure, answers and consistency, can be done quickly. We test the same set of questions on a regular schedule so you can see the change.",
+   "## Pricing",
+   "AEO is quoted at a fixed price for a defined piece of work: a visibility check, a set of pages restructured, a full site pass. When we build your site, the structural part is included from the first commit. See [custom website design](website-design.html)."
+  ],
+  "faq": [
+   [
+    "What is AEO?",
+    "AEO is answer engine optimization: improving a website and its wider presence so AI assistants such as ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews name or cite the business in their answers."
+   ],
+   [
+    "Is AEO the same as GEO, AIO and AI SEO?",
+    "Largely, yes. GEO means generative engine optimization, AIO usually means AI Overview optimization, and AI SEO is the plain version. The work overlaps almost completely."
+   ],
+   [
+    "Can you guarantee that ChatGPT will recommend my business?",
+    "No, and nobody honestly can. Assistants choose their own sources. What we can do is make your business easy to read, easy to verify and well vouched for, then measure the change."
+   ],
+   [
+    "Does AEO replace SEO?",
+    "No. It sits on top of it. Pages that rank well and read clearly are the ones assistants tend to draw on, so the two are best done together."
+   ],
+   [
+    "How do I check whether AI assistants mention my business?",
+    "Ask three assistants the questions your customers would ask before hiring someone like you, and write down who gets named. Repeat it monthly. We run this check at the start of every AEO project."
+   ]
+  ],
+  "fig_alt": "Macro view of a processor on a circuit board, its edge glowing white"
+ },
+ {
+  "slug": "sales-funnels",
+  "name": "Sales Funnels",
+  "title": "Sales Funnels",
+  "chip": "Funnels",
+  "type": "Sales funnel design and build",
+  "img": "V11",
+  "fig": "V27",
+  "price": "Fixed quote",
+  "time": "Set in the quote",
+  "fact": "Offer · capture · follow-up",
+  "meta_title": "Sales Funnel Design and Build | UnleeshAI",
+  "meta_desc": "Sales funnels built on purpose: landing page, capture form, thank-you step and follow-up emails, measured at every stage. Fixed quote before any work.",
+  "deck": "A sales funnel is the path a stranger takes to become a customer, mapped out and built on purpose. We build the landing page, the capture, the thank-you step and the follow-up, and we measure every stage.",
+  "body": [
+   "A sales funnel is the path a stranger takes to become a customer, mapped out and built on purpose. In practice it is a short chain: something that brings the right people in, a page that makes one offer, a way to act on it, and follow-up for the people who are not ready yet. We design and build that chain and we measure each link.",
+   "Every business already has a funnel. Most were built by accident: someone hears about you, searches your name, lands on a home page, hunts for a phone number and maybe calls. Each step loses people. The quiet fear is not knowing which step, and the honest answer is that without measurement nobody knows.",
+   "## What we build",
+   "- The offer: what a visitor gets in exchange for a click, an email address or a call",
+   "- A [landing page](landing-page-design.html) built around that one offer",
+   "- The capture: a form, a booking calendar or a checkout that works on a phone",
+   "- A thank-you step that sets the next action instead of ending the conversation",
+   "- A short follow-up sequence that answers the questions people have before they buy",
+   "- Tracking at every stage, so the biggest drop is visible",
+   "## The offer matters more than the pages",
+   "A beautiful page with a weak offer converts worse than a plain page with a strong one. So we start by pressure-testing the offer: is it worth an email address, is it clear in one sentence, does it match what the ad or the search promised. Only then do we draw anything.",
+   "## Follow-up is where the money is",
+   "Few people buy on the first visit. A funnel without follow-up pays to attract visitors and then lets nearly all of them leave with no way to reach them again. Three or four honest emails that answer real objections will often do more than another month of ad spend.",
+   "## Measuring it",
+   "Four numbers, tracked separately: how many people arrive, how many act on the offer, how many respond to follow-up, how many become customers. The step with the biggest drop gets fixed first. Without those four numbers every change is a guess.",
+   "## Pricing",
+   "A funnel is quoted at a fixed price once we know the offer, the number of steps and what the capture has to connect to, such as your CRM, your calendar or your email tool. Getting visitors into the top of it is covered in [traffic generation](traffic-generation.html). The plain-words explainer is [what a sales funnel is](journal_what-is-a-sales-funnel.html)."
+  ],
+  "faq": [
+   [
+    "What is a sales funnel?",
+    "A sales funnel is the sequence of steps that turns a stranger into a customer: attention, an offer, a way to act on it, and follow-up. Building one on purpose means each step can be measured and improved."
+   ],
+   [
+    "Does a small business need a sales funnel?",
+    "Yes, because it already has one. The question is whether it was designed or happened by accident. A simple funnel with a clear offer, a working form and a few follow-up messages is enough for most small businesses."
+   ],
+   [
+    "What is the difference between a landing page and a sales funnel?",
+    "A landing page is one page. A funnel is the whole path: the landing page, the capture, the thank-you step and the follow-up that comes after."
+   ],
+   [
+    "Do I need special funnel software?",
+    "No. You need a page with one clear offer, a form that works and a way to send follow-up messages. We build the pages and wire them to the tools you already use."
+   ]
+  ],
+  "fig_alt": "Finger touching the back of a black tablet, leaving a streak of light"
+ },
+ {
+  "slug": "blog-writing",
+  "name": "Blog Writing Services",
+  "title": "Blog Writing Services",
+  "chip": "Content",
+  "type": "Blog and content writing",
+  "img": "V56",
+  "fig": "V73",
+  "price": "Fixed quote",
+  "time": "Set in the quote",
+  "fact": "Written to rank and be quoted",
+  "meta_title": "Blog Writing Services for SEO and AI Search | UnleeshAI",
+  "meta_desc": "Blog writing services built for SEO and AI search: articles that answer the questions your buyers type, structured to rank on Google and be quoted.",
+  "deck": "Blog writing that answers the questions your buyers actually type. Each article is planned around a real search, opens with the direct answer, and is structured to rank on Google and be quoted by AI assistants.",
+  "body": [
+   "Our blog writing service produces articles that answer the questions your buyers actually type into Google and ask AI assistants. Each piece is planned around a real search, opens with the direct answer and is structured so it can rank and be quoted. It reads like a person talking, not like a brochure.",
+   "Most business blogs are a graveyard: six posts from two years ago about company news nobody searched for. The quiet fear is spending money on more of the same. The fix is to stop writing about yourself and start answering questions.",
+   "## What you get",
+   "- Topic research: the questions your buyers ask, ranked by how likely the asker is to buy",
+   "- A title written as the question, because that is how people search and how they prompt",
+   "- The direct answer in the first two sentences, then the detail",
+   "- Clear subheadings every few paragraphs, so readers and machines can both find their place",
+   "- Internal links to the service or product the article supports",
+   "- A page title, description and structured data for every article",
+   "- Your voice, your facts and no invented statistics",
+   "## How we choose topics",
+   "We start with cost, time and comparison questions, because the people asking them are close to buying. How much does it cost. How long does it take. Which option is right for me. Is it worth it. An article that answers one of those clearly will do more than ten posts of general advice.",
+   "Then we look at what already ranks and what the AI assistants say when asked the same question. If the existing answers are vague, there is room. If they are excellent, we pick a narrower question you can own.",
+   "## Written for search and for AI answers",
+   "The structure that helps an article rank is the same structure that makes it quotable: a question as the heading, the answer straight after it, short paragraphs and consistent facts. That is the content half of [SEO](seo-services.html) and of [AEO and AI SEO](aeo-ai-seo.html).",
+   "You can read our own in the [Journal](blog.html). Entries such as [how much a website costs](journal_how-much-does-a-website-cost.html) and [how long SEO takes](journal_how-long-does-seo-take.html) follow exactly this pattern.",
+   "## Pricing",
+   "Blog writing is quoted at a fixed price for a set number of articles, with the topics agreed first. You see the list before anything is written."
+  ],
+  "faq": [
+   [
+    "What does a blog writing service include?",
+    "Topic research, a title built around a real search, the article itself with clear subheadings, internal links, and the page title, description and structured data that go with it."
+   ],
+   [
+    "How does blog writing help SEO?",
+    "Each article is a new page that can rank for a specific question, and it links readers to the service it supports. Over time a set of focused articles brings in searches a small site could never win with service pages alone."
+   ],
+   [
+    "How long should a blog post be?",
+    "As long as the question needs. A cost or how-to question usually takes 800 to 1,500 words to answer properly. Padding does not help. Completeness does."
+   ],
+   [
+    "Who chooses the topics?",
+    "We propose a list based on the questions your buyers search for and ask AI assistants, and you approve it before anything is written. Nothing is published with invented statistics."
+   ]
+  ],
+  "fig_alt": "Person at a desk with three monitors in a dark room beside a tall window"
+ },
+ {
+  "slug": "website-optimization",
+  "name": "Website Optimization",
+  "title": "Website Optimization",
+  "chip": "Optimization",
+  "type": "Website speed and conversion optimization",
+  "img": "V36",
+  "fig": "V23",
+  "price": "Fixed quote",
+  "time": "Set in the quote",
+  "fact": "Speed and conversion fixes",
+  "meta_title": "Website Optimization: Speed and Conversion | UnleeshAI",
+  "meta_desc": "Website optimization for a site you already have: faster load times, better Core Web Vitals and conversion fixes. Audit first, fixed quote, measured results.",
+  "deck": "Website optimization makes the site you already have faster, easier to use and better at turning visitors into enquiries. We audit it, fix what is slowing it down or losing people, and measure the difference.",
+  "body": [
+   "Website optimization is the work of making an existing website faster, easier to use and better at turning visitors into enquiries. We audit the site, fix what is slowing it down or losing people, and measure the before and after. You keep the site you have. It just starts doing its job.",
+   "The quiet fear here is that the whole site needs rebuilding. Sometimes it does, and we will say so. More often a handful of problems account for most of the damage: images several times larger than they need to be, scripts that block the page from showing, a form that is painful on a phone.",
+   "## What we look at",
+   "- Load speed on a real phone on a mobile connection, not only on a desktop",
+   "- Core Web Vitals, the three measurements Google uses for loading, responsiveness and visual stability",
+   "- Images, video and fonts: size, format and how they load",
+   "- Scripts and plugins that are slowing every page for the sake of one feature",
+   "- The path to enquiry: how many taps it takes to call, book or buy",
+   "- Forms: fields nobody needs, errors nobody can read, buttons too small to press",
+   "- Search basics that are missing: titles, descriptions, headings, structured data",
+   "## Speed",
+   "A slow page loses visitors before they see anything. It also costs you in search, because page experience is one of the things Google measures. Most speed problems come from weight, meaning too much being sent to the browser, and from order, meaning the wrong things being sent first. We reduce the first and fix the second.",
+   "## Conversion",
+   "A fast page that confuses people still loses them. So the second half of the work is the path: is it obvious what you sell, is the next step visible without scrolling on a phone, does the form ask for only what you need. Small changes here often matter more than a redesign.",
+   "## Audit first, then a fixed quote",
+   "We start with an audit and give you a written list of what we found, ordered by how much each fix is likely to help. Then we quote the fixes at a fixed price. You can take the whole list, or the top three.",
+   "## When a rebuild is the better answer",
+   "If the site sits on a platform that cannot be made fast, or the structure fights every fix, patching costs more than starting clean. A custom five-page site starts at $499 and goes live in two to four days. See [custom website design](website-design.html). Once the site is quick, [SEO](seo-services.html) and [traffic generation](traffic-generation.html) have something worth sending people to."
+  ],
+  "faq": [
+   [
+    "What is website optimization?",
+    "Website optimization is improving an existing site so it loads faster, is easier to use and converts more visitors into enquiries or sales. It covers speed, Core Web Vitals, mobile usability, forms and the path to contact."
+   ],
+   [
+    "How do I know if my website is slow?",
+    "Open it on your phone using mobile data, not wifi. If you are waiting more than a couple of seconds to see the page, so are your visitors. Google's free PageSpeed Insights tool will give you the measurements."
+   ],
+   [
+    "What are Core Web Vitals?",
+    "Core Web Vitals are three measurements Google uses to judge page experience: how quickly the main content loads, how quickly the page responds when you tap, and how much the layout shifts while loading."
+   ],
+   [
+    "Should I optimize my site or rebuild it?",
+    "Optimize when the problems are specific and fixable, such as heavy images or blocking scripts. Rebuild when the platform or structure fights every fix. Our audit tells you which case you are in."
+   ]
+  ],
+  "fig_alt": "Server rack standing in shallow water in a dark room, lit by a single shaft of light"
+ },
+ {
+  "slug": "traffic-generation",
+  "name": "Traffic Generation",
+  "title": "Traffic Generation",
+  "chip": "Traffic",
+  "type": "Website traffic generation",
+  "img": "V25",
+  "fig": "V21",
+  "price": "Fixed quote",
+  "time": "Depends on the channel",
+  "fact": "Search · content · campaigns",
+  "meta_title": "Website Traffic Generation Services | UnleeshAI",
+  "meta_desc": "Traffic generation that brings the right visitors: search, content, AI answers, email and paid campaigns, pointed at pages built to convert. Fixed quotes.",
+  "deck": "Traffic generation is the work of bringing the right visitors to your website: people who are looking for what you sell. We combine search, content, AI answers, email and campaigns, and point them at pages built to convert.",
+  "body": [
+   "Traffic generation is the work of bringing the right visitors to your website, meaning people who are already looking for what you sell. We combine search, content, AI answers, email and paid campaigns, and we point all of it at pages built to turn a visit into an enquiry.",
+   "A website with no visitors is an expensive secret. The quiet fear is the opposite problem: paying for traffic and watching it bounce. So we treat traffic and conversion as one job. There is no point filling a leaky bucket faster.",
+   "## Where the traffic comes from",
+   "- Search: pages and articles that rank for what your buyers type, through [SEO](seo-services.html)",
+   "- AI answers: being named by ChatGPT, Claude, Perplexity and Google AI Overviews, through [AEO and AI SEO](aeo-ai-seo.html)",
+   "- Content: articles that answer buying questions, through [blog writing](blog-writing.html)",
+   "- Email: campaigns to the list you already have, and outreach to the people you want to reach",
+   "- Paid campaigns: search and social ads sent to a dedicated [landing page](landing-page-design.html)",
+   "- Local: your Google Business Profile, maps and directories, for businesses that serve an area",
+   "## Fast channels and slow channels",
+   "Paid ads and email can bring visitors within days, and they stop when you stop. Search and content take months to build, and they keep working after the work is done. A sensible plan uses a fast channel to bring enquiries now and a slow channel to lower the cost of every enquiry later.",
+   "## Right visitors, not more visitors",
+   "Ten visitors who are ready to buy are worth more than a thousand who are browsing. We choose channels and keywords by intent: what the person was trying to do when they found you. Traffic numbers are easy to inflate. Enquiries are not.",
+   "## Where the traffic lands",
+   "Every campaign points at a page built for it. Ad traffic goes to a landing page that repeats the promise in the ad. Search traffic goes to the page that answers the search. When the landing page has follow-up behind it, that is a [sales funnel](sales-funnels.html). If the site itself is slow or confusing, we fix that first through [website optimization](website-optimization.html).",
+   "## Pricing",
+   "We quote the work at a fixed price once we know which channels fit your business: a campaign set up, a set of pages, a month of content. Any ad spend is paid by you directly to the platform, and it is separate from our fee."
+  ],
+  "faq": [
+   [
+    "What is traffic generation?",
+    "Traffic generation is the work of bringing visitors to a website through channels such as search, content, AI answers, email, social media and paid ads. Done well, it brings people who are already looking for what the business sells."
+   ],
+   [
+    "What is the fastest way to get traffic to a website?",
+    "Paid ads and email are the fastest, often within days. They stop when the spend stops. Search and content are slower to start and keep bringing visitors long after the work is done."
+   ],
+   [
+    "How long does it take to get organic traffic?",
+    "Usually months. Google's own guidance on SEO says four months to a year. Specific, low-competition searches can move sooner than broad ones."
+   ],
+   [
+    "Why is my website getting traffic but no enquiries?",
+    "Usually one of three reasons: the visitors are the wrong people, the page does not match what they were promised, or the next step is hard to find or hard to complete. We check all three before recommending more traffic."
+   ]
+  ],
+  "fig_alt": "Two smartphones on a dark surface with an arc of light particles sweeping past"
+ }
+]

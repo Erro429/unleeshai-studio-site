@@ -15,7 +15,13 @@ const PAGES = {
   contact: { file: 'contact.html',      name: 'CONTACT', sub: 'ABOUT A WEBSITE THAT GETS FOUND' },
   blog:    { file: 'blog.html',         name: 'JOURNAL', sub: 'Answers on web design, SEO and AI search.' },
   article: { file: 'journal.html',      name: 'ENTRY',   sub: 'Journal entry' },
+  services: { file: 'services.html',    name: 'SERVICES', sub: 'What we build and how we grow it.' },
+  service: { file: 'service.html',      name: 'SERVICE', sub: 'Scope, pricing and answers.' },
 };
+
+/* one page per service, generated from tools/services.json (keep in step with its slugs) */
+const SERVICE_FILES = ['website-design.html', 'landing-page-design.html', 'seo-services.html', 'aeo-ai-seo.html',
+  'sales-funnels.html', 'blog-writing.html', 'website-optimization.html', 'traffic-generation.html'];
 
 /* which page key a link points at (data-driven pages share a prefix) */
 function keyForHref(href) {
@@ -24,12 +30,14 @@ function keyForHref(href) {
   if (direct) return direct;
   if (file.startsWith('work_')) return 'project';
   if (file.startsWith('journal_')) return 'article';
+  if (SERVICE_FILES.includes(file)) return 'service';
   return 'home';
 }
 
 const NAV = [
   { label: '( Index )',     word: 'HOME',    href: 'index.html',   imgs: ['V07', 'V08'] },
   { label: '( Studio )',    word: 'ABOUT',   href: 'about.html',   imgs: ['V09', 'V10'] },
+  { label: '( Offer )',     word: 'SERVICES', href: 'services.html', imgs: ['V37', 'V38'] },
   { label: '( Archive )',   word: 'WORK',    href: 'work.html',    imgs: ['V11', 'V12'] },
   { label: '( Prototype )', word: 'LABS',    href: 'lab.html',     imgs: ['V13', 'V14'] },
   { label: '( Dialogue )',  word: 'CONTACT', href: 'contact.html', imgs: ['V15', 'V16'] },
@@ -71,11 +79,11 @@ export function mountMenu() {
     <aside class="menu-side">
       <div class="ms-words">DESIGN<br><span class="mono ink-2" style="font-stretch:100%;font-weight:400">( Web · SEO · AEO )</span><br>SELLS</div>
       <div class="ms-lists">
-        <ul><li>Custom Websites</li><li>Landing Pages</li><li>Sales Funnels</li><li>Website Optimization</li></ul>
-        <ul><li>SEO</li><li>AEO and AIO</li><li>Blog Writing</li><li>Traffic Generation</li></ul>
+        <ul><li><a href="website-design.html">Custom Websites</a></li><li><a href="landing-page-design.html">Landing Pages</a></li><li><a href="sales-funnels.html">Sales Funnels</a></li><li><a href="website-optimization.html">Website Optimization</a></li></ul>
+        <ul><li><a href="seo-services.html">SEO</a></li><li><a href="aeo-ai-seo.html">AEO and AIO</a></li><li><a href="blog-writing.html">Blog Writing</a></li><li><a href="traffic-generation.html">Traffic Generation</a></li></ul>
       </div>
       <div class="ms-links">
-        <a href="about.html" data-roll>About</a><a href="work.html" data-roll>Work</a>
+        <a href="about.html" data-roll>About</a><a href="services.html" data-roll>Services</a><a href="work.html" data-roll>Work</a>
         <a href="lab.html" data-roll>Labs</a><a href="blog.html" data-roll>Blog</a>
         <a href="contact.html" data-roll>Contact</a>
       </div>
@@ -182,6 +190,7 @@ export function mountFooter() {
       </div>
       <div class="f-grid">
         <div class="f-social mono">
+          <a href="services.html" data-roll>services</a>
           <a href="work.html" data-roll>work</a>
           <a href="about.html" data-roll>about</a>
           <a href="contact.html" data-roll>contact</a>

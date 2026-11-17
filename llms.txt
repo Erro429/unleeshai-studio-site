@@ -16,9 +16,21 @@
 - [Custom Website Design, SEO, AEO and AI Search | UnleeshAI](https://unleeshai.com/): UnleeshAI is a web design studio that builds custom, hand-coded websites and landing pages, then gets them found on Google and in AI answers with SEO and AEO.
 - [About UnleeshAI: Web Design, SEO and AI Search Studio](https://unleeshai.com/about.html): How UnleeshAI works: a remote web design studio for custom websites, SEO, AEO and sales funnels, run on a six-phase process from first call to launch.
 - [Web Design Portfolio: Live Sites and Concepts | UnleeshAI](https://unleeshai.com/work.html): The UnleeshAI web design portfolio: live client websites we built and shipped, plus ten concept flagships across ten sectors, all hand-coded.
+- [Web Design, SEO and AI Search Services | UnleeshAI](https://unleeshai.com/services.html): Eight services from one studio: custom website design, landing pages, SEO, AEO and AI SEO, sales funnels, blog writing, website optimization and traffic generation.
 - [Labs: AI Visual & Web Motion Experiments | UnleeshAI](https://unleeshai.com/lab.html): UnleeshAI Labs: 25 experiments in web motion design, AI motion imagery and commercial image generation, filterable by stream with a captioned lightbox.
 - [Contact UnleeshAI: Get a Website, SEO or AEO Quote](https://unleeshai.com/contact.html): Send UnleeshAI a brief for a website, landing page, SEO or AI search project. Five-page sites from $499, most live in 2 to 4 days. Replies in two working days.
 - [Journal: Web Design, SEO and AI Search Answers | UnleeshAI](https://unleeshai.com/blog.html): The UnleeshAI journal: plain answers on website cost, SEO timelines, AEO, landing pages and sales funnels, plus field notes on web design and motion.
+
+## Services
+
+- [Custom Website Design](https://unleeshai.com/website-design.html): Custom website design means a site drawn and coded for your business alone, with no template underneath. Ours start at $499 for five pages and most go live in two to four days.
+- [Landing Page Design](https://unleeshai.com/landing-page-design.html): A landing page is a single page built around one offer and one action. We design and hand-code landing pages for ads, email campaigns and launches, with the form and the follow-up wired in.
+- [SEO Services](https://unleeshai.com/seo-services.html): SEO is the work that gets your website shown when people search for what you sell. We handle the technical fixes, the page-by-page optimization, local search and the content, and we report on enquiries, not vanity numbers.
+- [AEO and AI SEO](https://unleeshai.com/aeo-ai-seo.html): AEO is answer engine optimization: getting your business named when someone asks an AI assistant instead of a search engine. It is also called AIO, GEO or AI SEO. We build it into your site and your content.
+- [Sales Funnels](https://unleeshai.com/sales-funnels.html): A sales funnel is the path a stranger takes to become a customer, mapped out and built on purpose. We build the landing page, the capture, the thank-you step and the follow-up, and we measure every stage.
+- [Blog Writing Services](https://unleeshai.com/blog-writing.html): Blog writing that answers the questions your buyers actually type. Each article is planned around a real search, opens with the direct answer, and is structured to rank on Google and be quoted by AI assistants.
+- [Website Optimization](https://unleeshai.com/website-optimization.html): Website optimization makes the site you already have faster, easier to use and better at turning visitors into enquiries. We audit it, fix what is slowing it down or losing people, and measure the difference.
+- [Traffic Generation](https://unleeshai.com/traffic-generation.html): Traffic generation is the work of bringing the right visitors to your website: people who are looking for what you sell. We combine search, content, AI answers, email and campaigns, and point them at pages built to convert.
 
 ## Live websites built by the studio
 

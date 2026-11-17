@@ -38,6 +38,20 @@
   font-family: var(--f-display); font-weight: 800; font-stretch: 125%;
   font-size: 3.2em; line-height: 0.8; float: left; margin: 0.08em 0.12em 0 0;
 }
+.ar-col h2 {
+  font-family: var(--f-body); font-weight: 400; font-stretch: 100%; text-transform: none; letter-spacing: -0.01em;
+  font-size: clamp(22px, 1.9vw, 30px); line-height: 1.25; margin-top: 28px;
+}
+.ar-col h3 {
+  font-family: var(--f-body); font-weight: 400; font-stretch: 100%; text-transform: none; letter-spacing: 0;
+  font-size: clamp(17px, 1.35vw, 21px); line-height: 1.35; margin-top: 12px;
+}
+.ar-col h3 + p { margin-top: -14px; }
+.ar-list { display: flex; flex-direction: column; gap: 10px; font-size: clamp(16px, 1.25vw, 19px); font-weight: 300; line-height: 1.6; }
+.ar-list li { position: relative; padding-left: 22px; }
+.ar-list li::before { content: ''; position: absolute; left: 0; top: 0.72em; width: 10px; height: 1px; background: var(--line-strong); }
+.ar-col p a, .ar-list a { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+.ar-col p a:hover, .ar-list a:hover { color: var(--white); text-decoration-color: var(--white); }
 .ar-pull {
   margin: 20px 0; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   font-family: var(--f-body); font-weight: 300; font-size: clamp(22px, 2.2vw, 34px); line-height: 1.35; letter-spacing: -0.01em;
