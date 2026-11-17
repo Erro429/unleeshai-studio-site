@@ -134,7 +134,8 @@
 
 /* bottom row */
 .hx-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 36px; gap: 24px; }
-.hx-tagline { font-size: 12.5px; font-weight: 300; color: var(--ink); line-height: 1.7; }
+/* the page h1: same small hero line as before, so the display-heading defaults are switched off */
+.hx-tagline { font-family: var(--f-body); font-stretch: 100%; letter-spacing: 0; text-transform: none; font-size: 12.5px; font-weight: 300; color: var(--ink); line-height: 1.7; }
 .hx-contact { font-size: 12.5px; line-height: 1.8; display: flex; flex-direction: column; }
 .hx-contact span { color: var(--ink-2); font-weight: 300; }
 .hx-social { display: flex; flex-direction: column; align-items: flex-end; font-size: 12.5px; }
@@ -396,6 +397,15 @@
   cursor: pointer;
 }
 .sector-row:last-child { border-bottom: 1px solid var(--line); }
+.sectors-intro { max-width: 68ch; margin: -16px 0 56px; color: var(--ink-2); font-weight: 300; line-height: 1.7; }
+.sectors-intro a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.sector-row .sr-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.sector-row .sr-text h3 { flex: none; }
+@media (max-width: 767px) {
+  .sector-row { gap: 16px; padding: 28px 8px; }
+  .sectors-intro { margin-bottom: 36px; }
+}
+.sector-row .sr-text p { max-width: 62ch; color: var(--ink-2); font-weight: 300; font-size: var(--t-body); line-height: 1.6; }
 .sector-row .idx { font-family: var(--f-mono); font-size: var(--t-label); color: var(--ink-3); }
 .sector-row h3 { font-family: var(--f-body); font-weight: 300; font-stretch: 100%; font-size: clamp(24px, 3vw, 44px); text-transform: none; letter-spacing: 0; flex: 1; transition: transform var(--d-fast) var(--ease-out); }
 .sector-row .arr { width: 24px; height: 24px; transition: transform var(--d-fast) var(--ease-out); }

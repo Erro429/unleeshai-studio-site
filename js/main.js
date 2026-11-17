@@ -18,6 +18,8 @@ const pageInits = {
   contact: () => import('./page-contact.js').then((m) => m.init()),
   blog: () => import('./page-blog.js').then((m) => m.init()),
   article: () => import('./page-article.js').then((m) => m.init()),
+  services: () => import('./page-blog.js').then((m) => m.init()),    // services index shares the journal index layout
+  service: () => import('./page-article.js').then((m) => m.init()),  // one service shares the journal entry layout
 };
 
 function initPage() {

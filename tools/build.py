@@ -5,6 +5,11 @@
   work_<slug>.html     <- tools/detail-template.html  + tools/projects.json
   blog.html            <- tools/journal-template.html + tools/journal.json
   journal_<slug>.html  <- tools/article-template.html + tools/journal.json
+  services.html        <- tools/services-template.html + tools/services.json
+  <slug>.html          <- tools/service-template.html  + tools/services.json
+
+Body copy in journal.json and services.json is a list of strings: '## ' and '### ' start a
+subheading, consecutive '- ' lines form a list, [text](url) is a link, anything else is a paragraph.
 
 Run from anywhere: python tools/build.py
 """
@@ -12,7 +17,9 @@ import html
 import io
 import json
 import os
+import re
 
+import imgattrs
 import seo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -40,6 +47,42 @@ def fill(template, mapping):
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+LINK = re.compile(r'\[([^\]]+)\]\(([^)\s]+)\)')
+
+
+def rich(s):
+    """Escaped text with [text](url) turned into a link."""
+    return LINK.sub(lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', esc(s))
+
+
+def prose(blocks, pull='', fig=''):
+    """Reading-column copy. The pull quote follows the second paragraph and the figure the third."""
+    out, paras, i = '', 0, 0
+    while i < len(blocks):
+        b = blocks[i]
+        if b.startswith('### '):
+            out += f'      <h3>{rich(b[4:])}</h3>\n'
+        elif b.startswith('## '):
+            out += f'      <h2>{rich(b[3:])}</h2>\n'
+        elif b.startswith('- '):
+            items = ''
+            while i < len(blocks) and blocks[i].startswith('- '):
+                items += f'<li>{rich(blocks[i][2:])}</li>'
+                i += 1
+            out += f'      <ul class="ar-list">{items}</ul>\n'
+            continue
+        else:
+            cls = ' class="ar-lead"' if paras == 0 else ''
+            out += f'      <p{cls}>{rich(b)}</p>\n'
+            paras += 1
+            if paras == 2:
+                out += pull
+            if paras == 3:
+                out += fig
+        i += 1
+    return out
 
 
 # ---------------------------------------------------------------- work
@@ -190,16 +233,11 @@ def build_articles(articles):
     for i, a in enumerate(articles):
         nxt = articles[(i + 1) % n]
         prv = articles[(i - 1) % n]
-        paras = a['body']
-        body_html = ''
-        for k, para in enumerate(paras):
-            cls = ' class="ar-lead"' if k == 0 else ''
-            body_html += f'      <p{cls}>{esc(para)}</p>\n'
-            if k == 1:
-                body_html += f'      <blockquote class="ar-pull" data-reveal-lines>{esc(a["pull"])}</blockquote>\n'
-            if k == 2:
-                body_html += (f'      <figure class="ar-fig reveal-img"><img src="assets/img/{a["fig"]}.webp{V}" alt="{esc(a["cat"])} illustration for {esc(a["title"])}" loading="lazy">'
-                              f'<figcaption class="bracket-label">( Fig. 01 · {esc(a["cat"])} )</figcaption></figure>\n')
+        body_html = prose(
+            a['body'],
+            pull=f'      <blockquote class="ar-pull" data-reveal-lines>{esc(a["pull"])}</blockquote>\n',
+            fig=(f'      <figure class="ar-fig reveal-img"><img src="assets/img/{a["fig"]}.webp{V}" alt="{esc(a["cat"])} illustration for {esc(a["title"])}" loading="lazy">'
+                 f'<figcaption class="bracket-label">( Fig. 01 · {esc(a["cat"])} )</figcaption></figure>\n'))
         write(f'journal_{a["slug"]}.html', fill(tpl, {
             'SLUG': a['slug'], 'TITLE': esc(a['title']), 'DECK': esc(a['deck']), 'DATE': a['date'],
             'CAT': esc(a['cat']), 'READ': a['read'], 'IMG': a['img'], 'BODY': body_html,
@@ -207,6 +245,48 @@ def build_articles(articles):
             'NEXT': f'journal_{nxt["slug"]}.html', 'NEXT_TITLE': esc(nxt['title']), 'NEXT_IMG': nxt['img'],
             'NEXT_DATE': nxt['date'], 'NEXT_CAT': esc(nxt['cat']),
             'PREV': f'journal_{prv["slug"]}.html', 'PREV_TITLE': esc(prv['title']),
+        }))
+
+
+# ---------------------------------------------------------------- services
+def service_row(s, i):
+    return (
+        f'      <a class="bl-row" href="{s["slug"]}.html" data-img="{s["img"]}" data-cursor-label="OPEN">'
+        f'<span class="b-date tabular">{i + 1:02d}</span>'
+        f'<span class="b-cat">{esc(s["chip"])}</span>'
+        f'<span class="b-title">{esc(s["name"])}</span>'
+        f'<span class="b-read">{esc(s["price"])}</span>'
+        f'<span class="b-arr"><svg class="in-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span>'
+        f'</a>'
+    )
+
+
+def build_services(services):
+    n = len(services)
+    first = services[0]
+    write('services.html', fill(read('services-template.html'), {
+        'COUNT': n,
+        'NAME_LI': ''.join(f'<li>{esc(s["name"])}</li>' for s in services),
+        'FEAT_FILE': f'{first["slug"]}.html', 'FEAT_IMG': first['img'], 'FEAT_FACT': esc(first['fact']),
+        'FEAT_NAME': esc(first['name']), 'FEAT_DECK': esc(first['deck']),
+        'ROWS': '\n'.join(service_row(s, i) for i, s in enumerate(services)),
+    }))
+    tpl = read('service-template.html')
+    for i, s in enumerate(services):
+        nxt, prv = services[(i + 1) % n], services[(i - 1) % n]
+        body = prose(
+            s['body'],
+            fig=(f'      <figure class="ar-fig reveal-img"><img src="assets/img/{s["fig"]}.webp{V}" alt="{esc(s["fig_alt"])}" loading="lazy">'
+                 f'<figcaption class="bracket-label">( {esc(s["chip"])} )</figcaption></figure>\n'))
+        body += '      <h2>Common questions</h2>\n'
+        for q, a in s['faq']:
+            body += f'      <h3>{esc(q)}</h3>\n      <p>{rich(a)}</p>\n'
+        write(f'{s["slug"]}.html', fill(tpl, {
+            'TITLE': esc(s['title']), 'NAME': esc(s['name']), 'DECK': esc(s['deck']), 'CHIP': esc(s['chip']),
+            'FACT': esc(s['fact']), 'PRICE': esc(s['price']), 'TIME': esc(s['time']), 'IMG': s['img'], 'BODY': body,
+            'INDEX': f'{i + 1:02d}', 'COUNT': f'{n:02d}',
+            'NEXT': f'{nxt["slug"]}.html', 'NEXT_NAME': esc(nxt['name']), 'NEXT_IMG': nxt['img'], 'NEXT_CHIP': esc(nxt['chip']),
+            'PREV': f'{prv["slug"]}.html', 'PREV_NAME': esc(prv['name']),
         }))
 
 
@@ -220,7 +300,10 @@ def main():
         build_journal(articles)
     if os.path.exists(os.path.join(HERE, 'article-template.html')):
         build_articles(articles)
-    seo.main()  # head tags, JSON-LD, sitemap, robots, llms.txt: always last
+    if os.path.exists(os.path.join(HERE, 'services.json')):
+        build_services(json.loads(read('services.json')))
+    seo.main()       # head tags, JSON-LD, sitemap, robots, llms.txt
+    imgattrs.main()  # alt text and intrinsic width/height on every <img>: always last
 
 
 if __name__ == '__main__':
